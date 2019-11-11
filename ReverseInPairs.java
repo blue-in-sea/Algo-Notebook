@@ -5,7 +5,6 @@
  * input  N1 -> N2 -> N3 -> N4 -> NULL
  * return N2 -> N1 -> N4 -> N3 -> NULL
  * */
-import java.util.Deque;
 
 class ListNode {
   int value;
@@ -72,7 +71,7 @@ class ListNode {
     * 虽然用到了stack，但因为只存了两个元素，所以空间复杂度还是O(1)，时间复杂度是O(n)。
     * 
     * */
-   public ListNode reverseInPairsStack(ListNode head) {
+  public ListNode reverseInPairsStack(ListNode head) {
     // if list is empty or contains only one node, cannot reverse
     if (head == null || head.next == null) {
       return head;
@@ -104,4 +103,5 @@ class ListNode {
     }
 
     return dummy.next;
+  }
 }
