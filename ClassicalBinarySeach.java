@@ -4,6 +4,8 @@
  */
 
 public class ClassicalBinarySearch {
+  // Time: O(logn)
+  // Space: O(1)
   public int binarySearch(int[] array, int target) {
     if (array == null || array.length == 0) {
       return -1;
