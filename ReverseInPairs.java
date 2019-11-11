@@ -54,7 +54,7 @@ class ListNode {
       
       cur.next.next = cur.next.next.next;   // N2 -> N3
       next.next = cur.next;                 // N3 -> N1
-      cur.next = next;                      // N1 or head = N2 
+      cur.next = next;                      // newHead = N2 
       
       cur = cur.next.next;                  // cur move 2 steps along the list 
     }                                       // to process the remaining part
