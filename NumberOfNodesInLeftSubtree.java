@@ -1,6 +1,6 @@
-/*
- *
- * Given a binary tree, count the number of nodes in each node’s left subtree, and store it in the numNodesLeft field.
+/* 
+ * Given a binary tree, count the number of nodes in each node’s left subtree, 
+ * and store it in the numNodesLeft field.
  *
  * Examples
  *                    1(6)
