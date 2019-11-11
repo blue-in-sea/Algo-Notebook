@@ -9,7 +9,7 @@
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-class ListNode {
+public class ListNode {
     int value;
     ListNode next;
 
