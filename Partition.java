@@ -2,16 +2,15 @@ import java.util.Arrays;
 
 public class Partition {
     public void partition(int[] array, int pivotIndex) {
-        // corner case
         if (array == null || array.length <= 1) {
             return;
         }
-        // partition
+        // 1. select partition pivot
         int pivot = array[pivotIndex];
-        // swap the pivot element to the rightmost position first
+        // 2. swap the pivot element to the rightmost position first
         int lastIndex = array.length - 1;
         swap(array, pivotIndex, lastIndex);
-
+        // 3. partition process
         int left = 0;
         int right = lastIndex - 1;
         while (left <= right) {
@@ -23,7 +22,7 @@ public class Partition {
                 swap(array, left++, right--);
             }
         }
-        // swap back the pivot element
+        // 4. swap back the pivot element
         swap(array, left, lastIndex);
     }
 
