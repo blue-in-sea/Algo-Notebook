@@ -26,7 +26,7 @@ public class TreeNodeLeft {
   TreeNodeLeft right;
   int numNodesLeft;
   
-  public TreeNodeLeft(int key) {
+  TreeNodeLeft(int key) {
     this.key = key;
   }
 } 
