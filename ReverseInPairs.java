@@ -36,4 +36,6 @@ class ListNode {
   }
   
   // Method2: Iterative
+  public ListNode reverseInPairsIterative(ListNode head) {
+  }
 }
