@@ -1,10 +1,7 @@
-/*
- * Given a target integer T and an integer array A sorted in ascending order, 
- * find the index i such that A[i] == T or return -1 if there is no such index.
- *
- * Assumption: no duplicate elements in the array.
- *
- */
+/* Given a target integer T and an integer array A sorted in ascending order, 
+ * find the index i such that A[i] == T or return -1 if there is no such index. */
+
+/* Assumption: no duplicate elements in the array. */
 
 public class ClassicalBinarySearch {
   public int binarySearch(int[] array, int target) {
