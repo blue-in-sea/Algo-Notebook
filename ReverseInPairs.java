@@ -6,16 +6,20 @@
  * return N2 -> N1 -> N4 -> N3 -> NULL
  * */
 
+import java.util.Deque;
+import java.util.LinkedList;
+
 class ListNode {
-  int value;
-  int ListNode next;
-  
-  ListNode(int value) {
-    this.value = value;
-    next = null;
- }
- 
- public class Solution {
+    int value;
+    ListNode next;
+
+    ListNode(int value) {
+        this.value = value;
+        next = null;
+    }
+}
+
+public class Solution {
    /* 
     * Method1: Recursive
     *
