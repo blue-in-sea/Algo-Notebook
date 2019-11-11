@@ -13,8 +13,17 @@
  *   { 'C', 'C', 'C' } }
  * 
  * we should put the chair at (1, 0), so that the sum of cost from the chair to the two equipment is 1 + 1 = 2, which is minimal.
- * 
-*/
+ * */
+
+public class Pair {
+  int i;
+  int j;
+  
+  Pair(int i, int j) {
+    this.i = i;
+    this.j = j;
+  }
+}
 
 public class PlaceToPutChairI {
   private static final char EQUIP = 'E';
@@ -128,15 +137,5 @@ public class PlaceToPutChairI {
       neis.add(new Pair(x, y - 1));
     }
     return neis;
-  }
-
-  static class Pair {
-    int i;
-    int j;
-
-    Pair(int i, int j) {
-      this.i = i;
-      this.j = j;
-    }
   }
 }
