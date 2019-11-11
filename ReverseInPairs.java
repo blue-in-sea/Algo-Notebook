@@ -37,5 +37,15 @@ class ListNode {
   
   // Method2: Iterative
   public ListNode reverseInPairsIterative(ListNode head) {
+    ListNode dummy = new ListNode(0);
+    dummy.next = head;
+    ListNode cur = dummy;
+    while (cur.next != null && cur.next.next != null) {
+      ListNode next = cur.next.next;        // next = N2
+      cur.next.next = cur.next.next.next;   // N2 -> N3
+      next.next = cur.next;                 // N3 -> N1
+      cur = cur.next.next;                  // cur move 2 steps along the list 
+    }
+    return dummy.next;
   }
 }
