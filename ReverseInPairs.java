@@ -5,6 +5,8 @@
  * input  N1 -> N2 -> N3 -> N4 -> NULL
  * return N2 -> N1 -> N4 -> N3 -> NULL
  * */
+import java.util.Deque;
+
 class ListNode {
   int value;
   int ListNode next;
