@@ -31,7 +31,7 @@ public class TreeNodeLeft {
   }
 } 
 
-public class Solution {
+public class NumberOfNodesInLeftSubtree {
   public void numNodesLeft(TreeNodeLeft root) {
     countNodes(root);
   }
