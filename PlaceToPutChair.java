@@ -1,5 +1,15 @@
 /*
- * Given a gym with k pieces of equipment and some obstacles.  We bought a chair and wanted to put this chair into the gym such that  the sum of the shortest path cost from the chair to the k pieces of equipment is minimal. The gym is represented by a char matrix, ‘E’ denotes a cell with equipment, ‘O’ denotes a cell with an obstacle, 'C' denotes a cell without any equipment or obstacle. You can only move to neighboring cells (left, right, up, down) if the neighboring cell is not an obstacle. The cost of moving from one cell to its neighbor is 1. You can not put the chair on a cell with equipment or obstacle.
+ * Given a gym with k pieces of equipment and some obstacles. We bought a chair and wanted to put this chair into the gym 
+ * such that  the sum of the shortest path cost from the chair to the k pieces of equipment is minimal. 
+ * The gym is represented by a char matrix, ‘E’ denotes a cell with equipment, 
+ *                                          ‘O’ denotes a cell with an obstacle, 
+ *                                          'C' denotes a cell without any equipment or obstacle. 
+ * 
+ * Only allow to move to neighboring cells (left, right, up, down) 
+ * if the neighboring cell is not an obstacle. 
+ * The cost of moving from one cell to its neighbor is 1. 
+ *
+ * Do not allow to put the chair on a cell with equipment or obstacle.
  * 
  * Assumptions
  * There is at least one equipment in the gym
