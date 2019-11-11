@@ -77,7 +77,7 @@ class ListNode {
       return head;
     }
     //用stack保存每次迭代的两个节点
-    Deque<ListNode> stack = new LinkedList<>();
+    Deque<ListNode> stack = new LinkedList<>();;
 
     ListNode dummy = new ListNode(0);
     dummy.next = head;
