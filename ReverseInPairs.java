@@ -6,8 +6,8 @@
  * return N2 -> N1 -> N4 -> N3 -> NULL
  * */
 
+import java.util.ArrayDeque;
 import java.util.Deque;
-import java.util.LinkedList;
 
 class ListNode {
     int value;
@@ -77,35 +77,35 @@ public class Solution {
     * */
   public ListNode reverseInPairsStack(ListNode head) {
     // if list is empty or contains only one node, cannot reverse
-        if (head == null || head.next == null) {
-            return head;
-        }
-        //用stack保存每次迭代的两个节点
-        Deque<ListNode> stack = new LinkedList<>();
+    if (head == null || head.next == null) {
+      return head;
+    }
+    //用stack保存每次迭代的两个节点
+    Deque<ListNode> stack = new ArrayDeque<>();
 
-        ListNode dummy = new ListNode(0);
-        dummy.next = head;
-        ListNode cur = dummy;
+    ListNode dummy = new ListNode(0);
+    dummy.next = head;
+    ListNode cur = dummy;
 
-        while (head != null && head.next != null) {
-            //将两个节点放入stack中
-            stack.push(head);
-            stack.push(head.next);
-            //当前节点往前走两步
-            head = head.next.next;
-            //从stack中弹出两个节点，然后放入新的list里
-            cur.next = stack.poll();
-            cur.next.next = stack.poll();
-            cur = cur.next.next;
-        }
-        // post-processing: if list has odd number of nodes
-        // link the last node to the new list
-        if (head != null) {
-            cur.next = head;
-        } else {
-            cur.next = null;  // set null after the tail of list!!
-        }
+    while (head != null && head.next != null) {
+      //将两个节点放入stack中
+      stack.push(head);
+      stack.push(head.next);
+      //当前节点往前走两步
+      head = head.next.next;
+      //从stack中弹出两个节点，然后放入新的list里
+      cur.next = stack.poll();
+      cur.next.next = stack.poll();
+      cur = cur.next.next;
+    }
+    // post-processing: if list has odd number of nodes
+    // link the last node to the new list
+    if (head != null) {
+      cur.next = head;
+    } else {
+      cur.next = null;  // set null after the tail of list!!
+    }
 
-        return dummy.next;
+    return dummy.next;
   }
 }
