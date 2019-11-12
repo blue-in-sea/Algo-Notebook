@@ -21,6 +21,7 @@ public class TreeNode {
   }
 }
 
+// Method 1: follow the zig zag order when traverse
 public List<Integer> zigZag(TreeNode root) {
   List<Integer> list = new LinkedList<>();
   if (root == null) return list;
@@ -52,4 +53,28 @@ public List<Integer> zigZag(TreeNode root) {
     layer = 1 - layer;
   }
   return list;
+}
+
+// Method 2: Classical BFS + Check if the layer is even and odd
+/* *
+ * Initialize Q: FIFO 队列
+ * root入Q;
+ * while(Q不空){
+ *    //本层节点数
+ *    size = Q.size;
+ *    for(i < size){
+ *         n = Q.head出Q;
+ *         正序或逆序排列本层节点值;
+ *         if(n.left) n.left入Q;
+ *         if(n.right) n.right入Q;
+ *     }
+ * }
+ *
+ * Initialize layer = 0, if even: right to left (reverse cur_layer list)
+ *                       if  odd: left to right (classical bfs order)
+ * layer = 1 - layer when exit cur_layer
+ */
+
+public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+  
 }
