@@ -1,4 +1,4 @@
-/*
+/* *
  * Given a gym with k pieces of equipment and some obstacles. We bought a chair and wanted to put this chair into the gym 
  * such that  the sum of the shortest path cost from the chair to the k pieces of equipment is minimal. 
  * The gym is represented by a char matrix, ‘E’ denotes a cell with equipment, 
@@ -23,7 +23,7 @@
  *   { 'C', 'C', 'C' } }
  * 
  * we should put the chair at (1, 0), so that the sum of cost from the chair to the two equipment is 1 + 1 = 2, which is minimal.
- * */
+ */
 
 public class Pair {
   int i;
