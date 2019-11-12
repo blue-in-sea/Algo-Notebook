@@ -27,7 +27,7 @@ public class isFullBinaryTree {
    *
    * 1. What should we do at current layer? 
    *    if the node has both left and right child: 
-   *        recursively check its left and right subtree  
+   *        recursively check its left and right subtree validity  
    *    else 
    *        return false
    *
