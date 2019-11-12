@@ -28,7 +28,7 @@ public class StringTransformsIntoAnotherString {
 }
 
 /* *
- * default V	      getOrDefault(Object key, V defaultValue)
+ * default V | getOrDefault(Object key, V defaultValue)
  * Returns the value to which the specified key is mapped, 
  * or defaultValue if this map contains no mapping for the key.
  */
