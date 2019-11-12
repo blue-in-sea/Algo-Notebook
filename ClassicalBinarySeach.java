@@ -1,4 +1,5 @@
-/* Given a target integer T and an integer array A sorted in ascending order, 
+/* *
+ * Given a target integer T and an integer array A sorted in ascending order, 
  * find the index i such that A[i] == T or return -1 if there is no such index. 
  * Assumption: no duplicate elements in the array. 
  */
