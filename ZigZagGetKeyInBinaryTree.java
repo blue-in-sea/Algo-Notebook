@@ -76,5 +76,29 @@ public List<Integer> zigZag(TreeNode root) {
  */
 
 public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+  List<List<Integer>> result = new LinkedList<>();
+  if (root == null) return result;
   
+  Queue<TreeNode> queue = new LinkedList<>();
+  queue.offer(root);
+  int layer = 0;
+  
+  while (!queue.isEmpty()) {
+    List<Integer> list = new LinkedList<>();
+    int size = queue.size();
+    
+    for (int i = 0; i < size; i++) {
+      TreeNode cur = queue.poll();
+      list.add(cur.key);
+      
+      if (cur.left != null)  queue.offer(cur.left);
+      if (cur.right != null)  queue.offer(cur.right);
+    } 
+    
+    if (layer == 0) Collections.reverse(list);
+    result.add(list);
+    layer = 1 - layer;
+  }
+  
+  return result;
 }
