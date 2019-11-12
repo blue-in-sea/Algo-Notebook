@@ -1,4 +1,4 @@
-/* 
+/* *
  * Given a binary tree, count the number of nodes in each node’s left subtree, 
  * and store it in the numNodesLeft field.
  *
@@ -18,7 +18,7 @@
  * 6(0)         7(0)      8(0)
  * 
  * The numNodesLeft is shown in parentheses.
- * */
+ */
  
 public class TreeNodeLeft {
   int key;
