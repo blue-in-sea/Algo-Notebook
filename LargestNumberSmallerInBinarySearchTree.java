@@ -14,16 +14,21 @@ public class TreeNode {
 }
 
 public class LargestNumberSmallerInBinarySearchTree {
+  /* *
+   * Time: O(height) since cur either go left or go right along the tree 
+   * Space: O(1)     no extra space used 
+   */
   public int largestSmaller(TreeNode root, int target) {
     // assume tree is not null and no duplicate keys
     int result = Integer.MIN_VALUE;
+    TreeNode cur = root;
 
-    while (root != null){
-      if (root.key < target) {
-        result = root.key;
-        root = root.right;
+    while (cur != null){
+      if (cur.key < target) {
+        result = cur.key;                // store cur 
+        cur = cur.right;                 // ignore its all left-subtree
       } else {
-        root = root.left;
+        cur = cur.left;                  // ignore cur && its all right-subtree
       }
     }
     return result;
