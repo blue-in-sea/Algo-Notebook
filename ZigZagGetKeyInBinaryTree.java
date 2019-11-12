@@ -21,7 +21,11 @@ public class TreeNode {
   }
 }
 
-// Method 1: follow the zig zag order when traverse
+/* * 
+ * Method 1: follow the zig zag order when traverse
+ * Time: O(n) for visiting all n nodes 
+ * Space: O(n) for the size of queue reach its max on the leaf level, in a full tree
+ */
 public List<Integer> zigZag(TreeNode root) {
   List<Integer> list = new LinkedList<>();
   if (root == null) return list;
@@ -55,8 +59,9 @@ public List<Integer> zigZag(TreeNode root) {
   return list;
 }
 
-// Method 2: Classical BFS + Check if the layer is even and odd
 /* *
+ * Method 2: Classical BFS + Check if the layer is even and odd
+ *  
  * Initialize Q: FIFO 队列
  * root入Q;
  * while(Q不空){
@@ -95,7 +100,7 @@ public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
       if (cur.right != null)  queue.offer(cur.right);
     } 
     
-    if (layer == 0) Collections.reverse(list);
+    if (layer == 0) Collections.reverse(list); // O(n) cost 
     result.add(list);
     layer = 1 - layer;
   }
