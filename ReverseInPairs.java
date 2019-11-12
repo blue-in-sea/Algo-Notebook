@@ -1,10 +1,10 @@
-/*
+/* *
  * Reverse pairs of elements in a singly-linked list.
  *
  * Examples
  * input  N1 -> N2 -> N3 -> N4 -> NULL
  * return N2 -> N1 -> N4 -> N3 -> NULL
- * */
+ */
 
 import java.util.ArrayDeque;
 import java.util.Deque;
