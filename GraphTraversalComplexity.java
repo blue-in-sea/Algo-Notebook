@@ -42,11 +42,22 @@ public class GraphTraversalComplexity {
     }
   }
 }
-
 /* *
- * Given V: # of vertices on the graph 
+ * Time Complexity Analysis Decomposite
+ * Each DFS calls itself (does not consider next level recursion): O(E/V + 1)
+ * Each DFS markes one visied: O(1)
+ * Each Node is only allowed to visited onece: O(V)
+ * Total: O((E/V + 1) * V) = O(V + E)
+ *
+ * Key!! Understand the unchanging component operation costs 
+ *
+ * 
+ * Given V: (Range of E can be various, thus both V & E play a part
+ *           into our Graph Traversal's complexity analysis)
  * E min -> 0
  * E     -> O(V)
  * E max -> O(V^2)
+ * 
+ * Only tree, we could use "n", since E = V + 1 is fixed in DAG
  */
 
