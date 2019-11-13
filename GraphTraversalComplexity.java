@@ -50,7 +50,7 @@ public class GraphTraversalComplexity {
  * Total: O((E/V + 1) * V) = O(V + E)
  *
  * Key!! Try to find the invariant in the loop 
- *    !! 寻找不变量
+ *    !! 寻找(循环)不变量
  * 
  * Given V: (Range of E can be various, thus both V & E play a part
  *           into our Graph Traversal's complexity analysis)
