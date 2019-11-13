@@ -22,6 +22,11 @@ public class OptimalAccountBalancing {
     return helper(debts, 0, 0);
   }
   
+  /* *
+   * Recursion + DP
+   * Starting from first debt (pos = 0), we look for all other debts debt[i] (i>0) which have opposite sign to debt[0]. 
+   * Then each such debt[i] can make one transaction debt[i] += debt[0] to clear the person with debt debt[0]
+   */ 
   private int helper(Long[] debts, int pos, int cnt) {
     while (pos < debts.length && debts[pos] == 0) pos++;
     if (pos >= debts.length) {
