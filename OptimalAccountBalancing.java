@@ -4,22 +4,22 @@
  
 public class OptimalAccountBalancing {
   public int minTransfers(int[][] transactions) {
-    Map<Integer, Long> map = new HashMap<>();
-    for (int[] t : transactions) {
-      long val1 = map.getOrDefault(t[0], 0L);
-      long val2 = map.getOrDefault(t[1], 0L);
+    Map<Integer, Long> map = new HashMap();  // balance map
+    for (int[] t: transactions) {
+      long val1 = map.getOrDefault(t[0], 0L);  // send
+      long val2 = map.getOrDefault(t[1], 0L);  // receive
       map.put(t[0], val1 - t[2]);
-      map.put(t[1], val2 - t[2]); 
+      map.put(t[1], val2 + t[2]);
     }
     
     List<Long> list = new ArrayList<>();
-    for (long val : list) {
-      if (val != 0) list.add(val);
+    for(long val: map.values()){
+      if(val != 0) list.add(val);
     }
     
     Long[] debts = new Long[list.size()];
     debts = list.toArray(debts);
-    return helper(debts, 0, 0);
+    return helper(debts, 0 , 0);
   }
   
   /* *
