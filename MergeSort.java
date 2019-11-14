@@ -1,4 +1,13 @@
+/* *
+ * Given an array of integers, sort the elements in the array in ascending order. 
+ * The merge sort algorithm should be used to solve this problem.
+ */
+
 public class MergeSort {
+  /* *
+   * Time: O(nlogn) for logn level while sort for n elements 
+   * Space: O(n) for the helper array
+   */
   public int[] mergeSort(int[] array) {
     // corner case 
     if (array == null || array.length <= 1) {
