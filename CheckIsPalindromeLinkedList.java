@@ -1,4 +1,9 @@
 /**
+ * This soln would destroy the original structure of the linked list.
+ * If you do not want to destroy the structure, you can reserve the second part back.
+ */
+
+/**
  * Definition for ListNode
  * public class ListNode {
  *     int key;
@@ -9,9 +14,6 @@
  *     }
  * }
  */
-  
-// This code would destroy the original structure of the linked list.
-// If you do not want to destroy the structure, you can reserve the second part back.
 public class CheckIsPalindromeLinkedList {
   /**
    * @param head a ListNode
