@@ -1,4 +1,4 @@
-/* *
+/**
  * Reverse pairs of elements in a singly-linked list.
  *
  * Examples
@@ -18,7 +18,7 @@
  * }
  */
 public class Solution {
-   /* 
+   /**
     * Method1: Recursive
     *
     * 1. 返回值：head 为空指针或者 next 为空指针,
@@ -26,7 +26,7 @@ public class Solution {
     * 2. 调用单元：设需要交换的两个点为 head 和 next, head 连接后面
     *    交换完成的子链表，next 连接 head, 完成交换
     * 3. 返回值：交换完成的子链表
-    * */  
+    */  
   public ListNode reverseInPairs(ListNode head) {
     // 1. Terminating condition  
     if (head == null || head.next == null) {
@@ -40,14 +40,14 @@ public class Solution {
     return newHead;
   }
   
-   /* 
+   /**
     * Method2: Iterative
     *
     * Idea similar to swap two nodes
     * 
     * input  N1 -> N2 -> N3 -> NULL
     * return N2 -> N1 -> N3 -> NULL
-    * */   
+    */   
   public ListNode reverseInPairsIterative(ListNode head) {
     ListNode dummy = new ListNode(0);
     dummy.next = head;
@@ -64,7 +64,7 @@ public class Solution {
     return dummy.next;
   }
    
-   /*
+   /**
     * Method3: Stack
     *
     * 利用一个stack，然后不断迭代链表，每次取出两个节点放入stack中，再从stack中拿出两个节点。
@@ -72,7 +72,7 @@ public class Solution {
     * 再把这两个节点串联起来，重复这个逻辑遍历完整个链表，就可以做到两两反转的效果了。
     * 虽然用到了stack，但因为只存了两个元素，所以空间复杂度还是O(1)，时间复杂度是O(n)。
     * 
-    * */
+    */
   public ListNode reverseInPairsStack(ListNode head) {
     // if list is empty or contains only one node, cannot reverse
     if (head == null || head.next == null) {
