@@ -1,4 +1,4 @@
-/* *
+/**
  * Get the list of keys in a given binary tree layer by layer in zig-zag order.
  * 
  * Examples
@@ -11,17 +11,19 @@
  * the result is [5, 3, 8, 11, 4, 1]
  */
 
-public class TreeNode {
-  int key;
-  TreeNode left;
-  TreeNode right;
-  
-  TreeNode(int key) {
-    this.key = key;
-  }
-}
+/**
+ * Definition of TreeNode:
+ * public class TreeNode {
+ *     public int key;
+ *     public TreeNode left, right;
+ *     public TreeNode(int key) {
+ *         this.key = key;
+ *         this.left = this.right = null;
+ *     }
+ * }
+ */
 
-/* * 
+/** 
  * Method 1: follow the zig zag order when traverse
  * Time: O(n) for visiting all n nodes 
  * Space: O(n) for the size of queue reach its max on the leaf level, in a full tree
@@ -59,7 +61,7 @@ public List<Integer> zigZag(TreeNode root) {
   return list;
 }
 
-/* *
+/**
  * Method 2: Classical BFS + Check if the layer is even and odd
  *  
  * Initialize Q: FIFO 队列
