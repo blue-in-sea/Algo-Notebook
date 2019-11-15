@@ -16,7 +16,7 @@ class GraphNode {
 }
 
 public class GraphTraversalComplexity {
-  /* *
+  /**
    * DFS Traversal: Complexity Analysis 
    * Time: O(V * (1 + E/V)) = O(V + E)
    * Spcae: O(V) 
@@ -29,7 +29,7 @@ public class GraphTraversalComplexity {
     }
   }
   
-  /* *
+  /**
    * V := Number of Nodes 
    * E := Number of Edges 
    */
@@ -42,7 +42,7 @@ public class GraphTraversalComplexity {
     }
   }
 }
-/* *
+/**
  * Time Complexity Analysis Decomposite
  * Each DFS calls itself (does not consider next level recursion): O(E/V + 1)
  * Each DFS markes one visied: O(1)
