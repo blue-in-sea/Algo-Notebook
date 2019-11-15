@@ -23,7 +23,7 @@ public class OptimalAccountBalancing {
   }
   
   /**
-   * Recursion + DP
+   * Recursion + DP in stack
    * Starting from first debt (pos = 0), we look for all other debts debt[i] (i>0) which have opposite sign to debt[0]. 
    * Then each such debt[i] can make one transaction debt[i] += debt[0] to clear the person with debt debt[0]
    */ 
@@ -37,7 +37,7 @@ public class OptimalAccountBalancing {
       if (debts[i] * debts[pos] < 0) {
         debts[i] += debts[pos];
         min = Math.min(helper(debts, pos + 1, cnt + 1), min);
-        debts[i] = debts[i] - debts[pos];
+        debts[i] = debts[i] - debts[pos]; // back-tracking recovery
       }
     }
     return min;
