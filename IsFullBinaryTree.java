@@ -9,17 +9,18 @@
  *            3) Return value: 返回值
  */
 
-public class TreeNode {
-  int key;
-  TreeNode left;
-  TreeNode right;
-  
-  TreeNode(int key) {
-    this.key = key;
-  }
-}
-
-public class isFullBinaryTree {
+/**
+ * Definition of TreeNode:
+ * public class TreeNode {
+ *     public int key;
+ *     public TreeNode left, right;
+ *     public TreeNode(int key) {
+ *         this.key = key;
+ *         this.left = this.right = null;
+ *     }
+ * }
+ */
+public class IsFullBinaryTree {
   /**
    * Method: Recursion
    *
