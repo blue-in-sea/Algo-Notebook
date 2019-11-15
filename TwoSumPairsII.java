@@ -1,4 +1,4 @@
-/* *
+/**
  * Find all pairs of elements in a given array that sum to the pair the given target number. 
  * Return all the distinct pairs of values.
  * 
