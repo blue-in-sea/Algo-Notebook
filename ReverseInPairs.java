@@ -19,7 +19,7 @@
  */
 public class Solution {
    /**
-    * Method1: Recursive
+    * Method 1: Recursive
     *
     * 1. 返回值：head 为空指针或者 next 为空指针,
     *    也就是当前无节点或者只有一个节点, 无法进行交换
@@ -41,10 +41,9 @@ public class Solution {
   }
   
    /**
-    * Method2: Iterative
+    * Method 2: Iterative
     *
     * Idea similar to swap two nodes
-    * 
     * input  N1 -> N2 -> N3 -> NULL
     * return N2 -> N1 -> N3 -> NULL
     */   
@@ -65,7 +64,7 @@ public class Solution {
   }
    
    /**
-    * Method3: Stack
+    * Method 3: Stack
     *
     * 利用一个stack，然后不断迭代链表，每次取出两个节点放入stack中，再从stack中拿出两个节点。
     * 借助stack后进先出的特点，放进去的时候是1,2。拿出来的时候就是2，1两个节点了。
