@@ -1,10 +1,10 @@
 /**
  * Definition of TreeNode:
  * public class TreeNode {
- *     public int val;
+ *     public int key;
  *     public TreeNode left, right;
- *     public TreeNode(int val) {
- *         this.val = val;
+ *     public TreeNode(int key) {
+ *         this.key = key;
  *         this.left = this.right = null;
  *     }
  * }
