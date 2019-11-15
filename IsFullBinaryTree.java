@@ -1,4 +1,4 @@
-/* *
+/**
  * Determine if a given binary tree is full (If the root is null, return false).
  *
  * A full binary tree is defined as a binary tree in which all nodes have either zero or two child nodes. 
