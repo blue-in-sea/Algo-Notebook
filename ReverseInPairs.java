@@ -6,19 +6,17 @@
  * return N2 -> N1 -> N4 -> N3 -> NULL
  */
 
-import java.util.ArrayDeque;
-import java.util.Deque;
-
-public class ListNode {
-    int value;
-    ListNode next;
-
-    ListNode(int value) {
-        this.value = value;
-        next = null;
-    }
-}
-
+/**
+ * Definition for ListNode
+ * public class ListNode {
+ *     int key;
+ *     ListNode next;
+ *     ListNode(int key) {
+ *         this.key = key;
+ *         next = null;
+ *     }
+ * }
+ */
 public class Solution {
    /* 
     * Method1: Recursive
