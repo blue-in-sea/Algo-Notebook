@@ -1,5 +1,5 @@
-/* *
- * LT 1153. String Transforms Into Another String
+/**
+ * LT1153. String Transforms Into Another String
  *
  * Given two strings str1 and str2 of the same length, determine whether you can transform 
  * str1 into str2 by doing zero or more conversions. In one conversion you can convert all 
@@ -27,7 +27,8 @@ public class StringTransformsIntoAnotherString {
   }
 }
 
-/* *
+/**
+ * Java Map API
  * default V | getOrDefault(Object key, V defaultValue)
  * Returns the value to which the specified key is mapped, 
  * or defaultValue if this map contains no mapping for the key.
