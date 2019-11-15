@@ -1,4 +1,4 @@
-/* *
+/**
  * Given a integer dictionary A of unknown size, where the numbers in the dictionary are 
  * sorted in ascending order, determine if a given target integer T is in the dictionary. 
  * Return the index of T in A, return -1 if T is not in A.
@@ -7,8 +7,6 @@
  * 1) dictionary A is not null
  * 2) dictionary.get(i) will return null, if index i is out of bounds
  */
-
-import java.util.Arrays;
 
 public class UnknownSizeBinarySearch {
     public int search(Dictionary dict, int target) {
