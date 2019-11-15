@@ -1,4 +1,4 @@
-/* *
+/**
  * Given an array A of length N containing all positive integers from [1...N]. 
  * How to get an array B such that B[i] represents: 
  * how many elements A[j] (j > i) in array A that are smaller than A[i].
@@ -24,7 +24,7 @@ public class CountArray {
     return countArray;
   }
   
-  /* *
+  /**
    * 针对数组 array 指定的区间 [left, right] 进行归并排序，在排序的过程中完成统计任务
    *
    * @param array
@@ -46,7 +46,7 @@ public class CountArray {
     }
   }
   
-  /* *
+  /**
    * merge 谁小移动谁
    * [left, mid] 是排好序的
    * [mid + 1, right] 是排好序的
@@ -76,7 +76,7 @@ public class CountArray {
     }
   }
   
-  /* *
+  /**
    * IndexArray store the indices
    * merge sort the array but records the sequence of 
    * original indices after sorting
