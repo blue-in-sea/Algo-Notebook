@@ -1,4 +1,4 @@
-/* *
+/**
  * Insert a key in a binary search tree if the binary search tree does not already contain the key. 
  * Return the root of the binary search tree.
  *
@@ -7,15 +7,17 @@
  * 2) If the key is already existed in the binary search tree, you do not need to do anything
  */
 
-public class TreeNode {
-  int key;
-  TreeNode left;
-  TreeNode right;
-  
-  TreeNode(int key) {
-    this.key = key;
-  }
-}
+/**
+ * Definition of TreeNode:
+ * public class TreeNode {
+ *     public int key;
+ *     public TreeNode left, right;
+ *     public TreeNode(int key) {
+ *         this.key = key;
+ *         this.left = this.right = null;
+ *     }
+ * }
+ */
 
 public class InsertBinarySearchTree {
   /* *
@@ -35,7 +37,7 @@ public class InsertBinarySearchTree {
     return root;
   }
   
-  /* *
+  /**
    * Mathod 2: Iterative 
    * Time: O(H) where O(log N) for average case, O(N) worst case
    * Space: O(1) since it's a constant space solution
