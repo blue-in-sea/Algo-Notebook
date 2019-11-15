@@ -1,13 +1,22 @@
-public class ListNode {
-  int value;
-  ListNode next;
+/**
+ * Definition for ListNode
+ * public class ListNode {
+ *     int key;
+ *     ListNode next;
+ *     ListNode(int key) {
+ *         this.key = key;
+ *         next = null;
+ *     }
+ * }
+ */
   
-  ListNode(int value) {
-    this.value = value;
-    next = null;
-}
-
+// This code would destroy the original structure of the linked list.
+// If you do not want to destroy the structure, you can reserve the second part back.
 public class CheckIsPalindromeLinkedList {
+  /**
+   * @param head a ListNode
+   * @return a boolean
+   */
   public boolean isPalindrome(ListNode head) {
     if (head == null || head.next == null) {
       return true;
