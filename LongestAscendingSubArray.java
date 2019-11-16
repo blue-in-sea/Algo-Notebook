@@ -42,7 +42,7 @@ public class LongestAscendingSubArray {
   }
   
   /** 
-   * Method 1: Sliding Window
+   * Method 2: Sliding Window
    *
    * Window include [within the range from the leftBound to rightBound]
    * the max length of the ascending subarray [two bounds are inclusive]
