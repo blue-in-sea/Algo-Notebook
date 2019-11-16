@@ -16,7 +16,7 @@ public class MaxProductOfCuttingRope {
   /** 
    * Method 1: DFS (Recursion) + Backtracking
    *
-   * (只考虑右边最后一刀)
+   * (只考虑右边最后一刀) if n = 5
    *                                      maxP(5)
    *          /                    |                    |                    \
    * max{maxP(4), 4} * 1   max{maxP(3), 2} * 2   max{maxP(2), 2} * 3   max{maxP(1), 1} * 4
@@ -44,22 +44,17 @@ public class MaxProductOfCuttingRope {
   }
   
   /** 
-   * Method 2: DFS (Recursion) + Backtracking
-   *
-   * (只考虑右边最后一刀)
-   *                                      maxP(5)
-   *          /                    |                    |                    \
-   * max{maxP(4), 4} * 1   max{maxP(3), 2} * 2   max{maxP(2), 2} * 3   max{maxP(1), 1} * 4
-   *     / | \                  /  \                    |                   0
-   *    ......                 ......                 ......
+   * Method 2: Dynamic Programming（左大段 + 右大段）
    * 
-   * Time: O(n!) for n meters rope
-   * Space: O(n) for stack calls
+   * M[i] represents 储存前面的下刀，有几个地方能下最后一刀
+   * M[i,j] = MAX{ M[i,k] * M[k,j] } 
+   *
+   * Time: O(n!) = ½[(n-2)(n-3)(n-4)...1]
+   * Space: O(1) 
    */
   
   
-  
-  
+  // Space: O(n) to O(1) by only store the currMax 
   public int maxProduct(int length) {
     int n = length;
     int[] M = new int[n + 1];
@@ -71,18 +66,32 @@ public class MaxProductOfCuttingRope {
     // sub-solution: n meters
     for (int i = 2; i <= n; i ++) {
       int currMax = 0;
-      // 储存前面的下刀，有几个地方能下最后一刀 （左大段 + 右小段）
       for (int j = 1; j <= i; j++) {
         currMax = Math.max(currMax, Math.max(j, M[j]) * (i - j));
-      /*
-        currMax = Math.max(currMax, 
-                  Math.max(j, M[j]) * Math.max((i - j), M[i - j]));
-      */
-      } // end inner-for
+      } 
       
       M[i] = currMax;
-    } // end outter-for
+    }
     
     return M[n];
-  } // end maxProduct()
+  } 
+  
+  /** 
+   * Method 3: Dynamic Programming（左大段 + 右小段）Optimal!!
+   * 
+   * M[i] represents [within the range from the beginning index to i-th index]
+   * the max length of the ascending subarray. [must include the i-th element]
+   *
+   * M[i] = M[i - 1] + 1     a[i] > a[i - 1] 
+   *      = 1                otherwise
+   * Time: O(n) for linear scan, Space: O(1)
+   */
+  public int maxProduct(int length) {
+  }
+  
+  
+  
+  
+  
+  
 }
