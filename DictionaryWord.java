@@ -41,5 +41,4 @@ public class DictionaryWord {
     }
     return set; 
   }
-
 }
