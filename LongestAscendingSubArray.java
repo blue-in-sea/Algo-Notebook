@@ -12,18 +12,35 @@
 public class LongestAscendingSubArray {
   /** 
    * Method 1: Dynamic Programming
-   *
+   * 
    * M[i] represents [within the range from the beginning index to i-th index]
    * the max length of the ascending subarray. [must include the i-th element]
    *
    * M[i] = M[i - 1] + 1     a[i] > a[i - 1] 
    *      = 1                otherwise
+   * Time: O(n) for linear scan, Space: O(1)
    */
-   public int longest(int[] array) {
-   
-   
-   }
-   
+  public int longestDP(int[] array) {
+    // Check if the array is null
+    if (array == null) return -1;
+    // Check if it is an empty array
+    if (array.length == 0) return 0;
+
+    // optimization: we do not need the whole DP-array,  - O(n) space
+    // only need to store a global_max and a cur_len     - O(1) space
+    int maxLen = 1;
+    int curLen = 1;
+    for (int i = 1; i <array.length; i++) {
+      if (array[i] > array[i - 1]) {
+        curLen++;
+        maxLen = Math.max(maxLen, curLen);
+      } else {
+        curLen = 1;
+      }
+    }
+    return maxLen;
+  }
+  
   /** 
    * Method 1: Sliding Window
    *
@@ -32,8 +49,9 @@ public class LongestAscendingSubArray {
    *
    * right bound++;         a[i] > a[i - 1] 
    * reset windows;         otherwise
+   * Time: O(n) for linear scan, Space: O(1)
    */ 
-   public int longest(int[] array) {
+   public int longestSW(int[] array) {
    
    }
 }
