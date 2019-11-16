@@ -51,7 +51,19 @@ public class LongestAscendingSubArray {
    * reset windows;         otherwise
    * Time: O(n) for linear scan, Space: O(1)
    */ 
-   public int longestSW(int[] array) {
-   
-   }
+  public int longestSW(int[] array) {
+    // corner cases
+    
+    int maxLen = 1;
+    for (int i = 0, left = 0; i < array.length; i++) {
+      if (i == 0 || array[i] > array[i - 1]) {
+        // Ascending part continue, for-loop drive window's right bound
+        maxLen = Math.max(maxLen, i - left + 1);
+      } else {
+        // Ascending part terminate, reset window's left bound
+        left = i;
+      }
+    }
+    return maxLen;
+  }
 }
