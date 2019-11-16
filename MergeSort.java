@@ -4,7 +4,7 @@
  */
 
 public class MergeSort {
-  /* *
+  /**
    * Time: O(nlogn) for logn level while sort for n elements 
    * Space: O(n) for the helper array
    */
