@@ -49,6 +49,8 @@ public class LongestAscendingSubArray {
    *
    * right bound++;         a[i] > a[i - 1] 
    * reset windows;         otherwise
+   * (window len = right - left + 1)
+   *
    * Time: O(n) for linear scan, Space: O(1)
    */ 
   public int longestSW(int[] array) {
