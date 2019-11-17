@@ -1,4 +1,8 @@
-/**/
+/**
+ * Given a singly linked list where elements are sorted in ascending order, convert it to a height balanced BST.
+ * For testing purpose, please make sure for any node in the result, its left sub-tree should have equal 
+ * or only one more node than its right sub-tree.
+ */
 
 /**
  * class ListNode {
