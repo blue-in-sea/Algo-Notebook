@@ -22,7 +22,7 @@
  * }
  */
 public class SortedListToBinarySearchTree {
-  public TreeNode sortListToBST(ListNode head) {
+  public TreeNode sortedListToBST(ListNode head) {
     // corner case: if the list is empty, then the tree should be empty
     if (head == null) {
       return null;
@@ -31,22 +31,18 @@ public class SortedListToBinarySearchTree {
   }
   
   private TreeNode helper(ListNode head) {
-    // base case 
+    // base case 1
     if (head == null) {
       return null;
     }
-    
     ListNode mid = findMiddle(head);
     TreeNode root = new TreeNode(mid.value);
-    
-    // base case
+    // base case 2 
     if (head == mid) {
       return root;
-    }
-    
+    }    
     root.left = helper(head);
     root.right = helper(mid.next);
-    
     return root;
   }
   
@@ -60,7 +56,7 @@ public class SortedListToBinarySearchTree {
       fast = fast.next.next;
     }
     if (prev != null) {
-      prev = null;
+      prev.next = null;
     }
     return slow;  // for even nodes, slow is the first node of the second half
   }
