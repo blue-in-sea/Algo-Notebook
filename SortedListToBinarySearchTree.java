@@ -117,3 +117,9 @@ public class SortedListToBinarySearchTree {
 }
 
 /* Complexity Analysis: https://github.com/iris-in-sea/Algo-Notebook/wiki/Note-on-Sorted-Linked-List-to-BST */
+/**
+ * Math.ceil(double a)
+ * Returns the smallest (closest to negative infinity) double value 
+ * that is greater than or equal to the argument and is equal to a mathematical integer.
+ * Java 8: https://docs.oracle.com/javase/8/docs/api/java/lang/Math.html
+ */
