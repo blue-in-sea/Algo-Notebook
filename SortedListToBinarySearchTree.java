@@ -26,6 +26,11 @@
  * }
  */
 public class SortedListToBinarySearchTree {
+  /**
+   * Method 1: Recursion 
+   * Time: O(N logN) = (level) log N * (find middle) N/2
+   * Space: O(logN) for stack calls 
+    */
   public TreeNode sortedListToBST(ListNode head) {
     // corner case: if the list is empty, then the tree should be empty
     if (head == null) {
@@ -64,4 +69,10 @@ public class SortedListToBinarySearchTree {
     }
     return slow;  // for even nodes, slow is the first node of the second half
   }
+  
+  /**
+   * Method 2: Recursion + toArray
+   * Time: O(N) 
+   * Space: O(N) 
+   */
 }
