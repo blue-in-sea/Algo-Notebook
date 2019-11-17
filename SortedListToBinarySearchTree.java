@@ -75,4 +75,43 @@ public class SortedListToBinarySearchTree {
    * Time: O(N) 
    * Space: O(N) 
    */
+  public TreeNode sortedListToBST(ListNode head) {
+    int[] array = sortedListToArray(head);
+    return helper(array, 0, array.length - 1);
+  }
+
+  private int[] sortedListToArray(ListNode head) {
+    List<Integer> list = new ArrayList<>();
+    while (head != null) {
+      list.add(head.value);
+      head = head.next;
+    }
+    
+    int[] array = new int[list.size()];
+    for (int i = 0; i < array.length; i++) {
+      array[i] = list.get(i);
+    }
+    return array;
+  }
+
+  private TreeNode helper(int[] array, int left, int right) {
+    // Invalid case
+    if (left > right) {
+      return null;
+    }
+
+    // Middle element forms the root.
+    int mid = (int) Math.ceil((double)(left + right) / 2.0); // int-coversion!!!
+    TreeNode node = new TreeNode(array[mid]);
+
+    // Base case for when there is only one element left in the array
+    if (left == right) {
+      return node;
+    }
+
+    // Recursively form BST on the two halves
+    node.left = helper(array, left, mid - 1);
+    node.right = helper(array, mid + 1, right);
+    return node;
+  }
 }
