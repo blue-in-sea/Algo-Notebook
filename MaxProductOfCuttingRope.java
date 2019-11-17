@@ -47,6 +47,18 @@ public class MaxProductOfCuttingRope {
    * Method 2: Dynamic Programming（左大段 + 右大段）
    * M[i] represents the max product of (p[0], p[1], ...,p[m-1])
    */
+  public int maxProduct(int length) {
+    int n = length;
+    int[] M = new int[n + 1];
+    M[0] = 0; // place holder
+    M[1] = 0;
+    for (int i = 2; i <= n; i ++) {
+      for (int j = 1; j <= i / 2; j++) {
+        M[i] = Math.max(M[i], Math.max(M[j], j) * Math.max(M[i - j], i - j));
+      }
+    }
+    return M[n];
+  } 
   
   /** 
    * Method 3: Dynamic Programming（左大段 + 右小段）Optimal!!
