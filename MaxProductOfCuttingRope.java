@@ -55,6 +55,7 @@ public class MaxProductOfCuttingRope {
     for (int i = 2; i <= n; i ++) {
       for (int j = 1; j <= i / 2; j++) {
         M[i] = Math.max(M[i], Math.max(M[j], j) * Math.max(M[i - j], i - j));
+                                   // 左大段               // 右大段
       }
     }
     return M[n];
@@ -65,4 +66,17 @@ public class MaxProductOfCuttingRope {
    * M[i] represents the max product of (p[0], p[1], ...,p[m-1])
    * 右小段: 右边最后一刀绳子本身的长度
    */
+  public int maxProduct(int length) {
+    int n = length;
+    int[] M = new int[n + 1];
+    M[0] = 0; // place holder
+    M[1] = 0;
+    for (int i = 2; i <= n; i ++) {
+      for (int j = 1; j < i; j++) {
+        M[i] = Math.max(M[i], Math.max(M[j], j) * (i - j));
+                                   // 左大段      // 右小段
+      }
+    }
+    return M[n];
+  } 
 }
