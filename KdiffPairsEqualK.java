@@ -1,5 +1,9 @@
+/**
+ * LT 532. K-diff Pairs in an Array
+ */
+
 class KdiffPairsEqualK {
-    // K = 0, not pass the test case
+    // K = 0 as a separate corner case
     public int findPairs(int[] nums, int k) {
         if (nums == null || nums.length == 0 || k < 0) {
             return 0;
