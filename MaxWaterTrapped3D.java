@@ -39,17 +39,17 @@ public class MaxWaterTrapped3D {
     return waterSum;
   }
 
-    // the border cells are the starting points of the whole BFS process
+  // the border cells are the starting points of the whole BFS process
   private void processBorder(int[][] matrix, boolean[][] visited, PriorityQueue<Pair> minHeap, int rows, int cols) { 
     for (int j = 0; j < cols; j++) {
-      minHeap.offer(new Pair(0, j, matrix[0][j]));                // left border 
-      minHeap.offer(new Pair(rows - 1, j, matrix[rows - 1][j]));  // right border
+      minHeap.offer(new Pair(0, j, matrix[0][j]));                   // leftBorder 
+      minHeap.offer(new Pair(rows - 1, j, matrix[rows - 1][j]));     // rightBorder
       visited[0][j] = true;
       visited[rows - 1][j] = true;
     }
       
-    for (int i = 1; i < rows - 1; i++) {                          // top border
-      minHeap.offer(new Pair(i, 0, matrix[i][0]));                // down border
+    for (int i = 1; i < rows - 1; i++) {                             // topBorder
+      minHeap.offer(new Pair(i, 0, matrix[i][0]));                   // downBorder
       minHeap.offer(new Pair(i, cols - 1, matrix[i][cols - 1]));
       visited[i][0] = true;
       visited[i][cols - 1] = true;
