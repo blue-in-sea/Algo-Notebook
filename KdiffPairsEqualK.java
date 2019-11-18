@@ -3,8 +3,28 @@
  */
 
 class KdiffPairsEqualK {
-    // Time: O(N) for one Hash Map 
-    // Space: O(N)
+    // Method 1: Two Hash Sets
+    // Time: O(N), Space: O(2N) -> O(N)
+    public int findPairs(int[] nums, int k) {
+        if (nums == null || nums.length == 0 || k < 0) {
+            return 0;
+        }
+        Set<Integer> seen = new HashSet<>();
+        Set<Integer> used = new HashSet<>();
+        for (int num : nums) {
+            if (k != 0 && seen.contains(num + k)) {
+                used.add(num);
+            }
+            if (seen.contains(num - k)) {
+                used.add(num - k);
+            }
+            seen.add(num);
+        }
+        return used.size();
+    }
+    
+    // Method 2: One Hash Map
+    // Time: O(N), Space: O(N)
     public int findPairs(int[] nums, int k) {
         if (nums == null || nums.length == 0 || k < 0) {
             return 0;
@@ -42,6 +62,7 @@ class KdiffPairsEqualK {
             
         }
     }
+    
     // K = 0 as a separate corner case
     // Version 0
     public int findPairs(int[] nums, int k) {
