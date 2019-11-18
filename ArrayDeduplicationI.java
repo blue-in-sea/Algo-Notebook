@@ -1,6 +1,6 @@
 /** 
- * s: the part on the left side of s (exclusive s) are processed are part
- * f: linear scan
+ * s: all elements to the left side of s (excluding s) are results that are processed
+ * f: the current index when linear scan
  * return array[s-1]
  * 
  * initialize s = f = 1
