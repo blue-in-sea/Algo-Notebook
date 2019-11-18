@@ -12,5 +12,57 @@
  */
 
 public class ArrayDeduplicationIII {
-
+  /**
+   * Given a sorted integer array, remove duplicate elements. 
+   * For each group of elements with the same value do not keep any of them. 
+   *
+   * Do this in-place, using the left side of the original array 
+   * and maintain the relative order of the elements of the array. Return the array after deduplication.
+   */
+  public int[] dedup(int[] array) {
+    // assume array is not null
+    if (array.length <= 1) {
+      return array;
+    }
+    int slow = 0;
+    int fast = 0;
+    while (fast < array.length) {
+      int next_fast = fast;
+      while (next_fast < array.length && array[next_fast] == array[fast]) {
+        next_fast++;
+      }
+      if (next_fast - fast == 1) {
+        array[slow] = array[fast];
+        slow++;
+      }
+      fast = next_fast;
+    }
+    return Arrays.copyOf(array, slow);
+  }
+  
+  /**
+   * Remove adjacent, repeated characters in a given string, leaving only no character 
+   * for each group of such characters. The characters in the string are sorted in ascending order.
+   */  
+  public String deDup(String input) {
+    if (input == null || input.length() <= 1) {
+      return input;
+    }
+    char[] array = input.toCharArray();
+    int slow = 0;
+    int fast = 0;
+    while (fast < array.length) {
+      int next_fast = fast;
+      while (next_fast < array.length && array[next_fast] == array[fast]) {
+        next_fast++;
+      }
+      if (next_fast - fast == 1) {
+        array[slow] = array[fast]; 
+        slow++;
+        fast++; // with or without, either works
+      }
+      fast = next_fast;
+    }
+    return new String(array, 0, slow);
+  }
 }
