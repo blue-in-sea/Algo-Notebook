@@ -1,4 +1,34 @@
+/** 
+ * Given a non-negative integer 2D array representing the heights of bars in a matrix. 
+ * Suppose each bar has length and width of 1. Find the largest amount of water that can be trapped in the matrix. 
+ * The water can flow into a neighboring bar if the neighboring bar's height is smaller than the water's height. 
+ * Each bar has 4 neighboring bars to the left, right, up and down side.
+ * 
+ * Assumptions: 
+ * The given matrix is not null and has size of M * N, where M > 0 and N > 0, all the values are non-negative integers in the matrix.
+ * Examples:
+ * { { 2, 3, 4, 2 },
+ *   { 3, 1, 2, 3 },
+ *  { 4, 3, 5, 4 } }
+ * the amount of water can be trapped is 3, 
+ * at position (1, 1) there is 2 units of water trapped,
+ * at position (1, 2) there is 1 unit of water trapped.   
+ */
+
 public class MaxWaterTrapped3D {
+  /** 
+   * Data Str: min heap 
+   * (heap stores [i, j] of the nodes in the matrix, sorted from min to max based on node's height)
+   * 
+   * Algo:
+   * 1) first, put all border nodes into the heap, every node's value is the water-level height
+   * !! lowest node's value represents the lowest height of entire matrix
+   * 2) second, pop min from heap, the node popped has the lowest height
+   * 3) third, generate all neighbors of the node
+   * !! 每个neighbor的水位的最低可能值，就是当前node的水位 !!
+   *
+   * The entire process starts from the 4-borders of the matrix, and gradually define the higher's the water-level height
+   */
   public int maxTrapped(int[][] matrix) {
     // assume matrix is not null, has size M * N
     // M > 0 & N > 0, all the values are non-negative integers
@@ -30,9 +60,11 @@ public class MaxWaterTrapped3D {
         // if necessary, mark the neighbor cell as visited, and offer 
         // the neighbor cell into minHeap 
         visited[nei.x][nei.y] = true;
-        // how much water can be trapped at the neighbor cell
+        
+        // key!! how much water can be trapped at the neighbor cell
         waterSum += Math.max(cur.height - nei.height, 0);
         nei.height = Math.max(cur.height, nei.height);
+        
         minHeap.offer(nei);
       }
     }
