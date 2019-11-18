@@ -3,7 +3,47 @@
  */
 
 class KdiffPairsEqualK {
+    // Time: O(N) for one Hash Map 
+    // Space: O(N)
+    public int findPairs(int[] nums, int k) {
+        if (nums == null || nums.length == 0 || k < 0) {
+            return 0;
+        }
+
+        int cnt = 0;
+        if (k == 0) {
+            // case 1
+            Map<Integer, Integer> map = new HashMap<>();
+            for (int num : nums) {
+                if (map.containsKey(num) && map.get(num) == 1) {
+                    cnt++;
+                }
+                map.put(num, map.getOrDefault(num ,0) + 1);
+            }
+            return cnt;
+            
+        } else {
+            // case 2
+            Map<Integer, Boolean> map = new HashMap<>();
+            for (int num : nums) {
+                map.put(num, true);
+            }
+
+            for (int num : nums) {
+                if (map.containsKey(num - k) && map.get(num) && map.get(num - k)) {
+                    cnt++; 
+                }
+                if (map.containsKey(num + k) && map.get(num) && map.get(num + k)) {
+                    cnt++;
+                }
+                map.put(num, false);
+            }
+            return cnt;
+            
+        }
+    }
     // K = 0 as a separate corner case
+    // Version 0
     public int findPairs(int[] nums, int k) {
         if (nums == null || nums.length == 0 || k < 0) {
             return 0;
