@@ -1,4 +1,4 @@
-public class MaxWaterTrappedI {
+public class MaxWaterTrapped {
   // Optimization on Space: Two Pointers (leftMax + rightMax)
   // Time: O(N)
   // Space: O(1)
