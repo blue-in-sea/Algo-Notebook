@@ -18,7 +18,7 @@
 public class MaxWaterTrapped3D {
   /** 
    * Data Str: min heap 
-   * (heap stores [i, j] of the nodes in the matrix, sorted from min to max based on node's height)
+   * (heap stores <i, j> of the nodes in the matrix, sorted from min to max based on node's height)
    * 
    * Algo:
    * 1) first, put all border nodes into the heap, every node's value is the water-level height
@@ -126,3 +126,18 @@ public class MaxWaterTrapped3D {
     }
   }
 }
+
+/**
+ * For every point Pi <xi, yi, zi> on the border, set the water level to zi
+ * For every point Pj not on the border, set the water level to INFINITY
+ * Insert all Pi into MIN_HEAP = (set of all active points)
+ * 
+ * While MIN_HEAP is not empty:           // Best-First-Search (BFS2)
+ *      P = MIN_HEAP.pop();               // Select the active P with the minimum level
+ *      SUM += Level(P) - Height(P)
+ *       
+ *      For every point Q adjacent to P:
+ *          If Level(Q) is INFINITY:      // dedup
+ *          Level(Q) = max( Height(Q), Level(P) ) // !! key
+ *          Offer Q into MIN_HEAP
+ */
