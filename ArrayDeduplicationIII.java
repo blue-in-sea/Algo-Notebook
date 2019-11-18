@@ -6,7 +6,7 @@
  * 
  * initialize s = f = next_f = 0
  * 1) next_f = f keep doing next_f++ util a[next_f] != a[f]
- * 2) 
+ * 2) otherwise
  *    case 1: a[next_f] - a[f] == 1, s++, f++ or f = next_f  (element appear only once, so keep one)
  *    case 2: a[next_f] - a[f]   > 1, f = next_f             (element appear more than one, keep none)
  */
