@@ -1,5 +1,11 @@
-// case 1: if a[f] == a[s-1], skip (duplicates)
-// case 2: if a[f] != a[s-1], a[s] = a[f], s++, f++
+/** 
+ * s: the part on the left side of s (exclusive s) are processed are part
+ * f: linear scan 
+ * return array[s-1]
+ *  
+ * case 1: if a[f] == a[s-1], skip (duplicates)
+ * case 2: if a[f] != a[s-1], a[s] = a[f], s++, f++
+ */
 
 public class ArrayDeduplicationI {
   /**
