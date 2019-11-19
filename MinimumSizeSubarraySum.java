@@ -9,7 +9,7 @@ public class MinimumSizeSubarraySum {
      * @param s: An integer
      * @return: an integer representing the minimum size of subarray
      *
-     * Time: O(N) for r moves n steps, l moves n steps, total add up to 2N
+     * Time: O(N) for r moves n steps, l moves n steps, total add up to 2N into the time complexity
      * Space: O(1) 
      */
   public int minimumSize(int[] nums, int s) {
