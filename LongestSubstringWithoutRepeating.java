@@ -54,7 +54,7 @@ public class LongestSubstringWithoutRepeating {
         return res;
     }
   
-    // cnt_arr for all lower letters case
+    // cnt_arr for all lowercase letters 'a-z', no special char or uppercase letters allowed
     public int lengthOfLongestSubstring(String s) {
         int[] cnt = new int[26]; 
         char[] arr = s.toCharArray();
