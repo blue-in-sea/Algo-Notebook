@@ -62,7 +62,7 @@ public class MinimumWindowSubstring  {
         // s[l...(r-1)]
         if (resL == -1) {
             return "";
-        }else {
+        } else {
             return source.substring(resL, resR);
         }
     }
