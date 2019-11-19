@@ -1,3 +1,7 @@
+/**
+ * 同向双指针 l & r
+ * 每次删除左指针左边的数字 只要当前sum小于s，右指针继续向右移动 时间复杂度O(N)
+ */
 public class MinimumSizeSubarraySum {
     /**
      * @param nums: an array of integers
