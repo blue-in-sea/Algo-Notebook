@@ -52,10 +52,37 @@ public class KthSmallestInUnsortedArray {
   
   /**
    * Method 2: MAX HEAP Online Algo
-   * Time: O(k + (n-k) logk)
+   * Time: O((n-k) logk)
    * 
    * @param k: An integer
    * @param nums: An integer array
    * @return: kth smallest element
    */
+  public int kthSmallest(int k, int[] nums) {
+    // corner case:
+    if (nums == null || nums.length == 0 || k <= 0) {
+      return -1; // return a special value
+    }
+    
+    PriorityQueue<Integer> maxHeap = new PriorityQueue<>(k, new Comparator<Integer>() {
+      @Override 
+      public int compare (Integer e1, Integer e2) {
+        if (e1.equals(e2)) {
+          return 0;
+        }
+        return e1 > e2 ? -1 : 1;
+      }
+    });
+    
+    for (int i = 0; i < nums.length; i++) {  // O((n-k) logk)
+      if (i < k) {
+        maxHeap.offer(nums[i]);
+      } else if (nums[i] < maxHeap.peek()) {
+        maxHeap.poll();
+        maxHeap.offer(nums[i]);
+      }
+    }
+    
+    return maxHeap.peek();
+  }
 }
