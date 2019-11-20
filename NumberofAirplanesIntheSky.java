@@ -1,4 +1,4 @@
-// Solution 1: Time O(nlogn) = sorting the input 2 * O(nlogn) + check all points 2 * O(n)
+// Solution 1: Time O(nlogn) = sorting the input O(nlogn) + check all points O(n)         [n = airplance.size() * 2]
 /**
  * Definition of Interval:
  * public classs Interval {
