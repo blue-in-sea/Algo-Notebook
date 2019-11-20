@@ -7,7 +7,6 @@ public class KthSmallestInUnsortedArray {
    * @param nums: An integer array
    * @return: kth smallest element
    */
-  
   public int kthSmallest(int k, int[] nums) {
     return quickSelect(nums, 0, nums.length - 1, k - 1);
   }
@@ -50,4 +49,13 @@ public class KthSmallestInUnsortedArray {
     A[left] = A[right];
     A[right] = temp;
   }
+  
+  /**
+   * Method 2: MAX HEAP Online Algo
+   * Time: O(k + (n-k) logk)
+   * 
+   * @param k: An integer
+   * @param nums: An integer array
+   * @return: kth smallest element
+   */
 }
