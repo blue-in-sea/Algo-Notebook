@@ -1,4 +1,4 @@
-// Solution 1: Time O(nlogn) for sort the input 
+// Solution 1: Time O(nlogn) = sorting the input 2 * O(nlogn) + check all points 2 * O(n)
 /**
  * Definition of Interval:
  * public classs Interval {
