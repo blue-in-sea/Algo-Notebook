@@ -18,7 +18,7 @@ public class KthSmallestInUnsortedArray {
     }
     
     int left = start, right = end;
-    int pivot[start + (end - start) / 2];
+    int pivot = A[start + (end - start) / 2];
     
     while (left <= right) {
       while (left <= right && A[left] < pivot) {
@@ -34,10 +34,10 @@ public class KthSmallestInUnsortedArray {
     }
     
     if (right >= k && start <= right) {
-      quickSelect(A, start, right, k);   // [ x ] P [   ]
+      return quickSelect(A, start, right, k);   // [ x ] P [   ]
       
     } else if (left <= k && left <= end) {
-      quickSelect(A, left, end, k);      // [   ] P [ x ]
+      return quickSelect(A, left, end, k);      // [   ] P [ x ]
       
     } else {
       return A[k];                       // [   ] P [   ]  where P is the Kth Smallest, at A[K - 1] position
