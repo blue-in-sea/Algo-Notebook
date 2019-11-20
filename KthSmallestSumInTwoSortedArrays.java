@@ -25,10 +25,11 @@ public class KthSmallestSumInTwoSortedArrays {
     // and at least one of them is not empty
     // 1 <= K <= total lengths of the two sorted arrays
     PriorityQueue<Cell> minHeap = new PriorityQueue<Cell>(k, new CellComparator());
-    boolean[][] visited = new boolean[A.length][B.length];
+    boolean[][] visited = new boolean[A.length][B.length];  
+    // if don't use vistied, when meet the 6th-cell, the 5th-cell is doubtly generated into heap, pattern repeats, see note
 
     minHeap.offer(new Cell(0, 0, A[0] + B[0]));
-    visited[0][0] = true;
+    visited[0][0] = true;  
 
     for (int i = 0; i < k - 1; i++) {
       Cell c = minHeap.poll();
