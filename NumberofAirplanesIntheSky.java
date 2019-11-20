@@ -41,8 +41,7 @@ public class NumberofAirplanesIntheSky {
         
         Collections.sort(list, Event.MyComparator);
         int sky = 0, res = 1;  
-        // when interval all miss each other 
-        // at leaste one plane will in the sky
+        // when airplanes = [], return 0, or res = 1 (but sanity check airplanes is empty)
         for (Event e : list) {
             if (e.type == 1) {
                 sky++;
@@ -55,3 +54,4 @@ public class NumberofAirplanesIntheSky {
         return res;
     }
 }
+
