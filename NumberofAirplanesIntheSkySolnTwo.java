@@ -1,5 +1,4 @@
-// Solution 2: Time O(n^2) = check all [i, j] priority O(n!) + check all points 2 * O(n)
-
+// Solution 2: Time O(n^2) = check all [i, j] schedule O(n^2) + check all points O(n)   [n = airplance.size() * 2]
 /**
  * Definition of Interval:
  * public classs NumberofAirplanesIntheSkySolnTwo {
