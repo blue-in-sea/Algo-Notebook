@@ -1,3 +1,5 @@
+// Solution 2: Time O(n^2) = check all [i, j] priority O(n!) + check all points 2 * O(n)
+
 /**
  * Definition of Interval:
  * public classs NumberofAirplanesIntheSkySolnTwo {
