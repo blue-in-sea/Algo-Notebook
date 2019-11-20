@@ -8,7 +8,6 @@
  *     }
  * }
  */
- 
 class Event {
     public int time;
     public int type; // 1: take off, 0: landing
@@ -33,7 +32,6 @@ public class NumberofAirplanesIntheSky {
      * @param airplanes: An interval array
      * @return: Count of airplanes are in the sky.
      */
-    
     public int countOfAirplanes(List<Interval> airplanes) {
         List<Event> list = new ArrayList<>(airplanes.size() * 2);
         for (Interval plane : airplanes) {
