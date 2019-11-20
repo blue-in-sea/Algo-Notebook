@@ -29,7 +29,7 @@ public class KthSmallestInUnsortedArray {
       }
       
       if (left <= right) {
-        swap(A, left--, right++);
+        swap(A, left++, right--);
       }
     }
     
