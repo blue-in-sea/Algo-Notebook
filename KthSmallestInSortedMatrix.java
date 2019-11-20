@@ -1,9 +1,9 @@
 public class KthSmallestInSortedMatrix {
   /**
-    * @param matrix: a matrix of integers
-    * @param k: An integer
-    * @return: the kth smallest number in the matrix
-    */
+   * @param matrix: a matrix of integers
+   * @param k: An integer
+   * @return: the kth smallest number in the matrix
+   */
   class Cell {
     public int x, y, val;
     public Cell(int x, int y, int val) {
