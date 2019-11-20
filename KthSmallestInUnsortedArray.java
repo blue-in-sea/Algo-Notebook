@@ -2,6 +2,7 @@ public class KthSmallestInUnsortedArray {
   /**
    * Method 1: Quick Select 
    * Time: avg O(n), worst O(N^2) depends on the pivot selection
+   * Space: depends on how many stack calls 
    * 
    * @param k: An integer
    * @param nums: An integer array
@@ -53,6 +54,7 @@ public class KthSmallestInUnsortedArray {
   /**
    * Method 2: MAX HEAP Online Algo
    * Time: O((n-k) logk)
+   * Space: O(k) 
    * 
    * @param k: An integer
    * @param nums: An integer array
