@@ -1,3 +1,4 @@
+// Solution 1: Time O(nlogn) for sort the input 
 /**
  * Definition of Interval:
  * public classs Interval {
