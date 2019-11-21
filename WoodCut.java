@@ -3,6 +3,8 @@ public class WoodCut {
      * @param L: Given n pieces of wood with length L[i]
      * @param k: An integer
      * @return: The maximum length of the small pieces
+     *
+     * Time: O(n logL) where n is number of woods in the arr, L is the max length among all given woods
      */
     public int woodCut(int[] L, int k) {
         int res = 0;
