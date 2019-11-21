@@ -79,4 +79,42 @@ public class CourseSchedule {
     }
     return map;
   }
+  
+  // Approach 2: 裸拓扑排序
+  public boolean canFinish(int numCourses, int[][] prerequisites) {
+    List[] edges = new ArrayList[numCourses];
+    int[] degree = new int[numCourses];
+
+    for (int i = 0;i < numCourses; i++) {
+      edges[i] = new ArrayList<Integer>();
+    }
+
+    for (int i = 0; i < prerequisites.length; i++) {
+      degree[prerequisites[i][0]]++;  // inDegree
+      edges[prerequisites[i][1]].add(prerequisites[i][0]);  // build graph
+    }
+
+    Queue<Integer> queue = new LinkedList<>();
+    for (int i = 0; i < degree.length; i++) {
+      if (degree[i] == 0) {
+        queue.add(i);  // put no prerequisite class into our queue 
+      }
+    }
+
+    int cnt = 0;
+    while (!queue.isEmpty()) {
+      int course = (int)queue.poll();
+      cnt++;  // cnt will increase one unit whenever a course's indegree reset to 0
+      int n = edges[course].size();
+      for (int i = 0; i < n; i++) {
+        int pointer = (int)edges[course].get(i);
+        degree[pointer]--;
+        if (degree[pointer] == 0) {
+          queue.offer(pointer);
+        }
+      }
+    }
+    
+    return cnt == numCourses;
+  }
 }
