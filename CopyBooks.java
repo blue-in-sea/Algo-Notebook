@@ -41,4 +41,39 @@ public class CopyBooks {
     }
     
     // version 2
+    public int copyBooks(int[] pages, int k) {
+        // 二分抄书时间
+        int l = 0;
+        int r = Integer.MAX_VALUE;
+        
+        while (l + 1 < r) {
+            int mid = l + (r - l) / 2;
+            if (check(pages, mid, k)) {
+                r = mid;
+            } else {
+                l = mid;
+            }
+        }
+        
+        if (check(pages, l, k)) {
+            return l;
+        }
+        return r;  // l | r when while stops, return a lower bound
+    }
+    
+    private boolean check(int[] pages, int timeLimit, int k) {
+        int person = 0;
+        int remain = 0;
+        for (int book : pages) {
+            if (book > timeLimit) {
+                return false;
+            }
+            if (book > remain) {
+                person++;
+                remain = timeLimit;
+            }
+            remain -= book;
+        }
+        return person <= k;
+    }
 }
