@@ -31,3 +31,5 @@ public class HeapInsertIntoArray {
     array[large] = tmp;
   }
 }
+// defintion ref: https://www.cs.cmu.edu/~adamchik/15-121/lectures/Binary%20Heaps/heaps.html
+// code ref: http://www.algolist.net/Data_structures/Binary_heap/Insertion
