@@ -1,7 +1,7 @@
 public class SquareRootI {
   public int sqrt(int x) {
     long res = 1;
-    long left = 0, right = x;  // in order to pass <0>, left must be initialed at the lowest value 
+    long left = 0, right = x;  // in order to pass <0>, left must be initialed at the lowest value, or res declared as 0, either works
 
     while (left <= right) {
       long mid = left + (right - left) / 2;
