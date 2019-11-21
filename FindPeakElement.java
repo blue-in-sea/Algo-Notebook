@@ -8,7 +8,7 @@ public class FindPeakElement {
             return -1;
         }
         
-        int left = 1, right = A.length - 1; // 1.答案在之间，2.不会出界 
+        int left = 1, right = A.length - 2; // 1.答案在之间，2.不会出界 
         while (left + 1 < right) {
             int mid = left + (right - left) / 2;
       
