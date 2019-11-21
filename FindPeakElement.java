@@ -11,12 +11,12 @@ public class FindPeakElement {
         int left = 1, right = A.length - 1; // 1.答案在之间，2.不会出界 
         while (left + 1 < right) {
             int mid = left + (right - left) / 2;
+      
             //如果中间的数比后一位数大的话，peek点肯定在mid左边或是mid。
-            //如果中间的数比前一位数小的话，peek点肯定在mid右边或是mid。
-            if (A[mid] > A[mid - 1]) {
-                left = mid;
-            } else {
+            if (A[mid] > A[mid + 1]) {
                 right = mid;
+            } else {
+                left = mid;
             }
         }
         // while 结束时 left 和 right 相邻
@@ -25,5 +25,6 @@ public class FindPeakElement {
         } else {
             return left;
         }
+        // 谁大 return 谁
     }
 }
