@@ -7,6 +7,7 @@ public class DataStreamMedian {
         int n = nums.length;
         int[] res = new int[n];
         
+        // PriorityQueue<Integer> maxHeap = new PriorityQueue<>(n, (x, y) -> y - x);
         PriorityQueue<Integer> maxHeap = new PriorityQueue<>(n, Collections.reverseOrder());
         PriorityQueue<Integer> minHeap = new PriorityQueue<>(n);
         
@@ -35,12 +36,13 @@ public class DataStreamMedian {
     }
 }
 
-/*
-reverseOrder()
-Returns a comparator that imposes the reverse of the natural ordering on a collection of objects 
-that implement the Comparable interface.
-https://docs.oracle.com/javase/8/docs/api/?java/util/Collections.html
-*/
-/*
-https://stackoverflow.com/questions/11003155/change-priorityqueue-to-max-priorityqueue
-*/
+/**
+ * reverseOrder()
+ * Returns a comparator that imposes the reverse of the natural ordering on a collection of objects 
+ * that implement the Comparable interface.
+ * https://docs.oracle.com/javase/8/docs/api/?java/util/Collections.html
+ */
+/**
+ * maxHeap or pq override comparator 
+ * https://stackoverflow.com/questions/11003155/change-priorityqueue-to-max-priorityqueue
+ */
