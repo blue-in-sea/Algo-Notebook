@@ -34,7 +34,7 @@ public class MyQueue {
     /*
      * helper function to balance stack 
      */
-    public void move() { 
+    private void move() { 
         if (s2.isEmpty()) {
             while (!s1.isEmpty()) {
                 s2.offerFirst(s1.pollFirst());
