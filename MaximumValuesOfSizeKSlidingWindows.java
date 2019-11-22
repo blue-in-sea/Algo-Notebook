@@ -1,4 +1,5 @@
 public class MaximumValuesOfSizeKSlidingWindows {
+  // Method 1: Maintain a monolithic Deque 
   public List<Integer> maxWindows(int[] array, int k) {
     List<Integer> res = new ArrayList<>();
     // corner case
