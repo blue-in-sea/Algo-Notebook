@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 public class Partition {
     public void partition(int[] array, int pivotIndex) {
         if (array == null || array.length <= 1) {
