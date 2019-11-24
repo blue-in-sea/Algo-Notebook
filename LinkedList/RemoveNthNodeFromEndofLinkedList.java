@@ -8,7 +8,7 @@
  *   }
  * }
  */
-public class Solution {
+public class RemoveNthNodeFromEndofLinkedList {
   public ListNode removeNthFromEnd(ListNode head, int n) {
     ListNode fast = head;
 	  ListNode slow = head;
