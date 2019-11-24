@@ -1,22 +1,39 @@
+/**
+ * class ListNode {
+ *   public int value;
+ *   public ListNode next;
+ *   public ListNode(int value) {
+ *     this.value = value;
+ *     next = null;
+ *   }
+ * }
+ */
 public class RemoveNthNodeFromEndofList {
-    public ListNode removeNthFromEnd(ListNode head, int n) {
-        ListNode dummy = new ListNode(0);
-        dummy.next = head;
-        
-        ListNode slow = dummy; // handle input = [1], n = 1 case
-        ListNode fast = dummy;
-        slow.next = head; 
-        
-        for (int i = 1; i <= n + 1; i++) {
-            fast = fast.next;
-        }
-        
-        while (fast != null) {
-            fast = fast.next;
-            slow = slow.next;
-        }
-        
-        slow.next = slow.next.next; // slow points to the N-th node when exit while
-        return dummy.next;
+  public ListNode removeNthFromEnd(ListNode head, int n) {
+    ListNode fast = head;
+	  ListNode slow = head;
+
+    while (n > 0 && fast != null) {
+      fast = fast.next;
+      n--;
     }
+    // Check if n is greater than the size of linked List 
+    if (n > 0) {
+      return head;
+    }
+
+    // Check if the linked list has only one node
+	  if (fast == null) {
+      return head.next;
+    }
+
+	  while (fast.next != null) {
+      fast = fast.next;
+      slow = slow.next;
+    }
+	  
+    // Remove slow.next which is the nth form the end
+	  slow.next = slow.next.next;
+	  return head;
+  }
 }
