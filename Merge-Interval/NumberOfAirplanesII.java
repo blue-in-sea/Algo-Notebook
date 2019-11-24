@@ -8,7 +8,6 @@
  *     }
  * }
  */
- 
 public class NumberOfAirplanesII {
     /**
      * @param airplanes: An interval array
@@ -24,7 +23,7 @@ public class NumberOfAirplanesII {
 
         int cur = 0;
         for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-            cur += entry.getValue();
+            cur += (int) entry.getValue();
             list.add(Arrays.asList((int) entry.getKey(), cur));
         }
         return list;
@@ -81,5 +80,11 @@ public class NumberOfAirplanesII {
         list = soln.statusOfAirplanes(flightStatus);
         printInput(flightStatus);
         printOutput(list);
+        
+/*
+        for (List<Integer> item : list) {
+            System.out.printf("%d, %d %n", item.get(0), item.get(1));
+        }
+ */
     }
 }
