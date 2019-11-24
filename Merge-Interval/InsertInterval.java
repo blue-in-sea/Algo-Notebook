@@ -1,7 +1,29 @@
-/*
-
-
-*/
+/**
+ * ___: current interval(i); _ _ _: newInterval
+ *
+ * 1) i.end < newInterval.start，then we can safely add i to result;
+ * 	  newInterval still needs to be compared with latter intervals
+ * 
+ * 	  |________|
+ * 			         |_ _ _ _ _|
+ * 			
+ * 2) i.start > newInterval.end，then we can safely add both to result，
+ * 	  and mark newInterval as null
+ * 	
+ * 			         |________|
+ * 	  |_ _ _ _ _|
+ * 			
+ * 3) There is overlap between i and newInterval. We can merge i into newInterval, 
+ * then use the updated newInterval to compare with latter intervals.
+ * [case 1]	
+ * 	  |________|
+ * 		  |_ _ _ _ _|
+ *
+ * [case 2]	  			
+ *            
+ * 		 |________|
+ * 	 |_ _ _ _ _|			
+ */
 
 class public InsertInterval {  
 
