@@ -2,8 +2,8 @@
 ✮  Topological Sorting
 
 Tree
-	• Binary Tree Level Order Traversal I & II
- 	• Bianry Tree Zig-Zag Order Traversal 
+  • Binary Tree Level Order Traversal I & II
+  • Bianry Tree Zig-Zag Order Traversal 
   • Tree Serialization & Deserialization
   • Convert Binary Tree to Linked List by Depth
   
