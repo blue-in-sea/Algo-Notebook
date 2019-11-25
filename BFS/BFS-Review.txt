@@ -12,12 +12,12 @@ Matrix
   • Knight Shortest Path
   
 Graph
-	• Clone Graph (BFS & DFS)
- 	• Word Ladder
+  • Clone Graph (BFS & DFS)
+  • Word Ladder
   
 Topological Sort
-	• Course Schedule II
- 	• Alien Dictionary 
+  • Course Schedule II
+  • Alien Dictionary 
   
 	
 Follow-up
