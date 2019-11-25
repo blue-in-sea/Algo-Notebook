@@ -104,7 +104,7 @@ public class CourseSchedule {
     int cnt = 0;
     while (!queue.isEmpty()) {
       int course = (int)queue.poll();
-      cnt++;  // cnt will increase one unit whenever a course's indegree reset to 0
+      cnt++; // cnt will increase one unit whenever a course's indegree reset to 0 (出队列的时候加）
       int n = edges[course].size();
       for (int i = 0; i < n; i++) {
         int pointer = (int)edges[course].get(i);
