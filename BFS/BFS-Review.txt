@@ -22,8 +22,8 @@ Topological Sort
 	
 Follow-up
 BFS in Graph 
-	• Graph Valid Tree
- 	• Search Graph Nodes
+  • Graph Valid Tree
+  • Search Graph Nodes
   • Connected Component in an undirected graph
   • Sequence Reconstruction
  
