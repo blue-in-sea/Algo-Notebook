@@ -20,7 +20,7 @@
   *   }
   * }
   */
-  public class IterativeTraversalOfBinaryTree {
+public class IterativeTraversalOfBinaryTree {
   /**
    * Pre-order Traversal Of Binary Tree (iterative)
    * Time: O(N), Space: O(H)
@@ -106,4 +106,4 @@
       cur = cur.right;
     } // cur = null -> end while
   }
-  }
+}
