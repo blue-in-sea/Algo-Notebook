@@ -104,6 +104,7 @@ public class IterativeTraversalOfBinaryTree {
       stack.offerFirst(cur);
       res.add(cur.key);
       cur = cur.right;
-    } // cur = null -> end while
+    } 
   }
+  
 }
