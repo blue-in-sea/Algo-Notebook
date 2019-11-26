@@ -83,10 +83,27 @@ public class IterativeTraversalOfBinaryTree {
    * Post-order Traversal Of Binary Tree (iterative)
    * Time: O(N), Space: O(H)
    */
-  public List<Integer> PostOrder(TreeNode root) {
-    
+  public List<Integer> PostOrder(TreeNode root) {    
+    List<Integer> res = new ArrayList<>();
+    if (root == null) {
+      return res;
+    }
+    Deque<TreeNode> stack = new LinkedList<>();	
+    pushRight(root, stack, res);
+	  while (!stack.isEmpty()) {
+		  TreeNode cur = stack.pollFirst();
+		  cur = cur.left;
+		  pushRight(cur, stack, res);
+	  }
+    Collections.reverse(res);
+    return res;
   }
-  
- 
 
+  private void pushRight(TreeNode cur, Deque<TreeNode> stack, List<Integer> res) {
+    while (cur != null) {
+      stack.offerFirst(cur);
+      res.add(cur.key);
+      cur = cur.right;
+    } // cur = null -> end while
+  }
 }
