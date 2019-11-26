@@ -14,7 +14,7 @@ public class IterativeOrderTraversalOfBinaryTree2 {
     if (root == null) {
       return preorder;
     }
-    Deque<TreeNode> stack = new LinkedList<TreeNode>();
+    Deque<TreeNode> stack = new LinkedList<>();
     stack.offerFirst(root);
     while (!stack.isEmpty()) {
       TreeNode cur = stack.pollFirst();
