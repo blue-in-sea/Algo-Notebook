@@ -24,30 +24,30 @@ public class IterativeTraversalOfBinaryTree {
   
   /**
    * In-order Traversal Of Binary Tree (iterative)
+   * Time: O(N), Space: O(H)
    */
-  public List<Integer> InOrder(TreeNode root) {
+  public List<Integer> inOrder(TreeNode root) {
     List<Integer> res = new ArrayList<>();
     if (root == null) {
       return res;
     }
     
-    Deque<Integer> stack = new LinkedList<>();
+    Deque<TreeNode> stack = new LinkedList<>();	
     pushLeft(root, stack);
-    
-    while (!stack.isEmpty()) {
-      TreeNode cur = stack.offerFirst();
-      res.add(cur);
-      cur = cur.right;
-      pushLeft(cur, stack);
-    }
-    
+	  while (!stack.isEmpty()) {
+		  TreeNode cur = stack.pollFirst();
+		  res.add(cur.key);
+		  cur = cur.right;
+		  pushLeft(cur, stack);
+	  }
+    return res;
   }
-  
-  private void pushLeft(TreeNode cur, Deque<Integer> stack) {
-    while (!cur.isEmpty()) {
-      stack.offer(cur);
+
+  private void pushLeft(TreeNode cur, Deque<TreeNode> stack) {
+    while (cur != null) {
+      stack.offerFirst(cur);
       cur = cur.left;
-    } // cur = null : reach beyond leaf-node -> end while
+    } // cur = null -> end while
   }
   
 }
