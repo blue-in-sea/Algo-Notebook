@@ -7,7 +7,7 @@
  *
  * Pre-order traversal is [5, 3, 1, 4, 8, 11]
  *  In-order traversal is [1, 3, 4, 5, 8, 11]
- * Postorder traversal is [1, 4, 3, 11, 8, 5]
+ * Postorder traversal is [1, 4, 3, 11, 8, 5]   ==>   [5, 8, 11, 3, 4, 1]
  */
 
 /**
@@ -54,6 +54,28 @@ public class IterativeTraversalOfBinaryTree {
    * Post-order Traversal Of Binary Tree (iterative)
    * Time: O(N), Space: O(H)
    */
-	
+	public List<Integer> PostOrder(TreeNode root) {
+    if (root == null) {
+      return res;
+    }
+    
+    Deque<TreeNode> stack = new LinkedList<>();
+    pushRight(root, stack);
+    
+    while (!stack.isEmpty()) {
+      TreeNode cur = stack.pollFirst();
+      res.add(cur);
+      cur = cur.left;
+      pushRight
+    }
+    Collections.reverse(res);
+    return res;
+  }
   
+  private void pushRight(TreeNode cur, Deque<TreeNode> stack) {
+    while (cur != null) {
+      stack.offerFirst(cur);
+      cur = cur.right;
+    }
+  }
 }
