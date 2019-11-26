@@ -25,7 +25,6 @@ public class IterativeTraversalOfBinaryTree {
    * Pre-order Traversal Of Binary Tree (iterative)
    * Time: O(N), Space: O(H)
    */
-
   public List<Integer> preOrder(TreeNode root) {
     // Time: O(N), Space: O(H)
     List<Integer> res = new ArrayList<>();
