@@ -28,7 +28,7 @@ public class CheckIfBinaryTreeIsBalanced {
   }
   
   // Method 2: 从顶至底DFS，以每个节点为根节点，递归判断是否是平衡二叉树
-  // Time: O(N^2) Not Recommended
+  // Time: O(NlogN) Not Recommended
   // Spce: O(H)
   public boolean isBalanced(TreeNode root) {
     if (root == null)  return true;
