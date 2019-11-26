@@ -94,6 +94,4 @@ public class IterativeOrderTraversalOfBinaryTree2 {
     Collections.reverse(postorder);
     return postorder;
   }
-  
-  
 }
