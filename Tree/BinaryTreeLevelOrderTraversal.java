@@ -10,7 +10,7 @@
  * }
  */
 
-public class Solution {
+public class BinaryTreeLevelOrderTraversal {
     /**
      * @param root: A Tree
      * @return: Level order a list of lists of integer
