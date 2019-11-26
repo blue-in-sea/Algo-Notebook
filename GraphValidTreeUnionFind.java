@@ -1,4 +1,4 @@
-public class GraphValidTree {
+public class GraphValidTreeUnionFind {
   /**
    * Method 3: Union Find
    */
