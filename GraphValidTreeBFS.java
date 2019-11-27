@@ -1,9 +1,10 @@
 public class GraphValidTreeBFS {
   /**
-   * BFS Approach 1: 只在neighbor没有被遍历过时才放入queue中
+   * BFS Approach Thinking: 只在neighbor没有被遍历过时才放入queue中
    * 这样，在遍历出队列时，如果遇到元素被二次访问就说明有cycle,
    * 最后遍历visited[]，确认每一个元素都被遍历到，才是valid tree（没有落单的节点）
    */
+  // version 1: boolean array
   public boolean validTree(int n, int[][] edges) {
     // initializa (adjacency list) graph map
     Map<Integer, List<Integer>> map = new HashMap<>(n);
@@ -33,9 +34,9 @@ public class GraphValidTreeBFS {
       }
       visited[cur] = true;
 
-      for (Integer nei : map.get(cur)) {
+      for (Integer nei : map.get(cur)) {  // expand
         if (!visited[nei]) {
-          queue.offer(nei);
+          queue.offer(nei);              // generate
         }
       }
     }
@@ -49,4 +50,50 @@ public class GraphValidTreeBFS {
     // if found no circle, we need a default return value for the program 
     return true;
   }
+  
+  // version 2: hash set
+  public boolean validTree(int n, int[][] edges) {
+    // corner case !!
+    if (edges.length == 0) {
+      return n == 1;
+    }
+    // initializa (adjacency list) graph map
+    Map<Integer, List<Integer>> map = new HashMap<>(n);
+
+    // intialize vertices
+    for (int i = 0; i < n; i++) {
+      map.put(i, new ArrayList<Integer>());
+    }
+
+    // add edges : “a tree is an undirected graph in which any two vertices are 
+    // connected by exactly one path. In other words, any connected graph without 
+    // simple cycles is a tree.”
+    for (int[] edge : edges){
+      map.get(edge[0]).add(edge[1]);
+      map.get(edge[1]).add(edge[0]);
+    }
+
+    Set<Integer> visited = new HashSet<>();
+    Queue<Integer> queue = new LinkedList<>();
+    queue.offer(edges[0][0]);
+    // marked as visited when expanding 
+    // corner case: seed (or egde), or root is invalid!!!
+
+    while (!queue.isEmpty()) {
+      int cur = queue.poll();
+
+      if (!visited.add(cur)) {
+        return false;
+      }
+
+      for (int nei : map.get(cur)) {    // expand
+        if (!visited.contains(nei)) { 
+          queue.offer(nei);             // generated
+        }
+      }
+    }
+    // if found no circle, we need a default return value for the program 
+    return visited.size() == n;
+  }
+
 }
