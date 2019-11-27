@@ -5,6 +5,8 @@ public class GraphValidTreeBFS {
    * 最后遍历visited[]，确认每一个元素都被遍历到，才是valid tree（没有落单的节点）
    */
   // version 1: boolean array
+  // Time: O(V + E) for building graph takes O(E), and BFS takes O(V + E)
+  // Space: O(V) for boolean array
   public boolean validTree(int n, int[][] edges) {
     // initializa (adjacency list) graph map
     Map<Integer, List<Integer>> map = new HashMap<>(n);
@@ -52,6 +54,9 @@ public class GraphValidTreeBFS {
   }
   
   // version 2: hash set
+  // Time: O(V + E) for building graph takes O(E), and BFS takes O(V + E), and set contains and add take constant O(1) 
+  //                (but might hash collision become O(V)), worst case BFS part will become O(V + VE) = O(VE) !!)
+  // Space: O(V) for HashSet
   public boolean validTree(int n, int[][] edges) {
     // corner case !!
     if (edges.length == 0) {
