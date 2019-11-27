@@ -63,7 +63,7 @@ public class BinaryTreeVerticalOrderTraversal {
     /** 
      * Soln 2: using Hash Map + post-processing
      */
-        public List<List<Integer>> verticalOrder(TreeNode root) {
+    public List<List<Integer>> verticalOrder(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
         
         if (root == null) {
