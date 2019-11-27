@@ -95,5 +95,4 @@ public class GraphValidTreeBFS {
     // if found no circle, we need a default return value for the program 
     return visited.size() == n;
   }
-
 }
