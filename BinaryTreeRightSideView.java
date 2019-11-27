@@ -14,6 +14,8 @@ public class BinaryTreeRightSideView {
     /**
      * @param root: the root of the given tree
      * @return: the values of the nodes you can see ordered from top to bottom
+     *
+     * Soln 1: BFS
      */
     public List<Integer> rightSideView(TreeNode root) {
         List<Integer> view = new ArrayList<>();
