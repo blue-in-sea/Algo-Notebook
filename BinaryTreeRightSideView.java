@@ -49,4 +49,31 @@ public class BinaryTreeRightSideView {
         
         return view;
     }
+    /**
+     * Soln 2: DFSC!!!
+     */
+    public List<Integer> rightSideView(TreeNode root) {
+        // <K, V> : <Depth, Value of the Node>
+        Map<Integer, Integer> map = new HashMap<>();
+        dfs(map, root, 0);
+        
+        int depth = 0;
+        List<Integer> view = new ArrayList<>();
+        while (map.containsKey(depth)) {
+            view.add(map.get(depth));
+            depth++;
+        }
+        
+        return view;
+    }
+    
+    private void dfs(Map<Integer, Integer> map, TreeNode root, int depth) {
+        if (root == null) {
+            return;
+        }
+        
+        map.put(depth, root.val);
+        dfs(map, root.left, depth + 1);
+        dfs(map, root.right, depth + 1);
+    }
 }
