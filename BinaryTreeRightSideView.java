@@ -50,11 +50,11 @@ public class BinaryTreeRightSideView {
         return view;
     }
     /**
-     * Soln 2: DFSC!!!
+     * Soln 2: DFS !!!
      */
     public List<Integer> rightSideView(TreeNode root) {
         // <K, V> : <Depth, Value of the Node>
-        Map<Integer, Integer> map = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>();  // map 存的 node 会被最右边的 node 覆盖掉
         dfs(map, root, 0);
         
         int depth = 0;
