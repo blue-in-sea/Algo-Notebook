@@ -14,6 +14,9 @@ public class BinaryTreeVerticalOrderTraversal {
     /**
      * @param root: the root of tree
      * @return: the vertical order traversal
+     * 
+     * Soln 1: using Tree Map (self-balancing binary search tree)
+     * [Time to insert n-th element = O(Log (n-1))]
      */
     public List<List<Integer>> verticalOrder(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
