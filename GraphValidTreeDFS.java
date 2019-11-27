@@ -1,5 +1,9 @@
 public class GraphValidTreeDFS {
-  // DFS 1-1
+  /**
+   * DFS Approach Thinking: 类似BFS, 只是在recursive放入parent和当前节点 cur 时, 
+   * 选择cur != parent才进行下一层hasCycle的递归, 这样如果出现二次访, 就说明了有cycle. 
+   */
+  // version 1: dfs helper default return as true, if found no cycle
   public boolean validTree(int n, int[][] edges) {
     // initialize (adjacency list) graph map 
     Map<Integer, List<Integer>> map = new HashMap<>();
