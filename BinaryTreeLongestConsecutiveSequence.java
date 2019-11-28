@@ -9,6 +9,38 @@
  * }
  */
 public class BinaryTreeLongestConsecutiveSequence {
+  
+  // Top-down Recursion Approach 
+  // Time: O(N)
+  // Space: O(H)
+  public int longestConsecutive(TreeNode root) {
+    if (root == null) {
+      return 0;
+    }
+
+    int[] max = new int[1]; // attentions for array size
+    dfs(root, root.key, 0, max);
+    return max[0];
+  }
+
+  private void dfs(TreeNode root, int parent, int longest, int[] max) {
+    // base case
+    if (root == null) {
+      return;
+    }
+
+    if (parent == root.key - 1) { // 判断 curNode 能不能与 parentNode 接上
+      longest++;
+    } else {
+      longest = 1;
+    }
+
+    max[0] = Math.max(max[0], longest);
+    dfs(root.left, root.key, longest, max);
+    dfs(root.right, root.key, longest, max);
+  }
+  
+  
   // Bottom-up Recursion Approach 
   // Time: O(N)
   // Space: O(H)
