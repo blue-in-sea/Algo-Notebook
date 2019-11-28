@@ -7,6 +7,8 @@ public class Solution {
     if (start.equals(end)) {
       return 1;
     }
+    
+    // start word and end word already are given in dict
 
     Set<String> visited = new HashSet<>();
     Queue<String> queue = new LinkedList<>();
