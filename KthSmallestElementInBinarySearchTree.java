@@ -21,6 +21,7 @@ public class KthSmallestElementInBinarySearchTree {
         pushLeft(root, stack);
         
         for (int i = 0; i < k - 1; i++) {
+            // inOrder traversal iterative 
             TreeNode cur = stack.pollFirst();
             cur = cur.right;
             pushLeft(cur, stack);
