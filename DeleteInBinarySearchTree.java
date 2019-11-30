@@ -24,6 +24,10 @@ public class DeleteInBinarySearchTree {
     }
     if (key == root.key) {
       if (root.left == null) {
+  /*    TreeNode tmp = root.right;
+        root.right = null;
+        root = null;
+        return tmp;             */
         return root.right;
       } else if (root.right == null) {
         return root.left;
