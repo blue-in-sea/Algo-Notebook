@@ -1,6 +1,6 @@
 public class StringReplaceShorter {
-  // Method 1: not using any String/StringBuilder utility,
-  // and using char[] to do it in-place.
+  // case 1: if a[f .. f+2] == pattern, a[s] = this char in the replacement, s += t.length(), f += s.length()
+  // case 2: if a[f .. f+2] != pattern, a[s] = a[f], s++, f++
   public String replace(String input, String s, String t) {
     // Assumptions: input, s, t are not null, s is not empty
     char[] array = input.toCharArray();
