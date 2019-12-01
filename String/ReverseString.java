@@ -1,7 +1,3 @@
-// String Reversal - Iterative
-// Time = O(n)
-// Space = O(1)
-
 public class ReverseString {
   /**
    * String Reversal - while loop
@@ -25,6 +21,28 @@ public class ReverseString {
     // recursion
     helper(array, left + 1, right - 1);
     swap(array, left, right);              // 虚线框
+  }
+  
+  private void swap(char[] array, int a, int b) {
+      char tmp = array[a];
+      array[a] = array[b];
+      array[b] = tmp;
+  }
+  
+  /**
+   * String Reversal - for loop
+   * Time: O(N)
+   * Space: O(1)
+   */ 
+  public String reverse(String input) {
+    if (input == null || input.length() <= 1) {
+        return input;
+    }
+    char[] array = input.toCharArray();
+    for (int left = 0, right = array.length - 1; left < right; left++, right--) {
+      swap(array, left, right);
+    }
+    return new String(array);
   }
   
   private void swap(char[] array, int a, int b) {
