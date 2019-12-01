@@ -6,21 +6,16 @@ public class ReverseString {
    */
   public String reverse(String input) {
     if (input == null || input.length() <= 1) {
-      return input;
+        return input;
     }
     char[] array = input.toCharArray();
-    helper(array, 0, array.length - 1);
-    return new String(array);
-  }
-
-  public void helper(char[] array, int left, int right) {
-    // base case 
-    if (left >= right) {
-      return;
+    int left = 0, right = array.length - 1;
+    while (left < right) {
+        swap(array, left, right);
+        left++;
+        right--;
     }
-    // recursion
-    helper(array, left + 1, right - 1);
-    swap(array, left, right);              // 虚线框
+    return new String(array);
   }
   
   private void swap(char[] array, int a, int b) {
