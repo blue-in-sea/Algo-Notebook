@@ -74,7 +74,6 @@ public class StringReplaceBasic {
         i++;
       }
     }
-    
     return matches;
   }
 }
