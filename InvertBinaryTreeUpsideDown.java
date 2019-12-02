@@ -25,7 +25,7 @@ public class InvertBinaryTreeUpsideDown {
     return newRoot;
   }
   
-  // Method 2: iterative
+  // Method 2: Iterative
   public TreeNode reverse(TreeNode root) {
     TreeNode prev = null;
     TreeNode prevRight = null;
