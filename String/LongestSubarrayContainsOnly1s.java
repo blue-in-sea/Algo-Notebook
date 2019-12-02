@@ -31,4 +31,26 @@ public class LongestSubarrayContainsOnly1s {
 
     return res;
   }
+  
+  
+  // Pretty Version
+  public int longestConsecutiveOnes(int[] nums, int k) {
+    int cnt = 0;
+    int res = 0;
+
+    int l = 0;  // left-bound of window 
+    int r = 0;  // right-bound of window 
+    while (r < nums.length) {
+      if (nums[r] == 1) {
+        res = Math.max(res, ++r - l);
+      } else if (cnt < k) {
+        cnt++;
+        res = Math.max(res, ++r - l);
+      } else if (nums[l++] == 0) {
+        cnt--;
+      }
+    }
+
+    return res;
+  }
 }
