@@ -24,4 +24,25 @@ public class InvertBinaryTreeUpsideDown {
 
     return newRoot;
   }
+  
+  // Method 2: iterative
+  public TreeNode reverse(TreeNode root) {
+    TreeNode prev = null;
+    TreeNode prevRight = null;
+
+    while (root != null) {
+      TreeNode next = root.left;
+      TreeNode curRight = root.right;
+
+      root.right = prevRight;  // make new right-connection
+      root.left = prev;        // make new left-connection
+
+      prevRight = curRight;    // prevRight move one forward
+      prev = root;             // prev move one forward
+
+      root = next;             // root move one forward
+    }
+
+    return prev;
+  }
 }
