@@ -38,7 +38,7 @@ public class ClassicalBinarySearch {
       return right;
     } 
     return -1;    
-    }
+  }
 }
   
   /**
