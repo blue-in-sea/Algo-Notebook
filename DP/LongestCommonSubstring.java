@@ -6,7 +6,7 @@
  *     
  * Examples       
  * S = “abcde”, T = “cdf”, the longest common substring of S and T is “cd” 
- * S = “student”, T = “sweden”, the longest common substring of S and T is “den”    
+ * S = “sweden”, T = “student”, the longest common substring of S and T is “den”    
  */
 
 public class LongestCommonSubstring {
@@ -63,6 +63,7 @@ public class LongestCommonSubstring {
 }
 
 /*
+S = “sweden” (i), T = “student” (j), the longest common substring of S and T is “den”
 // M[i][j] = lonest common substring between the first i of a[i]
 // and the first j of b[j] (must include the a[i-1] and b[i-1])
 // base case : M[i][0] = 0 and M[0][j] = 0 
