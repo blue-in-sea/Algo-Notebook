@@ -14,7 +14,7 @@ public class LongestCommonSubstring {
   // M[i][j] = lonest common substring between the first i of a[i]
   // and the first j of b[j] (must include the a[i-1] and b[i-1])
   public String longestCommon(String s, String t) {
-    int[][] longest = new int[s.length() + 1][t.length() + 1];
+    int[][] common = new int[s.length() + 1][t.length() + 1];
     
     int start = 0;
     int maxLen = 0;
@@ -24,11 +24,11 @@ public class LongestCommonSubstring {
     for (int i = 1; i <= s.length(); i++) {
       for (int j = 1; j <= t.length(); j++) {
         if (s.charAt(i - 1) == t.charAt(j - 1)) {
-          longest[i][j] = longest[i - 1][j - 1] + 1;
+          common[i][j] = common[i - 1][j - 1] + 1;
         } 
 
-        if (longest[i][j] > maxLen) {
-          maxLen = longest[i][j];
+        if (common[i][j] > maxLen) {
+          maxLen = common[i][j];
           start = i - maxLen;
         }
       }
@@ -39,7 +39,7 @@ public class LongestCommonSubstring {
 }
 
 /**
- *     (i) 0 1 2 3 4 5 6 7
+ *     (i) 0 1 2 3 4 5 6 7           // index offset by 1
  * (j)     0 s t u d e n t
  *  0      0 0 0 0 0 0 0 0           // base case: M[0][j] = 0
  *  1   s  0 1 0 0 0 0 0 0 
