@@ -1,12 +1,13 @@
 /**
- * Find the longest common substring of two given strings.
- * 
- * Assumptions
- * The two given strings are not null     
- *     
- * Examples       
- * S = “abcde”, T = “cdf”, the longest common substring of S and T is “cd” 
- * S = “student”, T = “sweden”, the longest common substring of S and T is “den”    
+ * Definition of TreeNode:
+ * public class TreeNode {
+ *     public int val;
+ *     public TreeNode left, right;
+ *     public TreeNode(int val) {
+ *         this.val = val;
+ *         this.left = this.right = null;
+ *     }
+ * }
  */
 
 public class BinaryTreeLevelOrderTraversal {
