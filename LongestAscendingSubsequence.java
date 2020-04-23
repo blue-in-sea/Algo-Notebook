@@ -1,4 +1,35 @@
 public class LongestAscendingSubsequence {
+  // Method 1: DP 
+  // Time: O(n^2), Space: O(n)
+  public int longest (int[] array) {
+    // Assume array is not null
+    if (array.length == 0) {
+      return 0;
+    }
+    // M[i] = the len of the longest subsequence
+    // ending at the index i (including i)
+    int[] M = new int[array.length];
+    int res = 1;  // global max
+
+    for (int i = 0; i < array.length; i++) {
+      // initialize M[i] as 1, since the shortest one has len 1
+      // just as array[i] itself
+      M[i] = 1;
+      for (int j = 0; j < i; j++) {
+        // only when array[j] < array[i], it is possible to use the
+        // longest ascending subsequence ending index j and array[i]
+        // to form a new ascending subsequence 
+        if (array[j] < array[i]) {
+          M[i] = Math.max(M[j] + 1, M[i]);
+        }
+        // possibly update the global longest one
+        res = Math.max(M[i], res);
+      }
+    }
+
+    return res;
+  }
+
   // Method 2: DP + Binary Search
   // Time: O(nlogn), Space: O(n)
   public int longest2(int[] array) {
