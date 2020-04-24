@@ -14,8 +14,8 @@ public class Solution {
     // and it will be sorted by the corresponding number in the
     // original araray
     int[] indexArray = initialindexArray(array);
-    int[] countArray = new int[array.length]; // the actual return array
-    int[] helper = new int[array.length];     // help with merge sort 
+    int[] countArray = new int[array.length]; 
+    int[] helper = new int[array.length];     
     mergeSort(array, indexArray, countArray, helper, 0, array.length - 1);
     return countArray;
   }
@@ -91,4 +91,20 @@ public class Solution {
  *     res.push_back(Y)     // [2, 3]
  *     Y's counter += 0
  *     j++
+ */
+
+/**
+ * Index Array:  [1, 0, 2, 3]  位置
+ * Helper Array: [0, 1, 0, 0]  辅助   xxxx  yyyy (index)
+ * Count Array:  [1, 0, 0, 0]  计数
+ * =============
+ * Index Array:  [1, 0, 3, 2]
+ * Helper Array: [0, 1, 2, 3]
+ * Count Array:  [1, 0, 1, 0]
+ * =============
+ * Index Array:  [1, 3, 2, 0]
+ * Helper Array: [1, 0, 3, 2]
+ * Count Array:  [3, 0, 1, 0]
+ * =============
+ * Result: [3, 0, 1, 0]
  */
