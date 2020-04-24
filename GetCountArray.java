@@ -8,57 +8,54 @@
  * Requirement: Time complexity = O(nlogn).
  */
 
-public class GetCountArray {
+public class Solution {
   public int[] countArray(int[] array) {
     // The indexArray contains the indices in the original array
-    // and it will be sorted corresponding number in the input array
-    int[] indexArr = initialIndexArr(array);
-    int[] countArr = new int[array.length]; // the actual return array
-    int[] helper = new int[array.length];   // helper arr in merge sort
-    
-    mergeSort(array, indexArr, countArr, helper, left, 0, array.length - 1);
-    return countArr;
+    // and it will be sorted by the corresponding number in the
+    // original araray
+    int[] indexArray = initialindexArray(array);
+    int[] countArray = new int[array.length]; // the actual return array
+    int[] helper = new int[array.length];     // help with merge sort 
+    mergeSort(array, indexArray, countArray, helper, 0, array.length - 1);
+    return countArray;
   }
-  
-  private void mergeSort(int[] array, int[] indexArr, int[] countArr, int[] helper, int left, int right) {
+
+  private void mergeSort(int[] array, int[] indexArray, int[] countArray, int[] helper, int left, int right) {
     if (left >= right) {
       return;
     }
     int mid = left + (right - left) / 2;
-    mergeSort(array, indexArr, countArr, helper, left, mid);
-    mergeSort(array, indexArr, coutArr, helper, mid + 1, right);
-    merger(array, indexArr, coutArr, helper, left, mid, right);
+    mergeSort(array, indexArray, countArray, helper, left, mid);
+    mergeSort(array, indexArray, countArray, helper, mid + 1, right);
+    merge(array, indexArray, countArray, helper, left, mid, right);
   }
-  
-  private void merge(int[] array, int[] indexArr, int[] countArr, 
-                     int[] helper, int left, int mid, int right) {
-    copyArr(indexArr, helper, left, right);
-    
-    int i = left;
-    int j = mid + 1;
-    int cur = left;
 
-    while (i  <= mid) {
-      // 谁小移谁, 记录移动元素的 index 
+  private void merge(int[] array, int[] indexArray, int[] countArray, int[] helper, int left, int mid, int right) {
+    copyArray(indexArray, helper, left, right);
+    int i = left;
+    int j = mid + 1; 
+    int cur = left;
+    // when sorting the indexArray, we use the corresponding value
+    // in the original array 
+    while (i <= mid) {
       if (j > right || array[helper[i]] <= array[helper[j]]) {
-        // counter: 在 merge sort 的过程中，有多少个比我小的数从我的右边移动到了我的左边
-        countArr[helper[i]] += (j - mid - 1);  
-        indexArr[cur++] = helper[i++];
+        countArray[helper[i]] += (j - mid - 1); 
+        indexArray[cur++] = helper[i++];
       } else {
-        // no need to update the counter
+        // no need to update count
         indexArray[cur++] = helper[j++];
-      } 
+      }
     }
   }
-  
-  private int[] copyArr(int[] array, int[] helper, int left, int right) {
+
+  private int[] copyArray(int[] indexArray, int[] helper, int left, int right) {
     for (int i = left; i <= right; i++) {
-      helper[i] = indexArr[i];
+      helper[i] = indexArray[i];
     }
     return helper;
   }
-  
-  private int[] initialindexArr(int[] array) {
+
+  private int[] initialindexArray(int[] array) {
     int[] indices = new int[array.length];
     for (int i = 0; i < array.length; i++) {
       indices[i] = i;
