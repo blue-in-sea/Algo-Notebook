@@ -33,11 +33,11 @@ public class GetCountArray {
   private void merge(int[] array, int[] indexArr, int[] countArr, 
                      int[] helper, int left, int mid, int right) {
     copyArr(indexArr, helper, left, right);
+    
     int i = left;
     int j = mid + 1;
     int cur = left;
-    // when sorting the indexArr, we use the corresponding value
-    // in the original arr
+
     while (i  <= mid) {
       // 谁小移谁, 记录移动元素的 index 
       if (j > right || array[helper[i]] <= array[helper[j]]) {
