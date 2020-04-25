@@ -40,8 +40,8 @@ public class WordLadder {
         dict.add(start);
         dict.add(end);
         
-        HashSet<String> visited = new HashSet<String>();
-        Queue<String> queue = new LinkedList<>();
+        Set<String> visited = new HashSet<String>();
+        Queue<String> queue = new ArrayDeque<>();
         queue.offer(start);
         visited.add(start);
         
