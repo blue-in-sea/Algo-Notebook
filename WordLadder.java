@@ -18,7 +18,7 @@
  * Time: O(M×N), where M is the length of words and N is the total number of words in the input word list.
  * Space Complexity: O(M×N), to store all M transformations for each of the N words.
  *
- * Method 1: BFS from end word, transform one letter, and eventually to become start words. 
+ * Method 2: BFS from end word, transform one letter in each step, and eventually to become start words. 
  * Time: O(25xM), where M is the length of words, and 26 char tables.
  */
 public class WordLadder {
