@@ -1,3 +1,26 @@
+/* *
+ * Given a begin word, an end word and a dictionary, find the least number transformations from begin word to end word, 
+ * and return the length of the transformation sequence. Return 0 if there is no such transformations.
+ * In each transformation, you can only change one letter, and the word should still in the dictionary 
+ * after each transformation.
+ * 
+ * Assumptions
+ * 1. All words have the same length.
+ * 2. All words contain only lowercase alphabetic characters.
+ * 3. There is no duplicates in the word list.
+ * 4.The beginWord and endWord are non-empty and are not the same.
+ *
+ * Example: start = "git", end = "hot", dictionary = {"git","hit","hog","hot"}
+ * Output: 3
+ * Explanation: git -> hit -> hot
+ *
+ * Method 1: BFS from end to start words. 
+ * Time: O(M×N), where M is the length of words and N is the total number of words in the input word list.
+ * Space Complexity: O(M×N), to store all M transformations for each of the N words.
+ *
+ * Method 1: BFS from end word, transform one letter, and eventually to become start words. 
+ * Time: O(25xM), where M is the length of words, and 26 char tables.
+ */
 public class WordLadder {
     /*
      * @param start: a string
