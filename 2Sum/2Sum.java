@@ -27,4 +27,16 @@ public class 2Sum {
         }
         return false;
     }
+    
+    // Method 2: HashSet to store ele, then check ele's complement
+    // Time: O(n), Space: O(n)
+    public boolean existSum(int[] array, int target) {
+        Set<Integer> set = new HashSet<>();
+        
+        for (int ele : array) {
+            if (set.contains(target - ele)) return true;
+            set.add(ele);
+        }
+        return false;      
+    }
 }
