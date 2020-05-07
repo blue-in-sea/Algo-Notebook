@@ -7,7 +7,7 @@ class JumpGame {
         if (len == 1) return true;
 
         boolean[] dp = new boolean[len];
-        // dp[len - 1] = true;  // can skip, since default is true
+        // dp[len - 1] = true;  // base can skip, since default is true
         for (int i = len - 2; i >= 0; i--) {
             // from index i, it is already possible to jump to
             // the end of array
