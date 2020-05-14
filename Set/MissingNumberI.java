@@ -22,6 +22,7 @@ public class MissingNumberI {
   // Method 2: use sum
   // Time: O(n), Space O(1)
   public int missingII(int[] array) {
+    int n = array.length + 1;
     long targetSum = (n + 0L) * (n + 1) / 2;
     long actualSum = 0L;
     for (int num : array) {
