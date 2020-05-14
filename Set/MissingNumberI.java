@@ -22,7 +22,6 @@ public class MissingNumberI {
   // Method 2: use sum
   // Time: O(n), Space O(1)
   public int missingII(int[] array) {
-    int n = array.length + 1;
     long targetSum = (n + 0L) * (n + 1) / 2;
     long actualSum = 0L;
     for (int num : array) {
@@ -71,7 +70,7 @@ public class MissingNumberI {
     }
     // if all the numbers of [1, n - 1] in position
     // the missing number is n
-    return array.length + 1;
+    return n;
   }
   
   private void swap(int[] array, int left, int right) {
