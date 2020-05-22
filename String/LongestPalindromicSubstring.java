@@ -7,8 +7,8 @@ class public LongestPalindromicSubstring {
         }
         int start = 0, end = 0;
         for (int i = 0; i < s.length(); i++) {
-            int len1 = expendAroundCenter(s, i, i);     // odd len
-            int len2 = expendAroundCenter(s, i, i + 1); // even len
+            int len1 = extendPalindrome(s, i, i);     // odd len
+            int len2 = extendPalindrome(s, i, i + 1); // even len
             int len = Math.max(len1, len2);
             if (len > end - start) {
                 start = i - (len - 1) / 2;
@@ -18,8 +18,7 @@ class public LongestPalindromicSubstring {
         return s.substring(start, end + 1);
     }
 
-    private int expendAroundCenter(String s, int left, int right) {
-        int l = left, r = right;
+    private int extendPalindrome(String s, int l, int r) {
         while (l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)) {
             l--;
             r++;
