@@ -11,6 +11,9 @@ class MedianOfTwoSortedArray {
       * median = max(A[i-1], B[j-1]) (when m + n is odd)
       * median = (max(A[i-1], B[j-1]) + min(A[i], B[j]))/2 (when m + n is even)   
       *
+      * So, if i and j are not edges values (means A[i-1], B[j-1], A[i], B[j])  
+      * all exist, then we must check both B[j-1] <= A[i] and A[i-1] <= B[j].
+      *
       * Time: O(log(min(m,n))) 
       * Space: O(1) 
       */
@@ -48,7 +51,7 @@ class MedianOfTwoSortedArray {
                     // corner 3 : A[i] doesn't exist.
                     minRight = nums2[j];
                 } else if (j == n){
-                    // corner 3 : B[j] doesn't exist.
+                    // corner 4 : B[j] doesn't exist.
                     minRight = nums1[i];
                 } else {
                     minRight = Math.min(nums2[j], nums1[i]);
