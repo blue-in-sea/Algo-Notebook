@@ -1,4 +1,4 @@
-class Solution {
+public class WordLadderII {
     public List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {
         List<List<String>> ladders = new ArrayList<>();
         Map<String, List<String>> graph = new HashMap<>();  // bfs - build graph
