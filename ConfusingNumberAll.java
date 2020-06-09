@@ -15,7 +15,7 @@
  */
 
 public class ConfusingNumberAll {
-    public static List<Long> allConfusingNumber(int N) {
+    public List<Long> allConfusingNumber(int N) {
         List<Long> res = new ArrayList<>();
         int[] arr = {0,1,6,8,9};
         int[] map = {0,1,9,8,6};
@@ -23,7 +23,7 @@ public class ConfusingNumberAll {
         return res;
     }
 
-    private static void dfs(int N, int[] arr, int[] map, List<Long> res,
+    private void dfs(int N, int[] arr, int[] map, List<Long> res,
                      long currNum, long rotatedNum, int multiplier) {
         if (currNum > N) {
             return;
