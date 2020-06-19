@@ -18,8 +18,8 @@ public class WildcardMatching {
 
         // 初始化
         dp[0][0] = true;
-        for (int i = 1; i <= n; i++) {
-            dp[0][i] = dp[0][i - 1] && p.charAt(i - 1) == '*';
+        for (int j = 1; j <= n; j++) {
+            dp[0][j] = dp[0][j - 1] && p.charAt(j - 1) == '*';
         }
 
         // 状态转移
