@@ -18,7 +18,7 @@ public class ClassicalBinarySearch {
     }
     int left = 0;
     int right = array.length - 1;
-    while (left + 1 < right) {
+    while (left < right - 1) {
       int mid = left + (right - left) / 2;
       if (array[mid] == target) {
         return mid;
