@@ -1,0 +1,13 @@
+Binary Search
+ 1. classical binary search
+ 2. first occurrence of target
+ 3. last occurrence of target
+ 4. smallest element larger than target
+ 5. largest element smaller or equal to target
+ 6. total occurrence of target
+ 7. the cloest to target
+ 8. K-closests to target
+ 9. search in rotated sorted array
+ 10. search in rotated sorted array with duplicates
+ 11. reconstruct the binary search tree from postorder
+ 12. find the median of two sorted arrays
