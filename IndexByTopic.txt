@@ -9,5 +9,25 @@ Binary Search
  8. K-closests to target
  9. search in rotated sorted array
  10. search in rotated sorted array with duplicates
- 11. reconstruct the binary search tree from postorder
- 12. find the median of two sorted arrays
+ 11. search in a moutain array
+ 12. find the first missing number start with leftmost element in a sorted array 
+ 13. reconstruct the binary search tree from postorder
+ 14. find the median of two sorted arrays
+ 
+LinkedList
+  1. check if linked list has a circle 
+  2. cycle node in linked list
+  
+Two pointer 
+[同向双指针] sliding window, fast-slow pointers  
+[逆向双指针] 中心开花, 两边往中间走
+  1. longest subarray contains only 1s
+  2. two sum
+  3. two sum smaller
+  4. 2 sum closest 
+  5. find the closes sum to target from two sorted arrays
+  6. rainbow sort
+  7. longest substring without repeating characters 
+  8. sliding window maximum
+  9. sliding window median 
+  10. minimum substring ...
