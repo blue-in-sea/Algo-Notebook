@@ -1,5 +1,7 @@
 class 3SumClosest {
-    // Essence: search in a sorted matrix
+    // essence: search in sorted matrix
+    // time: O(nlogn) + O(n^2) = O(n^2)
+    // space: O(1)ntwo pointers
     public int threeSumClosest(int[] nums, int target) {
         Arrays.sort(nums);
         int res = nums[0] + nums[1] + nums[2];
