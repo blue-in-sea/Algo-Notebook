@@ -37,6 +37,7 @@ public class LongestSubstringwithAtMostKDistinctCharacters {
         
         return res;
     }
+    
     // Version-2
     // Sliding window with frequency_map 
     // [l, r] represents the sliding window that contain at most k distinct char
