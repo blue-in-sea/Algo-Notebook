@@ -25,6 +25,7 @@ public class KthSmallestInSortedMatrix {
     int cols = matrix[0].length;
 
     PriorityQueue<Cell> minHeap = new PriorityQueue<Cell>(k, new CellComparator());
+    // PriorityQueue<Cell> minHeap = new PriorityQueue<>((c1, c2) -> c1.value - c2.value); 
     boolean[][] visited = new boolean[rows][cols];
 
     // all generated cells will be marked to true in the visited
@@ -49,3 +50,6 @@ public class KthSmallestInSortedMatrix {
     return minHeap.peek().val;
   }
 }
+
+// PriorityQueue<Cell> minHeap = new PriorityQueue<>((x, y) -> x.value - y.value);  // x 小排前面
+// PriorityQueue<Cell> maxHeap = new PriorityQueue<>((x, y) -> y.value - x.value); 
