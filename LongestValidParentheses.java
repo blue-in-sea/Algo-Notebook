@@ -1,5 +1,5 @@
 public class LongestValidParentheses {
-    // Dynamic Programming 
+    // Method 3: Dynamic Programming 
     // Time: O(n), Space: O(n)
     public int longestValidParentheses(String s) {
         int max = 0;
