@@ -1,4 +1,26 @@
 public class LongestValidParentheses {
+    // Method 1: Mono Stack store the index of (unmateched left-parentheses)
+    // Time: O(n), Space: O(n)
+    public int longestValidParentheses(String s) {
+        Deque<Integer> stack = new ArrayDeque<>();
+
+        int max = 0;
+        stack.offerFirst(-1);
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == '(') {
+                stack.offerFirst(i);
+            } else {
+                stack.pollFirst();
+                if (stack.isEmpty()) {
+                    stack.offerFirst(i);
+                } else {
+                    max = Math.max(max, i - stack.peekFirst());
+                }
+            }
+        }
+        return max;
+    }
+    
     // Method 3: Dynamic Programming 
     // Time: O(n), Space: O(n)
     public int longestValidParentheses(String s) {
