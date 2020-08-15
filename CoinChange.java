@@ -36,14 +36,14 @@ public class CoinChange {
 Test Case: coins = [1, 7, 13], amount = 21
 Return 3 since 1 + 7 + 13 = 21 or 7 + 7 + 7 = 21
 ========================================
-1st Iteration, I: 0 - 21, coin = 1
+1st Iteration, i: 0 - 21, coin = 1
 dp[0] = 0 
 dp[1] = min(dp[1], dp[0] + 1) = min(22, 1) = 1
 dp[2] = min(dp[2], dp[1] + 1) = min(22, 2) = 2
 …
 dp[21] = min(dp[21], dp[20] + 1) = min(22, 21) = 21
 ========================================
-2nd Iteration, I: 0 - 21, coin = 7
+2nd Iteration, i: 0 - 21, coin = 7
 …
 dp[7] = min(dp[7], dp[0] + 1) = min(7, 1) = 1
 dp[8] = 2
@@ -54,7 +54,7 @@ dp[15] = 3
 …
 dp[21] = min(dp[14], dp[14] + 1) = min(14, 2 + 1) = 3
 ========================================
-3rd Iteration, I: 0 - 21, coin = 7
+3rd Iteration, i: 0 - 21, coin = 7
 …
 dp[13] = min(dp[13], dp[0] + 1) = min(7, 0 + 1) = 13
 …
