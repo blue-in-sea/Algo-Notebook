@@ -1,4 +1,37 @@
 public class CoinChange {
+    // Method 1: DFS
+    public int coinChange(int[] coins, int amount) {
+        // Sanity Check 
+        if (amount < 1) return 0;
+        // 自上而下的动态规划方法
+        return coinChange(coins, amount, new int[amount]);
+    }
+
+    private int coinChange(int[] coins, int rem, int[] count) {
+        // base case: this path is invalid
+        if (rem < 0) return -1;
+        // base case: rem as 0, successfully exit
+        if (rem == 0) return 0;
+        // deduplication: directly return, avoid duplicate case
+        if (count[rem - 1] != 0) return count[rem - 1];
+        int min = Integer.MAX_VALUE;
+        // dfs every possible path
+        for (int coin : coins) {
+            // 用一下coin这个面值的硬币会怎样？res是这个方法的最优情况
+            int res = coinChange(coins, rem - coin, count);
+            // res < 0 will result res = -1, 
+            // res > min not the optimal, exclude
+            if (res >= 0 && res < min) {
+                min = 1 + res;
+            }
+        }
+        // count[rem - 1]存储着给定金额amount的解
+        // 若为Integer.MAX_VALUE则该情况无解
+        count[rem - 1] = (min == Integer.MAX_VALUE) ? -1 : min;
+        return count[rem - 1];
+    }
+    
+    // Method 2: DP
     public int coinChange(int[] coins, int amount) {
         int[] dp = new int[amount + 1];
         Arrays.fill(dp, amount + 1);
