@@ -1,3 +1,18 @@
+/**
+ * The programming interface for a legacy motor controller accepts commands as binary strings of variable length. The
+ * console has a very primitive autocomplete/auto-correct feature: as a new command is entered one character at a time,
+ * it will display the previously entered command that shares the longest common prefix. If multiple commands are tied,
+ * it displays the most recent one. If there is no previous command that shares a common prefix, it will display the
+ * most recent command.
+ *
+ * Given a sequence of commands entered into the console, for each command, determine the index of the command
+ * last displayed by autocomplete a it was entered.
+ *
+ * n = 6
+ * command = ['000', '1110', '01', '001', '110', '11']
+ * return array is [0, 1, 1, 1, 2, 5]
+ */
+
 class TrieNode {
     public char val;
     public boolean isWord;
