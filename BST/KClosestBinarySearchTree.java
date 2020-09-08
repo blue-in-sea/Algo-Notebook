@@ -21,6 +21,9 @@ public class KClosestBinarySearchTree {
    * @param target: the given target
    * @param k: the given k
    * @return: k values in the BST that are closest to the target
+   * 
+   * Method 1: inOrder Traversal convert BST into a sort array and then do k-closest in the given array
+   * Time: O(n), Space: O(n) where n is the number of node in BST
    */
   public List<Integer> closestKValues(TreeNode root, double target, int k) {
     Deque<Integer> dq = new ArrayDeque<>();    
@@ -44,4 +47,10 @@ public class KClosestBinarySearchTree {
     dq.add(root.key);
     inOrder(root.right, dq);
   }
+  
+ /**
+   * Method 2: do k-closest in the input BST
+   * Time: O(h + k), Space: O(h) where h is the height of node in BST
+   * Time: O(logn + k), Space: O(logn) if assuem the BST is balanced 
+   */
 }
