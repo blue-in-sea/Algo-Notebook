@@ -11,7 +11,7 @@
  */
 
 
-public class SerializeAnsDeserializeBinaryTree {
+public class SerializeAnsDeserializeBinaryTreeBFS {
     /**
      * This method will be invoked first, you should design your own algorithm 
      * to serialize a binary tree which denote by a root node to a string which
