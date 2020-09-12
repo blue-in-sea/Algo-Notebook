@@ -53,4 +53,34 @@ public class MeetingRoomII {
         }
         return res;
     }
+    
+    // Time: 0(2 * N + 2Nlog2N) where N is the size of the intervals
+    public int myMeetingRooms(int[][] intervals) {
+        if (intervals == null) return 0;
+        int N = intervals.length;
+        int[][] time = new int[N * 2][2];
+        for (int i = 0; i < N; i++) {
+            int start = intervals[i][0];
+            time[i][0] = start;
+            time[i][1] = 1;
+            int end = intervals[i][1];
+            time[N + i][0] = end;
+            time[N + i][1] = -1;
+        }
+        Arrays.sort(time, new Comparator<int[]>() {
+            @Override
+            public int compare(int[] a, int[] b) {
+                if (a[0] == b[0]) {
+                    return a[1] - b[1];
+                }
+                return a[0] - b[0];
+            }
+        });
+        int room = 0, cnt = 0;
+        for (int[] t : time) {
+            cnt += t[1];
+            room = Math.max(room, cnt);
+        }
+        return room;
+    }
 }
