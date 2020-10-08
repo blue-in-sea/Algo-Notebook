@@ -32,6 +32,7 @@ public class IterativeOrderTraversalOfBinaryTree2 {
         stack.offerFirst(cur.left);
       }
       // print the elemet first before process it 
+      // 在 root 弹出 stack 的时候 print 它
       preorder.add(cur.key);
     }
     return preorder;
