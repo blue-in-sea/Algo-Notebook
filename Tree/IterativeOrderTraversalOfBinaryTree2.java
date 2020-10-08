@@ -22,6 +22,7 @@ public class IterativeOrderTraversalOfBinaryTree2 {
     stack.offerFirst(root);
     while (!stack.isEmpty()) {
       TreeNode cur = stack.pollFirst();
+      // 保证打印 preorder 的顺序正确
       // the left subtree should be traversed before the right subtree
       // since the stack is LIFO, we push right into the stack first
       // so for the next step the top element of stack is the left subtree
