@@ -13,12 +13,14 @@ class Solution {
         Collections.sort(events, (a, b) -> a[0] != b[0] ? a[0] - b[0] : a[1] - b[1]);
         List<Interval> ans = new ArrayList();
 
-        int prev = -1, bal = 0;
+        int prev = -1, work = 0;
         for (int[] event: events) {
             // event[0] = time, event[1] = command
-            if (bal == 0 && prev >= 0)
+            if (work == 0 && prev >= 0) {
                 ans.add(new Interval(prev, event[0]));
-            bal += event[1] == OPEN ? 1 : -1;
+            }
+            
+            work += event[1] == OPEN ? 1 : -1;
             prev = event[0];
         }
 
