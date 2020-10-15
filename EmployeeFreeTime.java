@@ -2,7 +2,7 @@ class Solution {
     public List<Interval> employeeFreeTime(List<List<Interval>> avails) {
         int OPEN = 0, CLOSE = 1;
         
-        List<int[]> events = new ArrayList();
+        List<int[]> events = new ArrayList<>();
         for (List<Interval> employee: avails) {
             for (Interval iv: employee) {
                 events.add(new int[]{iv.start, OPEN});
