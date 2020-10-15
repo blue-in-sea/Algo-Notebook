@@ -10,7 +10,7 @@ class Solution {
             }
         }
             
-        Collections.sort(events, (a, b) -> a[0] != b[0] ? a[0]-b[0] : a[1]-b[1]);
+        Collections.sort(events, (a, b) -> a[0] != b[0] ? a[0] - b[0] : a[1] - b[1]);
         List<Interval> ans = new ArrayList();
 
         int prev = -1, bal = 0;
