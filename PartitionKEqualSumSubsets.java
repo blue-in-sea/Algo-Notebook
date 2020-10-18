@@ -17,7 +17,7 @@ public class PartitionKEqualSumSubsets {
         if (nums == null || nums.length == 0) return false;
         int totalSum = 0;
         for (int num : nums) totalSum += num;
-        boolean[] visited = new boolean[nums.length];
+        boolean[] visited = new boolean[nums.length]; // visited[i] 的物理意义是选了就不能在选了
         return totalSum % k == 0 && dfs(nums, k, totalSum / k, 0, 0, visited);
     }
 
@@ -26,14 +26,7 @@ public class PartitionKEqualSumSubsets {
         if (sum > targetSum) return false;
         if (sum == targetSum) return dfs(nums, k - 1, targetSum, 0, 0, visited);
         for (int i = startIndex; i < nums.length; i++) {
-
-            System.out.print("nums[i]: " + nums[i] + ", ");
-            System.out.print("k: " + k + ", ");
-            System.out.print("current sum: " + sum + ", ");
-            System.out.print("startIndex: " + startIndex + ", ");
-            System.out.print("visited[i]: " + Arrays.toString(visited));
-            System.out.println();
-
+            // print
             if (!visited[i]) {
                 visited[i] = true;
                 sum += nums[i];
