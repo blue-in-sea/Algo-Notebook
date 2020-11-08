@@ -40,14 +40,15 @@ public class GraphValidTreeDFS {
     return true;
   }
   
-  private boolean dfs(Map<Integer, List<Integer>> map, int cur, boolean[] visited, int parent) {
+  private boolean dfsHasNoCycle(Map<Integer, List<Integer>> map, int cur, boolean[] visited, int parent) {
     if(visited[cur]) {
       return false;
     }
+    
     visited[cur] = true;
 
     for (int nei : map.get(cur)) {
-      if(nei != parent && !dfs(map, nei, visited, cur)){
+      if(nei != parent && !dfsHasNoCycle(map, nei, visited, cur)){
         return false;
       }
     }
