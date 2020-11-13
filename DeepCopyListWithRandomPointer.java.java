@@ -13,7 +13,7 @@ class Node {
 }
 */
 
-public class CopyRandomList {
+public class DeepCopyListWithRandomPointer {
     public Node copyRandomList(Node head) {
         // corner case 
         if (head == null) return head;
