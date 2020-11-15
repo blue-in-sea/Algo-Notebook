@@ -1,4 +1,10 @@
 /**
+ * The complexity of creating a trie is O(W *L ), where W is the number of words, and L is an average length of the word
+ * you need to perform L lookups on the average for each of the W words in the set.
+ * https://stackoverflow.com/questions/13032116/trie-complexity-and-searching
+ */
+
+/**
  * 208. Implement Trie (Prefix Tree)
  *
  * Implement a trie with insert, search, and startsWith methods.
