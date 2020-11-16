@@ -1,7 +1,3 @@
-package Leetcode;
-
-import java.util.*;
-
 /**
  * The programming interface for a legacy motor controller accepts commands as binary strings of variable length. The
  * console has a very primitive autocomplete/auto-correct feature: as a new command is entered one character at a time,
@@ -21,38 +17,12 @@ import java.util.*;
  * 题目要求：
  * 1. as a new command is entered one character at a time, it will display the previously entered command
  *    that shares the longest common prefix.
- * 2. If multiple commands are tied, it displays the most recent one. 
+ * 2. If multiple commands are tied, it displays the most recent one.
  * 3. If there is no previous command that shares a common prefix, it will display the most recent command
  */
 
 
 public class AutoCompleteFeature {
-    public static void main(String[] args) {
-        List<String> commandOne = new ArrayList<>();
-        commandOne.add("000");
-        commandOne.add("1110");
-        commandOne.add("01");
-        commandOne.add("001");
-        commandOne.add("110");
-        commandOne.add("11");
-        System.out.println(Arrays.toString(commandOne.toArray()));
-        System.out.println(Arrays.toString(autocomplete(commandOne).toArray()));
-
-        List<String> commandTwo = new ArrayList<>();
-        commandTwo.add("1");
-        commandTwo.add("0");
-        commandTwo.add("1");
-        commandTwo.add("1110");
-        commandTwo.add("11");
-        commandTwo.add("1");
-        commandTwo.add("1011");
-        commandTwo.add("1110");
-        commandTwo.add("0");
-        commandTwo.add("110");
-        System.out.println(Arrays.toString(commandTwo.toArray()));
-        System.out.println(Arrays.toString(autocomplete(commandTwo).toArray()));
-    }
-
     public static List<Integer> autocomplete(List<String> command) {
         List<Integer> resultList = new ArrayList<>();
         Trie trie = new Trie();
@@ -101,5 +71,37 @@ public class AutoCompleteFeature {
         TrieNode(int index) {
             this.index = index;
         }
+    }
+    
+    public static void main(String[] args) {
+        /**
+         * [000, 1110, 01, 001, 110, 11]
+         * [0, 1, 1, 1, 2, 5]
+         * [1, 0, 1, 1110, 11, 1, 1011, 1110, 0, 110]
+         * [0, 1, 1, 3, 4, 5, 6, 4, 2, 8]
+         */
+        List<String> commandOne = new ArrayList<>();
+        commandOne.add("000");
+        commandOne.add("1110");
+        commandOne.add("01");
+        commandOne.add("001");
+        commandOne.add("110");
+        commandOne.add("11");
+        System.out.println(Arrays.toString(commandOne.toArray()));
+        System.out.println(Arrays.toString(autocomplete(commandOne).toArray()));
+
+        List<String> commandTwo = new ArrayList<>();
+        commandTwo.add("1");
+        commandTwo.add("0");
+        commandTwo.add("1");
+        commandTwo.add("1110");
+        commandTwo.add("11");
+        commandTwo.add("1");
+        commandTwo.add("1011");
+        commandTwo.add("1110");
+        commandTwo.add("0");
+        commandTwo.add("110");
+        System.out.println(Arrays.toString(commandTwo.toArray()));
+        System.out.println(Arrays.toString(autocomplete(commandTwo).toArray()));
     }
 }
