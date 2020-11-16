@@ -21,7 +21,6 @@
  * 3. If there is no previous command that shares a common prefix, it will display the most recent command
  */
 
-
 public class AutoCompleteFeature {
     public static List<Integer> autocomplete(List<String> command) {
         List<Integer> resultList = new ArrayList<>();
