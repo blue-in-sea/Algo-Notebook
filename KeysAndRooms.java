@@ -1,4 +1,5 @@
 public class KeysAndRooms {
+    // Method 1: BFS
     public boolean canVisitAllRooms(List<List<Integer>> rooms) {
         // corner case 
         if (rooms == null || rooms.size() == 0) return true;
@@ -21,5 +22,25 @@ public class KeysAndRooms {
         }
 
         return visited.size() == rooms.size();
+    }
+    
+    // Method 2: DFS
+    public boolean canVisitAllRooms(List<List<Integer>> rooms) {
+        // corner case 
+        if (rooms == null || rooms.size() == 0) return true;
+
+        Set<Integer> visited = new HashSet<>();
+        dfs(rooms, 0, visited);
+        return visited.size() == rooms.size();
+    }
+
+    private void dfs(List<List<Integer>> rooms, int curr, Set<Integer> visited) {
+        if (!visited.add(curr)) return;
+
+        for (int nei : rooms.get(curr)) {
+            if (!visited.contains(nei)) {
+                dfs(rooms, nei, visited);
+            }
+        }
     }
 }
