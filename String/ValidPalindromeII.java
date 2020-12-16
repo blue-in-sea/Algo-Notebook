@@ -1,4 +1,4 @@
-class ValidPalindromeII {
+public class ValidPalindromeII {
     // Time: O(n), Space: O(1)
     public boolean validPalindrome(String s) {
         // assume s is null and s has len equal 0 return true
