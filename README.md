@@ -3,6 +3,10 @@ Welcome to Iris Algo Notebook
 
 
 -----------------
+基础 + 高频
+
+-----------------
+
 Coding 
 1. guess word
 2. 给了一堆card, 每一张只有一个face value (Ｑ1) 同一种超过3张就是一个kind, 问是不是所有的牌能组成kind (Ｑ2) 5张就是个顺子，问是不是所有的牌都能组成顺子 => 但是第二题我直接给 hashmap的o(n)解，发现他没有啥反应我就说了还可以用treeMap，他脸一亮，让我用tree map来做
