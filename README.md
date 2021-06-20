@@ -16,7 +16,7 @@ Coding
 
 5. 设计消消乐，初始不能有3个连着的，但可以通过swap 开局且保证一定有解法能赢. follow up:设计API给予最优解法的提示； follow up2:开放式问题，如何设计分级难度，谈一下想法就行，可能是看我做的太快了一拍脑门加的follow up :)
 6. bq,很简单，就是问怎么解决conflict,最自豪的项目是啥之类的，熟读麻厂LP军令的我对答如流
-7. 数字转英文，应该是原题https://leetcode.com/problems/integer-to-english-words/
+7. 数字转英文，应该是原题 https://leetcode.com/problems/integer-to-english-words/
 8. 一颗n叉树，从树的root node上倒水下来，水从每个node到下面的node都有对应时间，求把整个树都灌溉的时间，Follow up:if undirected graph，think 每个node到node的关系 be pipe，从一个node放水，求把所pipe填满的时间。
 9. 某亚裔面试官说看了我的简历说出算法题我肯定没问题，于是给了一道设计扫雷游戏的题，然后实现扫雷功能，各种讨论+实现啥的
 
