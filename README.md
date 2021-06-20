@@ -25,7 +25,9 @@ Coding
 BQ
 1. Team Conflict
 2. How to work with others
-3. 印象最深刻的项目、最有趣的项目、你的贡献、如何时间安排、如何领导合作、你的不足
+3. Project most proud of / fun / challenging .. + your role & contribution
+4. How do you arrange your day
+5. Your weakness 
 
 -----------------
 Lastly,
