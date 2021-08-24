@@ -45,7 +45,11 @@ public class CourseScheduleTikTok {
             }
         }
 
-        return result;
+        if (result.size() == tasks.size()) {
+            return result;
+        } else {
+            return new ArrayList<>();
+        }
     }
 
     private static Map<String, List<String>> buildGraph(List<String> tasks, List<List<String>> ins) {
