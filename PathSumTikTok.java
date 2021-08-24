@@ -1,3 +1,4 @@
+package TikTok;
 
 //               1
 //       2                  4
@@ -21,10 +22,9 @@ import java.util.ArrayDeque;
 // 1 - 2 (1) - 5 (12) 0+125 - 3 (12, 125) - 4 (1, 125) - 7 (14, 125)
 // 1 [12 14] - 2 [125,5 123,3 14] - [125 123 147] - [123 147], 125 - ... - [] (sum)
 
-import java.util.ArrayDeque;
 import java.util.Deque;
 
-public class PathSumTikTok {
+public class pathSum {
 
     static class TreeNode {
         int val;
@@ -45,11 +45,9 @@ public class PathSumTikTok {
     private static void dfs(TreeNode root, int path, int[] total) {
 
         path = root.val + path * 10;
-        System.out.println("root.val: " + root.val);
-        System.out.println("path.val: " + path);
 
         if (root.left == null && root.right == null) {
-            System.out.println(total[0]);
+            // System.out.println(total[0]);
             total[0] += path;
         }
 
