@@ -54,10 +54,11 @@ class GraphValidTree {
         return graph;
     }
     
-        // Time: O(V + E)
-    // Space: O(V) for tree as undirected cyclical graph in which any two vertices are 
-    // connected by exactly one path. 
-    // In other words, any connected graph without simple cycles is a tree
+    // ==========================================================================
+    // DFS Approach Thinking: 类似BFS, 只是在recursive放入parent和当前节点 cur 时, 
+    // 选择cur != parent才进行下一层hasCycle的递归, 这样如果出现二次访, 就说明了有cycle. 
+    // Time: O(V + E)
+    // Space: O(V) recursion stacks call
     public boolean validTree(int n, int[][] edges) {
         Map<Integer, List<Integer>> graph = buildGraph(n, edges);
 
@@ -81,10 +82,6 @@ class GraphValidTree {
         return true;
     }
 
-    // DFS Approach Thinking: 类似BFS, 只是在recursive放入parent和当前节点 cur 时, 
-    // 选择cur != parent才进行下一层hasCycle的递归, 这样如果出现二次访, 就说明了有cycle. 
-    // Time: O(V + E)
-    // Space: O(V) recursion stacks call
     // return true - if has no cycle 
     private boolean dfs(Map<Integer, List<Integer>> graph, int curr, boolean[] visited, int parent) {
         // base case: if the current node being visited, found a cycle
