@@ -47,7 +47,6 @@ public class pathSum {
         path = root.val + path * 10;
 
         if (root.left == null && root.right == null) {
-            // System.out.println(total[0]);
             total[0] += path;
         }
 
