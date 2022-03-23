@@ -8,20 +8,22 @@ class ReconstructItinerary {
      * You may assume all tickets form at least one valid itinerary. You must use all the tickets once and only once.
      */
   
-    Map<String, PriorityQueue<String>> targets = new HashMap<>();
+    
     List<String> route = new ArrayList<>();
-  
+   Map<String, PriorityQueue<String>> targets = new HashMap<>();
+   
     public List<String> findItinerary(List<List<String>> tickets) {
         for (List<String> ticket : tickets) {
             targets.computeIfAbsent(ticket.get(0), k -> new PriorityQueue()).add(ticket.get(1));
         }
-        visit("JFK");
+        dfs("JFK");
         return route;
     }
     
-    public void visit(String airport) {
+    public void dfs(String airport) {
+       // if the we have node, and this node still has its nei
         while(targets.containsKey(airport) && !targets.get(airport).isEmpty()) {
-            visit(targets.get(airport).poll());
+            dfs(targets.get(airport).poll());
         }
         route.add(0, airport);
     }
