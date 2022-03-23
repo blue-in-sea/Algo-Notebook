@@ -1,8 +1,7 @@
 public class EditDistance {
   public int editDistance(String one, String two) {
     // Assumptions: one, two are not null
-    // Again, using distance[i][j] to represent substring(0, i)
-    // in one and substring(0, j) in two
+    // Again, using distance[i][j] to represent substring(0, i) in one, and substring(0, j) in two
     int[][] distance = new int[one.length() + 1][two.length() + 1];
     for (int i = 0; i <= one.length(); i++) {
       for (int j = 0; j <= two.length(); j++) {
