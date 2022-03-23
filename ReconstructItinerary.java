@@ -27,4 +27,18 @@ class ReconstructItinerary {
         }
         route.add(0, airport);
     }
+   
+   
+   /**
+     * The problem can be modelled as a graph, with each node representing a city, and each ticket representing an edge from source city to destination city.
+     * The problem asks us to find a connected sequence(path) consisting of all edges in a graph, starting with "JFK".
+     *
+     * Our general intuition is to jump to algorithms like DFS/BFS. The DFS/BFS algorithms help us traverse all nodes in the graph, but fail to cover all edges in the graph
+     *
+     * This is where Eulerian Path comes into play. An Eulerian Path is a list of all edges in a graph in a sequence such that you can go from point A to all other nodes in the graph multiple times,
+     * as long as an edge is not visited.
+     *
+     * https://leetcode.com/problems/reconstruct-itinerary/discuss/1161401/C%2B%2B-Explaination%3A-Transition-from-DFS-to-Eulerian-Path
+     *
+     */
 }
