@@ -89,3 +89,31 @@ public class WordLadder {
         return list;
     }
 }
+
+/**
+ * Test 1
+ * start = "hit", end = "cog", wordList = ["hot","dot","dog","lot","log","cog"]
+ * "hit" -> "hot" -> "dot" -> "dog" -> "cog"
+ * "hit" -> "hot" -> "lot" -> "log" -> "cog"
+ *
+ * Builder Graph for the word list
+ * <K = word, V = replace one char word in wordList>
+ * hit: [hot]
+ * hot: [dot, lot]
+ * dot: [dog, hot, lot]
+ * lot: [dot, log, hot]
+ * dog: [cog, log, dot] <- end: "cog"
+ * Step = 5
+ *
+ * Test 2
+ * Input: beginWord = "hit", end = "cog", wordList = ["hot","dot","dog","lot","log"]
+ * Output: []
+ * Explanation: The end "cog" is not in wordList, therefore there is no valid transformation sequence
+ * hit: [hot]
+ * hot: [dot, lot]
+ * dot: [dog, hot, lot]
+ * lot: [dot, log, hot]
+ * dog: [log, dot]
+ * log: [dog, lot]
+ * Step = 0
+ */
