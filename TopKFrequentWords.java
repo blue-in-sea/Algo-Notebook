@@ -11,6 +11,9 @@ public class TopKFrequentWords {
         // minHeap on the frequencies of the strings/words
         // Note: using Map.Entry as the element <T> directly so that all the 
         // operations are done mostly efficient 
+
+        // PriorityQueue<Integer> maxHeap = new PriorityQueue<>((x, y) -> y - x); one test case issue!! see note
+        // PriorityQueue<Integer> minHeap = new PriorityQueue<>((x, y) -> x - y); one test case issue!! see note
         PriorityQueue<Map.Entry<String, Integer>> minHeap = new PriorityQueue<>((e1, e2) -> 
             e1.getValue() == e2.getValue() ? e2.getKey().compareTo(e1.getKey()) : e1.getValue().compareTo(e2.getValue()));
 
