@@ -2,7 +2,7 @@
       boolean knows(int a, int b); */
 // https://leetcode.com/problems/find-the-celebrity
 
-public class FindCelebrition extends Relation {
+public class FindCelebrity extends Relation {
     // Time: O(N)
     // Space: O(1)
     public int findCelebrity(int n) {
