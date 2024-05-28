@@ -24,11 +24,19 @@ public class LastOccurrence {
     while (left < right - 1) {
       int mid = left + (right - left) / 2;
       if (array[mid] <= target) {
-        left = mid; // last occurrence 
+        left = mid; // last occurrence, next iteration will be [mid, right]
       } else {
         right = mid;
       }
     }
+
+    // Make sure you understand all the possible situation when entering 
+    // this post-processing procedure
+    // 1. array only has one element 
+    // 2. array only has two elements
+    // 3. left == right - 1 and right is the result
+    // 4. left == right - 1 and left is the result
+    // 5. left == right - 1 and none of both is the result
     if (array[right] == target) {
       return right;
     } else if (array[left] == target) {
