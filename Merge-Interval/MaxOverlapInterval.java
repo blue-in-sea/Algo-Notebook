@@ -1,5 +1,4 @@
 public class MaxOverlapInterval {
-
     public static int getMax(int[][] intervals) {
         // sort by start of the interval
         Arrays.sort(intervals, (a, b) -> a[0] == b[0] ? a[1] - b[1] : a[0] - b[0]);
