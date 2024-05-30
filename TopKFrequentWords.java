@@ -1,4 +1,8 @@
 public class TopKFrequentWords {
+    /**
+     * Time: O(NlogK)
+     * Space: O(N+K) to store the frequencyMap with not more N elements and a heap with K elements.
+     */
     public String[] topKFrequent(String[] combo, int k) {
         // handle the special caseof empty combo at the very beginning
         if (combo.length == 0) {
