@@ -1,4 +1,6 @@
 class DailyTemperatures {
+    // Time: O(N) looping
+    // Space: O(N) stack
     public int[] dailyTemperatures(int[] temperatures) {
         if (temperatures == null || temperatures.length == 0) {
             return new int[0];
@@ -22,6 +24,26 @@ class DailyTemperatures {
     }
 }
 
-// stack = bottom [(0, 75), (1, 71), (2, 69)] top 
 // * stack store index
 // * stack is strictly increasing from bottom to top 
+/**
+ * ======================
+ * index 0  [0] 
+ * ======================
+ * index 1  [1]
+ * ======================
+ * index 2  [2]
+ * ======================
+ * index 3  [3, 2] bottom
+ * ======================
+ * index 4  [4, 3, 2]
+ * ======================
+ * index 5  [5, 2]
+ * ======================
+ * index 6  [6]
+ * ======================
+ * index 7  [7, 6]
+ * ======================
+ * [73, 74, 75, 71, 69, 72, 76, 73]
+ * [1,   1,  4,  2,  1,  1,  0,  0]
+ */
