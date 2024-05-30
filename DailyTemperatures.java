@@ -1,6 +1,7 @@
 class DailyTemperatures {
     // Time: O(N) looping
     // Space: O(N) stack
+    // MonoStack
     public int[] dailyTemperatures(int[] temperatures) {
         if (temperatures == null || temperatures.length == 0) {
             return new int[0];
@@ -21,6 +22,36 @@ class DailyTemperatures {
         }
 
         return res;
+    }
+
+    // Time: O(N) scan the array for once
+    // Space: O(1)
+    // Linear scan from tail to end
+    public int[] dailyTemperatures(int[] temperatures) {
+        int n = temperatures.length;
+        int dp[] = new int[n]; // store the days to wait to get a warmer T
+
+        // base case: 
+        dp[n - 1] = 0;
+        int globalHot = dp[n - 1];
+
+        // induction 
+        for (int i = n - 1; i >= 0; i --) {
+            int curT = temperatures[i];
+            
+            if (curT >= globalHot) {
+                globalHot = curT;
+
+            } else {
+                int cnt = 1; // days to wait to get a warmer T
+                
+                while (temperatures[i + cnt] <= curT) {
+                    cnt += dp[i + cnt];
+                }
+                dp[i] = cnt;
+            }
+        }
+        return dp;
     }
 }
 
