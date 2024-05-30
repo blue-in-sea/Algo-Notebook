@@ -8,8 +8,14 @@ public class MaxOverlapInterval {
         int max = 0;
 
         for (int i = 0; i < intervals.length - 1; i++) {
-            // at the beginning or cur.end < next.start
-            if (i == 0 || intervals[i][1] < intervals[i + 1][0]) {
+            // at the beginning
+            if (i == 0) {
+                cnt++;
+                max = Math.max(cnt, max);
+            }
+
+            // cur.end > next.start
+            if (intervals[i][1] > intervals[i + 1][0]) {
                 cnt++;
                 max = Math.max(cnt, max);
             } else {
@@ -21,7 +27,7 @@ public class MaxOverlapInterval {
     }
 
     public static void main(String[] args) {
-        int[][] intervals1 = {{1, 7}, {7, 8}};
+        int[][] intervals = {{1, 7}, {7, 8}};
         System.out.println(getMax(intervals));
 
         int[][] intervals2 = {{1, 7}, {2, 6}, {9, 10}};
@@ -29,5 +35,8 @@ public class MaxOverlapInterval {
 
         int[][] intervals3 = {{1, 7}, {2, 6}, {6, 8}, {9, 10}};
         System.out.println(getMax(intervals3));
+
+        int[][] intervals4 = {{1, 7}, {2, 6}, {3, 4}, {6, 8}, {9, 10}};
+        System.out.println(getMax(intervals4));
     }
 }
