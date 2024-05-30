@@ -21,7 +21,10 @@ public class MaxOverlapInterval {
     }
 
     public static void main(String[] args) {
-        int[][] intervals = {{1, 7}, {7, 8}};
+        int[][] intervals1 = {{1, 7}, {7, 8}};
         System.out.println(getMax(intervals));
+
+        int[][] intervals2 = {{1, 7}, {2, 6}, {9, 10}};
+        System.out.println(getMax(intervals2));
     }
 }
