@@ -1,19 +1,19 @@
 /**
- * ___: current interval(i); _ _ _: newInterval
+ * ___: current interval; _ _ _: newInterval
  *
- * 1) i.end < newInterval.start，then we can safely add i to result;
+ * 1) cur.end < newInterval.start，then we can safely add i to result;
  * 	  newInterval still needs to be compared with latter intervals
  * 
  * 	  |________|
  * 			         |_ _ _ _ _|
  * 			
- * 2) i.start > newInterval.end，then we can safely add both to result，
+ * 2) cur.start > newInterval.end，then we can safely add both to result，
  * 	  and mark newInterval as null
  * 	
  * 			         |________|
  * 	  |_ _ _ _ _|
  * 			
- * 3) There is overlap between i and newInterval. We can merge i into newInterval, 
+ * 3) There is overlap between i and newInterval. We can merge curInterval into newInterval, 
  * then use the updated newInterval to compare with latter intervals.
  * [case 1]	
  * 	  |________|
