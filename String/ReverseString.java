@@ -1,3 +1,5 @@
+
+
 public class ReverseString {
     /**
      * String Reversal - While loop
@@ -14,6 +16,22 @@ public class ReverseString {
      *      *  * * i++
      *      *  * * j--
      */
+    public void reverseString(char[] s) {
+        int i = 0, j = s.length - 1;
+        while (i < j) {
+            swap(s, i++, j--);
+        }  
+    }
+
+    private void swap(char[] array, int a, int b) {
+        char tmp = array[a];
+        array[a] = array[b];
+        array[b] = tmp;
+    }
+
+    // =============================================
+    // for input as string not char[]
+
     public String reverse(String input) {
         if (input == null || input.length() <= 1) {
             return input;
@@ -26,11 +44,7 @@ public class ReverseString {
         return new String(array);
     }
 
-    private void swap(char[] array, int a, int b) {
-        char tmp = array[a];
-        array[a] = array[b];
-        array[b] = tmp;
-    }
+    // ==============================================
 
     /**
      * String Reversal - for-loop 现实
@@ -47,6 +61,8 @@ public class ReverseString {
         }
         return new String(array);
     }
+
+    // ==============================================
 
     /**
      * String Reversal - recursion 现实
@@ -71,4 +87,6 @@ public class ReverseString {
         helper(array, left + 1, right - 1);
         swap(array, left, right);              // 虚线框
     }
+
+    // ==============================================
 }
