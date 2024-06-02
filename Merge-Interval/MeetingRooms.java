@@ -1,4 +1,15 @@
 class MeetingRoomsII {
+   /**
+     * 235. MeetingRoomII
+     * Given an array of meeting time intervals where intervals[i] = [start_i, end_i], return the minimum rooms required.
+     *
+     * Input: intervals = [[0,30],[5,10],[15,20]]
+     * Output: 2
+     *
+     * Input: intervals = [[7,10],[2,4]]
+     * Output: 1
+     */
+    
     // Algo: 扫描线
     // Similar question: NumberOfAirPlanesII (find the max # of airplanes on the sky)
     
