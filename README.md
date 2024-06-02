@@ -3,6 +3,10 @@ Welcome to Iris Algo Notebook
 
 # Algo 
 ### 1. Bianry Search
+1) Classical Binary Search
+* l = r: when search end, l & r stop at the same index
+* l < r - 1: when search end, l & r stop at the adjacent index 
+3) wsss
 3. Recusion
 ### 4. Merge Interval
 1) Insert a interval: no sorting 
@@ -16,7 +20,7 @@ Welcome to Iris Algo Notebook
 
   
 ### 5. Trie 
-1) Trie for prefix lookup vs. HashMap for a word dictionary 
+1) Trie for prefix lookup vs. HashMap for a word search
 * [Prefix Trie](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Trie/PrefixTrie.java)
 * [Prefix Trie II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Trie/PrefixTrieII.java)
 6. 
