@@ -27,13 +27,12 @@
 // https://stackoverflow.com/questions/13032116/trie-complexity-and-searching
 // HashTable - same worest case complexity, but easier on entire word searching
 
-// 1. Build the Trie via HashMap to store a list of children
 class TrieNode {
     public boolean isWord;
     public Map<Character, TrieNode> children;
 
     public TrieNode() {
-        this.children = new HashMap<>();
+        this.children = new HashMap<>(); // Graph representation via HashMap to store a list of children
     }
 }
 
