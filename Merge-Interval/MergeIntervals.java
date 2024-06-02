@@ -21,7 +21,7 @@ class MergeIntervals {
     public int[][] merge(int[][] intervals) {
         // sort by start of the interval
         // Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0])); 
-        // Arrays.sort(intervals, (a, b) -> a[0] == b[0] ? a[1] == b[1] : a[0] - b[0]);  for the same start time, compare the end time 
+        // Arrays.sort(intervals, (a, b) -> a[0] == b[0] ? a[1] - b[1] : a[0] - b[0]);  for the same start time, compare the end time 
         Arrays.sort(intervals, (a, b) -> a[0] - b[0]); 
 
         List<int[]> res = new ArrayList<>();
