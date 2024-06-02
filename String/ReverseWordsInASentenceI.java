@@ -5,8 +5,7 @@ public class ReverseWordsInASentenceI {
         // 2) If there is a leading or trailing space: (keep) or (trim)
         // 3) input is not null
 
-        // since string is immutable, we best to convert it to char array 
-        // when doing the manipulation on the given string 
+        // since string is immutable, we best to convert it to char array to do the swap in-place 
         char[] array = s.toCharArray();
 
         reverse(array, 0, s.length() - 1);
