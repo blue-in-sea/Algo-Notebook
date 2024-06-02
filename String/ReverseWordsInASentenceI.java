@@ -22,6 +22,11 @@ public class ReverseWordsInASentenceI {
         
         return new String(array);
 
+        // This is for two sepcial test cases in LC:
+        // 1) if the words are seperated by more than one space character => keep only one space 
+        // 2) if there is leading or tailing space => trim
+
+        // return trimStr(s);
     }
 
     private void reverse(char[] array, int i, int j) {
@@ -29,32 +34,16 @@ public class ReverseWordsInASentenceI {
             swap(array, i++, j--);
         }
     }
-    
-    // ===== LC test case =====
-    public String reverseWords(String s) {
-        if (s == null || s.length() == 0) return new String();
-        // since string is immutable, we best to convert it to char array 
-        // when doing the manipluation on the given string 
-        char[] array = s.toCharArray();
- 
-        reverse(array, 0, s.length() - 1);
- 
-        int start = 0;
-        // 2. reverse the each of the words 
-        for (int i = 0; i < array.length; i++) {
-            // find the start index of each word 
-            if (array[i] != ' ' && (i == 0 || array[i - 1] == ' ')) start = i;
-            // move i to the end index of this word and 
-            // reverse this segement of the sentence 
-            if (array[i] != ' ' && (i == array.length - 1 || array[i + 1] == ' ')) reverse(array, start, i);
-        }
- 
-        // Assumptions:
-        // 1) if the words are seperated by more than one space character => keep only one space 
-        // 2) if there is leading or tailing space => trim
-        String str = new String(array);
-        // trim
-        char[] arr = str.trim().toCharArray();
+
+    private void swap(char[] array, int a, int b) {
+        char tmp = array[a];
+        array[a] = array[b];
+        array[b] = tmp;
+    }
+
+    // This trim & format the final string if required 
+    private Srting trimStr(String s) {
+        char[] arr = s.trim().toCharArray();
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == ' ' && arr[i - 1] == ' ') continue;
