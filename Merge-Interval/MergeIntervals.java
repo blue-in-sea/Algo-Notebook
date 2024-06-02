@@ -16,9 +16,36 @@
 class MergeIntervals {
     // Time: O(NlogN) sorting
     // Space: No extra space beside sorting & result list
+    
+    // Version 1: for-loop with index
     public int[][] merge(int[][] intervals) {
         // sort by start of the interval
-        Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0])); 
+        // Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0])); 
+        // Arrays.sort(intervals, (a, b) -> a[0] == b[0] ? a[1] == b[1] : a[0] - b[0]);  for the same start time, compare the end time 
+        Arrays.sort(intervals, (a, b) -> a[0] - b[0]); 
+
+        List<int[]> res = new ArrayList<>();
+
+        for (int i = 0; i < intervals.length; i++) {
+            // if first interval (or) if non-overlap (prevEnd < currStart)
+            // add currInterval 
+            if (res.size() == 0 || res.getLast()[1] < intervals[i][0]) {
+                res.add(intervals[i]);
+            }
+            // Merge the interval has the largest end: 
+            // prevInterval.end = max(prevEnd, currEnd)
+            res.getLast()[1] = Math.max(res.getLast()[1], intervals[i][1]);
+        }
+
+        return res.toArray(new int[res.size()][]);
+    }
+
+    
+    // Version 2: for-loop with no index 
+    public int[][] merge(int[][] intervals) {
+        // sort by start of the interval
+        Arrays.sort(intervals, (a, b) -> a[0] - b[0]); 
+        
         List<int[]> res = new ArrayList<>();
 
         for (int[] interval : intervals) {
