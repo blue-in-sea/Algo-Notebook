@@ -4,7 +4,7 @@ Welcome to Iris Algo Notebook
 # Algo 
 ### 1. Bianry Search
 1) Classical Binary Search
-* Time O(logn) by sufficiently reducing the searching space by half `m = l + (l - r) / 2` 
+* Time: **O(logn)** by sufficiently reducing the searching space by half `m = l + (l - r) / 2` 
 * `l = r`: stop at the *same* index 
 * `l < r - 1`: stop at the *adjacent* index
 3) wsss
