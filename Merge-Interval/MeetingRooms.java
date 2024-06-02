@@ -1,6 +1,7 @@
-class MeetingRooms {
+class MeetingRoomsII {
     // Algo: 扫描线
-
+    // Similar question: NumberOfAirPlanesII (find the max # of airplanes on the sky)
+    
     // Data Str: TreeMap<k: time, v: cnt of the meeting room at this time> (sorted hashmap)
     // * search & insertion & deletion: O(logn)
     // * Time complexity to build a treemap: O(nlogn)
