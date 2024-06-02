@@ -21,6 +21,8 @@ class MeetingRoomsII {
     // 1. build the treemap (sort the time, keep track of the number of rooms needed at the given time)
     // 2. travser the treemap to find the max # of overlap intervals
 
+    // Time: O(nlogn)
+    // Space: O(n)
     public int minMeetingRooms(int[][] intervals) {
         // corner case
         if (intervals == null || intervals.length == 0) {
