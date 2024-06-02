@@ -1,3 +1,40 @@
+/**
+ * Implement Trie (Prefix Tree)
+ *
+ * Implement a trie with insert, search, and startsWith methods:
+ * API: 
+ * insert() - Inserts the string word into the trie.
+ * countWordsEqualTo() - Returns the number of instances of the word in the trie.
+ * countWordsStartingWith() - Returns the number of strings in the trie that shared the prefix.
+ * erase() - Erases a word from the trie.
+ *
+ * Example:
+ * Input
+ * ["Trie", "insert", "insert", "countWordsEqualTo", "countWordsStartingWith", "erase", "countWordsEqualTo",
+ * "countWordsStartingWith", "erase", "countWordsStartingWith"]
+ * [[], ["apple"], ["apple"], ["apple"], ["app"], ["apple"], ["apple"], ["app"], ["apple"], ["app"]]
+ * Output
+ * [null, null, null, 2, 2, null, 1, 1, null, 0]
+ *
+ * Explanation
+ * Trie trie = new Trie();
+ * trie.insert("apple");               // Inserts "apple".
+ * trie.insert("apple");               // Inserts another "apple".
+ * trie.countWordsEqualTo("apple");    // There are two instances of "apple" so return 2.
+ * trie.countWordsStartingWith("app"); // "app" is a prefix of "apple" so return 2.
+ * trie.erase("apple");                // Erases one "apple".
+ * trie.countWordsEqualTo("apple");    // Now there is only one instance of "apple" so return 1.
+ * trie.countWordsStartingWith("app"); // return 1
+ * trie.erase("apple");                // Erases "apple". Now the trie is empty.
+ * trie.countWordsStartingWith("app"); // return 0
+ */
+
+// Time: O(W * L) where W is number of words, L is the avg(length of words); In general, L steps for each of the W words
+// Space: O(W * L) 
+
+// https://stackoverflow.com/questions/13032116/trie-complexity-and-searching
+// HashTable - same worest case complexity, but easier on entire word searching
+
 
 class TrieNode {
     public boolean isWord;
