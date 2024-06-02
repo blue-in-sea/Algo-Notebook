@@ -62,11 +62,11 @@ public class ReverseString {
         return new String(array);
     }
 
-
+    // ==========================================================
     /**
      * String Reversal - recursion 现实
-     * Time: O(N)
-     * Space: O(N) for n/2 stack calls
+     * Time: O(n)
+     * Space: O(n) for n/2 stack calls
      */
     public String reverse(String input) {
         if (input == null || input.length() <= 1) {
