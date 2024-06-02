@@ -4,11 +4,9 @@ Welcome to Iris Algo Notebook
 # Algo 
 ### 1. Bianry Search
 1) Classical Binary Search
-* Time O(logn) by sufficiently reducing the searching space by half
-* m = l + (l - r) / 2 
-* when search end 
-* l = r: l & r stop at the same index
-* l < r - 1: l & r stop at the adjacent index 
+* Time O(logn) by sufficiently reducing the searching space by half `m = l + (l - r) / 2` 
+* `l = r`: l & r stop at the same index (when search end)
+* `l < r - 1`: l & r stop at the adjacent index (when search end)
 3) wsss
 3. Recusion
 ### 4. Merge Interval
