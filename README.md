@@ -5,7 +5,7 @@ Welcome to Iris Algo Notebook
 1. Bianry Search
 3. Recusion
 4. Merge Interval
-* * hi
+* 1) hi
 5. 
 6. 
 
