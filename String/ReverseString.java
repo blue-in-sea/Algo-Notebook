@@ -1,8 +1,8 @@
 public class ReverseString {
     /**
      * String Reversal - While loop
-     * Time: O(N)
-     * Space: O(1)
+     * Time: O(n) for two-ptr scan the entire input
+     * Extra Space: O(1) for in-place operation on the array
      *
      * 逆向双指针：i，j  分别指向首末，相向而行 【解法 in-place】
      *      *
@@ -13,9 +13,6 @@ public class ReverseString {
      *      *  * * swap(i, j)
      *      *  * * i++
      *      *  * * j--
-     *      *
-     *      * Time: O(n) for two-ptr scan the entire input
-     *      * Extra Space: O(1) for in-place operation on the array
      */
     public String reverse(String input) {
         if (input == null || input.length() <= 1) {
