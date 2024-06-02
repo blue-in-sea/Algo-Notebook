@@ -1,4 +1,25 @@
+/**
+ * input = I Love Yahoo
+ *        [i ...       j] leverage the reverseString 双指针首位相向而行
+ *
+ * Step1: reverse the whole sentence                     →    oohaY evoL I
+ * Step2: reverse every single word (two pointers)       →    Yahoo Love I
+ *
+ * Two Pointer:
+ * 1) start: store the start index of each word
+ * 2) i: linear scan to find the end index of each word
+ *
+ * Initialize: s = i = 0
+ * First, reverse the entire sentence
+ * Second, looping the sentence again to reverse every single word
+ * case 1	i find the start index of each word, start = i
+ * case 2 	i find the end index of each word, reverse the word: reverse(s, start, i)
+ */
+
 public class ReverseWordsInASentenceI {
+    // Time: O(n) only looping
+    // Space: O(n) char arr in-place operation 
+    
     public String reverseWords(String s) {
         // Assumptions:
         // 1) The words are separated by one space character
@@ -22,7 +43,7 @@ public class ReverseWordsInASentenceI {
         
         return new String(array);
 
-        // This is for two sepcial test cases in LC:
+        // Below is for two sepcial test cases in LC:
         // 1) if the words are seperated by more than one space character => keep only one space 
         // 2) if there is leading or tailing space => trim
 
