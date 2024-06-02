@@ -4,7 +4,7 @@
 
 public class ReverseString {
     /**
-     * String Reversal - While loop
+     * String Reversal - while loop 实现
      * Time: O(n) for two pointers scan the entire input
      * Extra Space: O(1) for in-place operation on the array
      *
