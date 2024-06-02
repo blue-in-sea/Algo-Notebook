@@ -31,7 +31,7 @@ public class ReverseString {
         array[b] = tmp;
     }
 
-    // ===========================================================================================
+    // ==========================================================
     // for input as string not char[]
 
     public String reverse(String input) {
@@ -45,7 +45,7 @@ public class ReverseString {
         }
         return new String(array);
     }
-
+    // ==========================================================
     /**
      * String Reversal - for-loop 现实
      * Time: O(n) - looping 
