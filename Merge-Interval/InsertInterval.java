@@ -45,9 +45,9 @@ class InsertInterval {
             } 
             // case 3: merge 2 overlap intervals
             else {   
-                // new start time will be the min
+                // new start time will be the min start
                 newInterval[0] = Math.min(newInterval[0], curInterval[0]);//get min
-                // new end time will be the min
+                // new end time will be the max end
                 newInterval[1] = Math.max(newInterval[1], curInterval[1]);//get max
             }
         }
