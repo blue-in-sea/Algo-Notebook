@@ -29,6 +29,7 @@ public class ReverseWordsInASentenceI {
         // since string is immutable, we best to convert it to char array to do the swap in-place 
         char[] array = s.toCharArray();
 
+        // 1. reverse the entire sentence
         reverse(array, 0, s.length() - 1);
 
         int start = 0;
