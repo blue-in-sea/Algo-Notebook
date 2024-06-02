@@ -15,9 +15,6 @@
  * Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
  */
 class InsertInterval {
-    // Time: O(n) given the input intervals were sorted 
-    // Space: O(1) no extra space used 
-
    /**
      * ___: current interval; _ _ _: newInterval
      *
@@ -44,6 +41,9 @@ class InsertInterval {
      * 		 |________|
      * 	 |_ _ _ _ _|			
      */
+    
+    // Time: O(n) given the input intervals were sorted 
+    // Space: O(1) no extra space used 
     public int[][] insert(int[][] intervals, int[] newInterval) {
         List<int[]> res = new ArrayList<>();
         for(int[] curInterval : intervals){
