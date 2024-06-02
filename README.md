@@ -15,9 +15,10 @@ Welcome to Iris Algo Notebook
 * [Numebr of Airplanes On the Sky](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/NumberOfAirplanesII.java)
 
   
-### 5. Trie
-* prefix-trie
-* prefix-trie-II
+### 5. Trie 
+1) Trie for prefix lookup vs. HashMap for a word dictionary 
+* [Prefix Trie](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Trie/PrefixTrie.java)
+* [Prefix Trie II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Trie/PrefixTrieII.java)
 6. 
 
 
