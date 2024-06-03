@@ -1,24 +1,45 @@
 /**
- * input = I Love Yahoo
- *        [i ...       j] leverage the reverseString 双指针首位相向而行
+ * 151. Reverse Words in a String
+ * Given an input string s, reverse the order of the words.
+ * Return a string of the words in reverse order concatenated by a single space.
  *
- * Step1: reverse the whole sentence                     →    oohaY evoL I
- * Step2: reverse every single word (two pointers)       →    Yahoo Love I
+ * Note that s may contain leading or trailing spaces or multiple spaces between two words. The returned string
+ * should only have a single space separating the words. Do not include any extra spaces.
  *
- * Two Pointer:
- * 1) start: store the start index of each word
- * 2) i: linear scan to find the end index of each word
+ * Input: s = "the sky is blue"
+ * Output: "blue is sky the"
  *
- * Initialize: s = i = 0
- * First, reverse the entire sentence
- * Second, looping the sentence again to reverse every single word
- * case 1	i find the start index of each word, start = i
- * case 2 	i find the end index of each word, reverse the word: reverse(s, start, i)
+ * Input: s = "  hello world  "
+ * Output: "world hello"
+ * Explanation: Your reversed string should not contain leading or trailing spaces.
+ * Example 3:
+ *
+ * Input: s = "a good   example"
+ * Output: "example good a"
+ * Explanation: You need to reduce multiple spaces between two words to a single space in the reversed string.
  */
 
 public class ReverseWordsInASentenceI {
     // Time: O(n) only looping
-    // Space: O(1) char arr in-place operation 
+    // Space: O(1) char arr in-place operation
+
+    /**
+     * input = I Love Yahoo
+     *        [i ...       j] leverage the reverseString 双指针首位相向而行
+     *
+     * Step1: reverse the whole sentence                     →    oohaY evoL I
+     * Step2: reverse every single word (two pointers)       →    Yahoo Love I
+     *
+     * Two Pointer:
+     * 1) start: store the start index of each word
+     * 2) i: linear scan to find the end index of each word
+     *
+     * Initialize: s = i = 0
+     * First, reverse the entire sentence
+     * Second, looping the sentence again to reverse every single word
+     * case 1	i find the start index of each word, start = i
+     * case 2 	i find the end index of each word, reverse the word: reverse(s, start, i)
+     */
     
     public String reverseWords(String s) {
         // Assumptions:
