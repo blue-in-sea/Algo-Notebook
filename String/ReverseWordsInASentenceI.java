@@ -18,7 +18,7 @@
 
 public class ReverseWordsInASentenceI {
     // Time: O(n) only looping
-    // Space: O(n) char arr in-place operation 
+    // Space: O(1) char arr in-place operation 
     
     public String reverseWords(String s) {
         // Assumptions:
