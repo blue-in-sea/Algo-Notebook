@@ -21,7 +21,7 @@ Welcome to Iris Algo Notebook
 
 
 ### 4. String
-1) String Reversal (相向双指针)
+1) String Reversal (相向双指针) 首位相向而行
 * [Reverse a String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ReverseString.java)
 * [Reverse Words in a Sentence I](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ReverseWordsInASentenceI.java)
 * Right Shift by N Characters
@@ -45,13 +45,27 @@ Welcome to Iris Algo Notebook
 * Find longest subarray that consists of all ‘1’s
 
 
-
+### 6. Two pointer 
+[同向双指针] sliding window, fast-slow pointers  
+[逆向双指针] 中心开花, 两边往中间走
+  1. longest subarray contains only 1s
+  2. two sum
+  3. two sum smaller
+  4. 2 sum closest 
+  5. find the closes sum to target from two sorted arrays
+  6. rainbow sort
+  7. longest substring without repeating characters 
+  8. sliding window maximum
+  9. sliding window median 
+  10. minimum substring ...
 
   
 ### 5. Trie 
 1) Trie for prefix lookup vs. HashMap for a word search
 * [Prefix Trie](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Trie/PrefixTrie.java)
 * [Prefix Trie II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Trie/PrefixTrieII.java)
-6. 
+
+
+
 
 
