@@ -17,8 +17,12 @@
  * Input: s = "a good   example"
  * Output: "example good a"
  * Explanation: You need to reduce multiple spaces between two words to a single space in the reversed string.
+ *
+ * Assumptions:
+ * 1) The words are separated by one space character
+ * 2) If there is a leading or trailing space: (keep) or (trim)
+ * 3) input is not null
  */
-
 public class ReverseWordsInASentenceI {
     // Time: O(n) only looping
     // Space: O(1) char arr in-place operation
@@ -40,12 +44,7 @@ public class ReverseWordsInASentenceI {
      * case 1	i find the start index of each word, start = i
      * case 2 	i find the end index of each word, reverse the word: reverse(s, start, i)
      */
-    
     public String reverseWords(String s) {
-        // Assumptions:
-        // 1) The words are separated by one space character
-        // 2) If there is a leading or trailing space: (keep) or (trim)
-        // 3) input is not null
 
         // since string is immutable, we best to convert it to char array to do the swap in-place 
         char[] array = s.toCharArray();
@@ -84,7 +83,10 @@ public class ReverseWordsInASentenceI {
         array[b] = tmp;
     }
 
-    // This trim & format the final string if required 
+    // Assumptions:
+    // 1) The words are separated by one space character
+    // 2) If there is a leading or trailing space: (keep) or (trim)
+    // 3) input is not null
     private Srting trimStr(String s) {
         char[] arr = s.trim().toCharArray();
         StringBuilder sb = new StringBuilder();
