@@ -19,6 +19,34 @@ Welcome to Iris Algo Notebook
 * [Meeting Rooms II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/MeetingRoomsII.java)
 * [Numebr of Airplanes On the Sky](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/NumberOfAirplanesII.java)
 
+
+### 4. String
+1) String Reversal (相向双指针)
+* [Reverse a String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ReverseString.java)
+* [Reverse Words in a Sentence I](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ReverseWordsInASentenceI.java)
+* Right Shift by N Characters
+* Char Replacement
+
+2) String Shuffling
+* String Shuffling
+* Reverse String Shuffling
+
+3) String Permutation
+* All Permutation I: No duplication in the input string 
+* All Permutation II: Might be duplication in the input string 
+
+4) String En/Decoding
+* Compress String 
+* Decompress String
+
+5) Sliding Window in A String
+* Longest substring that contains only character 
+* Find all anagrams of a substring S2 in a long string S1
+* Find longest subarray that consists of all ‘1’s
+
+
+
+
   
 ### 5. Trie 
 1) Trie for prefix lookup vs. HashMap for a word search
