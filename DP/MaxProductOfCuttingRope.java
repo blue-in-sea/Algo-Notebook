@@ -12,6 +12,7 @@
  * (cut the rope into 4 pieces with length of each is 3).
  */
 
+// Use Method 3:（左大段 + 右小段) for Interview .. 
 public class MaxProductOfCuttingRope {
   /** 
    * Method 1: DFS (Recursion) + Backtracking
