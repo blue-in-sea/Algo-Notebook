@@ -44,8 +44,9 @@ public class MaxProductOfCuttingRope {
   }
 
   /** 
-   * Method 2: Dynamic Programming（左大段 + 右大段）
+   * Method 2: Dynamic Programming（左大段 + 右小段）Optimal!!
    * M[i] represents the max product of (p[0], p[1], ...,p[m-1])
+   * 右小段: 右边最后一刀绳子本身的长度：如上图
    */
   public int maxProduct(int length) {
     int n = length;
@@ -53,20 +54,19 @@ public class MaxProductOfCuttingRope {
     M[0] = 0; // place holder
     M[1] = 0;
     for (int i = 2; i <= n; i ++) {
-      //因为对称，所以枚举到i / 2即可
+      //因为对称，所以枚举到i / 2即可，剪枝
       for (int j = 1; j <= i / 2; j++) {
-                      //不切  //切
-        M[i] = Math.max(M[i], Math.max(M[j], j) * Math.max(M[i - j], i - j));
-                                   // 左大段               // 右大段
+                       //不切  //切
+        M[i] = Math.max(M[i], Math.max(M[j], j) * (i - j)); // trick to calculate 
+                                   // 左大段      // 右小段
       }
     }
     return M[n];
   } 
 
   /** 
-   * Method 3: Dynamic Programming（左大段 + 右小段）Optimal!!
+   * Method 3: Dynamic Programming（左大段 + 右大段）
    * M[i] represents the max product of (p[0], p[1], ...,p[m-1])
-   * 右小段: 右边最后一刀绳子本身的长度
    */
   public int maxProduct(int length) {
     int n = length;
@@ -74,10 +74,11 @@ public class MaxProductOfCuttingRope {
     M[0] = 0; // place holder
     M[1] = 0;
     for (int i = 2; i <= n; i ++) {
-      for (int j = 1; j < i; j++) {
-                       //不切  //切
-        M[i] = Math.max(M[i], Math.max(M[j], j) * (i - j));
-                                   // 左大段      // 右小段
+      //因为对称，所以枚举到i / 2即可，剪枝
+      for (int j = 1; j <= i / 2; j++) {
+         //不切：继承之前的长度  //切
+        M[i] = Math.max(M[i], Math.max(M[j], j) * Math.max(M[i - j], i - j)); // memo recursion 
+                                   // 左大段               // 右大段
       }
     }
     return M[n];
