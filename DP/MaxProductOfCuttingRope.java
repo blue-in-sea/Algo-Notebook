@@ -28,7 +28,7 @@ public class MaxProductOfCuttingRope {
    */
   
   /** 
-   * Method 3: Dynamic Programming（左大段 + 右小段 Interview !!
+   * Method 3: Dynamic Programming（左大段 + 右小段) Interview !!
    * M[i] represents the max product of (p[0], p[1], ...,p[m-1])
    * 右小段: 右边最后一刀绳子本身的长度：如上图 !!
    * Time: O(n^2) 
