@@ -27,7 +27,7 @@ class JumpGame {
     //        <-
     // dp   [ T, T, T, T, T ]
     
-    // DP1: from end to start 如上图
+    // Method1: from end to start scan (回头看) 如上图 
     // Time: O(n^2), Space: O(n)
     public boolean canJump(int[] array) {
         // Assume the input is not null and input has length at leaste 1
