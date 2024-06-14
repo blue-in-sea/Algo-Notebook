@@ -10,10 +10,7 @@
  */
 public class FlattenBinaryTreeToLinkedList {
   /**
-   * @param root: a TreeNode, the root of the binary tree
-   * @return: root
-   *
-   * Mathod 1: Traversal (not recommend!)
+   * Method 1: Traversal (not recommend!)
    */
   private TreeNode lastNode = null; // declare a global var
   public TreeNode flatten(TreeNode root) {
@@ -42,9 +39,6 @@ public class FlattenBinaryTreeToLinkedList {
   }
   
   /**
-   * @param root: a TreeNode, the root of the binary tree
-   * @return: root
-   *
    * Method 2: Divide and Conquer
    */
   public TreeNode flatten(TreeNode root) {
