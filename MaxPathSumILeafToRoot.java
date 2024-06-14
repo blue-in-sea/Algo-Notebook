@@ -24,6 +24,7 @@
  *   }
  * }
  */
+// Use Method 2: bottom up for Interview .. 
 public class MaxPathSumILeafToRoot {
   // Method 1: Top down - pass down the prefix sum 
   public int maxPathSumLeafToRoot(TreeNode root) {
