@@ -26,8 +26,24 @@ public class MaxProductOfCuttingRope {
    * Time: O(n!) for n meters rope (Brutal Force)
    * Space: O(n) for stack calls
    */
+  public int maxProduct(int length) {
+    int n = length;
+    
+    // base case: no cut made 
+    if (n <= 1) {
+      return 0;
+    }
+    
+    int max = 0;
+    for (int i = 1; i < n; i++) {
+      int best = Math.max(maxProduct(n - i), n - i);
+      max = Math.max(i * best, max);
+    }
+    
+    return max;
+  }
   
-  /** 
+ /** 
    * Method 3: Dynamic Programming（左大段 + 右小段) Interview !!
    * M[i] represents the max product of (p[0], p[1], ...,p[m-1])
    * 右小段: 右边最后一刀绳子本身的长度：如上图 !!
@@ -49,23 +65,6 @@ public class MaxProductOfCuttingRope {
     }
     return M[n]; // M: [0, 0, 1, 2, 4, 6, 9, 12, 18, 27, 36, 54, 81]
   } 
-  
-  public int maxProduct(int length) {
-    int n = length;
-    
-    // base case: no cut made 
-    if (n <= 1) {
-      return 0;
-    }
-    
-    int max = 0;
-    for (int i = 1; i < n; i++) {
-      int best = Math.max(maxProduct(n - i), n - i);
-      max = Math.max(i * best, max);
-    }
-    
-    return max;
-  }
 
   /** 
    * Method 2: Dynamic Programming（左大段 + 右大段）
