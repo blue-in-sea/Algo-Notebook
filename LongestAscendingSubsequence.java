@@ -1,6 +1,21 @@
+/**
+ * 300. Longest Increasing Subsequence
+ * Given an integer array nums, return the length of the longest strictly increasing 
+ * subsequence
+ * 
+ * Input: nums = [10,9,2,5,3,7,101,18]
+ * Output: 4 where    [2,  3,7,101] - The longest increasing subsequence
+ *
+ * Input: nums = [0,1,0,3,2,3]
+ * Output: 4     [0,1,    2,3]      - The longest increasing subsequence
+ *
+ * Input: nums = [7,7,7,7,7,7,7]
+ * Output: 1     [7]                - The longest increasing subsequence
+ */
+
 public class LongestAscendingSubsequence {
-  // Method 1: DP 
-  // Time: O(n^2), Space: O(n)
+  // Method 1: DP Linear Scan 回头看
+  // Time: O(n^2) = 1 + 2 + 3 + 4 + ... + n(n+1)/2, Space: O(n)
   public int longest (int[] array) {
     // Assume array is not null
     if (array.length == 0) {
