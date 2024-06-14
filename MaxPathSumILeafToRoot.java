@@ -32,7 +32,7 @@ public class MaxPathSumILeafToRoot {
   }
 
   private int maxPathSum(TreeNode root, int sum) {
-    sum += root.key;
+    sum += root.key; // calculte the prefix sum at the current level 
     
     if (root.left == null && root.right == null) {
       return sum;
@@ -46,13 +46,14 @@ public class MaxPathSumILeafToRoot {
   
   // =======================================================================
   
-  // Method 2: bottom up - return the max suffix sum
+  // Method 2: bottom up - return the max suffix sum (Optimal!!!)
   public int maxPathSumLeafToRoot(TreeNode root) {
     // Assume root is not null
     return maxPathSum(root);
   }
 
   private int maxPathSum(TreeNode root) {
+    // base case
     if (root.left == null && root.right == null) {
       return root.key;
     }
@@ -62,6 +63,7 @@ public class MaxPathSumILeafToRoot {
     if (root.right == null) {
       return maxPathSum(root.left) + root.key;
     }
+    // current level
     return Math.max(maxPathSum(root.left), maxPathSum(root.right)) + root.key;
   }
   
