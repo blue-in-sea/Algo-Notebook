@@ -1,6 +1,30 @@
+/**
+ * Given a binary tree in which each node contains an integer number. Find the maximum possible path sum from a leaf 
+ * to root.
+ *          10
+ *
+ *        /      \
+ *
+ *     -2        7
+ *
+ *   /     \
+ *
+ * 8      -4
+ *
+ * The maximum path sum is 10 + 7 = 17.
+ */
+
+/**
+ * public class TreeNode {
+ *   public int key;
+ *   public TreeNode left;
+ *   public TreeNode right;
+ *   public TreeNode(int key) {
+ *     this.key = key;
+ *   }
+ * }
+ */
 public class MaxPathSumILeafToRoot {
-
-
   // Method 1: Top down - pass down the prefix sum 
   public int maxPathSumLeafToRoot(TreeNode root) {
     // Assume root is not null
