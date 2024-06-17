@@ -1,3 +1,5 @@
+package GraphBFS;
+
 /**
  * Definition for Directed graph.
  * class DirectedGraphNode {

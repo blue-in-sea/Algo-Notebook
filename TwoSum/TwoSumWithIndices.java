@@ -1,3 +1,5 @@
+package TwoSum;
+
 class TwoSumWithIndices {
     public int[] twoSum(int[] nums, int target) {
         Map<Integer, Integer> hashtable = new HashMap<Integer, Integer>();
