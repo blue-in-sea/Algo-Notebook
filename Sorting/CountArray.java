@@ -1,3 +1,5 @@
+package Sorting;
+
 /**
  * Given an array A of length N containing all positive integers from [1...N]. 
  * How to get an array B such that B[i] represents: 
