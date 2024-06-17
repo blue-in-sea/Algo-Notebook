@@ -1,3 +1,5 @@
+import java.util.*;
+
 class TopKFrequentNum {
     public int[] topKFrequent(int[] nums, int k) {
         // O(1) time

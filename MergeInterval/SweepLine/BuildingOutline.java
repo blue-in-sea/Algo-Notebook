@@ -1,3 +1,7 @@
+package MergeInterval.SweepLine;
+
+import java.util.*;
+
 public class BuildingOutline {
     /**
      * @param buildings: A list of lists of integers

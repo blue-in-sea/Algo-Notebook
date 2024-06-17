@@ -1,3 +1,6 @@
+package MergeInterval;
+
+import java.util.*;
 /**
  * 57. Insert newInterval
  * Insert newInterval into intervals such that intervals is still sorted in ascending order by start_i and
@@ -13,6 +16,7 @@
  * Output: [[1,2],[3,10],[12,16]]
  * Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
  */
+
 class InsertInterval {
    /**
      * ___: current interval; _ _ _: newInterval
