@@ -1,3 +1,5 @@
+package GraphBFS;
+
 public class SlidingPuzzle {
     private final int[] DIRS = {-1, 1, -3, 3};
     public int slidingPuzzle(int[][] board) {

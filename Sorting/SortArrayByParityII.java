@@ -1,3 +1,5 @@
+package Sorting;
+
 public class SortArrayByParityII {
     // 为数组的偶数下标部分和奇数下标部分分别维护指针 i, j
     // 随后，在每一步中，如果 A[i] 为奇数，则不断地向前移动 j

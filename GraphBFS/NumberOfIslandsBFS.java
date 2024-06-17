@@ -1,11 +1,13 @@
-/** 
+package GraphBFS;
+
+/**
  * BFS Time Complexity
  * Time: O(M * N) where M is # of rows and N is # of cols
  * Space: O( min(M * N) ) where in the worst case all elements in grid are lands, 
  *        and the size of queue could reach its maximum of min(M * N).
  */
 
-public class NumberOfIslands {
+public class NumberOfIslandsBFS {
   /* * * * * * * * * * * * version 1 * * * * * * * * * * * * */
   private class Pair {
     int x;

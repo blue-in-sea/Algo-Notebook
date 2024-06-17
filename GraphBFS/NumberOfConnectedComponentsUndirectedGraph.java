@@ -1,3 +1,5 @@
+package GraphBFS;
+
 public class NumberOfConnectedComponentsUndirectedGraph {
   /**
    * BFS

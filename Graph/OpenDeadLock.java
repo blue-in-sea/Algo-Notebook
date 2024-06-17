@@ -1,4 +1,6 @@
-public class OpenTheLock {
+package Graph;
+
+public class OpenDeadLock {
     public int openLock(String[] deadends, String target) {
         // corner case check
 

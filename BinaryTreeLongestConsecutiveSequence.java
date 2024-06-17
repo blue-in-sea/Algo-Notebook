@@ -1,14 +1,12 @@
-/**
- * public class TreeNode {
- *   public int key;
- *   public TreeNode left;
- *   public TreeNode right;
- *   public TreeNode(int key) {
- *     this.key = key;
- *   }
- * }
- */
 public class BinaryTreeLongestConsecutiveSequence {
+  class TreeNode {
+    public int key;
+    public TreeNode left;
+    public TreeNode right;
+    public TreeNode(int key) {
+      this.key = key;
+    }
+  }
   
   // Top-down Recursion Approach 
   // Time: O(N)
