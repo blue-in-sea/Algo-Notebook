@@ -1,4 +1,4 @@
-package Graph;
+package GraphBFS;
 import java.util.*;
 
 /**

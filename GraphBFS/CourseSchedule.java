@@ -1,7 +1,7 @@
 /**
  * Key: given node & edges, build map that stores a direct grap
  *      then BFS the graph to check whether it contains circle or violate the requirement 
- * 
+ *
  * Algo: 1. convert nodes and edges into map <node, adjList>
  *       2. second map to calculate the indegree of each nodes
  *       3. BFS, put all indegree == 0 nodes into queue, also put them into bfs-result list
@@ -21,7 +21,7 @@ public class CourseSchedule {
     }
 
     // build courseMap
-    Map<Integer, List<Integer>> courseMap = buildMap(numCourses, prerequisites); 
+    Map<Integer, List<Integer>> courseMap = buildMap(numCourses, prerequisites);
 
     // calculate each course's indegree / 统计各个节点的入度, 查节点在不在 key 里 (在, indegree++)
     // <K, V> : <node : its indegree>
@@ -79,7 +79,7 @@ public class CourseSchedule {
     }
     return map;
   }
-  
+
   // Approach 2: 裸拓扑排序
   public boolean canFinish(int numCourses, int[][] prerequisites) {
     List[] edges = new ArrayList[numCourses];
@@ -97,14 +97,14 @@ public class CourseSchedule {
     Queue<Integer> queue = new LinkedList<>();
     for (int i = 0; i < degree.length; i++) {
       if (degree[i] == 0) {
-        queue.add(i);  // put no prerequisite class into our queue 
+        queue.add(i);  // put no prerequisite class into our queue
       }
     }
 
     int cnt = 0;
     while (!queue.isEmpty()) {
       int course = (int)queue.poll();
-      cnt++;  // cnt will increase one unit whenever a course's indegree reset to 0
+      cnt++; // cnt will increase one unit whenever a course's indegree reset to 0 (出队列的时候加）
       int n = edges[course].size();
       for (int i = 0; i < n; i++) {
         int pointer = (int)edges[course].get(i);
@@ -114,7 +114,7 @@ public class CourseSchedule {
         }
       }
     }
-    
+
     return cnt == numCourses;
   }
 }

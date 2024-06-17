@@ -1,3 +1,5 @@
+import Graph.GraphNode;
+
 class Node {
     int val;
     List<Node> neighbors;
