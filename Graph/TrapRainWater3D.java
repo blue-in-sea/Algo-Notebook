@@ -1,3 +1,5 @@
+package Graph;
+
 /**
  * For every point Pi <xi, yi, zi> on the border, set the water level to zi
  * For every point Pj not on the border, set the water level to INFINITY
