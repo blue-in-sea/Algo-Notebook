@@ -18,6 +18,11 @@ package Recursion;
  * Output: 222616187
  * Explanation: The answer must be returned modulo 109 + 7.
  */
+
+// Topic All Combination 
+// 1. Burutal Force: recursion,                   O(k^n) for k^n possibilities/combinations
+// 2. TopDown DP: recursion + memo (trim),        O(n * t * k) for (n * t) state * k possible faces
+// 3. BottomUpDP: memo from base case to end      O(n * t * k) for (n * t) state * k possible faces (interview)
 public class DiceRollsWithTargetSum {
     // n dices, each dice has k faces number from 1 to k
     //
@@ -31,17 +36,40 @@ public class DiceRollsWithTargetSum {
 
     final int MOD = 1000000007;
 
+    // ===================================================================
+    // Bottom-Up Dynamic Programming: interview !!!
+    // Iterate over the states by starting from the base case and ending at the initial query
+    // Time: O(n * t * k) for 3 nested for-loop to compute (n * t) state * k possible faces
+    // Space: O(n * t) size of memo[][]
     public int numRollsToTarget(int n, int k, int target) {
-        Integer[][] memo = new Integer[n + 1][target + 1];
-        return dfs(memo, 0, n, 0, target, k);
+        int[][] memo = new int[n + 1][target + 1];
+        // base case
+        memo[n][target] = 1;
+        
+        for (int diceIndex = n - 1; diceIndex >= 0; diceIndex--) {
+            for (int currSum = 0; currSum <= target; currSum++) {
+               int ways = 0;
+                
+                // Iterate over the possible face value for current dice
+                for (int i = 1; i <= Math.min(k, target - currSum); i++) {
+                    ways = (ways + memo[diceIndex + 1][currSum + i]) % MOD;
+                }
+                
+                memo[diceIndex][currSum] = ways;
+            }
+        }
+        
+        return memo[0][0];
     }
 
+    // ===================================================================
     // Brutal force: Recursion with no trim
     // Time: O(k^n)
     // Go through each possible combinations and count the # of ways where result = target. To do this
     // we iterate from 1 to k for each dice, store it as a curr_var and keep a curr_sum, recursively move to the next dice.
     // This will produces all the k^n possibilities/combinations
 
+    // ===================================================================
     // Top-Down Dynamic Programming: Recursion + Memo
     // Time: O(n * t * k) where n dices, t is the target sum, k is the faces number => (n * t) state * k possible faces
     //                                                                                  memo[][]       for-loop
@@ -49,6 +77,12 @@ public class DiceRollsWithTargetSum {
     //                                 size of memo[][]  +  # of stack calls by n levels
     // De-dup the repeated sub-problem by memoize the result of each sub-problem: [index, currsum] with *
     // Each time we calculate the result from the same set of param, we can do lookup in constant time
+
+    public int numRollsToTarget(int n, int k, int target) {
+        Integer[][] memo = new Integer[n + 1][target + 1];
+        return dfs(memo, 0, n, 0, target, k);
+    }
+
     private int dfs(Integer[][] memo, int level /* dice_index */, int n, int currsum, int target, int k) {
         // base case
         // 1. if all dice exhausted
@@ -70,8 +104,4 @@ public class DiceRollsWithTargetSum {
         memo[level][currsum] = ways;
         return memo[level][currsum] = ways;
     }
-
-
-    // Bottom-Up Dynamic Programming: interview !!!
-    // Iterate over the states by starting from the base case and ending at the initial query
 }
