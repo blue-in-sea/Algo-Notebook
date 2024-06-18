@@ -1,4 +1,3 @@
-package Recursion;
 /**
  * You have n dice, and each dice has k faces numbered from 1 to k.
  * Given three integers n, k, and target, return the number of possible ways (out of the kn total ways) to roll the dice,
