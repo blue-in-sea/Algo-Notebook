@@ -22,25 +22,12 @@ public class LargestRectangleInHistogram {
     // and contains no negative value
     int maxArea = 0;
     // stack stores the index of the value
-    /**
-     *                   0 1 2 3 4 5    6
-     * Input: heights = [2,1,5,6,2,3]   x
-     *
-     *  peak                (i -  l) *  h[i]
-     * stack [0]        2 = (1 - 0)  *   2
-     * stack [3, 2, 1]  6 = (4 - 3)  *   6
-     *                 10 = (4 - 2)  *   5 maxArea
-     *
-     * stack [5, 4, 1] 3 = (6 - 5) * 3
-     *                 8 = (6 - 2) * 2
-     *
-     * stack [6] stack.peek = null
-     */
     Deque<Integer> stack = new ArrayDeque<>();
     for (int i = 0; i <= array.length; i++) {
       // we need a way of popping out of all elements in the stack
       // at least, so that we explicitly add a bar of height 0
       // cur -> curHeight, i -> right bound index
+
       int cur = i == array.length ? 0 : array[i];
       while (!stack.isEmpty() && array[stack.peekFirst()] >= cur) {
         int height = array[stack.pollFirst()];
@@ -48,8 +35,26 @@ public class LargestRectangleInHistogram {
         int left = stack.isEmpty() ? 0 : stack.peekFirst() + 1;
         maxArea = Math.max(height * (i - left), maxArea);
       }
+
       stack.offerFirst(i);
     } 
     return maxArea;
   }
+  /**
+   *                   0 1 2 3 4 5    6
+   * Input: heights = [2,1,5,6,2,3]   x
+   *
+   * left = index (top of stack), right = 1, height = value (poll stack, lowest height)
+   *
+   * peak                                 Area   (i -  l) *  h[stack.pollFirst()]       (peak)element
+   * stack [0]                               2 = (1 - 0)  *  2                          [2]
+   * stack [1] [2, 1] [3, 2, 1]              6 = (4 - 3)  *  6                          [1] [5, 1] [6, 5, 1]
+   *                                        10 = (4 - 2)  *  5   maxAre=10
+   *
+   * stack [4, 1] [5, 4, 1]                  3 = (6 - 5)   * 3                          [2, 1] [3, 2, 1]
+   *                                         8 = (6 - 2)   * 2
+   *                                         8 = (6 - 0)   * 1
+   *
+   * stack [6] and cur reset to 0, index out                                            [x]
+   */
 }
