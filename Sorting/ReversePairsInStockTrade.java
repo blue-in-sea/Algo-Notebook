@@ -12,7 +12,7 @@ package Sorting;
  * See GetCountArray.java, MergeSort.java
  * https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/
  */
-class ReversePairs {
+class ReversePairsInStockTrade {
     public int reversePairs(int[] array) {
         int[] indexArray = initialIndexArray(array);
         int[] countArray = new int[array.length]; 
