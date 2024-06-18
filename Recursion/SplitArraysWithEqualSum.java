@@ -1,5 +1,3 @@
-package Recursion;
-
 /**
  * Given an input array with an integer k, how to split the array into k subarray such that each
  * subarray shares the same sum
