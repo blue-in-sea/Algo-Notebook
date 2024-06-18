@@ -1,4 +1,4 @@
-class Solution {
+class FindCycleDFS {
     // version - 1
     public int[] findRedundantConnection(int[][] edges) {
         Map<Integer, List<Integer>> map = new HashMap<>();
