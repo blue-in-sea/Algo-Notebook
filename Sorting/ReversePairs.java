@@ -1,8 +1,20 @@
-// https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/
-// See GetCountArray.java
+package Sorting;
+
+/**
+ * LCR 170. 交易逆序对的总数
+ * 在股票交易中，如果前一天的股价高于后一天的股价，则可以认为存在一个「交易逆序对」。
+ * 请设计一个程序，输入一段时间内的股票交易记录 record，返回其中存在的「交易逆序对」总数。
+ *
+ * 输入：record = [9, 7, 5, 4, 6]
+ * 输出：8
+ * 解释：交易中的逆序对为 (9, 7), (9, 5), (9, 4), (9, 6), (7, 5), (7, 4), (7, 6), (5, 4)。
+ *
+ * See GetCountArray.java, MergeSort.java
+ * https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/
+ */
 class ReversePairs {
     public int reversePairs(int[] array) {
-        int[] indexArray = initialindexArray(array);
+        int[] indexArray = initialIndexArray(array);
         int[] countArray = new int[array.length]; 
         int[] helper = new int[array.length];     
         mergeSort(array, indexArray, countArray, helper, 0, array.length - 1);
@@ -48,7 +60,7 @@ class ReversePairs {
         return helper;
     }
 
-    private int[] initialindexArray(int[] array) {
+    private int[] initialIndexArray(int[] array) {
         int[] indices = new int[array.length];
         for (int i = 0; i < array.length; i++) {
             indices[i] = i;
