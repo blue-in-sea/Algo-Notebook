@@ -13,7 +13,6 @@
  * Input: heights = [2,4]
  * Output: 4
  */
-
 public class LargestRectangleInHistogram {
   // Time: O(N) for every single element can only be inserted and popped out of stack only once
   // Space: O(N) for the stack 
@@ -26,8 +25,6 @@ public class LargestRectangleInHistogram {
     for (int i = 0; i <= array.length; i++) {
       // we need a way of popping out of all elements in the stack
       // at least, so that we explicitly add a bar of height 0
-      // cur -> curHeight, i -> right bound index
-
       int cur = i == array.length ? 0 : array[i];
       while (!stack.isEmpty() && array[stack.peekFirst()] >= cur) {
         int height = array[stack.pollFirst()];
@@ -58,3 +55,13 @@ public class LargestRectangleInHistogram {
    * stack [6] and cur reset to 0, index out                                            [x]
    */
 }
+
+/**
+ *                 System.out.print("left: " + left + ", ");
+ *                 System.out.print("i: " + i + "(right), ");
+ *                 System.out.print("height: " + height + ", ");
+ *                 System.out.print("Area: " + height * (i - left) + ", ");
+ *                 System.out.print("maxArea: " + maxArea + ". ");
+ *                 System.out.println();
+ *                 System.out.print(stack);
+ */
