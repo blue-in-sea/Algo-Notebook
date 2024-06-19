@@ -1,9 +1,29 @@
+/**
+ * 261. Graph Valid Tree
+ * Given a graph of n nodes labeled from 0 to n - 1. And, given an integer n and a list of edges where
+ * edges[i] = [ai, bi] indicates that there is an undirected edge between nodes ai and bi in the graph.
+ *
+ * Return true if the edges of the given graph make up a valid tree, and false otherwise.
+ *
+ *                      0
+ *                 1    2    3
+ *                 4
+ *
+ * Input: n = 5, edges = [[0,1],[0,2],[0,3],[1,4]]
+ * Output: true
+ *
+ *
+ */
+/**
+ * Tree is a directed acyclic graph in which
+ * 1. any two vertices are connected by exactly one path
+ * 2. has a root and all vertices connected
+ * (so) any connected graph without simple cycles is a tree! => checkCycle()
+ */
 class GraphValidTree {
     // BFS
     // Time: O(V + E)
-    // Space: O(V) for tree as undirected cyclical graph in which any two vertices are 
-    // connected by exactly one path. 
-    // In other words, any connected graph without simple cycles is a tree
+    // Space: O(V)
     public boolean validTree(int n, int[][] edges) {
         Map<Integer, List<Integer>> graph = buildGraph(n, edges);
 
