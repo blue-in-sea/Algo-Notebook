@@ -1,3 +1,19 @@
+package BinaryTree; /**
+ * 545. Border View Of Binary Tree
+ *
+ *              1
+ *       x            2
+ *              3           4
+ * Input: root = [1,null,2,3,4]
+ * Output: [1,3,4,2]
+ * Explanation:
+ * - The left boundary is empty because the root does not have a left child.
+ * - The right boundary follows the path starting from the root's right child 2 -> 4.
+ *   4 is a leaf, so the right boundary is [2].
+ * - The leaves from left to right are [3,4].
+ * Concatenating everything results in [1] + [] + [3,4] + [2] = [1,3,4,2].
+ */
+
 /**
  * public class TreeNode {
  *   public int key;
@@ -9,6 +25,12 @@
  * }
  */
 public class BorderViewOfBinaryTree {
+  // dfsLeft()
+  // dfsRight()
+  // dfsLeaf()
+
+  // Time: O(3n) traverse all nodes -> O(n)
+  // Space: O(n) stack calls
   public List<Integer> borderView(TreeNode root) {
     List<Integer> res = new ArrayList<Integer>();
     if (root == null) {
