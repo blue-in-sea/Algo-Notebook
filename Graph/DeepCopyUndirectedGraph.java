@@ -1,7 +1,7 @@
 /**
  * 133. Clone Graph
- * * DFS & BFS  for 1 connected graph
- * * DFS & BFS  for multiple graph
+ * * DFS & BFS for 1 connected graph
+ * * DFS & BFS for multiple graph
  *
  * Time: O(V + E) for V is # of nodes, E is # edges
  * Space: O(V) for stack calls & lookup map & copy graph
@@ -26,10 +26,10 @@ class DeepCopyUndirectedGraph {
     /**
      * class Node {
      *     int val;
-     *     public List<Integer> children;
+     *     public List<Integer> neighbors;
      *     public Node(int val) {
      *         this.val = val;
-     *         this.children = new ArrayList<Node>();
+     *         this.neighbors = new ArrayList<Node>();
      *     }
      * }
      */
