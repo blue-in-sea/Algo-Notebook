@@ -3,13 +3,14 @@ class HeapComparator {
     // min heap
     PriorityQueue<Integer> minHeap = new PriorityQueue<>(n);
     PriorityQueue<Integer> minHeap = new PriorityQueue<>(n, (x, y) -> x - y);
+    PriorityQueue<Integer> minHeap = new PriorityQueue<>(n, (x, y) -> x - y);
     
     // max heap
     PriorityQueue<Integer> maxHeap = new PriorityQueue<>(n, Collections.reverseOrder());
     PriorityQueue<Integer> maxHeap = new PriorityQueue<>(n, (x, y) -> y - x);
     
     
-    // ==== Map Entry Set ===
+    // ==== Object with compareTo ===
     
     PriorityQueue<Map.Entry<String, Integer>> minHeap = new PriorityQueue<>(
         (e1, e2) -> 
@@ -17,7 +18,7 @@ class HeapComparator {
                                            : e1.getValue().compareTo(e2.getValue())
     );
     
-    // ==== Override ===
+    // ==== Override Comparator ===
     
     PriorityQueue<Cell> minHeap = new PriorityQueue<Cell>(k, new CellComparator());
     class CellComparator implements Comparator<Cell> {
