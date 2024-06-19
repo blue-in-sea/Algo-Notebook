@@ -1,3 +1,5 @@
+package Heap;
+
 public class KthClosestPointToOrigin {
   // BFS2: Shortest Path Problem
   public List<Integer> closest(int[] a, int[] b, int[] c, int k) {

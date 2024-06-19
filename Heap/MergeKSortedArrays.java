@@ -1,3 +1,5 @@
+package Heap;
+
 public class MergeKSortedArrays {
   public int[] merge(int[][] arrayOfArrays) {
     // assume arrayOfArrays is not null, and none of the array is null
