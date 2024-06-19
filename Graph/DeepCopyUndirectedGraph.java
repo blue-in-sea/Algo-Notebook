@@ -1,16 +1,4 @@
-package Graph;
-
 /**
- * class Node {
- *     int val;
- *     List<Node> neighbors;
- *
- *     public Node(int val) {
- *         this.val = val;
- *         neighbors = new ArrayList<Node>();
- *     }
- * }
- *
  * 133. Clone Graph
  * Use BFS + HashMap for Interview!!
  *
@@ -19,12 +7,16 @@ package Graph;
  * Space: O(V) for map to represent graph
  */
 class DeepCopyUndirectedGraph {
+    // ======= 1. DFS for connected graph  ======= (all nodes connected in 1 graph)
+
+    // Time: O(V + E) for V is # of nodes, E is # edges
+    // Space: O(V) for stack calls & lookup map & copy graph
     Map<Node, Node> lookup = new HashMap<>();
 
     public Node cloneGraph(Node node) {
-        // corner case & base case 
+        // corner case & base case
         if (node == null) return null;
-        // base case: dedup 如果已经 visited 过了 return 给 parent ptr
+        // base case: dedup 如果已经 visited 过了 return 给 parent 当前的 node
         if (lookup.containsKey(node)) return lookup.get(node);
 
         Node copy = new Node(node.val);
@@ -33,10 +25,21 @@ class DeepCopyUndirectedGraph {
             copy.neighbors.add(cloneGraph(nei));
         }
         return copy;
-
     }
-    
-    // ======= DFS for unconnected graph =======
+    /**
+     * class Node {
+     *     int val;
+     *     public List<Integer> children;
+     *     public Node(int val) {
+     *         this.val = val;
+     *         this.children = new ArrayList<Node>();
+     *     }
+     * }
+     */
+
+    // Below if for Unconnected Graph
+
+    // ======= 2. DFS for unconnected graph =======
     public List<GraphNode> copy(List<GraphNode> graph) {
         if (graph == null) {
             return null;
@@ -62,7 +65,7 @@ class DeepCopyUndirectedGraph {
         }
     }
     
-    // ======= BFS for unconnected graph =======
+    // ======= 3. BFS for unconnected graph =======
     public List<GraphNode> copy(List<GraphNode> graph) {
         if (graph == null) {
             return null;
