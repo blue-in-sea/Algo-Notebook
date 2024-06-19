@@ -1,3 +1,5 @@
+package GraphBFS;
+
 public class GraphValidTreeBFS {
   /**
    * BFS Approach Thinking: 只在neighbor没有被遍历过时才放入queue中
