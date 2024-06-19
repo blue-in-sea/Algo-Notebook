@@ -1,3 +1,5 @@
+package Graph;
+
 /**
  * 332. Reconstruct Itinerary
  * You are given a list of airline tickets where tickets[i] = [start_i, end_i] represent the departure and the arrival airports of one flight.
@@ -6,7 +8,7 @@
  * Requirement:
  * 1. Always start with "JFK"
  * 2. For multiple valid itineraries, return the route with the smallest lexical order
- *    (i.e.)n["JFK", "LGA"] has a smaller lexical order than ["JFK", "LGB"]
+ *    (i.e.) ["JFK", "LGA"] has a smaller lexical order than ["JFK", "LGB"]
  * 3. All tickets form at least one valid itinerary. You must use all the tickets once and only once.
  *
  * Input: tickets = [["MUC","LHR"],["JFK","MUC"],["SFO","SJC"],["LHR","SFO"]]
@@ -33,11 +35,8 @@ class ReconstructItinerary {
      * (Implementation wise, when visited a node, we poll the edge from the graph)
      * https://leetcode.com/problems/reconstruct-itinerary/discuss/1161401/C%2B%2B-Explaination%3A-Transition-from-DFS-to-Eulerian-Path
      */
-
     // Time: O(E * log(E/V)) where V vertex, E edges
     // Space: O(V + E)
-
-
     public List<String> findItinerary(List<List<String>> tickets) {
         // corner case
         if (tickets == null || tickets.size() == 0) {
