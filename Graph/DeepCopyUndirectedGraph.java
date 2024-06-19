@@ -1,12 +1,13 @@
 /**
  * 133. Clone Graph
+ * * DFS & BFS  for 1 connected graph
+ * * DFS & BFS  for multiple graph
  *
  * Time: O(V + E) for V is # of nodes, E is # edges
  * Space: O(V) for stack calls & lookup map & copy graph
  */
 class DeepCopyUndirectedGraph {
     // ======= 1. DFS for connected graph  ======= (all nodes connected in 1 graph)
-
     Map<Node, Node> lookup = new HashMap<>();
 
     public Node cloneGraph(Node node) {
@@ -33,9 +34,37 @@ class DeepCopyUndirectedGraph {
      * }
      */
 
+    // ======= 2. BFS for connected graph  =======
+    public Node cloneGraph(Node node) {
+        if (node == null) {
+            return null;
+        }
+
+        Queue<Node> queue = new ArrayDeque<>();
+        Map<Node, Node> visited = new HashMap<>();
+
+        queue.offer(node);
+        visited.put(node, new Node(node.val, new ArrayList()));
+
+        while(!queue.isEmpty()) {
+            Node curr = queue.poll();
+
+            for (Node nei : curr.neighbors) {
+                if (!visited.containsKey(nei)) {
+                    queue.offer(nei);
+                    visited.put(nei, new Node(nei.val, new ArrayList()));
+                }
+
+                visited.get(curr).neighbors.add(visited.get(nei));
+            }
+        }
+
+        return visited.get(node);
+    }
+
     // *****  Below if for Unconnected Graph ****** (more than 1 graphs given)
 
-    // ======= 2. DFS for unconnected graph =======
+    // ======= 3. DFS for unconnected graph =======
     public List<GraphNode> copy(List<GraphNode> graph) {
         if (graph == null) {
             return null;
@@ -61,7 +90,7 @@ class DeepCopyUndirectedGraph {
         }
     }
     
-    // ======= 3. BFS for unconnected graph =======
+    // ======= 4. BFS for unconnected graph =======
     public List<GraphNode> copy(List<GraphNode> graph) {
         if (graph == null) {
             return null;
