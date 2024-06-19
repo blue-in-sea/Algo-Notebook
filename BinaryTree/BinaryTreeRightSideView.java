@@ -1,3 +1,5 @@
+package BinaryTree;
+
 /**
  * Definition of TreeNode:
  * public class TreeNode {
@@ -12,12 +14,11 @@
 
 public class BinaryTreeRightSideView {
     /**
-     * @param root: the root of the given tree
-     * @return: the values of the nodes you can see ordered from top to bottom
-     *
-     * Soln 1: BFS
+     * BFS: level-order traversal (interview!!)
+     * Time: O(N) where N is # of tree nodes
+     * Space: O(D) where D is a tree diameter, worst case D = N
      */
-    public List<Integer> rightSideView(TreeNode root) {
+    public List<Integer> rightSideViewBFS(TreeNode root) {
         List<Integer> view = new ArrayList<>();
         
         if (root == null) {
@@ -34,6 +35,7 @@ public class BinaryTreeRightSideView {
                 TreeNode cur = queue.poll();
                 
                 if (i == size - 1) {
+                    // add the most right element to the tree (at the cur level)
                     view.add(cur.val);
                 }
                 
@@ -50,10 +52,12 @@ public class BinaryTreeRightSideView {
         return view;
     }
     /**
-     * Soln 2: DFS !!!
+     * DFS: pre-order traversal + depth-map
+     * Time: O(N) for visiting all nodes
+     * Space: O(H) for stack call where worst case H = N
      */
-    public List<Integer> rightSideView(TreeNode root) {
-        // <K, V> : <Depth, Value of the Node>
+    public List<Integer> rightSideViewDFS(TreeNode root) {
+        // <K, V> : <Depth, Value of the most right Node on the cur depth>
         Map<Integer, Integer> map = new HashMap<>();  // map 存的 node 会被最右边的 node 覆盖掉
         dfs(map, root, 0);
         
