@@ -1,4 +1,4 @@
-package TikTok;
+package Unknown;
 
 import java.util.*;
 
@@ -7,7 +7,6 @@ import java.util.*;
 // res = [ elementary, middle, high, college, trade ]
 
 public class CourseScheduleTikTok {
-
     public static List<String> findPath(List<String> tasks, List<List<String>> ins) {
         if (tasks == null || tasks.size() == 0) return new ArrayList<>();
 
@@ -103,7 +102,6 @@ public class CourseScheduleTikTok {
         ins.add(index3);
 
         System.out.println(ins);
-
         System.out.println(findPath(tasks, ins));
     }
 }
