@@ -1,3 +1,5 @@
+package LinkedList;
+
 /**
  * Definition for a Node.
  * class Node {
