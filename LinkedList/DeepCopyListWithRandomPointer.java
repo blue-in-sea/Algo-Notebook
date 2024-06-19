@@ -1,7 +1,6 @@
-package LinkedList;
-
 /**
- * Definition for a Node.
+ * 138. Copy List with Random Pointer
+ *
  * class Node {
  *     int val;
  *     Node next;
@@ -9,12 +8,15 @@ package LinkedList;
  *
  *     public Node(int val) {
  *         this.val = val;
- *         this.next = null;
- *         this.random = null;
+ *         // this.next = null;
+ *         // this.random = null;
  *     }
  * }
  */
 public class DeepCopyListWithRandomPointer {
+    // HashMap: <K: node, V: node_copy> where the new linked list will be chained on node_copy
+    // Time: O(n)
+    // Space: O(n)
     public Node copyRandomList(Node head) {
         // corner case 
         if (head == null) return head;
