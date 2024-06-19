@@ -1,16 +1,12 @@
 /**
  * 133. Clone Graph
- * Use BFS + HashMap for Interview!!
  *
- * Give V is # of nodes (vertices) and E is # of edges
- * Time: O(V + E) to copy the entire graph
- * Space: O(V) for map to represent graph
+ * Time: O(V + E) for V is # of nodes, E is # edges
+ * Space: O(V) for stack calls & lookup map & copy graph
  */
 class DeepCopyUndirectedGraph {
     // ======= 1. DFS for connected graph  ======= (all nodes connected in 1 graph)
 
-    // Time: O(V + E) for V is # of nodes, E is # edges
-    // Space: O(V) for stack calls & lookup map & copy graph
     Map<Node, Node> lookup = new HashMap<>();
 
     public Node cloneGraph(Node node) {
