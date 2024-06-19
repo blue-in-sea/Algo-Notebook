@@ -1,3 +1,5 @@
+package Recursion;
+
 /**
  * Given an array of integers nums and a positive integer k, find whether it's possible to divide this array into
  * k non-empty subsets whose sums are all equal.
@@ -6,13 +8,14 @@
  * Output: True
  * Explanation: It's possible to divide it into 4 subsets (5), (1, 4), (2,3), (2,3) with equal sums.
  */
-
 public class PartitionKEqualSumSubsets {
     public static void main(String[] args) {
         int nums[] = {4, 3, 2, 3, 5, 2, 1};
         System.out.print(canPartitionKSubsets(nums, 4));
     }
 
+    // Time: O(n!)
+    // Space: O(n)
     public static boolean canPartitionKSubsets(int[] nums, int k) {
         if (nums == null || nums.length == 0) return false;
         int totalSum = 0;
@@ -22,11 +25,21 @@ public class PartitionKEqualSumSubsets {
     }
 
     private static boolean dfs(int[] nums, int k, int targetSum, int startIndex, int sum, boolean[] visited) {
-        if (k == 0) return true;
-        if (sum > targetSum) return false;
-        if (sum == targetSum) return dfs(nums, k - 1, targetSum, 0, 0, visited);
+        // base case: if reach k levels
+        if (k == 0) {
+            return true;
+        }
+        // base case: if exceeded target sum
+        if (sum > targetSum) {
+            return false;
+        }
+        // base case: if found a subset
+        if (sum == targetSum) {
+            return dfs(nums, k - 1, targetSum, 0, 0, visited);
+        }
+        // recursive rule: calculate the sum for every subset between [startIndex, num.len)
+        // visited is for trimming
         for (int i = startIndex; i < nums.length; i++) {
-            // print
             if (!visited[i]) {
                 visited[i] = true;
                 sum += nums[i];
