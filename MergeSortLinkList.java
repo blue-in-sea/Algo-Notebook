@@ -1,5 +1,18 @@
 /**
- * Definition for singly-linked list.
+ * 148. Merge Sort On Linked List
+ * Given the head of a linked list, return the list after sorting it in ascending order.
+ *
+ * Input: head = [4,2,1,3]
+ * Output: [1,2,3,4]
+ *
+ * Input: head = [4,2,1,3]
+ * Output: [1,2,3,4]
+ *
+ * Input: head = []
+ * Output: []
+ */
+
+/**
  * public class ListNode {
  *     int val;
  *     ListNode next;
@@ -8,7 +21,6 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
- 
 public class MergeSortLinkList {
     // Merge Sort a Link List
     // Time: O(nlogn), Space: O(logn)
