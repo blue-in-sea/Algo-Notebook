@@ -1,14 +1,29 @@
+package BinaryTree; /**
+ * 298. Binary Tree Longest Consecutive Sequence
+ * Given the root of a binary tree, return the length of the longest consecutive sequence path.
+ * A consecutive sequence path is a path where the values increase by one along the path.
+ *
+ *        1
+ *     x     3
+ *   2  x   x   4
+ *            x    5
+ * Input: root = [1,null,3,2,4,null,null,null,5]
+ * Output: 3
+ * Explanation: Longest consecutive sequence path is 3-4-5, so return 3.
+ */
+
+/**
+ * class TreeNode {
+ *     public int key;
+ *     public TreeNode left;
+ *     public TreeNode right;
+ *     public TreeNode(int key) {
+ *       this.key = key;
+ *     }
+ *   }
+ */
 public class BinaryTreeLongestConsecutiveSequence {
-  class TreeNode {
-    public int key;
-    public TreeNode left;
-    public TreeNode right;
-    public TreeNode(int key) {
-      this.key = key;
-    }
-  }
-  
-  // Top-down Recursion Approach 
+  // Top-down Recursion Approach (interview!!!)
   // Time: O(N)
   // Space: O(H)
   public int longestConsecutive(TreeNode root) {
@@ -33,7 +48,8 @@ public class BinaryTreeLongestConsecutiveSequence {
       longest = 1;
     }
 
-    max[0] = Math.max(max[0], longest);
+    max[0] = Math.max(max[0], longest); // because Java always passed by value, hence we create an object to store
+    // https://stackoverflow.com/questions/23110555/integer-and-integer-array-storage-on-stack-heap
     dfs(root.left, root.key, longest, max);
     dfs(root.right, root.key, longest, max);
   }
