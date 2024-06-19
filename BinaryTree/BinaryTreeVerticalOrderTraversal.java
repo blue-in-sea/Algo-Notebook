@@ -1,3 +1,14 @@
+package BinaryTree; /**
+ * 987. Binary TreeVertical Order Traversal
+ *               3
+ *      9                20
+ *              15               7
+ *
+ * Input: root = [3,9,20,null,null,15,7]
+ * Output: [[9],[3,15],[20],[7]]
+ */
+
+
 /**
  * Definition of TreeNode:
  * public class TreeNode {
@@ -12,22 +23,26 @@
 
 public class BinaryTreeVerticalOrderTraversal {
     /**
-     * Soln 1: using Tree Map (self-balancing binary search tree)
+     * BFS with Tree Map (self-balancing binary search tree)
      * [Time to insert n-th element = O(Log (n-1))]
+     * Time: O(nlogn) where we do n insertions in the tree map
+     * Space: O(n) where size of queues & treemap
      */
     public List<List<Integer>> verticalOrder(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
-        
+
         if (root == null) {
             return res;
         }
-        
+
+        //<K: vertical-level sorting in ascending, V: a lists of node in the given level>
         Map<Integer, List<Integer>> map = new TreeMap<>();  // order map : bbst
         
         Queue<TreeNode> queue = new LinkedList<>();
         Queue<Integer> qCol = new LinkedList<>();
-        queue.offer(root);
-        qCol.offer(0);
+
+        queue.offer(root); // a list of tree nodes
+        qCol.offer(0);     // indices of vertical level
         
         while (!queue.isEmpty()) {
             TreeNode cur = queue.poll();
@@ -49,7 +64,7 @@ public class BinaryTreeVerticalOrderTraversal {
                 qCol.offer(col + 1);
             }
         }
-        
+
         for (int n : map.keySet()) {
             res.add(map.get(n));
         }
@@ -58,7 +73,7 @@ public class BinaryTreeVerticalOrderTraversal {
     }
     
     /** 
-     * Soln 2: using Hash Map + post-processing
+     * BFS with Hash Map + post-processing
      */
     public List<List<Integer>> verticalOrder(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
