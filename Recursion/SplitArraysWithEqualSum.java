@@ -7,12 +7,6 @@
  * output = [3, -1], [4, 6, -8], [1, 1] which all have a sum is equal to 2
  */
 public class SplitArraysWithEqualSum {
-    public static void main(String[] args) {
-        int[] arr = {3, -1, 4, 6, -8, 1, 1};
-        int k = 3;
-        System.out.println(split(arr, k));
-    }
-
     private static List<List<Integer>> split(int[] array, int k) {
         List<List<Integer>> res = new ArrayList<>();
         List<Integer> path = new ArrayList<>();
