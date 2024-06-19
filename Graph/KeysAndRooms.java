@@ -1,5 +1,7 @@
 public class KeysAndRooms {
     // Method 1: BFS
+    // Time: O(V + E) on graph traversal
+    // Space: O(V) for size of queue & hashset
     public boolean canVisitAllRooms(List<List<Integer>> rooms) {
         // corner case 
         if (rooms == null || rooms.size() == 0) return true;
@@ -25,6 +27,8 @@ public class KeysAndRooms {
     }
     
     // Method 2: DFS
+    // Time: O(V + E) on graph traversal
+    // Space: O(V) for size of stack & hashset
     public boolean canVisitAllRooms(List<List<Integer>> rooms) {
         // corner case 
         if (rooms == null || rooms.size() == 0) return true;
