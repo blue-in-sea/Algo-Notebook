@@ -1,15 +1,23 @@
-import Graph.GraphNode;
+package Graph;
 
-class Node {
-    int val;
-    List<Node> neighbors;
-
-    public Node(int val) {
-        this.val = val;
-        neighbors = new ArrayList<Node>();
-    }
-}
-
+/**
+ * class Node {
+ *     int val;
+ *     List<Node> neighbors;
+ *
+ *     public Node(int val) {
+ *         this.val = val;
+ *         neighbors = new ArrayList<Node>();
+ *     }
+ * }
+ *
+ * 133. Clone Graph
+ * Use BFS + HashMap for Interview!!
+ *
+ * Give V is # of nodes (vertices) and E is # of edges
+ * Time: O(V + E) to copy the entire graph
+ * Space: O(V) for map to represent graph
+ */
 class DeepCopyUndirectedGraph {
     Map<Node, Node> lookup = new HashMap<>();
 
@@ -27,7 +35,6 @@ class DeepCopyUndirectedGraph {
         return copy;
 
     }
-    
     
     // ======= DFS for unconnected graph =======
     public List<GraphNode> copy(List<GraphNode> graph) {
