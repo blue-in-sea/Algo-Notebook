@@ -1,24 +1,13 @@
 /**
+ * 548. Split Array sWith Equal Sum
  * Given an input array with an integer k, how to split the array into k subarray such that each
  * subarray shares the same sum
  *
  * arr = [3, -1, 4, 6, -8, 1, 1] and k == 3
  * output = [3, -1], [4, 6, -8], [1, 1] which all have a sum is equal to 2
  */
-
-import java.util.ArrayList;
-import java.util.List;
-
 public class SplitArraysWithEqualSum {
-    public static void main(String[] args) {
-        // TODO Auto-generated method stub
-        int[] arr = {3, -1, 4, 6, -8, 1, 1};
-        int k = 3;
-        System.out.println(split(arr, k));
-    }
-
     private static List<List<Integer>> split(int[] array, int k) {
-        /** res store the end indices of each subarray */
         List<List<Integer>> res = new ArrayList<>();
         List<Integer> path = new ArrayList<>();
 
