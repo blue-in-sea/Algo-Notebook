@@ -37,7 +37,7 @@ class DeepCopyUndirectedGraph {
      * }
      */
 
-    // Below if for Unconnected Graph
+    // *****  Below if for Unconnected Graph ****** (more than 1 graphs given)
 
     // ======= 2. DFS for unconnected graph =======
     public List<GraphNode> copy(List<GraphNode> graph) {
