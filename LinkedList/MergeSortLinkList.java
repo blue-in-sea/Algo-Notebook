@@ -1,4 +1,4 @@
-/**
+package LinkedList; /**
  * 148. Merge Sort On Linked List
  * Given the head of a linked list, return the list after sorting it in ascending order.
  *
