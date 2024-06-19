@@ -17,7 +17,7 @@
  *     }
  * }
  */
-public class Solution {
+public class ReverseInPairs {
    /**
     * Method 1: Recursive
     *
