@@ -1,4 +1,4 @@
-package BinaryTree; /**
+/**
  * 298. Binary Tree Longest Consecutive Sequence
  * Given the root of a binary tree, return the length of the longest consecutive sequence path.
  * A consecutive sequence path is a path where the values increase by one along the path.
@@ -31,7 +31,7 @@ public class BinaryTreeLongestConsecutiveSequence {
       return 0;
     }
 
-    int[] max = new int[1]; // attentions for array size
+    int[] max = new int[1]; // store a value of global max
     dfs(root, root.key, 0, max);
     return max[0];
   }
