@@ -19,6 +19,8 @@ Welcome to Iris Algo Notebook
  
 #### DSF (with Backtracking)
 > Backtracking 的核心：从一个初始状态出发，暴力搜索所有可能的解决方案，当遇到正确的解则将其记录，直到找到解或者尝试了所有可能的选择都无法找到解为止。
+
+#### DSF (with Memoization)
 > Memoization 的核心是去重和剪枝：通过记录之前的结果，去skip后面重复的结果集
 
 1) DSF I
