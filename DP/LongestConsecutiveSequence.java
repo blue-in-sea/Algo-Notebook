@@ -1,3 +1,5 @@
+package DP;
+
 public class LongestConsecutiveSequence {
   // Method 1: use HashMap
   public int longestConsecutive(int[] array) {

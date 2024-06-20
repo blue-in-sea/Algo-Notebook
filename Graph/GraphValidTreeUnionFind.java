@@ -1,3 +1,5 @@
+package Graph;
+
 public class GraphValidTreeUnionFind {
   /**
    * Method 3: Union Find

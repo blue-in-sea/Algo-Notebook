@@ -1,3 +1,5 @@
+package FreqMap;
+
 class MajorityNumberII {
     public int majorityElement(int[] nums) {
         int majorityCount = nums.length / 2;

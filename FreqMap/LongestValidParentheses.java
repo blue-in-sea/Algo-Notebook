@@ -1,4 +1,4 @@
-package DP;
+package FreqMap;
 
 /**
  * 32. Longest Valid Parentheses

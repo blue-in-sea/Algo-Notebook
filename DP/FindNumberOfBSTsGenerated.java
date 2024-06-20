@@ -1,3 +1,5 @@
+package DP;
+
 public class FindNumberOfBSTsGenerated {
     public int numTrees(int n) {
         int[] dp = new int[n + 1];

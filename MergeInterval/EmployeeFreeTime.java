@@ -1,4 +1,6 @@
-class Solution {
+package MergeInterval;
+
+class EmployeeFreeTime {
     public List<Interval> employeeFreeTime(List<List<Interval>> avails) {
         int OPEN = 0, CLOSE = 1;
         

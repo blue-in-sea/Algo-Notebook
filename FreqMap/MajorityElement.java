@@ -1,3 +1,5 @@
+package FreqMap;
+
 class MajorityElement {
     // Time: O(n), Extra Space: O(1)
     public int majorityElement(int[] nums) {
