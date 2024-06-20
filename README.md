@@ -16,9 +16,10 @@ Welcome to Iris Algo Notebook
 > (每层代表什么意义？一般来说解题之前就需要理解 DFS 要 recursion 多少层) 
 > 2. How many different states should we put on each level
 > (每层有多少个状态 / case 需要 try) ⇒ 每层有多少个 node，每个node由多个分叉或state
-
+ 
 #### DSF (with Backtracking)
-> Backtracking 的核心是剪枝 => 剪掉不必要的结果集
+> Backtracking 的核心：从一个初始状态出发，暴力搜索所有可能的解决方案，当遇到正确的解则将其记录，直到找到解或者尝试了所有可能的选择都无法找到解为止。
+> Memoization 的核心是去重和剪枝：通过记录之前的结果，去skip后面重复的结果集
 
 1) DSF I
 * Q1 All Subsets I & II
