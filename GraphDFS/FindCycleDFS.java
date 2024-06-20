@@ -1,3 +1,5 @@
+package GraphDFS;
+
 class FindCycleDFS {
     // version - 1
     public int[] findRedundantConnection(int[][] edges) {
