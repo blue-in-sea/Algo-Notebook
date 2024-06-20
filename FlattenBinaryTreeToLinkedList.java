@@ -1,14 +1,13 @@
 /**
- * public class TreeNode {
- *   public int key;
- *   public TreeNode left;
- *   public TreeNode right;
- *   public TreeNode(int key) {
- *     this.key = key;
- *   }
- * }
+ * 114. Flatten Binary Tree to Linked List
+ * Given the root of a binary tree, flatten the tree into a "linked list":
+ *
+ * The "linked list" should use the same TreeNode class where the right child pointer points to the next node in the list and the left child pointer is always null.
+ * The "linked list" should be in the same order as a pre-order traversal of the binary tree.
  */
 public class FlattenBinaryTreeToLinkedList {
+    // Time: O(n) traverse each node of the tree at most twice
+    // Space: O(n) stack calls
     public void flatten(TreeNode root) {
         TreeNode[] prev = new TreeNode[1];
         dfs(root, prev);
@@ -88,3 +87,14 @@ public class FlattenBinaryTreeToLinkedList {
         return root;
     }
 }
+/**
+ * public class TreeNode {
+ *   public int key;
+ *   public TreeNode left;
+ *   public TreeNode right;
+ *   public TreeNode(int key) {
+ *     this.key = key;
+ *   }
+ * }
+ */
+
