@@ -9,15 +9,8 @@ Welcome to Iris Algo Notebook
 * `l < r - 1`: stop at the *adjacent* index
 3) wsss
 3. Recusion
-### 2. Merge Interval
-1) Insert a interval: no sorting 
-* [InsertInterval](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/InsertInterval.java)
-2) Merge a list of intervals: sorting & merge
-* [Merge Intervals](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/MergeIntervals.java)
-* [Meeting Rooms](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/MeetingRooms.java)
-3) Find # of overlap intervals: flatten the 2D intervals into TreeMap (sorted data-str) & scan the list of time again 
-* [Meeting Rooms II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/MeetingRoomsII.java)
-* [Numebr of Airplanes On the Sky](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/NumberOfAirplanesII.java)
+
+### 3. Recursion
 
 ### 3. DFS
 
@@ -47,7 +40,7 @@ Welcome to Iris Algo Notebook
 * Find longest subarray that consists of all ‘1’s
 
 
-### 6. Two pointer 
+### 5. Two pointer 
 [同向双指针] sliding window, fast-slow pointers  
 [逆向双指针] 中心开花, 两边往中间走
   1. longest subarray contains only 1s
@@ -62,10 +55,21 @@ Welcome to Iris Algo Notebook
   10. minimum substring ...
 
   
-### 5. Trie 
+### 6. Trie 
 1) Trie for prefix lookup vs. HashMap for a word search
 * [Prefix Trie](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Trie/PrefixTrie.java)
 * [Prefix Trie II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Trie/PrefixTrieII.java)
+
+
+### 7. Merge Interval
+1) Insert a interval: no sorting 
+* [InsertInterval](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/InsertInterval.java)
+2) Merge a list of intervals: sorting & merge
+* [Merge Intervals](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/MergeIntervals.java)
+* [Meeting Rooms](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/MeetingRooms.java)
+3) Find # of overlap intervals: flatten the 2D intervals into TreeMap (sorted data-str) & scan the list of time again 
+* [Meeting Rooms II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/MeetingRoomsII.java)
+* [Numebr of Airplanes On the Sky](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/NumberOfAirplanesII.java)
 
 
 
