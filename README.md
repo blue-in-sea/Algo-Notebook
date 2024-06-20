@@ -9,7 +9,7 @@ Welcome to Iris Algo Notebook
 * `l < r - 1`: stop at the *adjacent* index
 3) wsss
 3. Recusion
-### 4. Merge Interval
+### 2. Merge Interval
 1) Insert a interval: no sorting 
 * [InsertInterval](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/InsertInterval.java)
 2) Merge a list of intervals: sorting & merge
@@ -18,6 +18,8 @@ Welcome to Iris Algo Notebook
 3) Find # of overlap intervals: flatten the 2D intervals into TreeMap (sorted data-str) & scan the list of time again 
 * [Meeting Rooms II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/MeetingRoomsII.java)
 * [Numebr of Airplanes On the Sky](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/NumberOfAirplanesII.java)
+
+### 3. DFS
 
 
 ### 4. String
