@@ -1,3 +1,32 @@
+package DP;
+
+/**
+ * 32. Longest Valid Parentheses
+ * Hard
+ * Topics
+ * Companies
+ * Given a string containing just the characters '(' and ')', return the length of the longest valid (well-formed) parentheses
+ * substring
+ * .
+ *
+ *
+ *
+ * Example 1:
+ *
+ * Input: s = "(()"
+ * Output: 2
+ * Explanation: The longest valid parentheses substring is "()".
+ * Example 2:
+ *
+ * Input: s = ")()())"
+ * Output: 4
+ * Explanation: The longest valid parentheses substring is "()()".
+ * Example 3:
+ *
+ * Input: s = ""
+ * Output: 0
+ */
+
 public class LongestValidParentheses {
     // Method 1: Mono Stack store the index of (unmateched left-parentheses)
     // Time: O(n), Space: O(n)
@@ -22,7 +51,7 @@ public class LongestValidParentheses {
     }
     
     
-    // Method 2: 计数器 l & r
+    // Method 2: 计数器 l & r count # of '(' & # of ')'      interview!!
     // Time: O(2n) -> O(n), Space: O(1)
     public int longestValidParentheses(String s) {
         int l = 0, r = 0, max = 0;
