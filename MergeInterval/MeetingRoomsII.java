@@ -19,7 +19,7 @@ class MeetingRoomsII {
     // * Space complexity O(n) same with hashmap
 
     // 1. build the treemap (sort the time, keep track of the number of rooms needed at the given time)
-    // 2. travser the treemap to find the max # of overlap intervals
+    // 2. scan the treemap to find the max # of overlap intervals
 
     // Time: O(nlogn)
     // Space: O(n)
