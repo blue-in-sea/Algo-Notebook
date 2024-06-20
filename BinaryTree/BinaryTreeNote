@@ -1,0 +1,6 @@
+A tree can be traversed by
+1. PreOrder                 N-L-R
+2. Inorder                  L-N-R
+3. PostOrder                L-R-N
+4. reversePreorder          R-L-N
+5. BFS/levelOrder           Level by Level
