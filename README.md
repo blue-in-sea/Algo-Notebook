@@ -11,7 +11,7 @@ Welcome to Iris Algo Notebook
 ### 3. Recursion
 
 ### 3. DFS
-##### DSF is based upon the recursion thinking (Base Case + Sub-Problems)  
+#### DSF is based upon the recursion thinking (Base Case + Sub-Problems)  
 > 1. How many levels in the recursion tree? What does it store on each level?
 > (每层代表什么意义？一般来说解题之前就需要理解 DFS 要 recursion 多少层) 
 > 2. How many different states should we put on each level
