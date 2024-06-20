@@ -1,5 +1,3 @@
-package Recursion;
-
 public class AllPermutationsII {
     public List<String> permutations(String set) {
         List<String> result = new ArrayList<String>();

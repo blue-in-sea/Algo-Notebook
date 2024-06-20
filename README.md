@@ -7,18 +7,44 @@ Welcome to Iris Algo Notebook
 * Time: **O(logn)** by sufficiently reducing the searching space by half `m = l + (l - r) / 2` 
 * `l = r`: stop at the *same* index 
 * `l < r - 1`: stop at the *adjacent* index
-3) wsss
-3. Recusion
-### 4. Merge Interval
-1) Insert a interval: no sorting 
-* [InsertInterval](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/InsertInterval.java)
-2) Merge a list of intervals: sorting & merge
-* [Merge Intervals](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/MergeIntervals.java)
-* [Meeting Rooms](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/MeetingRooms.java)
-3) Find # of overlap intervals: flatten the 2D intervals into TreeMap (sorted data-str) & scan the list of time again 
-* [Meeting Rooms II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/MeetingRoomsII.java)
-* [Numebr of Airplanes On the Sky](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/NumberOfAirplanesII.java)
 
+### 3. Recursion
+
+### 3. DFS
+#### DSF based upon Recursive Thinking (Base Case + Sub-Problems)  
+> 1. How many levels in the recursion tree? What does it store on each level?
+> (每层代表什么意义？一般来说解题之前就需要理解 DFS 要 recursion 多少层) 
+> 2. How many different states should we put on each level
+> (每层有多少个状态 / case 需要 try) ⇒ 每层有多少个 node，每个node由多个分叉或state
+ 
+#### DSF (with Backtracking)
+> Backtracking 的核心：从一个初始状态出发，暴力搜索所有可能的解决方案，当遇到正确的解则将其记录，直到找到解或者尝试了所有可能的选择都无法找到解为止。
+
+#### DSF (with Memoization)
+> Memoization 的核心是去重和剪枝：通过记录之前的结果，去skip后面重复的结果集
+
+1) DSF I
+* Q1 All Subsets I & II
+* Q2 All Valid Parentheses
+* Q3 All Permutations I & II with Dup
+* Q4 All Permutations of Subsets
+* Q5 99 CENTS
+* Q6 Factor Combinations
+
+2) DSF Epic
+* Q7 Desirable Number
+* Q8 Restore IP Address
+* Q9 Find All Confusing Numbers
+
+3) DFS Partition 
+* Q10 Minimum Partition
+* Q11 Partition with Equal Subset Sum
+* Q12 Partition with Equal Subset Sum to K
+* Q13 Split Array with Subset Sum
+
+4) Boyer-Moore Majority Vote algorithm
+* Q14 Majority Number I
+* Q15 Majority Number II
 
 ### 4. String
 1) String Reversal (相向双指针) 首位相向而行
@@ -45,7 +71,7 @@ Welcome to Iris Algo Notebook
 * Find longest subarray that consists of all ‘1’s
 
 
-### 6. Two pointer 
+### 5. Two pointer 
 [同向双指针] sliding window, fast-slow pointers  
 [逆向双指针] 中心开花, 两边往中间走
   1. longest subarray contains only 1s
@@ -60,10 +86,21 @@ Welcome to Iris Algo Notebook
   10. minimum substring ...
 
   
-### 5. Trie 
+### 6. Trie 
 1) Trie for prefix lookup vs. HashMap for a word search
 * [Prefix Trie](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Trie/PrefixTrie.java)
 * [Prefix Trie II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Trie/PrefixTrieII.java)
+
+
+### 7. Merge Interval
+1) Insert a interval: no sorting 
+* [InsertInterval](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/InsertInterval.java)
+2) Merge a list of intervals: sorting & merge
+* [Merge Intervals](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/MergeIntervals.java)
+* [Meeting Rooms](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/MeetingRooms.java)
+3) Find # of overlap intervals: flatten the 2D intervals into TreeMap (sorted data-str) & scan the list of time again 
+* [Meeting Rooms II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/MeetingRoomsII.java)
+* [Numebr of Airplanes On the Sky](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/NumberOfAirplanesII.java)
 
 
 
