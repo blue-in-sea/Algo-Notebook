@@ -1,3 +1,5 @@
+package GraphDFS;
+
 public class GraphValidTreeDFS {
   /**
    * DFS Approach Thinking: 类似BFS, 只是在recursive放入parent和当前节点 cur 时, 
