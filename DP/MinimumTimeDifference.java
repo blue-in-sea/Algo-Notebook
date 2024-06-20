@@ -1,5 +1,19 @@
+/**
+ * 539. Minimum Time Difference
+ * Given a list of 24-hour clock time points in "HH:MM" format, return the minimum minutes difference between any two time-points in the list.
+ *
+ * Input: timePoints = ["23:59","00:00"]
+ * Output: 1
+ *
+ * Input: timePoints = ["00:00","23:59","00:00"]
+ * Output: 0
+ */
 public class MinimumTimeDifference {
-    // finding the shortest distances between two elements in a circular array
+    // Finding the shortest distances between two elements in a circular array
+    // Algo: use a table[i] of size of # min in a days to store all the times
+    //       then, post-processing to compute the min (in a circular way)
+    // Time: O(24 * 60) or O(n) where n is the size of the input
+    // Space:O(24 * 60) constance time
     public int findMinDifference(List<String> timePoints) {
         // corner case 
         if (timePoints == null || timePoints.size() == 0) return 0;
