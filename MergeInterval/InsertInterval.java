@@ -16,7 +16,6 @@ import java.util.*;
  * Output: [[1,2],[3,10],[12,16]]
  * Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
  */
-
 class InsertInterval {
    /**
      * ___: current interval; _ _ _: newInterval
@@ -50,7 +49,7 @@ class InsertInterval {
     public int[][] insert(int[][] intervals, int[] newInterval) {
         List<int[]> res = new ArrayList<>();
         for(int[] curInterval : intervals){
-            // case 1: insertion of the newInterval does not needed any more 
+            // case 1: insertion of the newInterval does not need any more
             // (or) cur.end < new.start 
             if(newInterval == null || curInterval[1] < newInterval[0]){
                 res.add(curInterval);
