@@ -1,3 +1,5 @@
+package Sorting;
+
 /**
  * Given an array A of length N containing all positive integers from [1...N]. 
  * How to get an array B such that B[i] represents how many elements A[j] 
@@ -7,8 +9,7 @@
  * Examples: A = { 4, 1, 3, 2 }, we should get B = { 3, 0, 1, 0 }.
  * Requirement: Time complexity = O(nlogn).
  */
-
-public class Solution {
+public class GetCountArray {
   public int[] countArray(int[] array) {
     // The indexArray contains the indices in the original array
     // and it will be sorted by the corresponding number in the
