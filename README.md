@@ -14,29 +14,27 @@ Welcome to Iris Algo Notebook
 DSF (with Backtracking) 
 
 1) DSF I
-    * Q1 All Subsets I & II
-    * Q2 All Valid Parentheses
-    * Q3 All Permutations I & II with Dup
-    * Q4 All Permutations of Subsets
-    * Q5 99 CENTS
-    * Q6 Factor Combinations
+* Q1 All Subsets I & II
+* Q2 All Valid Parentheses
+* Q3 All Permutations I & II with Dup
+* Q4 All Permutations of Subsets
+* Q5 99 CENTS
+* Q6 Factor Combinations
 
 2) DSF Epic
-    * Q7 Desirable Number
-    * Q8 Restore IP Address
-    * Q9 Find All Confusing Numbers
+* Q7 Desirable Number
+* Q8 Restore IP Address
+* Q9 Find All Confusing Numbers
 
 3) DFS Partition 
-    * Q10 Minimum Partition
-    * Q11 Partition with Equal Subset Sum
-    * Q12 Partition with Equal Subset Sum to K
-    * Q13 Split Array with Subset Sum
+* Q10 Minimum Partition
+* Q11 Partition with Equal Subset Sum
+* Q12 Partition with Equal Subset Sum to K
+* Q13 Split Array with Subset Sum
 
 4) Boyer-Moore Majority Vote algorithm
-    * Q14 Majority Number I
-    * Q15 Majority Number II
-
-
+* Q14 Majority Number I
+* Q15 Majority Number II
 
 ### 4. String
 1) String Reversal (相向双指针) 首位相向而行
