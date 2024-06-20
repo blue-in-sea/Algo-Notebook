@@ -11,10 +11,17 @@ Welcome to Iris Algo Notebook
 ### 3. Recursion
 
 ### 3. DFS
-DSF (with Backtracking) 
+DSF is based upon the recursion thinking (Base Case + Sub-Problems)  
+> 1. How many levels in the recursion tree? What does it store on each level?
+> (每层代表什么意义？一般来说解题之前就需要理解 DFS 要 recursion 多少层) 
+> 2. How many different states should we put on each level
+> (每层有多少个状态 / case 需要 try) ⇒ 每层有多少个 node，每个node由多个分叉或state
+
+DSF (with Backtracking)
+> Backtracking 的核心是剪枝 => 剪掉不必要的结果集
 
 1) DSF I
-* 1) All Subsets I & II
+* Q1 All Subsets I & II
 * Q2 All Valid Parentheses
 * Q3 All Permutations I & II with Dup
 * Q4 All Permutations of Subsets
