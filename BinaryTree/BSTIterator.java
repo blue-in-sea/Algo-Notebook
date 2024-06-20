@@ -1,5 +1,3 @@
-package BinaryTree;
-
 /**
  * Definition of TreeNode:
  * public class TreeNode {
@@ -10,15 +8,13 @@ package BinaryTree;
  *         this.left = this.right = null;
  *     }
  * }
- * Example of iterate a tree:
+ * 
  * BSTIterator iterator = new BSTIterator(root);
  * while (iterator.hasNext()) {
  *    TreeNode node = iterator.next();
  *    do something for node
  * } 
  */
-
-
 public class BSTIterator {
     private Deque<TreeNode> stack = new LinkedList<>();
     
