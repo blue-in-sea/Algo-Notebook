@@ -14,7 +14,7 @@ Welcome to Iris Algo Notebook
 DSF (with Backtracking) 
 
 1) DSF I
-* Q1 All Subsets I & II
+* 1) All Subsets I & II
 * Q2 All Valid Parentheses
 * Q3 All Permutations I & II with Dup
 * Q4 All Permutations of Subsets
