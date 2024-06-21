@@ -1,9 +1,13 @@
 class MaximumSwap {
+
+    // DP: 从后往前，对于每个 index 找 swap 的 candidates
+    // Time: O(n)
+    // Space: O(1)
     public int maximumSwap(int num) {
         int max = -1;
         int maxIndex = -1;
-        int startIndex = -1;
-        int endIndex = 1;
+        int startIndex = -1; // 前一个 swap 的 candidate
+        int endIndex = 1;    // 后一个 swap 的 candidate
  
         // converting the number to string
         char[] arr = numToCharArray(num);
@@ -42,5 +46,35 @@ class MaximumSwap {
 
     private int charArrayToNum(char[] arr) {
         return Integer.parseInt(new String(arr));
+    }
+
+    // Brutal Force: 从前往后，对于每个 index 找其后最大的数
+    // Time: O(n^2)
+    // Space: O(1)
+    public int maximumSwap(int num) {
+        int max = -1;
+        int maxIndex = -1;
+
+        // converting the number to string
+        char[] arr = numToCharArray(num);
+        for (int i = 0; i < arr.length; i++) {
+
+            for (int j = i; j < arr.length; j++) {
+                if (arr[j] >= max) { // 注意：这里是等于，我们需要处于最后的 maximum 换到前面
+                    max = Math.max(arr[j], max);
+                    maxIndex = j;
+                }
+            }
+
+            if (max > arr[i]) {
+                swap(i, maxIndex, arr);
+                break;
+            } else {
+                max = -1;
+                maxIndex = -1;
+            }
+        }
+
+        return charArrayToNum(arr);
     }
 }
