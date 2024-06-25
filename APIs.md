@@ -21,19 +21,20 @@ map.forEach((key, value) -> System.out.println(key + ": " + value));
 ```
 
 5. Print a tree
+DFS
 ```
 void dfs(TreeNode root) {
   if (root == null) return;
-  // print(root.val) - preorder
+  // print(root.val); - preorder
   dfs(root.left);
-  // print(root.val) - inorder
+  // print(root.val); - inorder
   dfs(root.right);
-  // print(root.val) - postorder
+  // print(root.val); - postorder
 }
 ```  
-
 BFS
-> LevelOrder
+```
+LevelOrder 
 ```
 
 ### Map
@@ -86,8 +87,6 @@ for (Map.Entry<Integer, Integer> e : map.entrySet()) {
 
 ```
 
-
-
 ### String
 * `length()` - Returns the length of this string.
 * `isEmpty()` - Returns true if, and only if, length() is 0.
@@ -134,6 +133,14 @@ Examine	  element()	      peek()
 * `pop()` - Removes the object at the top of this stack and returns that object as the value of this function.
 * `push(E item)` - Pushes an item onto the top of this stack.
 
-### Heap
+### List
+
+### PriorityQueue
+* `add(E e)` - Inserts the specified element into this priority queue.
+* `offer(E e)` - Inserts the specified element into this priority queue.
+* `peek()` - Retrieves, but does not remove, the head of this queue, or returns null if this queue is empty.
+* `poll()` - Retrieves and removes the head of this queue, or returns null if this queue is empty.
+
+
 
 
