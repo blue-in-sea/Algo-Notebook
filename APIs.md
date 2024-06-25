@@ -1,4 +1,4 @@
-### Common APIs & Utils - JAVA 8 
+### Common APIs and Utils - Java 8
 ### Print
 1. Print an array 
 ```
@@ -110,9 +110,7 @@ for (Map.Entry<Integer, Integer> e : map.entrySet()) {
 * `lastIndexOf(int ch)` - Returns the index within this string of the last occurrence of the specified character.
 * `lastIndexOf(int ch, int fromIndex)` - Returns the index within this string of the last occurrence of the specified character, searching backward starting at the specified index.
 
-### Stack (
-
-### Queue
+### Queue (FIFO) "First-In, First-Out"
 ```
          Throws exception	Returns special value
 Insert	  add(e)	         offer(e)
@@ -120,6 +118,7 @@ Remove	  remove()	      poll()
 Examine	  element()	      peek()
 
 ```
+* `empty()` - Returns false if non-empty
 * `offer(E e)` - Inserts the specified element into this queue if it is possible to do so immediately without violating capacity restrictions.
 * `peek()` - Retrieves, but does not remove, the head of this queue, or returns null if this queue is empty.
 * `poll()` - Retrieves and removes the head of this queue, or returns null if this queue is empty.
@@ -130,24 +129,6 @@ Examine	  element()	      peek()
 * `pop()` - Removes the object at the top of this stack and returns that object as the value of this function.
 * `push(E item)` - Pushes an item onto the top of this stack.
 
-
-### Map
 ### Heap
 
-2. Interview Tips
-* Fast!
-* Algo + Presudo code!
-* Time Complexity!
-* Focus on the core Algo + DataStr --> Use utils for the trivial component!
 
-3. Complexity Analysis
-* Sorting: O(nlogn)
-* Divide-n-Conquer
-* Recursion 
-* Binary search: O(logn)
-* Graph traversal: O(V + E)
-* BST insert / update / lookup / deletion
-* TreeMap insert / update / lookup / deletion
-* PriorityQueue(Heap) / update / lookup / deletion 
-
-4. Ability run test case with implemented codes line-by-line to debug 
