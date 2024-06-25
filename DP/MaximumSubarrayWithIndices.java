@@ -21,7 +21,7 @@ public class MaximumSubarrayWithIndices {
   //      = array[i]                        if M[i - 1] <  0
   //        (reset curLeft = i)
 
-  public int largestSum(int[] array) {
+  public int[] largestSum(int[] array) {
     // base case
     int lastMax = array[0];
     int globalMax = array[0];
