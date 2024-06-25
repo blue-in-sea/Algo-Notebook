@@ -6,14 +6,25 @@
 * `isEmpty()` - Returns true if, and only if, length() is 0.
 
 * `charAt(int index)` - Returns the char value at the specified index.
+* `toCharArray()` - Converts this string to a new character array.
+* `substring(int beginIndex)` - Returns a string that is a substring of this string.
+* `substring(int beginIndex, int endIndex)` - Returns a string that is a substring of this string.
+
+```
+"abc".substring(1,3) -> 'bc' [1, 3)
+```
+
+* `contains(CharSequence s)` - Returns true if and only if this string contains the specified sequence of char values.
+* `endsWith(String suffix)` - Tests if this string ends with the specified suffix.
+
+* `equals(Object anObject)` - Compares this string to the specified object.
+* `equalsIgnoreCase(String anotherString)` - Compares this String to another String, ignoring case considerations. 
   
 * `compareTo(String anotherString)` - Compares two strings lexicographically.
 * `compareToIgnoreCase(String str)` - Compares two strings lexicographically, ignoring case differences.
 
-* `contains(CharSequence s)` - Returns true if and only if this string contains the specified sequence of char values.
-* `endsWith(String suffix)` - Tests if this string ends with the specified suffix.
-* `equals(Object anObject)` - Compares this string to the specified object.
-* `equalsIgnoreCase(String anotherString)` - Compares this String to another String, ignoring case considerations. 
+
+
 
 * `indexOf(int ch)` - Returns the index within this string of the first occurrence of the specified character.
 * `indexOf(String str, int fromIndex)` - Returns the index within this string of the first occurrence of the specified substring, starting at the specified index.
