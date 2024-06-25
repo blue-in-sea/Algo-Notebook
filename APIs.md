@@ -32,9 +32,18 @@ BFS
 ```
 
 ### Map
-  
+* `size()` - Returns the number of key-value mappings in this map.
+* `clear()` - Removes all of the mappings from this map (optional operation).
+
+* `	forEach(BiConsumer<? super K,? super V> action)` - Performs the given action for each entry in this map until all entries have been processed or the action throws an exception.
+```
+map.forEach((k, v) -> func);
+```
+* `get(Object key)` - Returns the value to which the specified key is mapped, or null if this map contains no mapping for the key.
 * `containsKey(Object key)` - Returns true if this map maps one or more keys to the specified value.
 * `containsValue(Object value)` - Returns true if this map maps one or more keys to the specified value.
+
+ 
 
 * `getOrDefault(Object key, V defaultValue)` - Returns the value to which the specified key is mapped, or defaultValue if this map contains no mapping for the key.
 ```
@@ -56,8 +65,14 @@ curr.getChildren().computeIfAbsent(c, n -> new TrieNode());
 map.values().removeIf(v -> v == 0); 
 ```
 
-* `clear()` - Removes all of the mappings from this map (optional operation).
-* `size()` - Returns the number of key-value mappings in this map.
+```
+for (Map.Entry<Integer, Integer> e : map.entrySet()) {
+   Integer k = e.getKey();
+   Integer v = e.getValue();
+}
+```
+
+
 
 
 ### String
