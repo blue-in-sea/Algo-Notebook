@@ -38,6 +38,11 @@ BFS
 * `getOrDefault()`
 * `values`
 * `keySet()`
+* 
+```
+// remove zero values from the map
+map.values().removeIf(v -> v == 0);
+```
   
 
 
