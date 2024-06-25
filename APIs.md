@@ -32,8 +32,6 @@ BFS
 ```
 
 ### Map
-* clear() - Removes all of the mappings from this map (optional operation).
-* size() - Returns the number of key-value mappings in this map.
   
 * `containsKey(Object key)` - Returns true if this map maps one or more keys to the specified value.
 * `containsValue(Object value)` - Returns true if this map maps one or more keys to the specified value.
@@ -58,6 +56,8 @@ curr.getChildren().computeIfAbsent(c, n -> new TrieNode());
 map.values().removeIf(v -> v == 0); 
 ```
 
+* `clear()` - Removes all of the mappings from this map (optional operation).
+* `size()` - Returns the number of key-value mappings in this map.
 
 
 ### String
