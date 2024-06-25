@@ -7,10 +7,10 @@
  * The given array is not null and has length of at least 1.
  *
  * Examples
- * {2, -1, 4, -2, 1}, the largest subarray sum is 2 + (-1) + 4 = 5. 
+ * {2, -1, 4, -2, 1}, the largest subarray {2, -1, 4} with sum = 5
  * The indices of the left and right boundaries are 0 and 2, respectively.
  *
- * {-2, -1, -3},      the largest subarray sum is -1
+ * {-2, -1, -3},      the largest subarray sum is -1 
  * The indices of the left and right boundaries are both 1
  */
 public class MaximumSubarrayWithIndices {
