@@ -1,6 +1,4 @@
-### JAVA 8 
-
-1. Common APIs & Utils
+### Common APIs & Utils - JAVA 8 
 ### Print
 1. Print an array 
 ```
@@ -75,16 +73,6 @@ BFS
 ### Stack
 ### Map
 ### Heap
-
-
-
-
-
-3. sss
-  
-* How to Print an array
-* How to Print an 2d-array 
-* How to Print an collections 
 
 2. Interview Tips
 * Fast!
