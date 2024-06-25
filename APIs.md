@@ -32,12 +32,13 @@ BFS
 ```
 
 ### Map
-* `containsKey()` - Returns true if this map maps one or more keys to the specified value.
+* `containsKey(Object key)` - Returns true if this map maps one or more keys to the specified value.
+* `containsValue(Object value)` - Returns true if this map maps one or more keys to the specified value.
 * `computeIfAbsent()`
 * `getOrDefault()`
 * `values`
 * `keySet()`
-* `ssssss`
+  
 
 
 ### String
@@ -69,6 +70,9 @@ BFS
   
 
 ### Queue
+* `lastIndexOf(int ch, int fromIndex)` - Returns the index within this string of the last occurrence of the specified character, searching backward starting at the specified index.
+* `lastIndexOf(int ch, int fromIndex)` - Returns the index within this string of the last occurrence of the specified character, searching backward starting at the specified index.
+* `lastIndexOf(int ch, int fromIndex)` - Returns the index within this string of the last occurrence of the specified character, searching backward starting at the specified index.
 
 ### Stack
 ### Map
