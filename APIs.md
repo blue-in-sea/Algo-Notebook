@@ -31,10 +31,9 @@
 
 ### Queue
 
-
-* Stack
-* Map
-* LinkedList
+### Stack
+### Map
+### Heap
 
 
 ### Print
