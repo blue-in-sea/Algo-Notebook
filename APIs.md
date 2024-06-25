@@ -1,6 +1,33 @@
 ### JAVA 8 
 
 1. Common APIs & Utils
+### Print
+1. Print an array
+```
+System.out.println(Arrays.toString(array));
+```
+
+2. Print a 2D array
+```
+System.out.println(Arrays.deepToString(array));
+```
+
+3. Print a map 
+```
+map.forEach((key, value) -> System.out.println(key + ": " + value));
+```
+
+4. Print a tree
+```
+DFS 
+- PreOrder()
+- InOrder()
+- PostOrder()
+
+BFS
+- LevelOrder()
+```
+
 ### String
 * `length()` - Returns the length of this string.
 * `isEmpty()` - Returns true if, and only if, length() is 0.
@@ -36,15 +63,7 @@
 ### Heap
 
 
-### Print
-1. Print an array
-```
-```
 
-1. Print a map
-```
-map.forEach((k, v) -> System.out.println("key : " + k " , " + "value : " + v));
-```
 
 
 3. sss
