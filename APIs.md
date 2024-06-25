@@ -2,7 +2,7 @@
 
 1. Common APIs & Utils
 ### Print
-1. Print an array
+1. Print an array 
 ```
 System.out.println(Arrays.toString(array));
 ```
@@ -12,21 +12,27 @@ System.out.println(Arrays.toString(array));
 System.out.println(Arrays.deepToString(array));
 ```
 
-3. Print a map 
+3. Print a 1-d collection: list / queue / stack
+```
+System.out.println(list);
+```
+
+4. Print a map 
 ```
 map.forEach((key, value) -> System.out.println(key + ": " + value));
 ```
 
-4. Print a tree
+5. Print a tree
 ```
 DFS 
-- PreOrder()
-- InOrder()
-- PostOrder()
+> PreOrder
+> InOrder
+> PostOrder
 
 BFS
-- LevelOrder()
+> LevelOrder
 ```
+
 
 ### String
 * `length()` - Returns the length of this string.
