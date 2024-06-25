@@ -34,16 +34,25 @@ BFS
 ### Map
 * `containsKey(Object key)` - Returns true if this map maps one or more keys to the specified value.
 * `containsValue(Object value)` - Returns true if this map maps one or more keys to the specified value.
-* `computeIfAbsent()`
-* `getOrDefault()`
-* `values`
-* `keySet()`
-* 
+
+* `getOrDefault(Object key, V defaultValue)` - Returns the value to which the specified key is mapped, or defaultValue if this map contains no mapping for the key.
 ```
-// remove zero values from the map
-map.values().removeIf(v -> v == 0);
+map.put(c, map.getOrDefault(c, 0) + 1);
 ```
-  
+* `computeIfAbsent(K key, Function<? super K,? extends V> mappingFunction)` - If the specified key is not already associated with a value (or is mapped to null), attempts to compute its value using the given mapping function and enters it into this map unless null.
+```
+graph.computeIfAbsent(c, k -> new PriorityQueue()).add(n);
+graph.computeIfAbsent(c, k -> new ArrayList<>()).add(n);
+curr.getChildren().computeIfAbsent(c, n -> new TrieNode()); 
+```
+
+* `keySet()` - Returns a Set view of the keys contained in this map.
+* `values()` - Returns a Collection view of the values contained in this map.
+```
+map.values().removeIf(v -> v == 0); // remove 0 values ele from the map
+```
+* clear() - Removes all of the mappings from this map (optional operation).
+* size() - Returns the number of key-value mappings in this map.
 
 
 ### String
