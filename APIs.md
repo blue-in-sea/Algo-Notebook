@@ -22,10 +22,15 @@ map.forEach((key, value) -> System.out.println(key + ": " + value));
 
 5. Print a tree
 ```
-DFS & Iterator
-> PreOrder
-> InOrder
-> PostOrder
+void dfs(TreeNode root) {
+  if (root == null) return;
+  // print(root.val) - preorder
+  dfs(root.left);
+  // print(root.val) - inorder
+  dfs(root.right);
+  // print(root.val) - postorder
+}
+```  
 
 BFS
 > LevelOrder
