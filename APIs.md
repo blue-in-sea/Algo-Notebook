@@ -35,27 +35,26 @@ BFS
 * `size()` - Returns the number of key-value mappings in this map.
 * `clear()` - Removes all of the mappings from this map (optional operation).
 
-* `	forEach(BiConsumer<? super K,? super V> action)` - Performs the given action for each entry in this map until all entries have been processed or the action throws an exception.
-```
-map.forEach((k, v) -> func);
-```
-* `get(Object key)` - Returns the value to which the specified key is mapped, or null if this map contains no mapping for the key.
 * `containsKey(Object key)` - Returns true if this map maps one or more keys to the specified value.
 * `containsValue(Object value)` - Returns true if this map maps one or more keys to the specified value.
 
- 
-
+* `get(Object key)` - Returns the value to which the specified key is mapped, or null if this map contains no mapping for the key.
 * `getOrDefault(Object key, V defaultValue)` - Returns the value to which the specified key is mapped, or defaultValue if this map contains no mapping for the key.
 ```
+
 map.put(c, map.getOrDefault(c, 0) + 1);
+
 ```
+
 * `computeIfAbsent(K key, Function<? super K,? extends V> mappingFunction)` - If the specified key is not already associated with a value (or is mapped to null), attempts to compute its value using the given mapping function and enters it into this map unless null.
 ```
-// BFS
-graph.computeIfAbsent(c, k -> new PriorityQueue()).add(n); 
+
+graph.computeIfAbsent(c, k -> new PriorityQueue()).add(n);
+
 graph.computeIfAbsent(c, k -> new ArrayList<>()).add(n);
-// Trie
-curr.getChildren().computeIfAbsent(c, n -> new TrieNode()); 
+
+curr.getChildren().computeIfAbsent(c, n -> new TrieNode());
+
 ```
 
 * `keySet()` - Returns a Set view of the keys contained in this map.
@@ -65,13 +64,22 @@ curr.getChildren().computeIfAbsent(c, n -> new TrieNode());
 map.values().removeIf(v -> v == 0); 
 ```
 
+* `forEach(BiConsumer<? super K,? super V> action)` - Performs the given action for each entry in this map until all entries have been processed or the action throws an exception.
 ```
+
+map.forEach((k, v) -> func);
+
+```
+
+* `Map.Entry<K,V>1 - Interface A map entry (key-value pair).
+```
+
 for (Map.Entry<Integer, Integer> e : map.entrySet()) {
    Integer k = e.getKey();
    Integer v = e.getValue();
 }
-```
 
+```
 
 
 
