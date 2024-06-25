@@ -1,24 +1,24 @@
 ### JAVA 8 
 
 1. Common APIs & Utils
-* String
-  > length() - Returns the length of this string.
-  > isEmpty() - Returns true if, and only if, length() is 0.
+### String
+* `length()` - Returns the length of this string.
+* `isEmpty()` - Returns true if, and only if, length() is 0.
 
-  > charAt(int index) - Returns the char value at the specified index.
+* `charAt(int index)` - Returns the char value at the specified index.
   
-  > compareTo(String anotherString) - Compares two strings lexicographically.
-  > compareToIgnoreCase(String str) - Compares two strings lexicographically, ignoring case differences.
+* `compareTo(String anotherString)` - Compares two strings lexicographically.
+* `compareToIgnoreCase(String str)` - Compares two strings lexicographically, ignoring case differences.
 
-  > contains(CharSequence s) - Returns true if and only if this string contains the specified sequence of char values.
-  > endsWith(String suffix) - Tests if this string ends with the specified suffix.
-  > equals(Object anObject) - Compares this string to the specified object.
-  > equalsIgnoreCase(String anotherString) - Compares this String to another String, ignoring case considerations. 
+* `contains(CharSequence s)` - Returns true if and only if this string contains the specified sequence of char values.
+* `endsWith(String suffix)` - Tests if this string ends with the specified suffix.
+* `equals(Object anObject)` - Compares this string to the specified object.
+* `equalsIgnoreCase(String anotherString)` - Compares this String to another String, ignoring case considerations. 
 
-  > indexOf(int ch) - Returns the index within this string of the first occurrence of the specified character.
-  > indexOf(String str, int fromIndex) - Returns the index within this string of the first occurrence of the specified substring, starting at the specified index.
-  > lastIndexOf(int ch) - Returns the index within this string of the last occurrence of the specified character.
-  > lastIndexOf(int ch, int fromIndex) - Returns the index within this string of the last occurrence of the specified character, searching backward starting at the specified index.
+* `indexOf(int ch)` - Returns the index within this string of the first occurrence of the specified character.
+* `indexOf(String str, int fromIndex)` - Returns the index within this string of the first occurrence of the specified substring, starting at the specified index.
+* `lastIndexOf(int ch)` - Returns the index within this string of the last occurrence of the specified character.
+* `lastIndexOf(int ch, int fromIndex)` - Returns the index within this string of the last occurrence of the specified character, searching backward starting at the specified index.
   
 
 
