@@ -23,24 +23,32 @@
 * `compareTo(String anotherString)` - Compares two strings lexicographically.
 * `compareToIgnoreCase(String str)` - Compares two strings lexicographically, ignoring case differences.
 
-
-
-
 * `indexOf(int ch)` - Returns the index within this string of the first occurrence of the specified character.
 * `indexOf(String str, int fromIndex)` - Returns the index within this string of the first occurrence of the specified substring, starting at the specified index.
 * `lastIndexOf(int ch)` - Returns the index within this string of the last occurrence of the specified character.
 * `lastIndexOf(int ch, int fromIndex)` - Returns the index within this string of the last occurrence of the specified character, searching backward starting at the specified index.
   
 
+### Queue
 
 
-
-
-
-* Queue
 * Stack
 * Map
 * LinkedList
+
+
+### Print
+1. Print an array
+```
+```
+
+1. Print a map
+```
+map.forEach((k, v) -> System.out.println("key : " + k " , " + "value : " + v));
+```
+
+
+3. sss
   
 * How to Print an array
 * How to Print an 2d-array 
