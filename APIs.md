@@ -71,7 +71,7 @@ map.forEach((k, v) -> func);
 
 ```
 
-* `Map.Entry<K,V>` - Interface A map entry (key-value pair).
+* `Map.Entry<K,V>` - Interface a map entry (key-value pair).
 ```
 
 for (Map.Entry<Integer, Integer> e : map.entrySet()) {
