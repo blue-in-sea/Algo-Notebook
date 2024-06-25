@@ -12,7 +12,7 @@ System.out.println(Arrays.toString(array));
 System.out.println(Arrays.deepToString(array));
 ```
 
-3. Print a 1-d collection: list / queue / stack
+3. Print a 1D collection: list / queue / stack
 ```
 System.out.println(list);
 ```
@@ -32,6 +32,14 @@ DFS
 BFS
 > LevelOrder
 ```
+
+### Map
+* `containsKey()`
+* `computeIfAbsent()`
+* `getOrDefault()`
+* `values`
+* `keySet()`
+* ddd
 
 
 ### String
