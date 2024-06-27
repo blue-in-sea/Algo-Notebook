@@ -81,10 +81,10 @@ Welcome to Iris Algo Notebook
   5. find the closes sum to target from two sorted arrays
   6. rainbow sort
   7. longest substring without repeating characters 
-  8. sliding window maximum
-  9. sliding window median 
-  10. minimum substring ...
+  9. minimum substring ...
 
+### 6. Heap
+  1. [Sliding Window Median](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/SlidingWindowMedian.java)
   
 ### 6. Trie 
 1) Trie for prefix lookup vs. HashMap for a word search
