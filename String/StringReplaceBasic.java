@@ -1,3 +1,10 @@
+/**
+ * String Replace (basic) (LaiCode 649)
+ * Given an original string input, and two strings S and T, from left to right replace all occurrences of S in input with T.
+ *
+ * input = "appledogapple", S = "apple", T = "cat", input becomes "catdogcat"
+ * input = "laicode", S = "code", T = "offer", input becomes "laioffer"
+ */
 public class StringReplaceBasic {
   public String replace(String input, String s, String t) {
     char[] array = input.toCharArray();
