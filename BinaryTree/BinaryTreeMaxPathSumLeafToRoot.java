@@ -1,7 +1,6 @@
 /**
  * Binary Tree Max Path Sum (from Leaf to Root)
- * Given a binary tree in which each node contains an integer number. Find the maximum possible path sum from a leaf 
- * to root.
+ * Given a binary tree in which each node contains an integer number. Find the maximum possible path sum from a leaf to root.
  *          10
  *
  *        /      \
@@ -26,7 +25,7 @@
  * }
  */
 // Use Method 2: bottom up for Interview .. 
-public class MaxPathSumILeafToRoot {
+public class BinaryTreeMaxPathSumLeafToRoot {
   // Method 1: Top down - pass down the prefix sum 
   public int maxPathSumLeafToRoot(TreeNode root) {
     // Assume root is not null
