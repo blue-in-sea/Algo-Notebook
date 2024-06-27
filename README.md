@@ -62,8 +62,8 @@ Welcome to Iris Algo Notebook
 * All Permutation II: Might be duplication in the input string 
 
 4) String En/Decoding
-* (Compress String)[https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/CompressStringII.java]
-* (Decompress String)[https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/DecompressStringII.java]
+* [Compress String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/CompressStringII.java)
+* [Decompress String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/DecompressStringII.java)
 
 5) Sliding Window in A String
 * Longest substring that contains only character 
