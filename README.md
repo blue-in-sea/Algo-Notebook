@@ -85,14 +85,15 @@ Welcome to Iris Algo Notebook
 
 ### 6. Heap
   1. [Sliding Window Median](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/SlidingWindowMedian.java)
+  2. TopK
   
-### 6. Trie 
+### 7. Trie 
 1) Trie for prefix lookup vs. HashMap for a word search
 * [Prefix Trie](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Trie/PrefixTrie.java)
 * [Prefix Trie II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Trie/PrefixTrieII.java)
 
 
-### 7. Merge Interval
+### 8. Merge Interval
 1) Insert a interval: no sorting 
 * [InsertInterval](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/InsertInterval.java)
 2) Merge a list of intervals: sorting & merge
