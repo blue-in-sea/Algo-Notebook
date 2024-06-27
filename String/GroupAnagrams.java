@@ -58,7 +58,7 @@ public class GroupAnagrams {
             }
 
             StringBuilder sb = new StringBuilder();
-            for (int i = 0; i < 26; i++) {
+            for (int i = 0; i < 26; i++) { // const time 
                 sb.append('#').append(count[i]);
             }
 
