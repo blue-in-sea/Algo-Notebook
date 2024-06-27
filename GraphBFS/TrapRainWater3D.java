@@ -14,6 +14,20 @@
  * at position (1, 1) there is 2 units of water trapped,
  * at position (1, 2) there is 1 unit of water trapped.   
  */
+
+/**
+ * Data Str: min heap 
+ * (heap stores <i, j> of the nodes in the matrix, sorted from min to max based on node's height)
+ *
+ * Algo:
+ * 1) first, put all border nodes into the heap, every node's value is the water-level height
+ * !! lowest node's value represents the lowest height of entire matrix
+ * 2) second, pop min from heap, the node popped has the lowest height
+ * 3) third, generate all neighbors of the node
+ * !! 每个neighbor的水位的最低可能值，就是当前node的水位 !!
+ *
+ * The entire process starts from the 4-borders of the matrix, and gradually define the higher's the water-level height
+ */
 public class TrapRainWater3D {
     /**
      * For every point Pi <xi, yi, zi> on the border, set the water level to zi
@@ -30,6 +44,9 @@ public class TrapRainWater3D {
      *          Level(Q) = max( Height(Q), Level(P) ) // !! key
      *          Offer Q into MIN_HEAP
      */
+
+    // Time Complexity of BFS + minHeap: O( V + ElogV ) vs. Regular BFS (V + E)
+    // Space Complexity: O(V)
     public int trapRainWater(int[][] heightMap) {
         // assume matrix is not null, has size M * N
         // M > 0 & N > 0, all the values are non-negative integers
