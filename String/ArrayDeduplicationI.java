@@ -42,7 +42,7 @@ public class ArrayDeduplicationI {
    * Remove adjacent, repeated characters in a given string, leaving only one character 
    * for each group of such characters.
    */
-  public String deDup(String input) {
+  public String dedup(String input) {
     if (input == null || input.length() <= 1) {
       return input;
     }
