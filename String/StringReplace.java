@@ -2,8 +2,7 @@
  * String Replace (LaiCode 172)
  * Given an original string input, and two strings S and T, replace all occurrences of S in input with T.
  *
- * input, S and T are not null, S is not empty string
- * Examples
+ * Assume: input S and T are not null, S is not empty string
  *
  * input = "appledogapple", S = "apple", T = "cat", input becomes "catdogcat"
  * input = "dodododo", S = "dod", T = "a", input becomes "aoao"
@@ -43,7 +42,7 @@ public class StringReplace {
   }
 
   // case 1: if a[f .. f+2] == pattern, a[s] = this char in the replacement, s -= t.length(), f -= s.length()
-  // case 1: if a[f .. f+2] != pattern, a[s] = a[f], s--, f--
+  // case 2: if a[f .. f+2] != pattern, a[s] = a[f], s--, f--
   private String replaceLonger(char[] array, String s, String t) {
     // Notice: we will need a long array in this case, and if the requirement
     // is "in place", usually you can assume you are given a longer enough
