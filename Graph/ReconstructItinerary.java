@@ -25,16 +25,11 @@ class ReconstructItinerary {
      * Vertex -> airport
      * Edge   -> ticket[start, end] with direction
      *
-     * Our general intuition is to jump to graph algorithms like DFS/BFS.
-     * The DFS/BFS algorithms help us traverse all nodes in the graph, but fail to cover all edges in the graph
-     *
-     * This is where Eulerian Path comes into play. An Eulerian Path is a list of all edges in a graph in a sequence
-     * such that you can go from point A to all other nodes in the graph multiple times,
+     * Find an Eulerian Path is a list of all edges in a graph in a sequence such that
+     * you can go from point A to all other nodes in the graph multiple times,
      * as long as an edge is not visited.
-     *
-     * (Implementation wise, when visited a node, we poll the edge from the graph)
-     * https://leetcode.com/problems/reconstruct-itinerary/discuss/1161401/C%2B%2B-Explaination%3A-Transition-from-DFS-to-Eulerian-Path
      */
+    
     // Time: O(E * log(E/V)) where V vertex, E edges
     // Space: O(V + E)
     public List<String> findItinerary(List<List<String>> tickets) {
