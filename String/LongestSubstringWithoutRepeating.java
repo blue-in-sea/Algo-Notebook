@@ -22,8 +22,8 @@ public class LongestSubstringWithoutRepeating {
      * Why 同向双指针: i 往右的时候, j 一定不会往右
      */
 
-     // Time: O(N)
-     // Space: O(N)
+     // Time: O(n) where n is the len(s)
+     // Space: O(n) size of set
     public int lengthOfLongestSubstring(String s) {
         Set<Character> set = new HashSet<>();
         char[] arr = s.toCharArray();
