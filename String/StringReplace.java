@@ -1,3 +1,13 @@
+/**
+ * String Replace (LaiCode 172)
+ * Given an original string input, and two strings S and T, replace all occurrences of S in input with T.
+ *
+ * input, S and T are not null, S is not empty string
+ * Examples
+ *
+ * input = "appledogapple", S = "apple", T = "cat", input becomes "catdogcat"
+ * input = "dodododo", S = "dod", T = "a", input becomes "aoao"
+ */
 public class StringReplace {
   // Method 1: not using any String/StringBuilder utility,
   // and using char[] to do it in-place.
@@ -101,8 +111,10 @@ public class StringReplace {
       }
     }
     return matches;
-  }
-/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+  }  
+
+  // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  
   // Method 2: using Java's StringBuilder utility and String indexOf()
   // not using the discussed algo
   public String replace(String input, String s, String t) {
