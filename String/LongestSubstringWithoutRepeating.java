@@ -1,21 +1,29 @@
 /**
- * 1.2.3 同向双指针2: Longest Substring Without Repeating (L384)
- * Fix l: find right-most r such that subarray[l, r] contains no duplicates
- * Why 同向双指针: i 往右的时候, j 一定不会往右
- */
-
-/**
- * Algo 
- * 同向双指针，需要记录两个指针中每个字符出现的次数（均<=1)
- * 只要右指针下一个字符出现次数=0，就可以向右移动
+ * 3. Longest Substring Without Repeating Characters
+ * Given a string s, find the length of the longest substring without repeating characters.
+ *
+ * Input: s = "abcabcbb"
+ * Output: 3
+ * Explanation: The answer is "abc", with the length of 3.
+ *
+ * Input: s = "bbbbb"
+ * Output: 1
+ * Explanation: The answer is "b", with the length of 1.
+ *
+ * Input: s = "pwwkew"
+ * Output: 3
+ * Explanation: The answer is "wke", with the length of 3.
+ * Notice that the answer must be a substring, "pwke" is a subsequence and not a substring.
  */
 public class LongestSubstringWithoutRepeating {
     /**
-     * @param s: a string
-     * @return: an integer
-     * 
-     * Time: O(N), Space: O(N)
+     * Method 1: 同向双指针 + Set
+     * Fix l: find right-most r such that subarray[l, r] contains no duplicates
+     * Why 同向双指针: i 往右的时候, j 一定不会往右
      */
+
+     // Time: O(N)
+     // Space: O(N)
     public int lengthOfLongestSubstring(String s) {
         Set<Character> set = new HashSet<>();
         char[] arr = s.toCharArray();
@@ -34,7 +42,11 @@ public class LongestSubstringWithoutRepeating {
         
         return res;
     }
-    
+
+    // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    /**
+     * Method 2: 同向双指针 + Cnt[]
+     */
     // 能不能用Hashmap或set来记录当前窗口中的字符？其实只要能保证这些操作时间复杂度是O(1)的方法都是可以的。
     // 但是当字母表比较小的时候，还是建议大家用这种开一个数组的方式来存字母出现次数。
     // ASCII Table: https://www.cs.cmu.edu/~pattis/15-1XX/common/handouts/ascii.html
@@ -56,7 +68,10 @@ public class LongestSubstringWithoutRepeating {
         
         return res;
     }
-  
+
+    /**
+     * Method 3: 同向双指针 + Cnt[]
+     */
     // cnt_arr for all lowercase letters 'a-z', no special char or uppercase letters allowed
     public int lengthOfLongestSubstring(String s) {
         int[] cnt = new int[26]; 
