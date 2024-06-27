@@ -2,8 +2,6 @@
  * String Replace (LaiCode 172)
  * Given an original string input, and two strings S and T, replace all occurrences of S in input with T.
  *
- * Assume: input S and T are not null, S is not empty string
- *
  * input = "appledogapple", S = "apple", T = "cat", input becomes "catdogcat"
  * input = "dodododo", S = "dod", T = "a", input becomes "aoao"
  */
