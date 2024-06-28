@@ -1,11 +1,6 @@
 public class LongestSubarrayContainsOnly1s {
-  /**
-   * @param nums: an integer array
-   * @param k: an integer, flip at most k 0s to 1s
-   * @return: an integer
-   * 
-   * Time: O(N), Space: O(1)
-   */
+  // Sliding Window 同相双指针（for-loop）
+  // Time: O(N), Space: O(1)
   public int longestConsecutiveOnes(int[] nums, int k) {
     int cntZero = 0;
     int res = 0;
@@ -32,8 +27,7 @@ public class LongestSubarrayContainsOnly1s {
     return res;
   }
   
-  
-  // Pretty Version
+  // While-loop 
   public int longestConsecutiveOnes(int[] nums, int k) {
     int cnt = 0;
     int res = 0;
