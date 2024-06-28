@@ -26,6 +26,7 @@ class MaxConsecutiveOnesWithKZeroFlip {
      * Time: O(n)
      * Space: O(1)
      */  
+    // for-loop version 
     public int longestOnes(int[] nums, int k) {
         int max = 0;
         int cntZero = 0;
@@ -47,6 +48,39 @@ class MaxConsecutiveOnesWithKZeroFlip {
 
             // Update our longest sequence answer
             max = Math.max(max, r - l + 1);
+        }
+        return max;
+    }
+
+    // +++++++++++++++++++++++++++++++++++++++++++++++++++
+    // while-loop version 
+    public int longestOnes(int[] nums, int k) {
+        int max = 0;
+        int l = 0;
+        int r = 0;
+        int cntZero = 0;
+
+        // While our window is in bounds
+        while (r < nums.length) {
+
+            // Increase numZeroes if the rightmost element is 0
+            if (nums[r] == 0) {
+                cntZero++;
+            }
+
+            //If our window is invalid, contract our window
+            while (cntZero > k) {
+                if (nums[l] == 0) {
+                    cntZero--;
+                }
+                l++;
+            }
+
+            // Update our longest sequence answer
+            max = Math.max(max, r - l + 1);
+
+            // Expand our window
+            r++;
         }
         return max;
     }
