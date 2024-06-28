@@ -17,7 +17,7 @@
  */
 public class LongestSubstringWithoutRepeating {
     /**
-     * Method 1: 同向双指针 + Set
+     * Method 1: 同向双指针 + Set (visited char)
      * Fix l: find right-most r such that subarray[l, r] contains no duplicates
      * Why 同向双指针: i 往右的时候, j 一定不会往右
      */
@@ -25,24 +25,25 @@ public class LongestSubstringWithoutRepeating {
      // Time: O(n) where n is the len(s)
      // Space: O(n) size of set
     public int lengthOfLongestSubstring(String s) {
-        Set<Character> set = new HashSet<>();
+        Set<Character> set = new HashSet<>(); 
         char[] arr = s.toCharArray();
-        
-        int res = 0;
-        for (int l = 0, r = 0; l < arr.length; l++) {
+
+        int max = 0;
+        int l = 0;
+        for (int r = 0; l < arr.length; l++) {
             
             while (r < arr.length && !set.contains(arr[r])) {
                 set.add(arr[r]);
-                res = Math.max(res, r - l + 1);
+                max = Math.max(max, r - l + 1);
                 r++;
             }
             
             set.remove(arr[l]);
         }
         
-        return res;
-    }
-
+        return max;
+    } 
+    
     // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     /**
      * Method 2: 同向双指针 + Cnt[]
