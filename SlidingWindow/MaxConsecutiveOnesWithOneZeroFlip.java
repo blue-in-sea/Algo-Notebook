@@ -23,7 +23,36 @@ class MaxConsecutiveOnesWithOneZeroFlip {
      *
      * Time: O(n)
      * Space: O(1)
-     */     
+     */   
+
+    // for-loop version 
+     public int findMaxConsecutiveOnes(int[] nums) {
+        int max = 0;
+        int cntZero = 0;
+
+        int l = 0; 
+        for (int r = 0; r < nums.length; r++) {
+            // Increase numZeroes if the rightmost element is 0
+            if (nums[r] == 0) {
+                cntZero++;
+            }
+
+            //If our window is invalid, contract our window
+            while (cntZero == 2) {
+                if (nums[l] == 0) {
+                    cntZero--;
+                }
+                l++;
+            }
+
+            // Update our longest sequence answer
+            max = Math.max(max, r - l + 1);
+        }
+        return max;
+    }
+
+    // +++++++++++++++++++++++++++++++++++++++++++++++++++
+    // while-loop version 
     public int findMaxConsecutiveOnes(int[] nums) {
         int max = 0;
         int l = 0;
