@@ -21,8 +21,8 @@ class MinimumSizeSubarraySum {
         if (nums == null || nums.length == 0) {
             return 0;
         }
-
-        int sum = 0, min = Integer.MAX_VALUE;
+        int sum = 0;
+        int min = Integer.MAX_VALUE; // or nums.length + 1
         int l = 0;
         for (int r = 0; r < nums.length; r++) {
             // advance the window-right
