@@ -2,15 +2,15 @@
 Welcome to Iris Algo Notebook
 
 # Algo 
-### 1. Bianry Search
+### Bianry Search
 1) Classical Binary Search
 * Time: **O(logn)** by sufficiently reducing the searching space by half `m = l + (l - r) / 2` 
 * `l = r`: stop at the *same* index 
 * `l < r - 1`: stop at the *adjacent* index
 
-### 3. Recursion
+### Recursion
 
-### 3. DFS
+### DFS
 #### DSF based upon Recursive Thinking (Base Case + Sub-Problems)  
 > 1. How many levels in the recursion tree? What does it store on each level?
 > (每层代表什么意义？一般来说解题之前就需要理解 DFS 要 recursion 多少层) 
@@ -46,7 +46,22 @@ Welcome to Iris Algo Notebook
 * Q14 Majority Number I
 * Q15 Majority Number II
 
-### 4. String
+### Graph
+1) Eulerian Path (directed connected graph)
+* [Reconstruct Itinerary](https://github.com/blue-in-sea/Algo-Notebook/edit/master/Graph/ReconstructItinerary.java)
+2) Topological Sort
+* [Course Schedule I (can take all course?)](https://github.com/blue-in-sea/Algo-Notebook/blob/master/GraphBFS/CourseSchedule.java)
+* [Course Schedule II (course list)](https://github.com/blue-in-sea/Algo-Notebook/blob/master/GraphBFS/CourseSchedule.java)
+
+
+### DP
+1) Greedy
+* [Maximum Subarray Sum](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/MaximumSubarray.java)
+* [Maximum Integer With At Most 1 Swap](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/MaximumSubarray.java)
+2) 
+3) ddd
+
+### String
 1) String Reversal (相向双指针) 首位相向而行
 * [Reverse a String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ReverseString.java)
 * [Reverse Words in a Sentence I](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ReverseWordsInASentenceI.java)
@@ -71,7 +86,7 @@ Welcome to Iris Algo Notebook
 * Find all anagrams of a substring S2 in a long string S1
 
 
-### 5. Sliding Window
+### Sliding Window
 [同向双指针] Sliding window: fast-slow pointers  
  1. [Minimum Size Subarray Sum](https://github.com/blue-in-sea/Algo-Notebook/tree/master/SlidingWindow)
  2. [Longest Subarray Contains Only 1s](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MaxConsecutiveOnes.java)
@@ -90,17 +105,17 @@ Welcome to Iris Algo Notebook
   7. longest substring without repeating characters 
   9. minimum substring ...
 
-### 6. Heap
+### Heap
   1. [Sliding Window Median](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/SlidingWindowMedian.java)
   2. TopK
   
-### 7. Trie 
+### Trie 
 1) Trie for prefix lookup vs. HashMap for a word search
 * [Prefix Trie](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Trie/PrefixTrie.java)
 * [Prefix Trie II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Trie/PrefixTrieII.java)
 
 
-### 8. Merge Interval
+### Merge Interval
 1) Insert a interval: no sorting 
 * [InsertInterval](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/InsertInterval.java)
 2) Merge a list of intervals: sorting & merge
