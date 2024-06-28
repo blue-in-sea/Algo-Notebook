@@ -19,6 +19,13 @@
  * 2. Max Consecutive Ones with most 1 zero flip
  */
 class MaxConsecutiveOnesWithKZeroFlip {
+    /**
+     * Sliding Window: 同向双指针 
+     * Finding the max number of consecutive 1's in the array with at most 1 zero flip
+     *
+     * Time: O(n)
+     * Space: O(1)
+     */  
     public int longestOnes(int[] nums, int k) {
         int max = 0;
         int cntZero = 0;
