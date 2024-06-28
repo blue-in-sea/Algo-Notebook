@@ -66,9 +66,9 @@ Welcome to Iris Algo Notebook
 * [Decompress String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/DecompressStringII.java)
 
 5) Sliding Window in A String
-* Longest substring that contains only character 
+* Longest substring that contains only character
+* [Longest Substring Without Repeating Character](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/LongestSubstringWithoutRepeating.java)
 * Find all anagrams of a substring S2 in a long string S1
-* Find longest subarray that consists of all ‘1’s
 
 
 ### 5. Sliding Window
