@@ -1,6 +1,5 @@
 class MaximumSwap {
-
-    // DP: 从后往前，对于每个 index 找 swap 的 candidates
+    // Greedy: 从后往前，对于每个 index 找最理想 swap 的 candidates
     // Time: O(n)
     // Space: O(1)
     public int maximumSwap(int num) {
