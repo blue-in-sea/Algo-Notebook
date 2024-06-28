@@ -47,9 +47,9 @@ Welcome to Iris Algo Notebook
 * Q15 Majority Number II
 
 ### Graph
-1) Eulerian Path (directed connected graph)
+1) Eulerian Path (Directed Connected Graph)
 * [Reconstruct Itinerary](https://github.com/blue-in-sea/Algo-Notebook/edit/master/Graph/ReconstructItinerary.java)
-2) Topological Sort
+2) Topological Sort (BFS + IndegreeMap)
 * [Course Schedule I (can take all course?)](https://github.com/blue-in-sea/Algo-Notebook/blob/master/GraphBFS/CourseSchedule.java)
 * [Course Schedule II (course list)](https://github.com/blue-in-sea/Algo-Notebook/blob/master/GraphBFS/CourseSchedule.java)
 
