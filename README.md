@@ -71,10 +71,14 @@ Welcome to Iris Algo Notebook
 * Find longest subarray that consists of all ‘1’s
 
 
-### 5. Two pointer 
-[同向双指针] sliding window, fast-slow pointers  
+### 5. Sliding Window
+[同向双指针] Sliding window: fast-slow pointers  
+ 1. [Minimum Size Subarray Sum](https://github.com/blue-in-sea/Algo-Notebook/tree/master/SlidingWindow)
+ 2. [Longest Subarray Contains Only 1s](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/LongestSubarrayContainsOnly1s.java)
+
+
 [逆向双指针] 中心开花, 两边往中间走
-  1. longest subarray contains only 1s
+ 
   2. two sum
   3. two sum smaller
   4. 2 sum closest 
