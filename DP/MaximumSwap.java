@@ -1,3 +1,16 @@
+/**
+ * 670. Maximum Swap 
+ * You are given an integer num. You can swap two digits at most once to get the maximum valued number.
+ * Return the maximum valued number you can get.
+ *
+ * Input: num = 2736
+ * Output: 7236
+ * Explanation: Swap the number 2 and the number 7.
+ *
+ * Input: num = 9973
+ * Output: 9973
+ * Explanation: No swap.
+ */
 class MaximumSwap {
     // Greedy: 从后往前，对于每个 index 找最理想 swap 的 candidates
     // Time: O(n)
