@@ -60,9 +60,10 @@ Welcome to Iris Algo Notebook
 * [Maximum Integer With At Most 1 Swap](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/MaximumSubarray.java)
 2) 
 3) Best Time to Buy and Sell Stock
-* ss
-* sss
-* sss
+* (Best Time to Buy and Sell Stock: For At Most 1 Trade)[https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/BestTimeBuyAndSellStock.java]
+* (Best Time to Buy and Sell Stock II: Hold at Most 1 Share At The Time)[https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/BestTimeBuyAndSellStockII.java]
+* (Best Time to Buy and Sell Stock III: Complete At Most 2 Transactions)[https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/BestTimeBuyAndSellStockIII.java]
+* (Best Time to Buy and Sell Stock IV: Complete At Most k Transactions)[https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/BestTimeBuyAndSellStockIV.java]
 
 ### String
 1) String Reversal (相向双指针) 首位相向而行
