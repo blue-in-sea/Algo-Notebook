@@ -65,8 +65,10 @@ Welcome to Iris Algo Notebook
 1) String Reversal (相向双指针) 首位相向而行
 * [Reverse a String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ReverseString.java)
 * [Reverse Words in a Sentence I](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ReverseWordsInASentenceI.java)
-* [Right Shift by N Characters](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/RightShiftByNCharacters.java)
-* Char Replacement
+* [Right Shift by N Characters](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/RightShiftByNCharacters.java) **
+* [String Replacement](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/StringReplace.java)
+* [ValidPalindrome](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ValidPalindrome.java) ** 
+* [ValidPalindromeII](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ValidPalindromeII.java) **
 
 2) String Shuffling
 * [String Shuffling](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/StringShuffling.java)
