@@ -90,6 +90,7 @@ Postorder
 
 * [Best Time to Buy and Sell Stock with Cool Down](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/BestTimeBuyAndSellStockWithCoolDown.java)
 * [Best Time to Buy and Sell Stock with Transcation Fee](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/BestTimeBuyAndSellStockWithFee.java)
+* [Maximum Profit From Trading Stocks](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/MaximumProfitFromTradingStocks.java)
 
 
 ### String
