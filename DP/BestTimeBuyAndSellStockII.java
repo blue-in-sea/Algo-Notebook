@@ -34,7 +34,7 @@ public class BestTimeBuyAndSellStockII {
      * if the second number is larger than the first one, and at the total sum we obtain will be the current maximum profit.
      */
 
-    // Time: O(n)
+    // Time: O(n) one pass 
     // Space: O(1)
     public int maxProfit(int[] prices) {
         int maxprofit = 0;
