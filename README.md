@@ -99,8 +99,8 @@ Postorder
 * [Reverse Words in a Sentence I](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ReverseWordsInASentenceI.java)
 * [Right Shift by N Characters](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/RightShiftByNCharacters.java) **
 * [String Replacement](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/StringReplace.java)
-* [ValidPalindrome](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ValidPalindrome.java) ** 
-* [ValidPalindromeII](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ValidPalindromeII.java) **
+* [Valid Palindrome](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ValidPalindrome.java) 
+* [Valid PalindromeII: After Deleting At Most 1 Char](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ValidPalindromeII.java)
 
 2) String Shuffling
 * [String Shuffling](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/StringShuffling.java)
