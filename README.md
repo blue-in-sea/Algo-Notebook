@@ -14,7 +14,9 @@ Welcome to Iris Algo Notebook
 
 1. BFS (Level Order)
 2. DFS (PreOrder / InOrder / PostOrder)
-![binary-tree](https://github.com/blue-in-sea/Algo-Notebook/assets/44347786/5223a40f-0f73-481f-9046-74b6eaf3bd41)
+
+![binary-tree](https://github.com/blue-in-sea/Algo-Notebook/assets/44347786/e80ccfd2-3715-4e86-86de-d6777f7c073a)
+
 ```
 Pororder 
 [3,9,1,5,3,4,8,20,15,9,7]
@@ -25,7 +27,7 @@ Inorder
 Postorder 
 [5,1,4,8,3,9,9,15,7,20,3]
 ```
-
+3. Reconstruct Binary Tree
 4. Max Path Sum
 5. LCA
 
