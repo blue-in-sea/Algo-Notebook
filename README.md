@@ -10,6 +10,13 @@ Welcome to Iris Algo Notebook
 
 ### Recursion
 
+### Binary Tree
+
+1. BFS (Level Order)
+2. DFS (PreOrder / InOrder / PostOrder)
+3. Max Path Sum
+4. 
+
 ### DFS
 #### DSF based upon Recursive Thinking (Base Case + Sub-Problems)  
 > 1. How many levels in the recursion tree? What does it store on each level?
