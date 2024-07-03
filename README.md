@@ -88,7 +88,7 @@ Postorder
 
 <img width="427" alt="state" src="https://github.com/blue-in-sea/Algo-Notebook/assets/44347786/7ce8bd10-b1ac-4059-8775-7384df37d562">
 
-* [Best Time to Buy and Sell Stock with Cool Down]([https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/BestTimeBuyAndSellStockIV.java](https://github.com/blue-in-sea/Algo-Notebook/new/master/DP))
+* [Best Time to Buy and Sell Stock with Cool Down](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/BestTimeBuyAndSellStockWithCoolDown.java)
 
 
 ### String
