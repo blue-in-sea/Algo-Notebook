@@ -1,5 +1,6 @@
 /**
- * 122. Best Time to Buy and Sell Stock II
+ * 122. Best Time to Buy and Sell Stock II (Hold at Most 1 Share At The Time)
+ * 
  * You are given an integer array prices where prices[i] is the price of a given stock on the ith day.
  * On each day, you may decide to buy and/or sell the stock. You can only hold at most one share of
  * the stock at any time. However, you can buy it then immediately sell it on the same day.
@@ -21,7 +22,6 @@
  * Output: 0
  * Explanation: There is no way to make a positive profit, so we never buy the stock to achieve the maximum profit of 0.
  */
-
 public class BestTimeBuyAndSellStockII {
     /**
      * DP: Greedy in Simple One Pass - Track slope
