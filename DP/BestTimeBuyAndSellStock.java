@@ -26,6 +26,9 @@ public class BestTimeBuyAndSellStock {
      *
      * where we have the current selling price move with i
      */
+    
+    // Time: O(n) one pass 
+    // Space: O(1)
     public int maxProfit(int[] prices) {
         int minprice = Integer.MAX_VALUE;
         int maxprofit = 0;
