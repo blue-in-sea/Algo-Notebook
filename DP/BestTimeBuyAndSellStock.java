@@ -19,7 +19,7 @@
  */
 public class BestTimeBuyAndSellStock {
     /**
-     * We need to find the largest price (peak) following each min price (valley), which difference could be the max profit.
+     * We need to find the largest price (peak) following each min price (valley), which difference could be the max profit
      *
      * > min-price: lowest valley
      * > max-profit: maximum profit = max diff (selling price - min-price)
