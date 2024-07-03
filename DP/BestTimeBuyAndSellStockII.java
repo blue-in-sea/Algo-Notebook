@@ -24,7 +24,8 @@
  */
 public class BestTimeBuyAndSellStockII {
     /**
-     * DP: Greedy in Simple One Pass - Track slope
+     * DP: Greedy in Simple One Pass - Track slope: Total Profit = ∑i (height(peak_i)) − height(valley_i))
+     *
      * Instead of looking for every peak following a valley, we can simply go on crawling over the slope
      * and keep on adding the profit obtained from every consecutive transaction.
      *
