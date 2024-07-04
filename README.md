@@ -31,6 +31,10 @@ Postorder
 4. Max Path Sum
 5. LCA
 
+#### (Advance)
+6. Weighted Binary Tree
+* Minimum Edge Weight Equilibrium Queries in a Tree
+
 ### DFS
 #### DSF based upon Recursive Thinking (Base Case + Sub-Problems)  
 > 1. How many levels in the recursion tree? What does it store on each level?
