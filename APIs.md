@@ -34,7 +34,19 @@ void dfs(TreeNode root) {
 ```  
 BFS
 ```
-LevelOrder 
+void LevelOrder() {
+  queue
+  while (!queue.isEmpty()) {
+     int size
+     for(curLevel) {
+        // generate the curr node 
+        node = queue.poll()
+
+        // expand children
+     }
+  }
+  level++;
+}
 ```
 
 ### Map
