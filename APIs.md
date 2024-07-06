@@ -37,7 +37,7 @@ BFS
 void LevelOrder() {
   queue
   while (!queue.isEmpty()) {
-     int size
+     check size for curLevel
      for(curLevel) {
         // generate the curr node 
         node = queue.poll()
