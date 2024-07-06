@@ -122,8 +122,15 @@ for (Map.Entry<Integer, Integer> e : map.entrySet()) {
 * `contains(Object o)` - Returns true if this set contains the specified element.
 * `containsAll(Collection<?> c)` - Returns true if this set contains all of the elements of the specified collection.
 * `equals(Object o)` - Compares the specified object with this set for equality.
-* `int hashCode()` -  Returns the hash code value for this set. ** 
 * `isEmpty()` - Returns true if this set contains no elements.
+  
+* `remove(Object o)` - Removes the specified element from this set if it is present (optional operation).
+* `removeAll(Collection<?> c)` - Removes from this set all of its elements that are contained in the specified collection (optional operation).
+* `retainAll(Collection<?> c)` - Retains only the elements in this set that are contained in the specified collection (optional operation).
+* `size()` - Returns the number of elements in this set (its cardinality).
+
+* `int hashCode()` -  Returns the hash code value for this set. ** 
+* `Object[] toArray()` - Returns an array containing all of the elements in this set.
 * `Iterator<E> iterator()` - Returns an iterator over the elements in this set.
 
 ```
@@ -142,10 +149,7 @@ for (Iterator<E> iter = list.iterator(); iter.hasNext(); ) {
 // Functional 
 list.stream().map(e -> e + 1); // Can apply a transformation function for e
 ``` 
-* `remove(Object o)` - Removes the specified element from this set if it is present (optional operation).
-* `removeAll(Collection<?> c)` - Removes from this set all of its elements that are contained in the specified collection (optional operation).
-* `retainAll(Collection<?> c)` - Retains only the elements in this set that are contained in the specified collection (optional operation).
-* `size()` - Returns the number of elements in this set (its cardinality).
+
 * `Spliterator<E>	spliterator()` - Creates a Spliterator over the elements in this set.
 
 ```
@@ -153,8 +157,6 @@ list.add(new user("Hi", 20));
 Spliterator<user> users = list.spliterator();
 users.forEachRemaining((n) -> System.out.println("name : " + n.name + " age: " + n.age);); // expect "name: hi age: 20
 ```
-
-* `Object[]	toArray()` - Returns an array containing all of the elements in this set.
 
 ### Set
 
