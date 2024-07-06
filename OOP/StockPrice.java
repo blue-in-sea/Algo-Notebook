@@ -30,6 +30,7 @@
  * stockPrice.minimum();     // return 2, the minimum price is 2 at timestamp 4. If timestampPriceMap[timestamp] != price, it means the price for the current timestamp was updated and that this price is outdated. So we discard this pair and repeat the above step. Otherwise, return the current price.
  */
 /**
+ * Algo
  * Insertion/Updation of Record:
  * Insert/Update the stock price at the current timestamp in timestampPriceMap.
  * Push the (price, timestamp) pair into the minHeap and maxHeap.
