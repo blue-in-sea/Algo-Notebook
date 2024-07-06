@@ -178,15 +178,14 @@ users.forEachRemaining((n) -> System.out.println("name : " + n.name + " age: " +
 
 ### List
 
-`add(E e)` - Appends the specified element to the end of this list (optional operation).
-`add(int index, E element)` - Inserts the specified element at the specified position in this list (optional operation).
-`addAll(Collection<? extends E> c)` - Appends all of the elements in the specified collection to the end of this list, in the order that they are returned by the specified collection's iterator (optional operation).
-`addAll(int index, Collection<? extends E> c)` - Inserts all of the elements in the specified collection into this list at the specified position (optional operation).
-`clear()` - Removes all of the elements from this list (optional operation).
-boolean	contains(Object o)
-Returns true if this list contains the specified element.
-boolean	containsAll(Collection<?> c)
-Returns true if this list contains all of the elements of the specified collection.
+* `add(E e)` - Appends the specified element to the end of this list (optional operation).
+* `add(int index, E element)` - Inserts the specified element at the specified position in this list (optional operation).
+* `addAll(Collection<? extends E> c)` - Appends all of the elements in the specified collection to the end of this list, in the order that they are returned by the specified collection's iterator (optional operation).
+* `addAll(int index, Collection<? extends E> c)` - Inserts all of the elements in the specified collection into this list at the specified position (optional operation).
+* `clear()` - Removes all of the elements from this list (optional operation).
+
+* `contains(Object o)` - Returns true if this list contains the specified element.
+* `containsAll(Collection<?> c)` - Returns true if this list contains all of the elements of the specified collection.
 boolean	equals(Object o)
 Compares the specified object with this list for equality.
 E	get(int index)
