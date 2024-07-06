@@ -171,9 +171,9 @@ list.stream().map(e -> e + 1); // Can apply a transformation function for e
 * `Spliterator<E>	spliterator()` - Creates a Spliterator over the elements in this set.
 
 ```
-list.add(new user("Hi", 20));
-Spliterator<user> users = list.spliterator();
-users.forEachRemaining((n) -> System.out.println("name : " + n.name + " age: " + n.age);); // expect "name: hi age: 20
+list.add(new User("Hi", 20));
+Spliterator<User> users = list.spliterator();
+users.forEachRemaining((n) -> System.out.println("name : " + n.name + " age: " + n.age);); // "name: hi age: 20
 ```
 
 ### List
@@ -186,10 +186,8 @@ users.forEachRemaining((n) -> System.out.println("name : " + n.name + " age: " +
 
 * `contains(Object o)` - Returns true if this list contains the specified element.
 * `containsAll(Collection<?> c)` - Returns true if this list contains all of the elements of the specified collection.
-boolean	equals(Object o)
-Compares the specified object with this list for equality.
-E	get(int index)
-Returns the element at the specified position in this list.
+* `equals(Object o)` - Compares the specified object with this list for equality.
+* `get(int index)` - Returns the element at the specified position in this list.
 int	hashCode()
 Returns the hash code value for this list.
 int	indexOf(Object o)
