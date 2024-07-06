@@ -118,6 +118,10 @@ for (Map.Entry<Integer, Integer> e : map.entrySet()) {
 ### Set
 * `add(E e)` - Adds the specified element to this set if it is not already present (optional operation).
 * `addAll(Collection<? extends E> c)` - Adds all of the elements in the specified collection to this set if they're not already present (optional operation).
+```
+s1.addAll(s2)
+Help to build the union of two collections 
+```
 * `clear()` - Removes all of the elements from this set (optional operation).
 * `contains(Object o)` - Returns true if this set contains the specified element.
 * `containsAll(Collection<?> c)` - Returns true if this set contains all of the elements of the specified collection.
@@ -127,6 +131,10 @@ for (Map.Entry<Integer, Integer> e : map.entrySet()) {
 * `remove(Object o)` - Removes the specified element from this set if it is present (optional operation).
 * `removeAll(Collection<?> c)` - Removes from this set all of its elements that are contained in the specified collection (optional operation).
 * `retainAll(Collection<?> c)` - Retains only the elements in this set that are contained in the specified collection (optional operation).
+```
+s1.retainAll(s2)
+Help to build the intersection of two collections 
+```
 * `size()` - Returns the number of elements in this set (its cardinality).
 
 * `int hashCode()` -  Returns the hash code value for this set. ** 
