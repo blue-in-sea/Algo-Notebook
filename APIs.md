@@ -118,13 +118,13 @@ for (Map.Entry<Integer, Integer> e : map.entrySet()) {
 ### Set
 * `add(E e)` - Adds the specified element to this set if it is not already present (optional operation).
 * `addAll(Collection<? extends E> c)` - Adds all of the elements in the specified collection to this set if they're not already present (optional operation).
-* `void	clear()` - Removes all of the elements from this set (optional operation).
-* `boolean	contains(Object o)` - Returns true if this set contains the specified element.
-* `boolean	containsAll(Collection<?> c)` - Returns true if this set contains all of the elements of the specified collection.
-* `boolean	equals(Object o)` - Compares the specified object with this set for equality.
-* `int	hashCode()` -  Returns the hash code value for this set.
-* `boolean	isEmpty()` - Returns true if this set contains no elements.
-* `Iterator<E>	iterator()` - Returns an iterator over the elements in this set.
+* `clear()` - Removes all of the elements from this set (optional operation).
+* `contains(Object o)` - Returns true if this set contains the specified element.
+* `containsAll(Collection<?> c)` - Returns true if this set contains all of the elements of the specified collection.
+* `equals(Object o)` - Compares the specified object with this set for equality.
+* `int hashCode()` -  Returns the hash code value for this set. ** 
+* `isEmpty()` - Returns true if this set contains no elements.
+* `Iterator<E> iterator()` - Returns an iterator over the elements in this set.
 
 ```
 // For-loop 
@@ -142,11 +142,11 @@ for (Iterator<E> iter = list.iterator(); iter.hasNext(); ) {
 // Functional 
 list.stream().map(e -> e + 1); // Can apply a transformation function for e
 ``` 
-* `boolean	remove(Object o)` - Removes the specified element from this set if it is present (optional operation).
-* `boolean	removeAll(Collection<?> c)` - Removes from this set all of its elements that are contained in the specified collection (optional operation).
-* `boolean	retainAll(Collection<?> c)` - Retains only the elements in this set that are contained in the specified collection (optional operation).
-* `int	size()` - Returns the number of elements in this set (its cardinality).
-* `default Spliterator<E>	spliterator()` - Creates a Spliterator over the elements in this set.
+* `remove(Object o)` - Removes the specified element from this set if it is present (optional operation).
+* `removeAll(Collection<?> c)` - Removes from this set all of its elements that are contained in the specified collection (optional operation).
+* `retainAll(Collection<?> c)` - Retains only the elements in this set that are contained in the specified collection (optional operation).
+* `size()` - Returns the number of elements in this set (its cardinality).
+* `Spliterator<E>	spliterator()` - Creates a Spliterator over the elements in this set.
 
 ```
 list.add(new user("Hi", 20));
