@@ -233,8 +233,8 @@ Returns an array containing all of the elements in this list in proper sequence 
 ```
          Throws exception	Returns special value
 Insert	  add(e)	         offer(e)
-Remove	  remove()	      poll()
-Examine	  element()	      peek()
+Remove	  remove()	       poll()
+Examine	  element()	       peek()
 
 ```
 * `empty()` - Returns false if non-empty
