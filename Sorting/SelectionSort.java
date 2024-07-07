@@ -1,7 +1,19 @@
+/**
+ * Given an array of integers, sort the array in ascending order and return it.
+ * [5,2,3,1] -> [1,2,3,5]
+ */
 public class SelectionSort {
-    // Selection Sort
-    // select min for each index by scanning through rest of the array
-    // Time: O(n^2), Space: O(1)
+    /**
+     * Selection Sort
+     * select min for each index by scanning through rest of the array
+     *
+     * for i [0 -> n)
+     *    for j [i -> n)
+     *       swap (i, j)
+     *
+     * Time: O(n^2)
+     * Space: O(1)
+     */
     public int[] selectionSort(int[] nums) {
         if (nums == null || nums.length == 0) return nums;
 
