@@ -1,27 +1,27 @@
-### Common APIs and Utils - Java 8
+### Common Utils - Java 8
 ### Printing
-1. Print an array 
+#### 1. Print an array 
 ```
 System.out.println(Arrays.toString(array));
 ```
 
-2. Print a 2D array
+#### 2. Print a 2D array
 ```
 System.out.println(Arrays.deepToString(array));
 ```
 
-3. Print a 1D collection: list / queue / stack
+#### 3. Print a 1D collection: list / queue / stack
 ```
 System.out.println(list);
 ```
 
-4. Print a map 
+#### 4. Print a map 
 ```
 map.forEach((key, value) -> System.out.println(key + ": " + value));
 ```
 
-5. Print a tree
-DFS
+#### 5. Print a tree
+##### DFS
 ```
 void dfs(TreeNode root) {
   if (root == null) return;
@@ -32,7 +32,7 @@ void dfs(TreeNode root) {
   // print(root.val); - postorder
 }
 ```  
-BFS
+##### BFS
 ```
 void LevelOrder() {
   queue
@@ -52,6 +52,7 @@ void LevelOrder() {
   level++;
 }
 ```
+### Common APIs - Java 8
 
 ### Map
 * `size()` - Returns the number of key-value mappings in this map.
