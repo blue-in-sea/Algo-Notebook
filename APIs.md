@@ -131,9 +131,15 @@ for (Map.Entry<Integer, Integer> e : map.entrySet()) {
 * `lastIndexOf(int ch)` - Returns the index within this string of the last occurrence of the specified character.
 * `lastIndexOf(int ch, int fromIndex)` - Returns the index within this string of the last occurrence of the specified character, searching backward starting at the specified index.
 
+### LinkedList
+To delete a list node
+1) Find previous node of the node to be deleted.
+2) Change the next of previous node.
+3) Free memory for the node to be deleted.
 
-####                            ArrayList                                         LinkedList
+
 ```
+####                            ArrayList                                         LinkedList
                                  (array)                                          (double-linked-list)
 
 ```
