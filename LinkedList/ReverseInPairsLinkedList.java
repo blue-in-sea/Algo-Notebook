@@ -17,7 +17,7 @@
  *     }
  * }
  */
-public class ReverseInPairs {
+public class ReverseInPairsLinkedList {
    /**
     * Method 1: Recursive
     *
