@@ -10,13 +10,25 @@ Welcome to Iris Algo Notebook
 * `l < r - 1`: stop at the *adjacent* index
 
 2) Search in a **Sorted** sequence
-* [First Occurrence](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinarySearch/FirstOccurrence.java)
+* [Find First Occurrence](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinarySearch/FirstOccurrence.java)
+  
   * `if (a[mid] >= target) r = mid;` for 1st occurence next search range `[l, m]` 前半部分
-* [Last Occurence](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinarySearch/LastOccurrence.java)
+ 
+* [Find Last Occurence](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinarySearch/LastOccurrence.java)
+  
   * `if (a[mid] <= target) l = mid;` for last occurence next search range `[m, r]` 后半部分
+  
+* [Find Largest Smaller Equal Elements](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinarySearch/FindPeakElement.java)
+  
+  * `if (a[mid] <= target) l = mid;` 相似于上题，找在 target 的左区间尽可能的大，或者等于 target 的元素
+  
+* [Find K Closest Element](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinarySearch/KClosestElements.java)
+  
+  * `if (x - arr[mid] > arr[mid + k] - x) l = mid + 1;` 找 k 个元素的起点，比较 `abs(x, a[m])` vs `abs(x, a[m+k])` 两个端点的对于 `x` 绝 对距离
+  
 * [Peak Element](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinarySearch/FindPeakElement.java)
+  
   * `if (a[mid] < a[mid + 1]) l = mid + 1;` 如果中间的数比后一位数小的话，peek点肯定在mid右边包括mid `[m, r]`
-
 
 ### Recursion
 
