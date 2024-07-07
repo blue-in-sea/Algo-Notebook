@@ -1,5 +1,3 @@
-package Sorting;
-
 public class SelectionSort {
     // Selection Sort
     // select min for each index by scanning through rest of the array
