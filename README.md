@@ -15,7 +15,7 @@ Welcome to Iris Algo Notebook
 * [Last Occurence](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinarySearch/LastOccurrence.java)
   * `if (a[mid] <= target) l = mid;` for last occurence next search range `[m, r]` 后半部分
 * [Peak Element](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinarySearch/FindPeakElement.java)
- * `if (a[mid] < a[mid + 1]) l = mid + 1;` 如果中间的数比后一位数小的话，peek点肯定在mid右边包括mid `[m, r]`
+  * `if (a[mid] < a[mid + 1]) l = mid + 1;` 如果中间的数比后一位数小的话，peek点肯定在mid右边包括mid `[m, r]`
 
 
 ### Recursion
