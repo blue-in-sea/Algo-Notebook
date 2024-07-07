@@ -43,7 +43,7 @@ Welcome to Iris Algo Notebook
 3. Selection Sort                  O(n^2)                              O(n^2)                               O(n^2)
 4. Merge Sort *                    O(nlogn)                            O(nlogn)                         *   O(nlogn)
 5. Heap Sort  *                    O(nlogn)                            O(nlogn)                         *   O(nlogn) 
-6. Quick Sort *                    O(nlogn)                            O(nlogn)                             O(n^2)
+6. Quick Sort x                    O(nlogn)                            O(nlogn)                         x   O(n^2)
 7. Counting Sort                   O(n+k)                              O(n+k)                               O(n+k)
 8. Radix Sort                      O(d(n+k))                           O(d(n+k))                            O(d(n+k))
 ```
