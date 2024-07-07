@@ -14,6 +14,8 @@ public class FindPeakElement {
         return l;
         // while 结束时 left 和 right 停在同一个位置
     }
+
+    // ****************************************************
     
     public int findPeakElement(int[] nums) {
         int l = 0, r = nums.length - 1;
@@ -24,5 +26,30 @@ public class FindPeakElement {
         }
         return nums[l] > nums[r] ? l : r;
         // while 结束时 left 和 right 相邻, 谁大 return 谁
+    }
+
+    // ****************************************************
+
+    public int findPeakElement(int[] nums) {
+        if (nums == null || nums.length <= 1) {
+            return 0;
+        }
+
+        int l = 1, r = nums.length - 2; // 这里注意初始值
+        while (l <= r) {
+            int mid = (l + r) / 2;
+            if (nums[mid] < nums[mid + 1]) {
+                l = mid + 1; 
+            } else {
+                if (nums[mid] > nums[mid - 1]) {
+                    return mid;  // found
+                } else {
+                    r = mid - 1;
+                }
+
+            }
+        }
+        return nums[l] > nums[r] ? l : r;
+        // while 结束时 left 和 right 相错一步, 谁大 return 谁
     }
 }
