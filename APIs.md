@@ -313,7 +313,7 @@ random.nextLong();     // Random Long Number - -8979699159253079774
 random.nextBoolean();  // Random Boolean - true
 ```
 
-Three way to generate a random number 
+Three ways to generate a random number 
 ```
 public class Foo {
    private Random random 
