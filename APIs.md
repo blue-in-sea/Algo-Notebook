@@ -132,6 +132,18 @@ for (Map.Entry<Integer, Integer> e : map.entrySet()) {
 * `lastIndexOf(int ch, int fromIndex)` - Returns the index within this string of the last occurrence of the specified character, searching backward starting at the specified index.
 
 ### List
+
+```
+                                 ArrayList                                        LinkedList
+                                 (array)                                          (double-linked-list)
+
+
+Random Access (get)           O(1) - Direct access by index.                      O(n) - Must traverse the list from the beginning or end.
+                              Fast                                                Slow
+
+
+```
+
 * `sort(Comparator<? super E> c)` - Sorts this list according to the order induced by the specified Comparator.
 ```
 Collections.sort(list);           or           Collections.sort(l, (a, b) -> a.compareTo(b));        
@@ -145,7 +157,7 @@ Collections.reverse(list);        or           Collections.sort(l, (a, b) -> b.c
 * `get(int index)` - Returns the element at the specified position in this list.
 * `indexOf(Object o)` -  Returns the index of the first occurrence of the specified element in this list, or -1 if this list does not contain the element.
 * `lastIndexOf(Object o)` - Returns the index of the last occurrence of the specified element in this list, or -1 if this list does not contain the element.
-* `E	set(int index, E element)` - Replaces the element at the specified position in this list with the specified element (optional operation).
+* `set(int index, E element)` - Replaces the element at the specified position in this list with the specified element (optional operation).
   
 * `add(E e)` - Appends the specified element to the end of this list (optional operation).
 * `add(int index, E element)` - Inserts the specified element at the specified position in this list (optional operation).
