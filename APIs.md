@@ -139,10 +139,10 @@ To delete a list node
 
 
 ```
-####                            ArrayList                                         LinkedList
+                                 ArrayList                                         LinkedList
                                  (array)                                          (double-linked-list)
 
-```
+
 Random Access (get)           O(1) - Direct access by index.                      O(n) - Must traverse the list from the beginning or end.
                               Fast *                                                Slow
 
