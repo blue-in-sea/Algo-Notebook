@@ -142,6 +142,18 @@ Random Access (get)           O(1) - Direct access by index.                    
                               Fast                                                Slow
 
 
+Search (contains):           O(n) - Must iterate through the list.                Search (contains): O(n) - Must iterate through the list.
+                             Same                                                 Same
+
+
+Insertion (add):            About the same                                        About the same 
+                          1. At the end: O(1) - Amortized constant time,         1. At the beginning: O(1)
+                            though it can be O(n) if resizing is needed.         2. At the end: O(1) if tail reference is maintained; otherwise, O(n)
+                          2. At a specific index: O(n) - Requires shifting.      3. At a specific index: O(n) - Must traverse to the index.
+
+
+
+
 ```
 
 * `sort(Comparator<? super E> c)` - Sorts this list according to the order induced by the specified Comparator.
