@@ -131,13 +131,12 @@ for (Map.Entry<Integer, Integer> e : map.entrySet()) {
 * `lastIndexOf(int ch)` - Returns the index within this string of the last occurrence of the specified character.
 * `lastIndexOf(int ch, int fromIndex)` - Returns the index within this string of the last occurrence of the specified character, searching backward starting at the specified index.
 
-### List
 
+####                            ArrayList                                         LinkedList
 ```
-                                 ArrayList                                        LinkedList
                                  (array)                                          (double-linked-list)
 
-
+```
 Random Access (get)           O(1) - Direct access by index.                      O(n) - Must traverse the list from the beginning or end.
                               Fast *                                                Slow
 
@@ -157,10 +156,11 @@ Deletion (remove)         1. From the end: O(1)                                 
 
                           Trick: Swap with the last ele & delete!!
 
-
-ArrayList -> randow aceess
-LinkedList -> frequent insertion and deletion occur at the beginning or middle of the list.
 ```
+* `ArrayList` => random access & frequently add or remove elements at the end
+* `LinkedList` =>  frequent insertion and deletion occur at the beginning or middle of the list.
+
+### List
 
 * `sort(Comparator<? super E> c)` - Sorts this list according to the order induced by the specified Comparator.
 ```
