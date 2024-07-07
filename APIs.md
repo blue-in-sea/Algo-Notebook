@@ -139,15 +139,15 @@ To delete a list node
 
 
 ```
-                                 ArrayList                                         LinkedList
-                                 (array)                                          (double-linked-list)
+                             ArrayList                                           LinkedList
+                             (array)                                             (double-linked-list)
 
 
-Random Access (get)           O(1) - Direct access by index.                      O(n) - Must traverse the list from the beginning or end.
-                              Fast *                                                Slow
+Random Access (get)         O(1) - Direct access by index.                       O(n) - Must traverse the list from the beginning or end.
+                            Fast *                                               Slow
 
 
-Search (contains):           O(n) - Must iterate through the list.                Search (contains): O(n) - Must iterate through the list.
+Search (contains):        O(n) - Must iterate through the list.                   Search (contains): O(n) - Must iterate through the list.
            
 
 
