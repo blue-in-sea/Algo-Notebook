@@ -3,10 +3,20 @@ Welcome to Iris Algo Notebook
 
 # Algo 
 ### Bianry Search
-1) Classical Binary Search
-* Time: **O(logn)** by sufficiently reducing the searching space by half `m = l + (l - r) / 2` 
+1) [Classical Binary Search](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinarySearch/ClassicalBinarySeach.java)
+* Time: **O(logn)** by sufficiently reducing the searching space by half `m = l + (l - r) / 2`
+* next search space either [l, m] or [m r]
 * `l = r`: stop at the *same* index 
 * `l < r - 1`: stop at the *adjacent* index
+
+2) Search in a **Sorted** sequence
+* [First Occurrence](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinarySearch/FirstOccurrence.java)
+  * `if (array[mid] >= target) r = mid;` for 1st occurence next search range `[l, m]`
+* [Last Occurence](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinarySearch/LastOccurrence.java)
+  * `if (array[mid] <= target) l = mid;` for last occurence next search range `[m, r]`
+
+
+
 
 ### Recursion
 
