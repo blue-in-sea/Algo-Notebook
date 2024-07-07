@@ -1,5 +1,5 @@
 ### Common APIs and Utils - Java 8
-### Print
+### Printing
 1. Print an array 
 ```
 System.out.println(Arrays.toString(array));
@@ -40,11 +40,15 @@ void LevelOrder() {
      check size for curLevel
      for(curLevel) {
         // generate the curr node 
-        node = queue.poll()
+        node = queue.poll();
+        print(node.val);
 
         // expand children
+        if (node.left != null) queue.offer(node.left);
+        if (node.left != null) queue.offer(node.right);
      }
   }
+  println();
   level++;
 }
 ```
@@ -126,32 +130,6 @@ for (Map.Entry<Integer, Integer> e : map.entrySet()) {
 * `lastIndexOf(int ch)` - Returns the index within this string of the last occurrence of the specified character.
 * `lastIndexOf(int ch, int fromIndex)` - Returns the index within this string of the last occurrence of the specified character, searching backward starting at the specified index.
 
-## Collections
-### Set
-* `add(E e)` - Adds the specified element to this set if it is not already present (optional operation).
-* `addAll(Collection<? extends E> c)` - Adds all of the elements in the specified collection to this set if they're not already present (optional operation).
-```
-s1.addAll(s2) // Union of two collections 
-```
-* `clear()` - Removes all of the elements from this set (optional operation).
-* `contains(Object o)` - Returns true if this set contains the specified element.
-* `containsAll(Collection<?> c)` - Returns true if this set contains all of the elements of the specified collection.
-* `equals(Object o)` - Compares the specified object with this set for equality.
-* `isEmpty()` - Returns true if this set contains no elements.
-  
-* `remove(Object o)` - Removes the specified element from this set if it is present (optional operation).
-* `removeAll(Collection<?> c)` - Removes from this set all of its elements that are contained in the specified collection (optional operation).
-* `retainAll(Collection<?> c)` - Retains only the elements in this set that are contained in the specified collection (optional operation).
-```
-s1.retainAll(s2) // Intersection of two collections 
-```
-* `size()` - Returns the number of elements in this set (its cardinality).
-
-* `int hashCode()` -  Returns the hash code value for this set. ** 
-* `Object[] toArray()` - Returns an array containing all of the elements in this set.
-* `Iterator<E> iterator()` - Returns an iterator over the elements in this set.
-* `Spliterator<E>	spliterator()` - Creates a Spliterator over the elements in this set.
-
 ### List
 * `sort(Comparator<? super E> c)` - Sorts this list according to the order induced by the specified Comparator.
 ```
@@ -212,12 +190,36 @@ list.stream().map(e -> e + 1); // Can apply a transformation function for e
 ``` 
 
 * `Spliterator<E>	spliterator()` - Creates a Spliterator over the elements in this list.
-
 ```
 list.add(new User("Hi", 20));
 Spliterator<User> users = list.spliterator();
 users.forEachRemaining((n) -> System.out.println("name : " + n.name + " age: " + n.age);); // "name: hi age: 20
 ```
+
+### Set
+* `add(E e)` - Adds the specified element to this set if it is not already present (optional operation).
+* `addAll(Collection<? extends E> c)` - Adds all of the elements in the specified collection to this set if they're not already present (optional operation).
+```
+s1.addAll(s2) // Union of two collections 
+```
+* `clear()` - Removes all of the elements from this set (optional operation).
+* `contains(Object o)` - Returns true if this set contains the specified element.
+* `containsAll(Collection<?> c)` - Returns true if this set contains all of the elements of the specified collection.
+* `equals(Object o)` - Compares the specified object with this set for equality.
+* `isEmpty()` - Returns true if this set contains no elements.
+  
+* `remove(Object o)` - Removes the specified element from this set if it is present (optional operation).
+* `removeAll(Collection<?> c)` - Removes from this set all of its elements that are contained in the specified collection (optional operation).
+* `retainAll(Collection<?> c)` - Retains only the elements in this set that are contained in the specified collection (optional operation).
+```
+s1.retainAll(s2) // Intersection of two collections 
+```
+* `size()` - Returns the number of elements in this set (its cardinality).
+
+* `int hashCode()` -  Returns the hash code value for this set. ** 
+* `Object[] toArray()` - Returns an array containing all of the elements in this set.
+* `Iterator<E> iterator()` - Returns an iterator over the elements in this set.
+* `Spliterator<E>	spliterator()` - Creates a Spliterator over the elements in this set.
 
 
 ### Queue (FIFO) "First-In, First-Out"
