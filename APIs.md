@@ -287,6 +287,50 @@ Examine	  element()	       peek()
 * `peek()` - Retrieves, but does not remove, the head of this queue, or returns null if this queue is empty.
 * `poll()` - Retrieves and removes the head of this queue, or returns null if this queue is empty.
 
+### Random 
+
+* `doubles()` - Returns an effectively unlimited stream of pseudorandom double values, each between zero (inclusive) and one (exclusive).
+
+* `nextBoolean()` -  Returns the next pseudorandom, uniformly distributed boolean value from this random number generator's sequence.
+* `nextBytes(byte[] bytes)` - Generates random bytes and places them into a user-supplied byte array.
+* `nextDouble()` - Returns the next pseudorandom, uniformly distributed double value between 0.0 and 1.0 from this random number generator's sequence.
+* `nextFloat()` - Returns the next pseudorandom, uniformly distributed float value between 0.0 and 1.0 from this random number generator's sequence.
+* `nextLong()` - Returns the next pseudorandom, uniformly distributed long value from this random number generator's sequence.
+* `setSeed(long seed)` - Sets the seed of this random number generator using a single long seed.
+
+* `nextInt()` - Returns the next pseudorandom, uniformly distributed int value from this random number generator's sequence.
+* `nextInt(int bound)` - Returns a pseudorandom, uniformly distributed int value between *0 (inclusive) and the specified value (exclusive)*, drawn from this random number generator's sequence.
+
+```
+/**
+  * A seed is a number that initializes the selection of numbers by a random number generator; given the same seed number,
+  * a random number generator will generate the same series of random numbers each time a simulation is run.
+  */
+Random random = new Random();
+random.setSeed(12345L);
+random.nextInt();      // Random Integer Number - 1553932502
+random.nextLong();     // Random Long Number - -8979699159253079774
+random.nextBoolean();  // Random Boolean - true
+```
+
+Three way to generate a random number 
+```
+public class Foo {
+   private Random random 
+
+   public Foo() {
+       this(System.currentTimeMillis());  
+   }
+
+   public Foo(long seed) {
+       this.random = new Random(seed);
+   }
+
+   public synchronized double getNext() {
+        return generator.nextDouble();
+   }
+}
+```
 
 
 
