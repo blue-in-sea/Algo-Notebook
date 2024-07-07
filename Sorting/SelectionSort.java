@@ -9,7 +9,8 @@ public class SelectionSort {
      *
      * for i [0 -> n)
      *    for j [i -> n)
-     *       swap (i, j)
+     *       if (a[i] > a[j])
+     *           swap (i, j)
      *
      * Time: O(n^2)
      * Space: O(1)
