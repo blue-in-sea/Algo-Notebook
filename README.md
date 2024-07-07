@@ -48,9 +48,9 @@ Welcome to Iris Algo Notebook
 8. Radix Sort                      O(d(n+k))                           O(d(n+k))                            O(d(n+k))
 ```
 
-* Bubble Sort
+* [Bubble Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/BubbleSort.java)
 * Insertion Sort
-* Selection Sort
+* [Selection Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/SelectionSort.java)
 * Merge Sort
 * [Heap Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/HeapSort.java)
 * Quick Sort
