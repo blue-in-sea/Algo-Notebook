@@ -150,31 +150,7 @@ s1.retainAll(s2) // Intersection of two collections
 * `int hashCode()` -  Returns the hash code value for this set. ** 
 * `Object[] toArray()` - Returns an array containing all of the elements in this set.
 * `Iterator<E> iterator()` - Returns an iterator over the elements in this set.
-
-```
-// For-loop 
-for (E element : list) {
-    // ..
-}
-
-// Iterator 
-for (Iterator<E> iter = list.iterator(); iter.hasNext(); ) {
-    E element = iter.next();
-    // 1 - can call methods of element
-    // 2 - can use iter.remove() to remove the current element from the list
-}
-
-// Functional 
-list.stream().map(e -> e + 1); // Can apply a transformation function for e
-``` 
-
 * `Spliterator<E>	spliterator()` - Creates a Spliterator over the elements in this set.
-
-```
-list.add(new User("Hi", 20));
-Spliterator<User> users = list.spliterator();
-users.forEachRemaining((n) -> System.out.println("name : " + n.name + " age: " + n.age);); // "name: hi age: 20
-```
 
 ### List
 * `sort(Comparator<? super E> c)` - Sorts this list according to the order induced by the specified Comparator.
@@ -208,16 +184,40 @@ Collections.reverse(list);        or           Collections.sort(l, (a, b) -> b.c
 * `containsAll(Collection<?> c)` - Returns true if this list contains all of the elements of the specified collection.
 
 * `List<E>	subList(int fromIndex, int toIndex)` - Returns a view of the portion of this list between the specified fromIndex, inclusive, and toIndex, exclusive.
+```
+list [a, b, c, d]  => list.subList(1, 3) [b, c]
+      0  1  2  3                  [1, 3] inclusive
+```
 * `Object[]	toArray()` - Returns an array containing all of the elements in this list in proper sequence (from first to last element).
 
 * `Iterator<E>	iterator()` - Returns an iterator over the elements in this list in proper sequence.
 * `ListIterator<E>	listIterator()` - Returns a list iterator over the elements in this list (in proper sequence).
 * `ListIterator<E>	listIterator(int index)` - Returns a list iterator over the elements in this list (in proper sequence), starting at the specified position in the list.
 
+```
+// For-loop 
+for (E element : list) {
+    // ..
+}
+
+// Iterator 
+for (Iterator<E> iter = list.iterator(); iter.hasNext(); ) {
+    E element = iter.next();
+    // 1 - can call methods of element
+    // 2 - can use iter.remove() to remove the current element from the list
+}
+
+// Functional 
+list.stream().map(e -> e + 1); // Can apply a transformation function for e
+``` 
+
 * `Spliterator<E>	spliterator()` - Creates a Spliterator over the elements in this list.
 
-
-
+```
+list.add(new User("Hi", 20));
+Spliterator<User> users = list.spliterator();
+users.forEachRemaining((n) -> System.out.println("name : " + n.name + " age: " + n.age);); // "name: hi age: 20
+```
 
 
 ### Queue (FIFO) "First-In, First-Out"
