@@ -52,7 +52,7 @@ Welcome to Iris Algo Notebook
 * Insertion Sort
 * Selection Sort
 * Merge Sort
-* Heap Sort
+* [Heap Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/HeapSort.java)
 * Quick Sort
 * Counting Sort
 * Radix Sort 
