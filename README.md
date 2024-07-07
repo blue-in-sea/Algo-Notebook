@@ -11,11 +11,11 @@ Welcome to Iris Algo Notebook
 
 2) Search in a **Sorted** sequence
 * [First Occurrence](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinarySearch/FirstOccurrence.java)
-  * `if (array[mid] >= target) r = mid;` for 1st occurence next search range `[l, m]`
+  * `if (a[mid] >= target) r = mid;` for 1st occurence next search range `[l, m]`
 * [Last Occurence](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinarySearch/LastOccurrence.java)
-  * `if (array[mid] <= target) l = mid;` for last occurence next search range `[m, r]`
-
-
+  * `if (a[mid] <= target) l = mid;` for last occurence next search range `[m, r]`
+* [Peak Element](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinarySearch/FindPeakElement.java)
+ * `if (a[mid] < a[mid + 1]) l = mid + 1;` 如果中间的数比后一位数小的话，peek点肯定在mid右边包括mid `[l, m]`
 
 
 ### Recursion
