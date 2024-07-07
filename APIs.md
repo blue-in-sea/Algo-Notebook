@@ -136,6 +136,7 @@ To delete a list node
 1) Find previous node of the node to be deleted.
 2) Change the next of previous node.
 3) Free memory for the node to be deleted.
+   
 [Add, Delete, Print Node a Single LinkedList](https://github.com/blue-in-sea/Algo-Notebook/blob/master/LinkedList/LinkedList.java)
 
 
