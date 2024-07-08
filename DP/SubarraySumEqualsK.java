@@ -1,9 +1,17 @@
-package DP;
-
+/**
+ * 560. Subarray Sum Equals K
+ * Given an array of integers nums and an integer k, return the total number of subarrays whose sum equals to k.
+ *
+ * Input: nums = [1,1,1], k = 2
+ * Output: 2 for [1,1] and [1,1]
+ *
+ * Input: nums = [1,2,3], k = 3
+ * Output: 2 for [1,2] and [3]
+ */
 public class SubarraySumEqualsK {
   // Methdod 1: Sliding Window
   // Find subarraySum(i, j) == target, increment the cnt
-  // Time: O(n), Space: O(1)
+  // Time: O(n^2), Space: O(1)
   public int numOfSubarraySumToK(int[] nums, int k) {
     if (nums == null || nums.length == 0) {
       return -1;
@@ -25,6 +33,7 @@ public class SubarraySumEqualsK {
   
   // Methdod 2: DP to store the pre_sum
   // DP[i] represents the pre_sum including a[i]
+  // Time: O(n^2), Space: O(1)
   public int numOfSubarraySumToK(int[] nums, int k) {
     if (nums == null || nums.length == 0) {
       return -1;
