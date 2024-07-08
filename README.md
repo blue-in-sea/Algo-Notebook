@@ -137,8 +137,7 @@ Postorder
 
 
 ### DP
-> DP 的优化在于 Memo 去避免重复计算
-> DP 的证明需要用到 induction（数学归纳总法）
+> DP 的优化在于 Memo 去避免重复计算；DP 的证明需要用到 induction（数学归纳总法）
 1) Greedy
 * [Maximum Subarray Sum](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/MaximumSubarray.java)
 * [Maximum Integer With At Most 1 Swap](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/MaximumSubarray.java)
@@ -146,9 +145,10 @@ Postorder
 * Max Subarray Sum 
 * SubarraySumEqualsK
   
-3) 背包问题
+3) 背包问题，滚动数组
+* Coin Change
 
-4) Best Time to Buy and Sell Stock
+5) Best Time to Buy and Sell Stock
 * [Best Time to Buy and Sell Stock: For At Most 1 Trade](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/BestTimeBuyAndSellStock.java)
 * [Best Time to Buy and Sell Stock II: Hold at Most 1 Share At The Time](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/BestTimeBuyAndSellStockII.java)
 * [Best Time to Buy and Sell Stock III: Complete At Most 2 Transactions](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/BestTimeBuyAndSellStockIII.java)
