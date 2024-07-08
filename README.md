@@ -143,7 +143,7 @@ Postorder
 * [Maximum Integer With At Most 1 Swap](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/MaximumSubarray.java)
 2) 一维 DP
 * Max Subarray Sum 
-* SubarraySumEqualsK
+* Subarray Sum Equals K
   
 3) 背包问题，滚动数组
 * Coin Change
@@ -176,7 +176,7 @@ Postorder
 
 3) String Permutation
 * All Permutation I: No duplication in the input string 
-* All Permutation II: Might be duplication in the input string 
+* [All Permutation II: Might be duplication in the input string](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllPermutationsII.java)
 
 4) String En/Decoding
 * [Compress String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/CompressStringII.java)
@@ -201,19 +201,21 @@ FixLen Sliding Window
 [逆向双指针] 中心开花, 两边往中间走
 
 ### Two Sum 
-  2. two sum
-  3. two sum smaller
-  4. 2 sum closest 
-  5. find the closest sum to target from two sorted arrays
+  2. Two sum
+  3. Two sum smaller
+  4. 2 Sum Closest 
+  5. Find the closest sum to target from two sorted arrays
 
 ### Heap
   1. [Sliding Window Median](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/SlidingWindowMedian.java)
 
-[K-Problem]
+[Kth-Problem]
   2. [Merge K Sorted Lists](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/MergeKSortedLists.java)
   3. [Merge K Sorted Arrays](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/MergeKSortedLists.java)
-  3. [TopK Frquent Nums]()
-  4. [TopK Frquent Words]()
+  3. [TopK Frquent Nums](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/TopKFrequentNum.java)
+  4. [TopK Frquent Words](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/TopKFrequentWords.java)
+  5. [Kth Closest Point To Origin](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/KthClosestPointToOrigin.java)
+  6. [Kth Largest Element In Array](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/KthLargestElementInArray.java)
 
   
 ### Trie 
