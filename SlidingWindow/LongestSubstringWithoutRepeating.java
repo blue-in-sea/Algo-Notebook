@@ -1,3 +1,5 @@
+package SlidingWindow;
+
 /**
  * 3. Longest Substring Without Repeating Characters
  * Given a string s, find the length of the longest substring without repeating characters.
@@ -18,12 +20,45 @@
 public class LongestSubstringWithoutRepeating {
     /**
      * Method 1: 同向双指针 + Set (visited char)
-     * Fix l: find right-most r such that subarray[l, r] contains no duplicates
-     * Why 同向双指针: i 往右的时候, j 一定不会往右
+     *
+     * Sliding Window Algo:
+     * l = 0
+     * for r -> [0, n)
+     *    while a[r] is a dup
+     *       shrink window left by removing a[l]
+     *       l++
+     *    until a[r] is not a dup in the current window
+     *
+     *    set.add(a[r])
+     *    update max
+     * end-for
      */
-
      // Time: O(n) where n is the len(s)
      // Space: O(n) size of set
+    public int lengthOfLongestSubstring(String s) {
+        Set<Character> set = new HashSet<>();
+        char[] arr = s.toCharArray();
+
+        int max = 0;
+        int l = 0;
+        for (int r = 0; r < arr.length; r++) {
+
+            while (set.contains(arr[r])) {
+                // shrink window-l
+                set.remove(arr[l]);
+                l++;
+            }
+
+            set.add(arr[r]);
+            max = Math.max(max, r - l + 1);
+        }
+
+        return max;
+    }
+
+    // ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    // Fixed l, expand r
+    // Fix l: find right-most r such that subarray[l, r] contains no duplicates
     public int lengthOfLongestSubstring(String s) {
         Set<Character> set = new HashSet<>(); 
         char[] arr = s.toCharArray();
