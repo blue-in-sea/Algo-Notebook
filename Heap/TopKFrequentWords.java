@@ -1,4 +1,4 @@
-package TopK;
+package Heap;
 
 public class TopKFrequentWords {
     /**

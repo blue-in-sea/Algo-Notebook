@@ -1,5 +1,3 @@
-package FreqMap;
-
 /**
  * 32. Longest Valid Parentheses
  *
