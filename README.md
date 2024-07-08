@@ -55,7 +55,11 @@ Welcome to Iris Algo Notebook
 * [Heap Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/HeapSort.java)
 * Quick Sort
 * Counting Sort
-* Radix Sort 
+* Radix Sort
+
+  #### Sort Color
+  * [Rainbow Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/RainbowSort.java)
+  
 
 
 ### Binary Tree
