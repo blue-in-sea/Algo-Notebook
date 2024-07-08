@@ -207,9 +207,10 @@ FixLen Sliding Window
   5. Find the closest sum to target from two sorted arrays
 
 ### Heap
+#### MinHeap + MaxHeap
   1. [Sliding Window Median](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/SlidingWindowMedian.java)
 
-[Kth-Problem]
+#### Kth-Problem
   2. [Merge K Sorted Lists](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/MergeKSortedLists.java)
   3. [Merge K Sorted Arrays](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/MergeKSortedLists.java)
   3. [TopK Frquent Nums](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/TopKFrequentNum.java)
