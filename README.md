@@ -176,18 +176,18 @@ Postorder
 * [Decompress String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/DecompressStringII.java)
 
 5) Sliding Window in A String
-* Longest substring that contains only character
-* [Longest Substring Without Repeating Character](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/LongestSubstringWithoutRepeating.java)
+see below 
 
 
 ### Sliding Window
 [同向双指针] Sliding window: fast-slow pointers  
  1. [Minimum Size Subarray Sum](https://github.com/blue-in-sea/Algo-Notebook/tree/master/SlidingWindow)
  2. [Minimum Window Substring](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MinimumWindowSubstring.java)
- 3. [Longest Subarray Contains Only 1s](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MaxConsecutiveOnes.java)
- 4. [Longest Subarray Contains Only 1s With At Most 1 Zero Flip](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MaxConsecutiveOnesWithOneZeroFlip.java)
- 5. [Longest Subarray Contains Only 1s With At Most K Zeros Flip](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MaxConsecutiveOnesWithKZeroFlip.java)
- 6. Max Bank Transactions
+ 3. [Longest Substring Without Repeating Character](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/LongestSubstringWithoutRepeating.java)
+ 4. [Longest Subarray Contains Only 1s](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MaxConsecutiveOnes.java)
+ 5. [Longest Subarray Contains Only 1s With At Most 1 Zero Flip](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MaxConsecutiveOnesWithOneZeroFlip.java)
+ 6. [Longest Subarray Contains Only 1s With At Most K Zeros Flip](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MaxConsecutiveOnesWithKZeroFlip.java)
+ 7. Max Bank Transactions
 
 FixLen Sliding Window 
 
