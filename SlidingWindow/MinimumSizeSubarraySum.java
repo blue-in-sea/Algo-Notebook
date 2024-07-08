@@ -14,8 +14,19 @@
  * Output: 0
  */
 class MinimumSizeSubarraySum {
-    // Sliding Window: 同向双指针
-    // Time: O(n)
+    /**
+     * Algo 同向双指针
+     * Initialize min = MAX_INT, sum = 0 (curSum in the window)
+     * l = 0
+     * for r -> [0 ... n)
+     *    每次 r 前进时，更新 sum
+     *    while 只要当前 sum >= target
+     *        shrink window left
+     *        把移除窗口的数从 sum 里减掉
+     * return min
+     */
+
+    // Time: O(n) for r moves n steps, l moves n steps, total add up to 2N into the time complexity
     // Space: O(1)
     public int minSubArrayLen(int target, int[] nums) {
         if (nums == null || nums.length == 0) {
