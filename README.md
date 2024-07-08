@@ -204,8 +204,9 @@ FixLen Sliding Window
 ### Two Sum 
   2. Two sum
   3. Two sum smaller
-  4. 2 Sum Closest 
-  5. Find the closest sum to target from two sorted arrays
+  4. Two Sum Closest
+  5. Three Sum
+  6. Find the Closest Sum to Target From Two Sorted Arrays
 
 ### Heap
 #### MinHeap + MaxHeap
