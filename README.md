@@ -190,6 +190,9 @@ Postorder
  5. [Longest Subarray Contains Only 1s With At Most K Zeros Flip](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MaxConsecutiveOnesWithKZeroFlip.java)
  6. Max Bank Transactions
 
+FixLen Sliding Window 
+ 7. [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/description/)
+
 
 [逆向双指针] 中心开花, 两边往中间走
  
