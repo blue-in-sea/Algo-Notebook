@@ -208,7 +208,13 @@ FixLen Sliding Window
 
 ### Heap
   1. [Sliding Window Median](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/SlidingWindowMedian.java)
-  2. TopK
+
+[K-Problem]
+  2. [Merge K Sorted Lists](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/MergeKSortedLists.java)
+  3. [Merge K Sorted Arrays](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/MergeKSortedLists.java)
+  3. [TopK Frquent Nums]()
+  4. [TopK Frquent Words]()
+
   
 ### Trie 
 1) Trie for prefix lookup vs. HashMap for a word search
