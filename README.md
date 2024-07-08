@@ -147,6 +147,7 @@ Postorder
   
 3) 背包问题，滚动数组
 * Coin Change
+* Maximum Profit From Trading Stocks 
 
 5) Best Time to Buy and Sell Stock
 * [Best Time to Buy and Sell Stock: For At Most 1 Trade](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/BestTimeBuyAndSellStock.java)
