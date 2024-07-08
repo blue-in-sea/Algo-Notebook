@@ -57,8 +57,10 @@ Welcome to Iris Algo Notebook
 * Counting Sort
 * Radix Sort
 
-  #### Sort Color
-  * [Rainbow Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/RainbowSort.java)
+#### Sort Color
+* [Rainbow Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/RainbowSort.java) to sort 3 colors 
+* [Rainbow SortII]() to sort 4 colors 
+*  [Rainbow SortIII]() to sort k colors 
   
 
 
