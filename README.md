@@ -59,8 +59,11 @@ Welcome to Iris Algo Notebook
 
 #### Sort Color
 * [Rainbow Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/RainbowSort.java) to sort 3 colors 
-* [Rainbow SortII]() to sort 4 colors 
-*  [Rainbow SortIII]() to sort k colors 
+* [Rainbow SortII](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/RainbowSortII.java) to sort 4 colors (divide-n-conquer) similar to mergeSort
+*  [Rainbow SortIII]() to sort k colors
+
+#### Others
+* Wiggle Sort
   
 
 
