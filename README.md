@@ -51,7 +51,7 @@ Welcome to Iris Algo Notebook
 * [Bubble Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/BubbleSort.java)
 * Insertion Sort
 * [Selection Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/SelectionSort.java)
-* [Merge Sort]()
+* [Merge Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/MergeSort.java)
 * [Heap Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/HeapSort.java)
 * Quick Sort
 * Counting Sort
