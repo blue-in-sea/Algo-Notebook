@@ -182,9 +182,6 @@ Postorder
 * [Compress String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/CompressStringII.java)
 * [Decompress String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/DecompressStringII.java)
 
-5) Sliding Window in A String
-see below 
-
 
 ### Sliding Window
 [同向双指针] Sliding window: fast-slow pointers  
@@ -202,14 +199,12 @@ FixLen Sliding Window
 
 
 [逆向双指针] 中心开花, 两边往中间走
- 
+
+### Two Sum 
   2. two sum
   3. two sum smaller
   4. 2 sum closest 
-  5. find the closes sum to target from two sorted arrays
-  6. rainbow sort
-  7. longest substring without repeating characters 
-  9. minimum substring ...
+  5. find the closest sum to target from two sorted arrays
 
 ### Heap
   1. [Sliding Window Median](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/SlidingWindowMedian.java)
