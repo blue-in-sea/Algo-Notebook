@@ -178,7 +178,6 @@ Postorder
 5) Sliding Window in A String
 * Longest substring that contains only character
 * [Longest Substring Without Repeating Character](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/LongestSubstringWithoutRepeating.java)
-* Find all anagrams of a substring S2 in a long string S1
 
 
 ### Sliding Window
@@ -191,6 +190,7 @@ Postorder
  6. Max Bank Transactions
 
 FixLen Sliding Window 
+
  7. [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/description/)
 
 
