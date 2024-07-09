@@ -207,10 +207,10 @@ FixLen Sliding Window
 [逆向双指针] 中心开花, 两边往中间走
 
 ### Two Sum 
-  2. 2sum
-  3. 2sum smaller
+  2. [2Sum](https://github.com/blue-in-sea/Algo-Notebook/blob/master/TwoSum/2Sum.java)
+  3. 2Sum Smaller
   4. 2Sum Closest
-  5. 3Sum
+  5. [3Sum](https://github.com/blue-in-sea/Algo-Notebook/blob/master/TwoSum/3Sum.java)
   6. Find the Closest Sum to Target From Two Sorted Arrays
 
 ### Heap
