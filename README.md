@@ -3,7 +3,7 @@ Welcome to Iris Algo Notebook
 
 # Algo 
 ### Bianry Search
-> O(logn) Sufficiently reduce search space by half
+> O(logn) - Sufficiently reduce search space by half
 
 1) [Classical Binary Search](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinarySearch/ClassicalBinarySeach.java)
 * Time: **O(logn)** by sufficiently reducing the searching space by half `m = l + (l - r) / 2`
@@ -61,6 +61,7 @@ Welcome to Iris Algo Notebook
 * Radix Sort
 
 #### Sort Color
+> 挡板规则 [0, i): red, [i, j): white, [j, k]: unchecked element, [(k, len - 1]: blue
 * [Rainbow Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/RainbowSort.java) to sort 3 colors 
 * [Rainbow SortII](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/RainbowSortII.java) to sort 4 colors (divide-n-conquer) similar to mergeSort
 * [Rainbow SortIII](https://github.com/blue-in-sea/Algo-Notebook/tree/master/Sorting) to sort k colors (divide-n-conquer) similar to RainbowSortII
