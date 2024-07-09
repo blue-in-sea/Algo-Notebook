@@ -19,7 +19,7 @@ public class MissingNumberI {
     return n;
   }
   
-  // Method 2: use sum
+  // Method 2: use sum (Optimal!!)
   // Time: O(n), Space O(1)
   public int missingII(int[] array) {
     int n = array.length + 1;
