@@ -51,10 +51,10 @@ Welcome to Iris Algo Notebook
 8. Radix Sort                      O(d(n+k))                           O(d(n+k))                            O(d(n+k))
 ```
 
-* [Bubble Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/BubbleSort.java)
+* [Bubble Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/BubbleSort.java) Bubbles rise up to the surface, each element of the array move to the end in each iteration
 * Insertion Sort
-* [Selection Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/SelectionSort.java)
-* [Merge Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/MergeSort.java)
+* [Selection Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/SelectionSort.java) Selects the min element from an unsorted list in each iteration and swap min to the beginning of the list.
+* [Merge Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/MergeSort.java) Divide & Conquer + Combine (Helper Arr 谁小移谁)
 * [Heap Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/HeapSort.java)
 * Quick Sort
 * Counting Sort
