@@ -12,7 +12,14 @@
  * Explanation: The
  */
 public class 3SumClosest {
-    // Similar: search in sorted matrix
+    // Maintain a res for globalMin diff
+    // For i -> [0, n)
+    //   find l, r such that a[l] + a[r] closest to target
+    //        update the globalMin
+    //        if a[l] + a[r] > target, then r--
+    //        else if a[l] + a[r] < target, then l++
+    //        else found
+    
     // Time: O(n^2) for O(nlogn) for sorting, O(n^2) for finding the pairs 
     // space: O(1) since in place
     public int threeSumClosest(int[] nums, int target) {
