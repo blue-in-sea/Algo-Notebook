@@ -1,4 +1,4 @@
-class ThreeSumClosest {
+public class 3SumClosest {
     // essence: search in sorted matrix
     // time: O(nlogn) + O(n^2) = O(n^2)
     // space: O(1) since two pointers
