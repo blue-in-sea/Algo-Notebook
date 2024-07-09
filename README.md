@@ -3,6 +3,8 @@ Welcome to Iris Algo Notebook
 
 # Algo 
 ### Bianry Search
+> O(logn) Sufficiently reduce search space by half
+
 1) [Classical Binary Search](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinarySearch/ClassicalBinarySeach.java)
 * Time: **O(logn)** by sufficiently reducing the searching space by half `m = l + (l - r) / 2`
 * next search space either [l, m] or [m r]
