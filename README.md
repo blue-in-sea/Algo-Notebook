@@ -142,6 +142,7 @@ Postorder
 * [Maximum Subarray Sum](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/MaximumSubarray.java)
 * [Maximum Integer With At Most 1 Swap](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/MaximumSubarray.java)
 2) 一维 DP
+* [Longest Palindromic Subsequence](https://laioffer.com/zh/videos/2018-03-14-516-longest-palindromic-subsequence/)
 * Max Subarray Sum 
 * Subarray Sum Equals K
   
