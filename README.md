@@ -221,7 +221,7 @@ FixLen Sliding Window
         (maxHeap)                       (minHeap)
           12                               1
     10         9                      5        9
-5    6        1                   10    6       12 
+  5   6      1   x                 10   6    12   x
 ```
 #### MinHeap + MaxHeap
   1. [Sliding Window Median](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/SlidingWindowMedian.java)
