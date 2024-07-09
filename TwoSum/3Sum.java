@@ -20,6 +20,8 @@
  * Explanation: The only possible triplet sums up to 0.
  */
 class 3Sum {
+    // Time: O(n^2) for O(nlogn) for sorting, O(n^2) for finding the pairs 
+    // space: O(1) since in place
     public List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
         List<List<Integer>> res = new ArrayList<List<Integer>>();
