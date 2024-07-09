@@ -1,11 +1,29 @@
-package TwoSum;
-
 /**
- * LT 532. K-diff Pairs in an Array
+ * 532. K-diff Pairs in an Array
+ * Given an array of integers nums and an integer k, return the number of unique k-diff pairs in the array.
+ *
+ * A k-diff pair is an integer pair (nums[i], nums[j]), where the following are true:
+ * 1. 0 <= i, j < nums.length
+ * 2. i != j
+ * 3. |nums[i] - nums[j]| == k (Notice that |val| denotes the absolute value of val)
+ *
+ * Input: nums = [3,1,4,1,5], k = 2
+ * Output: 2
+ * Explanation: There are two 2-diff pairs in the array, (1, 3) and (3, 5).
+ * Although we have two 1s in the input, we should only return the number of unique pairs.
+ *
+ * Input: nums = [1,2,3,4,5], k = 1
+ * Output: 4
+ * Explanation: There are four 1-diff pairs in the array, (1, 2), (2, 3), (3, 4) and (4, 5).
+ *
+ * Input: nums = [1,3,1,5,4], k = 0
+ * Output: 1
+ * Explanation: There is one 0-diff pair in the array, (1, 1).
  */
-
 class KdiffPairsEqualK {
-    // Method 1: Two Hash Sets
+    // Method 1: Two HashSet (Optimal!!)
+    // set1: store all visited num
+    // set2: store all (i, j) where |nums[i] - nums[j]| == k
     // Time: O(N), Space: O(2N) -> O(N)
     public int findPairs(int[] nums, int k) {
         if (nums == null || nums.length == 0 || k < 0) {
@@ -25,7 +43,8 @@ class KdiffPairsEqualK {
         return used.size();
     }
     
-    // Method 2: One Hash Map
+    // Method 2: One HashMap
+    // freqMap <key: num, value: boolean true if this element has not been used>
     // Time: O(N), Space: O(N)
     public int findPairs(int[] nums, int k) {
         if (nums == null || nums.length == 0 || k < 0) {
@@ -34,7 +53,7 @@ class KdiffPairsEqualK {
 
         int cnt = 0;
         if (k == 0) {
-            // case 1
+            // K = 0 as a separate corner case
             Map<Integer, Integer> map = new HashMap<>();
             for (int num : nums) {
                 if (map.containsKey(num) && map.get(num) == 1) {
@@ -45,7 +64,7 @@ class KdiffPairsEqualK {
             return cnt;
             
         } else {
-            // case 2
+            // main logics
             Map<Integer, Boolean> map = new HashMap<>();
             for (int num : nums) {
                 map.put(num, true);
@@ -61,51 +80,6 @@ class KdiffPairsEqualK {
                 map.put(num, false);
             }
             return cnt;
-            
         }
-    }
-    
-    // K = 0 as a separate corner case
-    // Version 0
-    public int findPairs(int[] nums, int k) {
-        if (nums == null || nums.length == 0 || k < 0) {
-            return 0;
-        }
-/*
-        if (k == 0) {
-            Map<Integer, Integer> map0 = new HashMap<>();
-            int cnt0 = 0;
-            for (int i : nums) {
-                 map0.put(i, map0.getOrDefault(i, 0) + 1);
-            }
-            
-            for (Map.Entry<Integer, Integer> entry : map0.entrySet()) {
-                if (entry.getValue() >= 2) {
-                    cnt0++;
-                } 
-            }
-            return cnt0;
-        }       
-*/   
-        // <K, V> : < num, used true or false
-        Map<Integer, Boolean> map = new HashMap<>();
-        
-        for (int num : nums) {
-            map.put(num, true);
-        }
-        
-        int cnt = 0;
-        for (int num : nums) {
-            if (map.containsKey(num - k) && map.get(num) && map.get(num - k)) {
-                cnt++; 
-            }
-            
-            if (map.containsKey(num + k) && map.get(num) && map.get(num + k)) {
-                cnt++;
-            }
-            
-            map.put(num, false);
-        }
-        return cnt;
     }
 }
