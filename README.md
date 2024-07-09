@@ -215,8 +215,9 @@ FixLen Sliding Window
 
 ### Heap
 ```
-Heap is a a complete binary tree
-All nodes in the tree follow the property that they are greater than their children
+1. A complete binary tree
+2. All nodes in the tree follow the property that they are greater than their children
+
         (maxHeap)                       (minHeap)
           12                               1
     10         9                      5        9
