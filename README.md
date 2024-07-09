@@ -6,8 +6,9 @@ Welcome to Iris Algo Notebook
 1) [Classical Binary Search](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinarySearch/ClassicalBinarySeach.java)
 * Time: **O(logn)** by sufficiently reducing the searching space by half `m = l + (l - r) / 2`
 * next search space either [l, m] or [m r]
-* `l = r`: stop at the *same* index 
-* `l < r - 1`: stop at the *adjacent* index
+* `l < r`: stop at the *same* index 
+* `l < r - 1`: stop at the *adjacent* index or `l + 1 < r`
+  
 
 2) Search in a **Sorted** sequence
 * [Find First Occurrence](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinarySearch/FirstOccurrence.java)
