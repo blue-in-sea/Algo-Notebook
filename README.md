@@ -207,10 +207,10 @@ FixLen Sliding Window
 [逆向双指针] 中心开花, 两边往中间走
 
 ### Two Sum 
-  2. Two sum
-  3. Two sum smaller
-  4. Two Sum Closest
-  5. Three Sum
+  2. 2sum
+  3. 2sum smaller
+  4. 2Sum Closest
+  5. 3Sum
   6. Find the Closest Sum to Target From Two Sorted Arrays
 
 ### Heap
