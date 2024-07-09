@@ -1,4 +1,3 @@
-
 /**
  * 1060. Missing Element in Sorted Array
  * Given an integer array nums which is sorted in ascending order and all of its elements are unique and given also
