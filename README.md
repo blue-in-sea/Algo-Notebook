@@ -208,10 +208,13 @@ FixLen Sliding Window
 
 ### Two Sum 
   2. [2Sum](https://github.com/blue-in-sea/Algo-Notebook/blob/master/TwoSum/2Sum.java)
-  3. 2Sum Smaller
-  4. 2Sum Closest
-  5. [3Sum](https://github.com/blue-in-sea/Algo-Notebook/blob/master/TwoSum/3Sum.java)
-  6. Find the Closest Sum to Target From Two Sorted Arrays
+  3. [2Sum One Pair of Indices](https://github.com/blue-in-sea/Algo-Notebook/blob/master/TwoSum/2SumWithIndices.java)
+  4. [2Sum All Pairs of Indices](https://github.com/blue-in-sea/Algo-Notebook/blob/master/TwoSum/2SumPairsII.java)
+  5. 2Sum Smaller
+  6. 2Sum Closest
+  7. [3Sum](https://github.com/blue-in-sea/Algo-Notebook/blob/master/TwoSum/3Sum.java)
+  8. [3Sum Closest](https://github.com/blue-in-sea/Algo-Notebook/blob/master/TwoSum/3SumClosest.java)
+  9. Find the Closest Sum to Target From Two Sorted Arrays
 
 ### Heap
 ```
