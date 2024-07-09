@@ -214,6 +214,14 @@ FixLen Sliding Window
   6. Find the Closest Sum to Target From Two Sorted Arrays
 
 ### Heap
+```
+Heap is a a complete binary tree
+All nodes in the tree follow the property that they are greater than their children
+
+          12                               1
+    10         9                      5        9
+5    6        1                    10  6       12 
+```
 #### MinHeap + MaxHeap
   1. [Sliding Window Median](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/SlidingWindowMedian.java)
 
