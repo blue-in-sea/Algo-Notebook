@@ -217,7 +217,7 @@ FixLen Sliding Window
   2. [Merge K Sorted Lists](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/MergeKSortedLists.java)
   3. [Merge K Sorted Arrays](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/MergeKSortedLists.java)
   3. [TopK Frquent Nums](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/TopKFrequentNum.java)
-  4. [TopK Frquent Words](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/TopKFrequentWords.java)
+  4. [TopK Frquent Words](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/TopKFrequentWords.java) plus [tutorial](https://laioffer.com/zh/videos/2018-03-13-692-top-k-frequent-words/)
   5. [Kth Closest Point To Origin](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/KthClosestPointToOrigin.java)
   6. [Kth Largest Element In Array](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/KthLargestElementInArray.java)
 
