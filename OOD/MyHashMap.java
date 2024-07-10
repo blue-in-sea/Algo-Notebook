@@ -27,7 +27,8 @@
  *     N is the number of all possible keys and
  *     K is the number of predefined buckets in the hashmap, which is 2069 in our case
  *
- * Space: O(N + K) 
+ * Space: O(M + K) 
+ *     M is the number of unique keys inserted 
  */
 class MyHashMap<K, V> {
     private class Entry<K, V> {
