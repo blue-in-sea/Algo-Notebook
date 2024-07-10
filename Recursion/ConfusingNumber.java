@@ -18,6 +18,17 @@
  * We get 9 after rotating 6, 9 is a valid number and 9!=6.
  */
 public ConfusingNumber {
+    // Algo
+    // 1. Get each digit
+    // while num > 0
+    //  d = num % 10
+    //  tmp /= 10
+    // 2. Lookup the map & rotate
+
+    // Time: O(L) where L is the len(num)
+    // Space: O(L) where we create a new integer which will have the same number of digits as num
+
+    // Version 1: HashMap
     public static boolean confusingNumberMap(int num) {
         Map<Integer, Integer> map = new HashMap();
         map.put(1,1);
@@ -38,8 +49,12 @@ public ConfusingNumber {
         return rot != num;
     }
 
-   
+    /**
+     * d: 9   rot: 6
+     * d: 8   rot: 68
+     */
 
+    // Version 2: Arr
     public static boolean confusingNumberArr(int num) {
         int[] map = new int[] {0, 1, -1, -1, -1, -1, 9, -1, 8, 6};
 
