@@ -1,5 +1,3 @@
-package TwoSum;
-
 /**
  * Find all pairs of elements in a given array that sum to the pair the given target number. 
  * Return all the distinct pairs of values.
@@ -12,7 +10,6 @@ package TwoSum;
  * The given array is not null and has length of at least 2
  * The order of the values in the pair does not matter
  */
-
 public class TwoSumPairsII {
   // Method 1: sort the array first and use two pointers
   public List<List<Integer>> allPairs(int[] array, int target) {
