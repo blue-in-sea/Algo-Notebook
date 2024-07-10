@@ -119,10 +119,12 @@ Permutations: N!
 Combinations: C(N, K) = (N−k)!k! / N!
 Subsets: 2^N since each element could be select or unselect
 ```
-Q0 [Combinations](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/Combination.java)
-Q1 [All Subsets I](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllSubset.java)
+* Q0 [Combinations](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/Combination.java)
+
+* Q1 [All Subsets](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllSubset.java)
   * [All Subsets II (Dup)](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllSubsetsII.java)
   * [All Subset of Size K](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllSubsetsOfSizeK.java)
+
 * Q2 All Valid Parentheses
 * Q3 All Permutations I & II with Dup
 * Q4 All Permutations of Subsets
