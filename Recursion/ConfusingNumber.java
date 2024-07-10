@@ -1,4 +1,5 @@
 /**
+ * 1056. Confusing Number
  * Some of the digits can be rotated by 180 degrees to form new digits.
  *
  * e.g. When 0, 1, 6, 8, 9 are rotated 180 degrees,
@@ -16,7 +17,6 @@
  * Input: 6, Output: True
  * We get 9 after rotating 6, 9 is a valid number and 9!=6.
  */
-
 public ConfusingNumber {
     public static boolean confusingNumberMap(int num) {
         Map<Integer, Integer> map = new HashMap();
@@ -26,28 +26,30 @@ public ConfusingNumber {
         map.put(8,8);
         map.put(9,6);
 
-        int temp = num;
+        int tmp = num;
         int rot = 0;
-        while (temp > 0){
-            int d = temp % 10;
+        while (tmp > 0){
+            int d = tmp % 10;
             if (!map.containsKey(d)) return false;
             rot = 10 * rot + map.get(d);
-            temp /= 10;
+            tmp /= 10;
         }
 
         return rot != num;
     }
 
+   
+
     public static boolean confusingNumberArr(int num) {
         int[] map = new int[] {0, 1, -1, -1, -1, -1, 9, -1, 8, 6};
 
-        int temp = num;
+        int tmp = num;
         int rot = 0;
-        while (temp > 0) {
-            int d = temp % 10;
+        while (tmp > 0) {
+            int d = tmp % 10;
             if(map[d] == -1) return false;
             rot = rot * 10 + map[d];
-            temp /= 10;
+            tmp /= 10;
         }
 
         return rot != num;
