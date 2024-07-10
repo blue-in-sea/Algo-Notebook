@@ -120,7 +120,9 @@ Postorder
 2) DSF Epic
 * Q7 Desirable Number
 * Q8 [Restore IP Address](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/RestoreIPAddresses.java)
-* Q9 Find All Confusing Numbers
+* Q9 [Find All Confusing Numbers](https://github.com/blue-in-sea/Algo-Notebook/edit/master/Recursion/ConfusingNumberAll.java)
+  * Basic [Find The Confusing Numbers](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/ConfusingNumber.java)
+  * Same [Find The Cnt of All Confusing Numbers](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/ConfusingNumberII.java)
 
 3) DFS Partition 
 * Q10 Minimum Partition
