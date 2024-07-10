@@ -1,5 +1,3 @@
-package Recursion;
-
 /**
  * Some of the digits can be rotated by 180 degrees to form new digits.
  *
@@ -14,8 +12,21 @@ package Recursion;
  * (Note that the rotated number can be greater than the original number.)
  *
  * Given a positive integer N, return ALL the confusing numbers between 1 and N inclusive.
+ *
+ * Input: n = 20
+ * Output: 6
+ * Explanation: The confusing numbers are [6,9,10,16,18,19].
+ * 6 converts to 9.
+ * 9 converts to 6.
+ * 10 converts to 01 which is just 1.
+ * 16 converts to 91.
+ * 18 converts to 81.
+ * 19 converts to 61.
+ *
+ * Input: n = 100
+ * Output: 19
+ * Explanation: The confusing numbers are [6,9,10,16,18,19,60,61,66,68,80,81,86,89,90,91,98,99,100].
  */
-
 public class ConfusingNumberAll {
     public List<Long> allConfusingNumber(int N) {
         List<Long> res = new ArrayList<>();
