@@ -113,7 +113,7 @@ Postorder
 #### DSF (with Memoization)
 > Memoization 的核心是去重和剪枝：通过记录之前的结果，去skip后面重复的结果集
 
-1) DSF I
+1) DSF I - [课件](https://docs.google.com/document/d/1gU26-F17g3CT7iA1sUbKx-fJDLcATDqBhCgc_iVK_i4/edit)
 ```
 排列 Permutations(C, K) = N!/(N-K)!                                        where N 的 K 排列, if K = N, O(N!)
 组合 Combinations: C(N, K) = (N−k)!k! / N!                                 where N 的 K 组合
@@ -131,7 +131,7 @@ Postorder
 * Q5 99 CENTS
 * Q6 Factor Combinations
 
-2) DSF Epic
+2) DSF Backtracking - [课件](https://docs.google.com/document/d/1wHGdet_cS2FO9AQXxd_1xid7u1AJ42mcq3vZvRn2ATw/edit#heading=h.t2lrjyikhz5t)
 * Q7 Desirable Number
 * Q8 [Restore IP Address](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/RestoreIPAddresses.java)
 * Q9 [Find All Confusing Numbers](https://github.com/blue-in-sea/Algo-Notebook/edit/master/Recursion/ConfusingNumberAll.java)
