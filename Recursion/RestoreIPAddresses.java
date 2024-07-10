@@ -36,7 +36,12 @@ class RestoreIPAddresses {
      * Level 4      2.5.5.2.
      *                 (return)
      */
+    
+    // M = 3, N = 4 we need to seprate s into N parts, & each part is at most M digit. 
+    // Time: O(M^N) = O(3^4) for total 4 levels with each level 3 states 
+    // Space: O(M * N) = O(12) -> O(1)
     public List<String> restoreIpAddresses(String s) {
+        
         List<String> res = new ArrayList<>();
         if (s == null || s.length() == 0) {
             return res;
