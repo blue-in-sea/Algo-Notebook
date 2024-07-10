@@ -15,8 +15,10 @@ class AllSubset {
      *    Two.
      *    Each case considers select (or not).
      *
-     * Time: O(2^n)
-     * Space: O(n) where n stack calls; at the bottom of each level, the path is size n
+     * Time: O(n * 2^n)
+     *        where 2^n to generate all subsets and then copy n element into output list
+     * Space: O(n) 
+     *        where n stack calls; at the bottom of each level, the path is size n
      */
     public List<List<Integer>> subsets(int[] nums) {
         List<List<Integer>> result = new ArrayList<>();
