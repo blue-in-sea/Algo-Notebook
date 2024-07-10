@@ -1,4 +1,41 @@
+/**
+ * 93. Restore IP Addresses
+ * Given a string containing only digits, restore it by returning all possible valid IP address combinations.
+ * A valid IP address consists of exactly four integers (each integer is between 0 and 255) separated by single points.
+ *
+ * Input: s = "25525511135"
+ * Output: ["255.255.11.135","255.255.111.35"]
+ *
+ * Input: s = "0000"
+ * Output: ["0.0.0.0"]
+ *
+ * Input: s = "101023"
+ * Output: ["1.0.10.23","1.0.102.3","10.1.0.23","10.10.2.3","101.0.2.3"]
+ */
 class RestoreIPAddresses {
+    /**
+     * Algo: DFS High Level
+     * 1. How many levels in the recursion tree? What does it store on each level?
+     *    4 levels, since each level a chunk of ip-address
+     *    For each level, it selects a position to place (.)
+     * 2. How many different states should we put on each level
+     *    1, 2, 3 states
+     *    But might be less depend on the relation between offset and ip.length
+     *
+     * Input: s = "25525511135"
+     * Expected: [["255.255.11.135", "255.255.111.35"]]
+     *
+     *                                               255255511135
+     *                                            /            |              \
+     * Level 1                             2.                             255.
+     *                                    /     |     \    …                /   |    \
+     * Level 2                   2.5.                                            255.255.
+     *                             /       \                                              /    |    \
+     * Level 3             2.5.5.  2.5.55.                                   255.255.11   255.255.111.
+     *                         /
+     * Level 4      2.5.5.2.
+     *                 (return)
+     */
     public List<String> restoreIpAddresses(String s) {
         List<String> res = new ArrayList<>();
         if (s == null || s.length() == 0) {
