@@ -1,4 +1,4 @@
-package OOP;
+package OOD;
 
 import java.math.BigDecimal;
 import java.util.*;

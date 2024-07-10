@@ -1,4 +1,4 @@
-package OOP;
+package OOD;
 
 class LRUCache {
     static class Node {
