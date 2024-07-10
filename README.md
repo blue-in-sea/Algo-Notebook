@@ -119,7 +119,7 @@ Postorder
 
 2) DSF Epic
 * Q7 Desirable Number
-* Q8 [Restore IP Address](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/RestoreIPAddress.java)
+* Q8 [Restore IP Address](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/RestoreIPAddresses.java)
 * Q9 Find All Confusing Numbers
 
 3) DFS Partition 
