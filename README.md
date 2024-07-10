@@ -104,7 +104,7 @@ Postorder
 > * (每层有多少个状态 / case 需要 try) ⇒ 每层有多少个 node，每个node由多个分叉或state
 
 #### DSF Complexity 
-> * Time: O(level ^ state)
+> * Time: O(level ^ state ^  complexity used in based case)
 > * Space: O(level * memeory used in each stack call)
  
 #### DSF (with Backtracking)
@@ -114,6 +114,11 @@ Postorder
 > Memoization 的核心是去重和剪枝：通过记录之前的结果，去skip后面重复的结果集
 
 1) DSF I
+```
+Permutations: N!
+Combinations: C(N, K) = (N−k)!k! / N!
+Subsets: 2^N since each element could be select or unselect
+```
 * Q1 All Subsets I & II
 * Q2 All Valid Parentheses
 * Q3 All Permutations I & II with Dup
