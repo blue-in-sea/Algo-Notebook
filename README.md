@@ -115,9 +115,9 @@ Postorder
 
 1) DSF I
 ```
-Permutations: N!
-Combinations: C(N, K) = (N−k)!k! / N!
-Subsets: 2^N since each element could be select or unselect
+排列 Permutations(C, K) = N!/(N-K)!                                        where N 的 K 排列, if K = N, O(N!)
+组合 Combinations: C(N, K) = (N−k)!k! / N!                                 where N 的 K 组合
+子集 Subsets: 2^N since each element could be select or unselect
 ```
 * Q0 [Combinations](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/Combination.java)
 
