@@ -25,6 +25,7 @@ class AllSubset {
         return result;
     }
 
+    // Version 1
     private void dfs(List<List<Integer>> result, List<Integer> path, int[] nums, int index){
         if (index == nums.length) {
             result.add(new ArrayList<>(path));
@@ -36,5 +37,16 @@ class AllSubset {
         path.remove(path.size() - 1);
 
         dfs(result, path, nums, index + 1);
+    }
+
+    Version 2
+    private void dfs(List<List<Integer>> result, List<Integer> path, int[] nums, int index){
+        result.add(new ArrayList<>(path));
+
+        for (int i = index; i < nums.length; i++) {
+            path.add(nums[i]);
+            dfs(result, path, nums, i + 1);
+            path.remove(path.size() - 1);
+        }
     }
 }
