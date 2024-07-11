@@ -1,4 +1,15 @@
 // 427. Construct Quad Tree
+// p.x >= box.center.x - (box.width) / 2 左边界
+// p.x <= box.center.x + (box.width) / 2 右边界
+// p.y <= box.center.y + (box.width) / 2 上边界
+// p.y >= box.center.y - (box.width) / 2 下边界
+/**
+ *  ---- ---- ----  
+ *      
+ *        p (p.x, p,y)
+ *  
+ *  ---- ---- ----  
+ */
 /*
 // Definition for a QuadTree node.
 class Node {
@@ -52,7 +63,6 @@ class QuadTree {
      * 4. Return root
      *
      */
-
     // Time: O(n^2 logn) (like merge sort) logn level; each level we have  N^2 cell to be build  
     // Space: O(logN) for stack calls
     public Node construct(int[][] grid) {
