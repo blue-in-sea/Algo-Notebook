@@ -277,12 +277,9 @@ FixLen Sliding Window
 ```
 维护一个单调序列
 ```
-1) MonoStack On Tree
-* [DailyTemperatures](https://github.com/blue-in-sea/Algo-Notebook/blob/master/MonoStack/DailyTemperatures.java) 单调非递减序列 peek[min->max] 看右边差几天得到一个更暖的天气
-* [Largest Rectangle In Histogram](https://github.com/blue-in-sea/Algo-Notebook/blob/master/MonoStack/LargestRectangleInHistogram.java) 单调非递减增加列 peek[max->min] 看右边差几步遇见一个更短的木板
-
-3) MonoStack On Tree 
-* [Max Binary Tree](https://github.com/blue-in-sea/Algo-Notebook/blob/master/MonoStack/MaxTree.java) 单调非递减序列 peek[min->max] 看右边差几步得到一个更大的元素去当root
+* [DailyTemperatures](https://github.com/blue-in-sea/Algo-Notebook/blob/master/MonoStack/DailyTemperatures.java) `单调非递减序列 peek[min->max] 看右边差几天得到一个更暖的天气`
+* [Largest Rectangle In Histogram](https://github.com/blue-in-sea/Algo-Notebook/blob/master/MonoStack/LargestRectangleInHistogram.java) `单调非递减增加列 peek[max->min] 看右边差几步遇见一个更短的木板`
+* [Max Binary Tree](https://github.com/blue-in-sea/Algo-Notebook/blob/master/MonoStack/MaxTree.java) `单调非递减序列 peek[min->max] 看右边差几步得到一个更大的元素去当root`
 
 1) General 
 * [Valid Parentheses](https://github.com/blue-in-sea/Algo-Notebook/blob/master/MonoStack/ValidParentheses.java)
