@@ -276,13 +276,14 @@ FixLen Sliding Window
 ### Stack
 1) General 
 * [Valid Parentheses](https://github.com/blue-in-sea/Algo-Notebook/blob/master/MonoStack/ValidParentheses.java)
-2) MonoStack
+#### 2) MonoStack
 ```
 维护一个单调非递减序列
-```  
+```
+MonoStack On Array
 * [Merge Intervals](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/MergeIntervals.java)
 * [Meeting Rooms](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/MeetingRooms.java)
-3) MonoStack On Tree 
+MonoStack On Tree 
 * [Max Binary Tree](https://github.com/blue-in-sea/Algo-Notebook/blob/master/MonoStack/MaxTree.java)
 
 
