@@ -12,9 +12,20 @@
  * Output: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
  */
 class AllPermutationsII {
+    /**
+     * Algo: DFS with swap(i, j) 
+     * DataStr: HashSet 在处理一个节点的时候，那些字母和 a[i] 交换过
+     * 
+     * 1. How many levels in the recursion tree? What does it store on each level?
+     *    3 levels, since each level represents a positions  
+     *    For each level, it makes the decision on whether to this element into set or NOT
+     * 2. How many different states should we put on each level
+     *    # of the remaining unused unique letter 
+     *    if we are on i-th level, we need to try (i - 1)th branches.
+     */
     
     // Time: O(n * n!) where n! to find all permutations and then copy n element into output list
-    // Space: O(n) where n stack calls; in each stack call, O(n) to maintain hashmap
+    // Space: O(n) where n stack calls; in each stack call, O(n) to maintain hashset
     public List<List<Integer>> permuteUnique(int[] array) {
         List<List<Integer>> result = new ArrayList<>();
         if (array == null) {
