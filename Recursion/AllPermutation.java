@@ -9,6 +9,16 @@
  * Output: [[0,1],[1,0]]
  */
 class AllPermutation {
+   /**
+     * Algo: DFS with swap(i, j)
+     * 1. How many levels in the recursion tree? What does it store on each level?
+     *    3 levels, since each level represents a positions  
+     *    For each level, it makes the decision on whether to this element into set or NOT
+     * 2. How many different states should we put on each level
+     *    # of the remaining unused letter 
+     *    if we are on i-th level, we need to try (i - 1)th branches.
+     */
+
     // Time: O(n * n!) where n! to find all permutations and then copy n element into output list
     // Space: O(n) where n stack calls; at the bottom of each level, the path is size n
     public List<List<Integer>> permute(int[] nums) {
