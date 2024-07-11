@@ -17,7 +17,6 @@ package MonoStack;
  * Input: temperatures = [30,60,90]
  * Output: [1,1,0]
  */
-
 class DailyTemperatures {
     // 1. MonoStack (interview!!)
     // Time: O(N) looping
