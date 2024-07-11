@@ -255,13 +255,6 @@ FixLen Sliding Window
   5. [Kth Closest Point To Origin](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/KthClosestPointToOrigin.java)
   6. [Kth Largest Element In Array](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/KthLargestElementInArray.java)
 
-  
-### Trie 
-1) Trie for prefix lookup vs. HashMap for a word search
-* [Prefix Trie](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Trie/PrefixTrie.java)
-* [Prefix Trie II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Trie/PrefixTrieII.java)
-
-
 ### Merge Interval
 1) Insert a interval: no sorting 
 * [InsertInterval](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Merge-Interval/InsertInterval.java)
@@ -281,6 +274,17 @@ FixLen Sliding Window
 * [Largest Rectangle In Histogram](https://github.com/blue-in-sea/Algo-Notebook/blob/master/MonoStack/LargestRectangleInHistogram.java) `单调非递减增加列 peek[max->min] 看右边差几步遇见一个更短的木板`
 * [Max Binary Tree](https://github.com/blue-in-sea/Algo-Notebook/blob/master/MonoStack/MaxTree.java) `单调非递减序列 peek[min->max] 看右边差几步得到一个更大的元素去当root`
 * [Valid Parentheses](https://github.com/blue-in-sea/Algo-Notebook/blob/master/MonoStack/ValidParentheses.java) `stack的单调性在于只存 ( [ { 左括号`
+
+### Trie 
+1) Trie for prefix lookup vs. HashMap for a word search
+* [Prefix Trie](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Trie/PrefixTrie.java)
+* [Prefix Trie II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Trie/PrefixTrieII.java)
+
+
+### Quad Tree 
+* [Build a quad tree](https://github.com/blue-in-sea/Algo-Notebook/blob/master/OOD/QuadTree.java)
+
+
 
 
 
