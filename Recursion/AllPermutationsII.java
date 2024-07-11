@@ -12,6 +12,9 @@
  * Output: [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
  */
 class AllPermutationsII {
+    
+    // Time: O(n * n!) where n! to find all permutations and then copy n element into output list
+    // Space: O(n) where n stack calls; in each stack call, O(n) to maintain hashmap
     public List<List<Integer>> permuteUnique(int[] array) {
         List<List<Integer>> result = new ArrayList<>();
         if (array == null) {
