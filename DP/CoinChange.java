@@ -15,29 +15,40 @@
  */
 public class CoinChange {
     // Method 1: BottomUp DP (Interview!!)
+    // dp[i][j] stores the min of coins used to make amount j from conins[i...n-1]
+    // where n is len(coins)
+    // i is idx(coins), j is amount accumulated 
+
+    // Induction Rule
+    // dp[i][j] = min( dp[i+1][j], dp[i][j - coins[i]] + 1 )
+    // Base Case
+    // dp[n][0] = 0
+    // dp[n][1...amount] = INF
+
+    // 滚动数组
+    // for i from [0, n)
+    //     for j from [0, amount]
+    //         dp[j] = min( dp[j], dp[j - coins[i]] + 1 );
+    
     // Time: O(amount * n) nested for-loop
     // Space: O(amount) for dp array
     public int coinChange(int[] coins, int amount) {
-        // dp[i] represents the fewest number of coins to make up the amount i
-        // base case:
-        // * amount 0 using 0 coin
-        // inductive rule:
-        // * if we have amount left to fill
-        // * * dp[i] = min(dp[i], dp[i - coins[j] + 1)) where i -> amount, j -> coin_index
         int[] dp = new int[amount + 1];
-        Arrays.fill(dp, amount + 1); // fill the arr with an impossible amount
+        Arrays.fill(dp, amount + 1);
 
         dp[0] = 0;
-        for (int j = 0; j< coins.length; j++) {
-            for (int i = 0; i <= amount; i++) {
-                if (i - coins[j] >= 0) {
-                    dp[i] = Math.min(dp[i], dp[i - coins[j]] + 1);
+        for (int i = 0; i< coins.length; i++) {
+            for (int j = 0; j <= amount; j++) {
+                if (j - coins[i] >= 0) {
+                    dp[j] = Math.min(dp[j], dp[j - coins[i]] + 1);
                 }
             }
         }
 
         return dp[amount] > amount ? -1 : dp[amount];
     }
+
+    // ************************************************************************
 
     // Method 2: TopDown DFS + Memo
     // Time: O(amount * n) where n is # of coins
