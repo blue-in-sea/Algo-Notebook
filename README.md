@@ -126,7 +126,9 @@ Postorder
   * [All Subset of Size K](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllSubsetsOfSizeK.java)
 
 * Q2 All Valid Parentheses
-* Q3 All Permutations I & II with Dup
+  
+* Q3 [All Permutations](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllPermutation.java)
+  * [All Permutations II (Dup)](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllPermutationsII.java)
 * Q4 All Permutations of Subsets
 * Q5 99 CENTS
 * Q6 Factor Combinations
@@ -135,8 +137,8 @@ Postorder
 * Q7 Desirable Number
 * Q8 [Restore IP Address](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/RestoreIPAddresses.java)
 * Q9 [Find All Confusing Numbers](https://github.com/blue-in-sea/Algo-Notebook/edit/master/Recursion/ConfusingNumberAll.java)
-  * Basic [Find The Confusing Numbers](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/ConfusingNumber.java)
-  * Same [Find The Cnt of All Confusing Numbers](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/ConfusingNumberII.java)
+  * [Find The Confusing Numbers (basic)](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/ConfusingNumber.java)
+  * [Find The Cnt of All Confusing Numbers (same)](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/ConfusingNumberII.java)
 
 3) DFS Partition 
 * Q10 Minimum Partition
