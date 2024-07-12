@@ -206,10 +206,8 @@ Postorder
     * [String Replace Shorter](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/StringReplaceShorter.java)
 
 #### 2) [同向双指针] Fast-slow pointer  
- 4. [Compressing String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/CompressString.java)
-    * [Decompressing String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/DecodeString.java)
- 5. [Compress String II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/CompressStringII.java)
-    * [Decompress String III](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/DecompressStringII.java)
+ 4. [Compressing String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/CompressString.java) & [Compress String II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/CompressStringII.java)
+ 5. [Decompressing String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/DecodeString.java) & [Decompress String III](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/DecompressStringII.java)
 
  6. [Move Zeros](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/MoveZeroes.java)
  7. [Array Deuplication - Keep Only 1](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ArrayDeduplicationI.java)
