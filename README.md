@@ -1,4 +1,4 @@
-# Hey, Algorithm! 
+背包# Hey, Algorithm! 
 Welcome to Iris Algo Notebook
 
 # Algo 
@@ -172,7 +172,11 @@ Postorder
 * Max Subarray Sum 
 * Subarray Sum Equals K
   
-3) 背包问题，滚动数组
+3) 背包问题
+#### 0/1 背包
+* [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/description/)
+
+#### 滚动数组
 * [Coin Change](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/CoinChange.java)
 * Maximum Profit From Trading Stocks 
 
