@@ -206,7 +206,7 @@ Postorder
 * Reverse String Shuffling
 
 3) String Permutation
-* All Permutation I: No duplication in the input string 
+* [All Permutation I: No duplication in the input string](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllPermutation.java)
    * [All Permutation II: Might be duplication in the input string](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllPermutationsII.java)
 
 4) String En/Decoding
@@ -215,9 +215,9 @@ Postorder
 
 5) Fast-slow pointer
 * [Move Zeros](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/MoveZeroes.java)
-* Array Deuplication
+* [Array Deuplication](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ArrayDeduplicationI.java)
    * Array Deuplication II
-   * Array Deuplication III
+   * [Array Deuplication III](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ArrayDeduplicationIII.java)
    
 
 
