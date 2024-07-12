@@ -1,3 +1,5 @@
+package Graph;
+
 /**
  * 323. Number of Connected Components in an Undirected Graph
  * Input: A graph of n nodes with a list of edges,
