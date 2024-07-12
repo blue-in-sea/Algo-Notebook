@@ -213,20 +213,25 @@ Postorder
 
 ### Sliding Window
 [同向双指针] Sliding window: fast-slow pointers  
- 1. [Minimum Size Subarray Sum](https://github.com/blue-in-sea/Algo-Notebook/tree/master/SlidingWindow)
- 2. [Minimum Window Substring](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MinimumWindowSubstring.java)
- 3. [Longest Substring Without Repeating Character](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/LongestSubstringWithoutRepeating.java)
- 4. [Longest Subarray Contains Only 1s](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MaxConsecutiveOnes.java)
- 5. [Longest Subarray Contains Only 1s With At Most 1 Zero Flip](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MaxConsecutiveOnesWithOneZeroFlip.java)
- 6. [Longest Subarray Contains Only 1s With At Most K Zeros Flip](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MaxConsecutiveOnesWithKZeroFlip.java)
- 7. Max Bank Transactions
+ 1. [Is Subsequence](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/IsSubsequence.java)
+ 2. [Minimum Size Subarray Sum](https://github.com/blue-in-sea/Algo-Notebook/tree/master/SlidingWindow)
+ 3. [Minimum Window Substring](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MinimumWindowSubstring.java)
+ 4. [Longest Substring Without Repeating Character](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/LongestSubstringWithoutRepeating.java)
+ 5. [Longest Subarray Contains Only 1s](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MaxConsecutiveOnes.java)
+ 6. [Longest Subarray Contains Only 1s With At Most 1 Zero Flip](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MaxConsecutiveOnesWithOneZeroFlip.java)
+ 7. [Longest Subarray Contains Only 1s With At Most K Zeros Flip](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MaxConsecutiveOnesWithKZeroFlip.java)
+ 8. Max Bank Transactions
 
-FixLen Sliding Window 
+Find Anagrams
 
- 7. [Find All Anagrams in a String](https://leetcode.com/problems/find-all-anagrams-in-a-string/description/)
+ 1. [Find All Anagrams in a String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/AllAnagrams.java)
+    * [Group https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/GroupAnagrams.javaAnagrams]()
 
+[逆向双指针] 两边往中间走
 
-[逆向双指针] 中心开花, 两边往中间走
+ 2. [Valid Palindrome](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ValidPalindrome.java)
+ 3. [Valid Palindrome II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ValidPalindromeII.java)
+
 
 ### Two Sum 
   1. [All Topics](https://leetcode.com/discuss/interview-question/3685049/25-variations-of-two-sum-question)
