@@ -156,6 +156,10 @@ Postorder
 2) Topological Sort (BFS + IndegreeMap)
 * [Course Schedule I (can take all course?)](https://github.com/blue-in-sea/Algo-Notebook/blob/master/GraphBFS/CourseSchedule.java)
 * [Course Schedule II (course list)](https://github.com/blue-in-sea/Algo-Notebook/blob/master/GraphBFS/CourseSchedule.java)
+3) Connect Graph 
+* [Key And Rooms](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Graph/KeysAndRooms.java)
+* [Number of Connected Components in an Undirected Graph](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Graph/NumberOfConnectedComponentsUndirectedGraph.java)
+* [Number of Islands](https://github.com/blue-in-sea/Algo-Notebook/blob/master/GraphBFS/NumberOfIslandsBFS.java)
 
 
 ### DP
