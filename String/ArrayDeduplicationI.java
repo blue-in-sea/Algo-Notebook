@@ -8,7 +8,6 @@
  * {1, 2, 2, 3, 3, 3} → {1, 2, 3}
  * {1,2,3,4,4,5} → {1, 2, 3, 4, 5}
  */
-
 /** 
  * Method: in-place via two pointers (f + s)
  * s: all elements to the left side of s (excluding s) are results that are processed
@@ -24,6 +23,7 @@ public class ArrayDeduplicationI {
    * Given a !! sorted !! integer array, remove duplicate elements. 
    * For each group of elements with the same value, keep only one of them. 
    */
+  // Time: O(n), Space: O(1)
   public int[] dedup(int[] array) {
     if (array == null || array.length <= 1) {
       return array;
@@ -35,7 +35,7 @@ public class ArrayDeduplicationI {
         slow++;
       }
     }
-    return Arrays.copyOf(array, slow);
+    return Arrays.copyOf(array, slow);  // copyOf(int[] original, int newLength)
   }
   
   /**
