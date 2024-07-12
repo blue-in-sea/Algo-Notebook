@@ -90,7 +90,7 @@ Postorder
 ```
 3. Reconstruct Binary Tree
 4. Max Path Sum
-5. LCA
+5. LCA - [课件](https://docs.google.com/document/d/1NjbwbS9Ckrri21dzoZYgec5YaUcTLDuuJCL-xSB2mcY/edit#heading=h.qy2juo1v0edg)
 
 #### (Advance)
 6. Weighted Binary Tree
