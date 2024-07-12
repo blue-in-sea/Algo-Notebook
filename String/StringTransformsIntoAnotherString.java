@@ -7,7 +7,6 @@
  *
  * Return true if and only if you can transform str1 into str2.
  */
-
 public class StringTransformsIntoAnotherString {
   public boolean canConvert(String str1, String str2) {
     if (str1.length() != str2.length()) return false;
