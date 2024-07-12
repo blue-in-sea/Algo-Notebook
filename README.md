@@ -140,7 +140,7 @@ Postorder
   * [Find The Cnt of All Confusing Numbers (same)](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/ConfusingNumberII.java)
 
 #### 3) DFS Partition 
-10. [Minimum Partition](https://blog.csdn.net/weixin_43981315/article/details/105569525)
+10. [Minimum Partition](https://blog.csdn.net/weixin_43981315/article/details/105569525) - DP [01背包]
 11. [Partition with Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/description/) - DP [01背包]
 12. [Partition with Equal Subset Sum to K](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/)
 13. Split Array with Subset Sum
@@ -175,6 +175,7 @@ Postorder
 #### 3) 背包问题
 ##### 0/1 背包
 * [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/description/)
+* [Minimum Partition](https://blog.csdn.net/weixin_43981315/article/details/105569525)
 
 ##### 滚动数组
 * [Coin Change](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/CoinChange.java)
