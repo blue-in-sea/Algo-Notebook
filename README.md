@@ -195,7 +195,7 @@ Postorder
 
 
 ### String
-[逆反向双指针] 首位相向而行
+#### [逆反向双指针] 首位相向而行
  1. [Valid Palindrome](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ValidPalindrome.java)
     * [Valid Palindrome II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ValidPalindromeII.java)
  2. [Reverse String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ReverseString.java)
@@ -205,10 +205,9 @@ Postorder
     * [String Replace Basic](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/StringReplaceBasic.java)
     * [String Replace Shorter](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/StringReplaceShorter.java)
 
-[同向双指针] Fast-slow pointer  
-
+#### [同向双指针] Fast-slow pointer  
  4. [Compressing String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/CompressString.java) & [Compress String II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/CompressStringII.java)
- 
+
  5. [Decompressing String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/DecodeString.java) & [Decompress String III](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/DecompressStringII.java)
 
  6. [Move Zeros](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/MoveZeroes.java)
@@ -217,14 +216,13 @@ Postorder
     * [Array Deuplication III - Keep None](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ArrayDeduplicationIII.java)
     * [Array Deuplication IV - Zuma](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ArrayDeduplicationIV.java)
  
-Divide-n-conquer
-
+#### Divide-n-conquer
  8. [String Shuffling](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/StringShuffling.java)
  9. Reverse String Shuffling
 
     
 ### Sliding Window
-[同向双指针] Sliding window: left-right pointers  
+#### [同向双指针] Sliding window: left-right pointers  
  1. [Is Subsequence](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/IsSubsequence.java)
  2. [Minimum Size Subarray Sum](https://github.com/blue-in-sea/Algo-Notebook/tree/master/SlidingWindow)
  3. [Minimum Window Substring](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MinimumWindowSubstring.java)
@@ -234,9 +232,6 @@ Divide-n-conquer
  7. [Longest Subarray Contains Only 1s With At Most K Zeros Flip](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MaxConsecutiveOnesWithKZeroFlip.java)
  8. [Find All Anagrams in a String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/AllAnagrams.java)
     * [Group Anagrams](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/GroupAnagrams.java)
-
-
-[逆向双指针] 两边往中间走
 
 
 ### Two Sum 
