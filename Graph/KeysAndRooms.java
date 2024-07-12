@@ -50,7 +50,6 @@ public class KeysAndRooms {
     }
 
     // **********************************************************
-    
     // Method 2: DFS
     // Time: O(V + E) on graph traversal
     // Space: O(V) for stack calls or hashset
@@ -74,7 +73,6 @@ public class KeysAndRooms {
 
     // **********************************************************
     // Helper to build graph (not necessary)
-    
     private  Map<Integer, List<Integer>> buildGraph(List<List<Integer>> rooms) {
         Map<Integer, List<Integer>> graph = new HashMap<>();
         // initialize node
