@@ -195,7 +195,7 @@ Postorder
 
 
 ### String
-1) [相向双指针] 首位相向而行
+1) [逆反向双指针] 首位相向而行
 
 * [Valid Palindrome](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ValidPalindrome.java)
     * [Valid Palindrome II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ValidPalindromeII.java)
@@ -206,21 +206,18 @@ Postorder
     * [String Replace Basic](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/StringReplaceBasic.java)
     * [String Replace Shorter](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/StringReplaceShorter.java)
 
-2) String Shuffling
+2) Recursion
 * [String Shuffling](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/StringShuffling.java)
 * Reverse String Shuffling
-
-3) String Permutation
 * [All Permutation I: No duplication in the input string](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllPermutation.java)
    * [All Permutation II: Might be duplication in the input string](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllPermutationsII.java)
 
-4) String En/Decoding
+3) [同向双指针] Fast-slow pointer  
 * [Compressing String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/CompressString.java)
 * [Decompressing String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/DecodeString.java)
-* [Compress String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/CompressStringII.java)
-* [Decompress String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/DecompressStringII.java)
+* [Compress String II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/CompressStringII.java)
+* [Decompress String III](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/DecompressStringII.java)
 
-5) Fast-slow pointer
 * [Move Zeros](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/MoveZeroes.java)
 * [Array Deuplication - Keep Only 1](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ArrayDeduplicationI.java)
    * [Array Deuplication II - Keep Only 2](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ArrayDeduplicationII.java)
