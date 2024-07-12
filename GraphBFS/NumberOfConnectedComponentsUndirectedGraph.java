@@ -1,95 +1,55 @@
-package GraphBFS;
-
-public class NumberOfConnectedComponentsUndirectedGraph {
-  /**
-   * BFS
-   */
+class NumberOfConnectedComponentsUndirectedGraph {
+    // E = Number of edges, V = Number of vertices.
+  
+    // Time: O(V + E) 
+    // * Building the adjacency list will take O(E) since we iterate over the list of edges once
+    // * Graph traversal we visited every vertex once; for each vertex, we vised all its edges 
+  
+    // Space: O(V) size of graph 
     public int countComponents(int n, int[][] edges) {
-    // corner case 
-    if (n <= 1) return n;
+        if (n <= 1) return n;
 
-    // initializa (adjacency list) graph map
-    Map<Integer, List<Integer>> map = new HashMap<>();
+        Map<Integer, List<Integer>> graph = buildGraph(n, edges);
+        Set<Integer> visited = new HashSet<>();
+        Queue<Integer> queue = new LinkedList<>();
 
-    // intialize vertices
-    for (int i = 0; i < n; i++) {
-      map.put(i, new ArrayList<>());
-    }
-
-    // add edge
-    for (int[] edge : edges) {
-      map.get(edge[0]).add(edge[1]);
-      map.get(edge[1]).add(edge[0]);
-    }
-    
-    // DFS
-    int component = 0;
-    Set<Integer> visited = new HashSet<>();
-
-    Queue<Integer> queue = new LinkedList<>();
-
-    for (int i = 0; i < n; i++) {
-      if (visited.add(i)) {
-        component++;
-        queue.offer(i);
-        bfs(queue, visited, map);
-      }
-    }
-
-    return component++;
-  }
-
-  private void bfs(Queue<Integer> queue, Set<Integer> visited, Map<Integer, List<Integer>> map) {
-    while (!queue.isEmpty()) {
-      int cur = queue.poll();
-      
-      for (int nei : map.get(cur)) {
-        if (visited.add(nei)) {
-          queue.offer(nei);
+        int component = 0;
+        for (int i = 0; i < n; i++) {
+            if (visited.add(i)) {
+                component++;
+                bfs(graph, queue, visited, i);
+            }
         }
-      }
-    } 
-  }
 
-  /**
-   * DFS
-   */
-  public int countComponents(int n, int[][] edges) {
-    // corner case 
-    if (n <= 1) return n;
-
-    // initializa (adjacency list) graph map
-    Map<Integer, List<Integer>> map = new HashMap<>();
-
-    // intialize vertices
-    for (int i = 0; i < n; i++) {
-      map.put(i, new ArrayList<>());
+        return component++;
     }
 
-    // add edge
-    for (int[] edge : edges) {
-      map.get(edge[0]).add(edge[1]);
-      map.get(edge[1]).add(edge[0]);
-    }
-    
-    // DFS
-    int component = 0;
-    Set<Integer> visited = new HashSet<>();
-    for (int i = 0; i < n; i++) {
-      if (visited.add(i)) {
-        component++;
-        dfs(i, visited, map);
-      }
+    private void bfs(Map<Integer, List<Integer>> graph, Queue<Integer> queue, Set<Integer> visited, int start) {
+        queue.offer(start);
+        
+        while (!queue.isEmpty()) {
+            int cur = queue.poll();
+
+            for (int nei : graph.get(cur)) {
+                if (visited.add(nei)) {
+                    queue.offer(nei);
+                }
+            }
+        }
     }
 
-    return component++;
-  }
-
-  private void dfs(int cur, Set<Integer> visited, Map<Integer, List<Integer>> map) {
-    for (int nei : map.get(cur)) {
-      if (visited.add(nei)) {
-        dfs(nei, visited, map);
-      }
+    // Build the undirected (unconnect) graph
+    private Map<Integer, List<Integer>> buildGraph(int n, int[][] edges) {
+        Map<Integer, List<Integer>> graph = new HashMap<>();
+        // intialize vertices
+        for (int i = 0; i < n; i++) {
+            graph.put(i, new ArrayList<>());
+        }
+        // add edge
+        for (int[] edge : edges) {
+            graph.get(edge[0]).add(edge[1]);
+            graph.get(edge[1]).add(edge[0]);
+        }
+        return graph;
     }
-  }
 }
