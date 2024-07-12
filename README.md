@@ -150,12 +150,12 @@ Postorder
 15. Majority Number II
 
 ### Graph
-1) Eulerian Path (Directed Connected Graph)
+#### 1) Eulerian Path (Directed Connected Graph)
 * [Reconstruct Itinerary](https://github.com/blue-in-sea/Algo-Notebook/edit/master/Graph/ReconstructItinerary.java)
-2) Topological Sort (BFS + IndegreeMap)
+#### 2) Topological Sort (BFS + IndegreeMap)
 * [Course Schedule I (can take all course?)](https://github.com/blue-in-sea/Algo-Notebook/blob/master/GraphBFS/CourseSchedule.java)
 * [Course Schedule II (course list)](https://github.com/blue-in-sea/Algo-Notebook/blob/master/GraphBFS/CourseSchedule.java)
-3) Connect Graph 
+#### 3) Connect Graph 
 * [Key And Rooms](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Graph/KeysAndRooms.java)
 * [Number of Connected Components in an Undirected Graph](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Graph/NumberOfConnectedComponentsUndirectedGraph.java)
 * [Number of Islands](https://github.com/blue-in-sea/Algo-Notebook/blob/master/GraphBFS/NumberOfIslandsBFS.java)
