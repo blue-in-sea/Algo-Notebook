@@ -113,42 +113,41 @@ Postorder
 #### DSF (with Memoization)
 > Memoization 的核心是去重和剪枝：通过记录之前的结果，去skip后面重复的结果集
 
-1) DSF I - [课件](https://docs.google.com/document/d/1gU26-F17g3CT7iA1sUbKx-fJDLcATDqBhCgc_iVK_i4/edit)
+#### 1) DSF I - [课件](https://docs.google.com/document/d/1gU26-F17g3CT7iA1sUbKx-fJDLcATDqBhCgc_iVK_i4/edit)
 ```
 排列 Permutations(C, K) = N!/(N-K)!                                        where N 的 K 排列, if K = N, O(N!)
 组合 Combinations: C(N, K) = (N−k)!k! / N!                                 where N 的 K 组合, N choose K 
 子集 Subsets: 2^N since each element could be select or unselect
 ```
-* Q0 [Combinations](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/Combination.java)
+1. [Combinations](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/Combination.java)
 
-* Q1 [All Subsets](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllSubsets.java)
-  * [All Subsets II (Dup)](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllSubsetsII.java)
-  * [All Subset of Size K](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllSubsetsOfSizeK.java)
+2. [All Subsets](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllSubsets.java)
+   * [All Subsets II (Dup)](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllSubsetsII.java)
+   * [All Subset of Size K](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllSubsetsOfSizeK.java)
 
-* Q2 [All Valid Combinations Of Parentheses](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllValidCombinationsOfParentheses.java)
+3. [All Valid Combinations Of Parentheses](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllValidCombinationsOfParentheses.java)
   
-* Q3 [All Permutations](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllPermutation.java)
+4. [All Permutations](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllPermutation.java)
   * [All Permutations II (Dup)](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllPermutationsII.java)
-* Q4 All Permutations of Subsets
-* Q5 99 CENTS
-* Q6 Factor Combinations
+5. All Permutations of Subsets
+6. Factor Combinations
 
-2) DSF Backtracking - [课件](https://docs.google.com/document/d/1wHGdet_cS2FO9AQXxd_1xid7u1AJ42mcq3vZvRn2ATw/edit#heading=h.t2lrjyikhz5t)
-* Q7 Desirable Number
-* Q8 [Restore IP Address](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/RestoreIPAddresses.java)
-* Q9 [Find All Confusing Numbers](https://github.com/blue-in-sea/Algo-Notebook/edit/master/Recursion/ConfusingNumberAll.java)
+#### 2) DSF Backtracking - [课件](https://docs.google.com/document/d/1wHGdet_cS2FO9AQXxd_1xid7u1AJ42mcq3vZvRn2ATw/edit#heading=h.t2lrjyikhz5t)
+7. Desirable Number
+8. [Restore IP Address](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/RestoreIPAddresses.java)
+9. [Find All Confusing Numbers](https://github.com/blue-in-sea/Algo-Notebook/edit/master/Recursion/ConfusingNumberAll.java)
   * [Find The Confusing Numbers (basic)](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/ConfusingNumber.java)
   * [Find The Cnt of All Confusing Numbers (same)](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/ConfusingNumberII.java)
 
-3) DFS Partition / DP 
-* Q10 [Minimum Partition](https://blog.csdn.net/weixin_43981315/article/details/105569525)
-* Q11 [Partition with Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/description/)
-* Q12 Partition with Equal Subset Sum to K
-* Q13 Split Array with Subset Sum
+#### 3) DFS Partition 
+10. [Minimum Partition](https://blog.csdn.net/weixin_43981315/article/details/105569525)
+11. [Partition with Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/description/) - DP [01背包]
+12. [Partition with Equal Subset Sum to K](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/)
+13. Split Array with Subset Sum
 
-4) Boyer-Moore Majority Vote algorithm
-* Q14 Majority Number I
-* Q15 Majority Number II
+#### 4) Boyer-Moore Majority Vote algorithm
+14. Majority Number I
+15. Majority Number II
 
 ### Graph
 1) Eulerian Path (Directed Connected Graph)
@@ -164,19 +163,20 @@ Postorder
 
 ### DP
 > DP 的优化在于 Memo 去避免重复计算；DP 的证明需要用到 induction（数学归纳总法）
-1) Greedy
+#### 1) Greedy
 * [Maximum Subarray Sum](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/MaximumSubarray.java)
 * [Maximum Integer With At Most 1 Swap](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/MaximumSubarray.java)
-2) 一维 DP
+  
+#### 2) 一维 DP
 * [Longest Palindromic Subsequence](https://laioffer.com/zh/videos/2018-03-14-516-longest-palindromic-subsequence/)
 * Max Subarray Sum 
 * [Subarray Sum Equals K](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/)
   
-3) 背包问题
-#### 0/1 背包
+#### 3) 背包问题
+##### 0/1 背包
 * [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/description/)
 
-#### 滚动数组
+##### 滚动数组
 * [Coin Change](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/CoinChange.java)
 * Maximum Profit From Trading Stocks 
 
