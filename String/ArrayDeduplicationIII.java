@@ -1,3 +1,9 @@
+// Array Duplication III - Keep none for each dup in a sorted array
+// index 0  1  2  3  4  5
+// input  1  1  2  2  3  3
+//           s
+//                       f
+//                                  next_f
 /** 
  * s: all elements to the left side of slow (excluding s) are results that are processed
  * f: the current index being processed 
@@ -10,7 +16,6 @@
  *    case 1: a[next_f] - a[f] == 1, s++, f++ or f = next_f  (element appear only once, so keep one)
  *    case 2: a[next_f] - a[f]   > 1, f = next_f             (element appear more than one, keep none)
  */
-
 public class ArrayDeduplicationIII {
   /**
    * Given a sorted integer array, remove duplicate elements. 
