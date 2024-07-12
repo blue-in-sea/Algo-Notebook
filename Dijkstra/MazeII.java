@@ -22,7 +22,6 @@
  * Explanation: One possible way is : left -> down -> left -> down -> right -> down -> right.
  * The length of the path is 1 + 1 + 3 + 1 + 2 + 2 + 2 = 12.
  */
-
 public class MazeII {
     // Time: O(MN logMN) where maze[][] is M by N, and insertion/polling of PQ is log(MN)
     // Space: O(MN) distance array
