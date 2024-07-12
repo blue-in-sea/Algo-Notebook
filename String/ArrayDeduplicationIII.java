@@ -1,10 +1,11 @@
 // Array Duplication III - Keep none for each dup in a sorted array
-// index 0  1  2  3  4  5
-// input  1  1  2  2  3  3
+// index  0  1  2  3  4  
+// inpu   1  2  2  3  3                      [1,2,2,3,3] -> [1]
 //           s
-//                       f
+//                    f
 //                                  next_f
 /** 
+ * Solution: next_f 是 f 往右第一个和 f 不一样的位置
  * s: all elements to the left side of slow (excluding s) are results that are processed
  * f: the current index being processed 
  *   (all elements to the right side of the fast pointer have not been processed)
