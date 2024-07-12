@@ -206,6 +206,7 @@ Postorder
     * [String Replace Shorter](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/StringReplaceShorter.java)
 
 [同向双指针] Fast-slow pointer  
+
  4. [Compressing String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/CompressString.java) & [Compress String II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/CompressStringII.java)
  
  5. [Decompressing String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/DecodeString.java) & [Decompress String III](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/DecompressStringII.java)
@@ -217,6 +218,7 @@ Postorder
     * [Array Deuplication IV - Zuma](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ArrayDeduplicationIV.java)
  
 Divide-n-conquer
+
  8. [String Shuffling](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/StringShuffling.java)
  9. Reverse String Shuffling
 
