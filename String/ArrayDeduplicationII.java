@@ -1,4 +1,4 @@
-// Array Duplication II - Keep two elements for each dup in a sorted array
+// Array Deduplication II - Keep two elements for each dup in a sorted array
 // {1, 2, 2, 3, 3, 3} → {1, 2, 2, 3, 3}
 /**
  * Solution: [0 … slow - 1] is the partial result to return, Fast pointer used to discover new element
