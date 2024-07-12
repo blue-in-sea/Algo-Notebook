@@ -220,12 +220,15 @@ Postorder
 
 5) Fast-slow pointer
 * [Move Zeros](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/MoveZeroes.java)
-* [Array Deuplication](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ArrayDeduplicationI.java)
-   * Array Deuplication II
-   * [Array Deuplication III](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ArrayDeduplicationIII.java)
-   
-
-
+* [Array Deuplication - Keep Only 1](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ArrayDeduplicationI.java)
+   * [Array Deuplication II - Keep Only 2](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ArrayDeduplicationII.java)
+   * [Array Deuplication III - Keep None](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ArrayDeduplicationIII.java)
+   * [Array Deuplication IV - Zuma](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ArrayDeduplicationIV.java)
+* [Compressing String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/CompressString.java)
+  * [Compressing String II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/CompressStringII.java)
+* [Decompressing String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/DecodeString.java)
+  * [Decompressing String II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/DecompressStringII.java)
+    
 ### Sliding Window
 [同向双指针] Sliding window: left-right pointers  
  1. [Is Subsequence](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/IsSubsequence.java)
