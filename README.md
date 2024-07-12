@@ -195,7 +195,7 @@ Postorder
 
 
 ### String
-1) [逆反向双指针] 首位相向而行
+#### 1) [逆反向双指针] 首位相向而行
 
 * [Valid Palindrome](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ValidPalindrome.java)
     * [Valid Palindrome II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ValidPalindromeII.java)
@@ -206,7 +206,7 @@ Postorder
     * [String Replace Basic](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/StringReplaceBasic.java)
     * [String Replace Shorter](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/StringReplaceShorter.java)
 
-2) [同向双指针] Fast-slow pointer  
+#### 2) [同向双指针] Fast-slow pointer  
 * [Compressing String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/CompressString.java)
   * [Decompressing String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/DecodeString.java)
 * [Compress String II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/CompressStringII.java)
@@ -218,11 +218,9 @@ Postorder
    * [Array Deuplication III - Keep None](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ArrayDeduplicationIII.java)
    * [Array Deuplication IV - Zuma](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ArrayDeduplicationIV.java)
  
-4) Recursion
+#### 3) Divide-n-conquer
 * [String Shuffling](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/StringShuffling.java)
 * Reverse String Shuffling
-* [All Permutation I: No duplication in the input string](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllPermutation.java)
-   * [All Permutation II: Might be duplication in the input string](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllPermutationsII.java)
 
     
 ### Sliding Window
@@ -235,7 +233,7 @@ Postorder
  6. [Longest Subarray Contains Only 1s With At Most 1 Zero Flip](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MaxConsecutiveOnesWithOneZeroFlip.java)
  7. [Longest Subarray Contains Only 1s With At Most K Zeros Flip](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MaxConsecutiveOnesWithKZeroFlip.java)
  8. [Find All Anagrams in a String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/AllAnagrams.java)
-    * [Group https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/GroupAnagrams.javaAnagrams]()'
+    * [Group Anagrams](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/GroupAnagrams.java)
 
 
 [逆向双指针] 两边往中间走
