@@ -32,8 +32,8 @@ public class AllAnagrams {
         List<Integer> res = new ArrayList<>();
         
         // A valid window must has the FIXED size of np for [l ... r] 
-        // Once r exceed np, if there exist a valid substring 
-        // then l-bound of window/res_index = r - np + 1
+        // Once r exceed np, if there exist a valid substring (agrams) 
+        // then l-bound of window (aka. res_index) = r - np + 1
         for (int r = 0; r < ns; r++) {
             char c = s.charAt(r);
             sCntMap.put(c, sCntMap.getOrDefault(c, 0) + 1);
