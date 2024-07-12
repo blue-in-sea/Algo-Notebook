@@ -1,4 +1,4 @@
-// Array Duplication III - Keep none for each dup in a sorted array
+// Array Deduplication III - Keep none for each dup in a sorted array
 // index  0  1  2  3  4  
 // inpu   1  2  2  3  3                      [1,2,2,3,3] -> [1]
 //           s
