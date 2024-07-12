@@ -190,31 +190,32 @@ Postorder
 
 
 ### String
-#### String Reversal (相向双指针) 首位相向而行
- 1. [Valid Palindrome](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ValidPalindrome.java)
+1) [相向双指针] 首位相向而行
+
+* [Valid Palindrome](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ValidPalindrome.java)
     * [Valid Palindrome II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ValidPalindromeII.java)
- 2. [Reverse String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ReverseString.java)
+* [Reverse String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ReverseString.java)
     * [Reverse Words in a Sentence I](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/ReverseWordsInASentenceI.java)
     * [Right Shift by N Characters](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/RightShiftByNCharacters.java)
- 3. [String Replacement](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/StringReplace.java)
+* [String Replacement](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/StringReplace.java)
     * [String Replace Basic](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/StringReplaceBasic.java)
     * [String Replace Shorter](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/StringReplaceShorter.java)
 
-#### String Shuffling
- 4. [String Shuffling](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/StringShuffling.java)
- 5. Reverse String Shuffling
+2) String Shuffling
+* [String Shuffling](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/StringShuffling.java)
+* Reverse String Shuffling
 
-#### String Permutation
- 6. All Permutation I: No duplication in the input string 
+3) String Permutation
+* All Permutation I: No duplication in the input string 
    * [All Permutation II: Might be duplication in the input string](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllPermutationsII.java)
 
-#### String En/Decoding
- 7. [Compress String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/CompressStringII.java)
- 8. [Decompress String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/DecompressStringII.java)
+4) String En/Decoding
+* [Compress String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/CompressStringII.java)
+* [Decompress String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/DecompressStringII.java)
 
-#### Fast-slow pointer
- 9. [Move Zeros](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/MoveZeroes.java)
- 10. Array Deuplication
+5) Fast-slow pointer
+* [Move Zeros](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/MoveZeroes.java)
+* Array Deuplication
    * Array Deuplication II
    * Array Deuplication III
    
