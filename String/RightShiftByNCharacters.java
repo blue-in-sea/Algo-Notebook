@@ -3,19 +3,19 @@
  * "abc", 4 -> "cab"
  */
 public class RightShiftByNCharacters {
-   /**
+    /**
      * Extended topic from (ReverseString)
      *
      * input =  abcd ef   (shift the whole string to right side by 2 positions)
      * result = ef abcd
      *
      * Step1     dcab  |  fe
-     * reverse str[0 ... length - 3]			       -> Time O(n), Space O(1)
+     * reverse str[0 ... length - 3]			    -> Time O(n), Space O(1)
      * reverse str[length - 2 ... length - 1]       -> Time O(n), Space O(1)
      *
      * Step2     ef  |  abcd
-     * reverse the entire String			             -> Time O(n), Space O(1)
-     */
+     * reverse the entire String			        -> Time O(n), Space O(1)
+     */   
     // Time: O(n)
     // Space: O(1)
     public String rightShift(String input, int n) {
