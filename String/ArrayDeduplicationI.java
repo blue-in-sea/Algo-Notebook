@@ -9,7 +9,7 @@
  * {1,2,3,4,4,5} → {1, 2, 3, 4, 5}
  */
 /** 
- * Method: in-place via two pointers (f + s)
+ * Solution: [0 … slow - 1] is the partial result to return, Fast pointer used to discover new element
  * s: all elements to the left side of s (excluding s) are results that are processed
  * f: the current index when linear scan
  * return array[s-1]
@@ -23,7 +23,7 @@ public class ArrayDeduplicationI {
    * Given a !! sorted !! integer array, remove duplicate elements. 
    * For each group of elements with the same value, keep only one of them. 
    */
-  // Time: O(n), Space: O(1)
+  // Time: O(n) linear scan, Space: O(1) in-place
   public int[] dedup(int[] array) {
     if (array == null || array.length <= 1) {
       return array;
