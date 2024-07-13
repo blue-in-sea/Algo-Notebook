@@ -16,47 +16,45 @@ class MaximumSwap {
     // Time: O(n)
     // Space: O(1)
     public int maximumSwap(int num) {
-        int max = -1;
-        int maxIndex = -1;
-        int startIndex = -1; // 前一个 swap 的 candidate
-        int endIndex = 1;    // 后一个 swap 的 candidate
- 
-        // converting the number to string
-        char[] arr = numToCharArray(num);
+        int max = Integer.MIN_VALUE;
+        int maxIdx = -1;
+        int lIdx = -1;
+        int rIdx = 1;
+        
+        char[] arr = convertToArr(num);
         for (int i = arr.length - 1; i >= 0; i--) {
-            // current digit is the largest by far
+
             if (arr[i] > max) {
                 max = arr[i];
-                maxIndex = i;
+                maxIdx = i;
                 continue;
             }
 
             if (arr[i] < max) {
-                startIndex = i;
-                endIndex = maxIndex;
+                lIdx = i;
+                rIdx = maxIdx;
             }
-        }
+        } 
  
         // check for is number already in order
-        if (startIndex == -1) {
-            return num;
-        }
+        if (lIdx == -1) return num;
  
-        swap(startIndex, endIndex, arr);
-        return charArrayToNum(arr);
+        swap(arr, lIdx, rIdx);
+ 
+        return convertToNum(arr);
     }
 
-    private void swap(int a, int b, char[] arr) {
+    char[] convertToArr(int num) {
+        return String.valueOf(num).toCharArray();
+    }
+
+    void swap(char[] arr, int a, int b) {
         char tmp = arr[a];
         arr[a] = arr[b];
         arr[b] = tmp;
     }
 
-    private char[] numToCharArray(int num) {
-        return String.valueOf(num).toCharArray();
-    }
-
-    private int charArrayToNum(char[] arr) {
+    int convertToNum(char[] arr) {
         return Integer.parseInt(new String(arr));
     }
 
