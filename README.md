@@ -88,9 +88,20 @@ Inorder
 Postorder 
 [5,1,4,8,3,9,9,15,7,20,3]
 ```
+* [Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/)
+```
+return Math.max(leftDepth, rightDepth) + 1
+```
+
 3. Reconstruct Binary Tree
 4. Max Path Sum
 5. LCA - [课件](https://docs.google.com/document/d/1NjbwbS9Ckrri21dzoZYgec5YaUcTLDuuJCL-xSB2mcY/edit#heading=h.qy2juo1v0edg)
+
+* LCA
+```
+Base Case: 1. root is null; 2. root is a or b
+return 1. root or 2. non-null side
+`` 
 
 #### (Advance)
 6. Weighted Binary Tree
