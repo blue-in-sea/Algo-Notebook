@@ -181,8 +181,15 @@ return 1. root or 2. non-null side
   
 #### 2) 一维 DP
 * [Longest Palindromic Subsequence](https://laioffer.com/zh/videos/2018-03-14-516-longest-palindromic-subsequence/)
-* Max Subarray Sum 
-* [Subarray Sum Equals K](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/)
+* Max Subarray Sum
+
+#### Prefix Sum 
+* [Subarray Sum Equals K](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/SubarraySumEqualsK.java)
+  
+#### 3) 背包问题
+##### 0/1 背包
+* [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/description/)
+* [Minimum Partition](https://blog.csdn.net/weixin_43981315/article/details/105569525)
   
 #### 3) 背包问题
 ##### 0/1 背包
