@@ -16,8 +16,6 @@
 public class CoinChange {
     // Method 1: BottomUp DP (Interview!!)
     // dp[i][j] stores the min of coins used to make amount j from conins[i...n-1]
-    // where n is len(coins)
-    // i is idx(coins), j is amount accumulated 
 
     // Induction Rule
     // dp[i][j] = min( dp[i+1][j], dp[i][j - coins[i]] + 1 )
@@ -25,13 +23,15 @@ public class CoinChange {
     // dp[n][0] = 0
     // dp[n][1...amount] = INF
 
+    // 总数背包
+    // dp[j] stores the min of coins used to make amount j 
+    // dp[j] = min( dp[j], dp[j - coins[i]] + 1 )
+    //                     用掉 coins[i] 的情况
+
     // 滚动数组
     // for i from [0, n)
     //     for j from [0, amount]
     //         dp[j] = min( dp[j], dp[j - coins[i]] + 1 );
-    
-    // Time: O(amount * n) nested for-loop
-    // Space: O(amount) for dp array
     public int coinChange(int[] coins, int amount) {
         int[] dp = new int[amount + 1];
         Arrays.fill(dp, amount + 1);
