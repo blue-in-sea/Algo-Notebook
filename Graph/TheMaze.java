@@ -1,4 +1,5 @@
 class TheMaze {
+    // DFS
     // Time: O(m⋅n⋅(m+n)) for matrix n by m
     //   dfs take (m⋅n) stack calls, for each level, the robot can take at most m+n steps
     // Space: O(m⋅n)
@@ -38,7 +39,50 @@ class TheMaze {
         return false;
     }
 
-    private boolean inRange(int x, int y, int r, int c) {
+    // ********************************************************************************************
+    // BFS
+    // Time: O(m⋅n⋅(m+n)) for matrix n by m
+    // Space: O(m⋅n)
+    int[][] DIRS = {{-1, 0}, {1, 0}, {0, 1}, {0, -1}};
+
+    public boolean hasPath(int[][] maze, int[] start, int[] destination) {
+        int r = maze.length;
+        int c = maze[0].length;
+
+        boolean[][] marked = new boolean[r][c];
+        Queue<int[]> queue = new ArrayDeque<>();
+
+        marked[start[0]][start[1]] = true;
+        queue.offer(start);
+
+        while(!queue.isEmpty()) {
+            int[] cur = queue.poll();
+
+            if (cur[0] == destination[0] && cur[1] == destination[1]) return true;
+
+            for (int[] dir : DIRS) {
+                int i = cur[0], j = cur[1];
+                
+                while (inRange(i, j, r, c) && maze[i][j] == 0) {
+                    i += dir[0];
+                    j += dir[1];
+                }
+
+                // back 1 step after hitting the wall 
+                int[] nei = new int[]{i -= dir[0], j -= dir[1]};
+                if (!marked[nei[0]][nei[1]]) {
+                    queue.offer(nei);
+                    marked[nei[0]][nei[1]] = true;
+                }
+            }
+        }
+
+        return false; 
+    }
+
+    // ********************************************************************************************
+    // Utils
+    boolean inRange(int x, int y, int r, int c) {
         return x >= 0 && x < r && y >= 0 && y < c;
     }
 }
