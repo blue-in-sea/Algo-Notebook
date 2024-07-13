@@ -311,8 +311,11 @@ return 1. root or 2. non-null side
 * [Prefix Trie II](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Trie/PrefixTrieII.java)
 
 
+## Advance Data Structure 
 ### Quad Tree 
 * [Build a quad tree](https://github.com/blue-in-sea/Algo-Notebook/blob/master/OOD/QuadTree.java)
+  
+### LRU
 
 
 
