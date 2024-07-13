@@ -58,6 +58,8 @@ class MaximumSwap {
         return Integer.parseInt(new String(arr));
     }
 
+    // *****************************************************
+
     // Brutal Force: 从前往后，对于每个 index 找其后最大的数
     // Time: O(n^2)
     // Space: O(1)
