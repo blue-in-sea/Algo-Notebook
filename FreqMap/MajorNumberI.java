@@ -19,28 +19,20 @@ class MajorNumberI {
             return -1;
         }
         
-        Map<Integer, Integer> map = frequencyMap(nums);
-        Map.Entry<Integer, Integer> majorityEntry = null;
-        for (Map.Entry<Integer, Integer> e : map.entrySet()) {
-            if (majorityEntry == null || e.getValue() > majorityEntry.getValue()) {
-                majorityEntry = e;
-            }
+        public int majorityElement(int[] nums) {
+        int n = nums.length;
+
+        Map<Integer, Integer> numToCnt = new HashMap<>();
+        for (int num : nums) {
+            numToCnt.put(num, numToCnt.getOrDefault(num, 0) + 1);
         }
-        return majorityEntry.getKey();  
+       
+        for (Integer key : numToCnt.keySet()) {
+            if (numToCnt.get(key) > n / 2) return key;
+        }
+
+        return -1;
     }
-    
-    public Map<Integer, Integer> frequencyMap(int[] nums) {
-        Map<Integer, Integer> map = new HashMap<Integer, Integer>();
-        
-        for (int ele : nums) {
-            if (!map.containsKey(ele)) {
-                map.put(ele, 1);
-            } else {
-                map.put(ele, map.get(ele) + 1);
-            }
-        }
-        return map;
-    } 
 
     // ************************************************************************
 
