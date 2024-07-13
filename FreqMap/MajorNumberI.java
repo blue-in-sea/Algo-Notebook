@@ -1,7 +1,19 @@
+/**
+ * 169. Majority Element
+ * Given an array nums of size n, return the majority element.
+ * The majority element is the element that appears more than ⌊n / 2⌋ times. 
+ * 
+ * Assume that the majority element always exists in the array.
+ *
+ * Input: nums = [3,2,3]
+ * Output: 3
+ *
+ * Input: nums = [2,2,1,1,1,2,2]
+ * Output: 2
+ */
 class MajorNumberI {
-
-    
-    
+    // Optimal: CntMap
+    // Time: O(n), Space: O(n)
     public int majorityElement(int[] nums) {
         if (nums == null || nums.length == 0) {
             return -1;
@@ -32,8 +44,8 @@ class MajorNumberI {
 
     // ************************************************************************
 
-    // Method 2:
-
+    // Brutal Force
+    // Time: O(n^2), Space: O(1)
     public int majorityElement(int[] nums) {
         int majorityCount = nums.length / 2;
         
