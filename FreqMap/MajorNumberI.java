@@ -19,14 +19,12 @@ class MajorNumberI {
             return -1;
         }
         
-        public int majorityElement(int[] nums) {
         int n = nums.length;
-
+        
         Map<Integer, Integer> numToCnt = new HashMap<>();
         for (int num : nums) {
             numToCnt.put(num, numToCnt.getOrDefault(num, 0) + 1);
         }
-       
         for (Integer key : numToCnt.keySet()) {
             if (numToCnt.get(key) > n / 2) return key;
         }
