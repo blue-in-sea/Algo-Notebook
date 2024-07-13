@@ -101,7 +101,7 @@ return Math.max(leftDepth, rightDepth) + 1
 ```
 Base Case: 1. root is null; 2. root is a or b
 return 1. root or 2. non-null side
-`` 
+```
 
 #### (Advance)
 6. Weighted Binary Tree
