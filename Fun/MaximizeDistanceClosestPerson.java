@@ -34,14 +34,11 @@ class MaximizeDistanceClosestPerson {
             if (seats[i] == 1) left[i] = 0;
             else if (i > 0) left[i] = left[i-1] + 1;
         }
-        System.out.println(Arrays.toString(left));
 
         for (int i = N-1; i >= 0; --i) {
             if (seats[i] == 1) right[i] = 0;
             else if (i < N-1) right[i] = right[i+1] + 1;
         }
-
-        System.out.println(Arrays.toString(right));
 
         int res = 0;
         for (int i = 0; i < N; ++i)
