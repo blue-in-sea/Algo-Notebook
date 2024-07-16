@@ -1,4 +1,24 @@
 /**
+ * 211. Reconstruct Binary Search Tree With Postorder Traversal
+ * Given the postorder traversal sequence of a binary search tree, reconstruct the original tree.
+ * postorder traversal = {1, 4, 3, 11, 8, 5}
+ *
+ * the corresponding binary search tree is
+ *         5
+ *
+ *       /    \
+ *
+ *     3        8
+ *
+ *   /   \        \
+ *
+ * 1      4        11
+ * 
+ * preorder: [5, 3, 1, 4, 8, 11]
+ * inorder: [ 1, 3, 4, 5, 8, 11]
+ */
+
+/**
  * public class TreeNode {
  *   public int key;
  *   public TreeNode left;
