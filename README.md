@@ -94,8 +94,25 @@ return Math.max(leftDepth, rightDepth) + 1
 ```
 
 3. Reconstruct Binary Tree
-4. Max Path Sum
-5. LCA - [课件](https://docs.google.com/document/d/1NjbwbS9Ckrri21dzoZYgec5YaUcTLDuuJCL-xSB2mcY/edit#heading=h.qy2juo1v0edg)
+```
+preOrder: [root][left subtree][right subtree]
+inOrder:  [left subtree][root][right subtree]
+
+On left-substree:
+[inLeft ... inMid - 1]
+preRight - (preLeft - 1)  = (InMid - 1) - inLeft, and so
+preRight = preLeft + inMid - inLeft
+
+On right-substree:
+[inMid + 1 ... inRight]
+preRight - preLeft = InRight - (inMid + 1), and so
+preLeft = preRight - InRight + inMid - 1  
+```
+[Reconstruct Binary Tree With Preorder And Inorder](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/editorial/)
+
+
+5. Max Path Sum
+6. LCA - [课件](https://docs.google.com/document/d/1NjbwbS9Ckrri21dzoZYgec5YaUcTLDuuJCL-xSB2mcY/edit#heading=h.qy2juo1v0edg)
 
 * LCA
 ```
