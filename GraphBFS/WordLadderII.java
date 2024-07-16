@@ -1,37 +1,66 @@
-public class WordLadderII {
-    public List<List<String>> findLadders(String beginWord, String endWord, List<String> wordList) {
+/**
+ * 126. Word Ladder II
+ * A transformation sequence from word beginWord to word endWord using a dictionary wordList is 
+ * a sequence of words beginWord -> s1 -> s2 -> ... -> sk such that:
+ *
+ * Every adjacent pair of words differs by a single letter. Note that beginWord does not need to be in wordList.
+ * Every si for 1 <= i <= k is in wordList: sk == endWord
+ *
+ * Given two words, beginWord and endWord, and a dictionary wordList, return all the shortest transformation 
+ * sequences from beginWord to endWord, or an empty list if no such sequence exists.
+ * Each sequence should be returned as a list of the words [beginWord, s1, s2, ..., sk].
+ *
+ * Input: beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log","cog"]
+ * Output: [["hit","hot","dot","dog","cog"],["hit","hot","lot","log","cog"]]
+ * Explanation: There are 2 shortest transformation sequences:
+ * "hit" -> "hot" -> "dot" -> "dog" -> "cog"
+ * "hit" -> "hot" -> "lot" -> "log" -> "cog"
+ *
+ * Input: beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log"]
+ * Output: []
+ * Explanation: The endWord "cog" is not in wordList, therefore there is no valid transformation sequence.
+ */
+class WordLadderII {
+    public List<List<String>> findLadders(String start, String end, List<String> wordList) {
         List<List<String>> ladders = new ArrayList<>();
-        Map<String, List<String>> graph = new HashMap<>();  // bfs - build graph
-        Map<String, Integer> distance = new HashMap<>();    // bfs - store distance
 
+        // optimize: convert the wordList to dict 
         Set<String> dict = new HashSet<>(wordList);
-        if (!dict.contains(endWord)) return ladders;
-        dict.add(beginWord);
+        if (!dict.contains(end)) return ladders;
 
-        bfs(graph, distance, endWord, beginWord, dict);  // end to start 
+        // 1. bfs to compute distance of each word
+        Map<String, List<String>> graph = new HashMap<>();  // bfs to build graph
+        Map<String, Integer> distance = new HashMap<>();    // bfs store distance
 
+        dict.add(start);
+        bfs(graph, distance, end, start, dict);  // bfs from end to start 
+
+        // 2. dfs to find all possible paths from start to end
         List<String> path = new ArrayList<String>();
-        dfs(ladders, path, beginWord, endWord, distance, graph);
+        path.add(start);
+        dfs(ladders, path, start, end, distance, graph);
         
         return ladders;
     }
 
     private void dfs(List<List<String>> ladders, List<String> path, String curr, String end,
                      Map<String, Integer> distance, Map<String, List<String>> graph) {
-        path.add(curr);
-        // base case 
+        // base case: found a valid path from start to end
         if (curr.equals(end)) {
             ladders.add(new ArrayList<>(path));
-        } else{
-            for (String next : graph.get(curr)) {
-                if (distance.containsKey(next) && distance.get(curr) == distance.get(next) + 1) { 
-                    dfs(ladders, path, next, end, distance, graph);
-                }
+            return;
+        } 
+
+        // recursion:
+        // 1. add the a new word
+        // 2. backtracking!!
+        for (String next : graph.get(curr)) {   
+            if (distance.containsKey(next) && distance.get(curr) == distance.get(next) + 1) { 
+                path.add(next);
+                dfs(ladders, path, next, end, distance, graph);
+                path.remove(path.size() - 1);
             }
         }
-
-        // back-tracking
-        path.remove(path.size() - 1);
     }
 
     private void bfs(Map<String, List<String>> graph, Map<String, Integer> distance, 
@@ -75,31 +104,3 @@ public class WordLadderII {
         return nextList;
     }
 }
-
-
-/**
- * beginWord = hit, endWord = cog. (require endWord has to be in the wordList)
- * Input wordList: [hot, dot, dog, lot, log, cog]
- *
- * Builder Graph for the word list
- * <K = word, V = replace one char word in wordList>
- * lot: [log, dot, hot]
- * hit: [hot]
- * log: [cog, dog, lot]
- * dot: [dog, lot, hot]
- * cog: [dog, log]
- * hot: [dot, lot, hit]
- * dog: [cog, log, dot]
- *
- * Get distance to the end word
- * <K = word, V = distance to the end>
- * lot: 2
- * hit: 4
- * log: 1
- * dot: 2
- * cog: 0
- * hot: 3
- * dog: 1
- *
- * Output ladders: [[hit, hot, dot, dog, cog], [hit, hot, lot, log, cog]]
- */
