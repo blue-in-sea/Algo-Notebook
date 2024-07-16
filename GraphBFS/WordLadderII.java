@@ -28,12 +28,12 @@ class WordLadderII {
         Set<String> dict = new HashSet<>(wordList);
         if (!dict.contains(end)) return ladders;
 
-        // 1. bfs to compute distance of each word
+        // 1. bfs from end to compute distance to each word
         Map<String, List<String>> graph = new HashMap<>();  // bfs to build graph
         Map<String, Integer> distance = new HashMap<>();    // bfs store distance
 
         dict.add(start);
-        bfs(graph, distance, end, start, dict);  // bfs from end to start 
+        bfs(graph, distance, end, dict);  // bfs from end 
 
         // 2. dfs to find all possible paths from start to end
         List<String> path = new ArrayList<String>();
@@ -63,8 +63,7 @@ class WordLadderII {
         }
     }
 
-    private void bfs(Map<String, List<String>> graph, Map<String, Integer> distance, 
-                     String start, String end, Set<String> dict) {
+    private void bfs(Map<String, List<String>> graph, Map<String, Integer> distance, String start, Set<String> dict) {
         for (String word : dict) {
             graph.put(word, new ArrayList<>());
         }
