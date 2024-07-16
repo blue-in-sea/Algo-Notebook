@@ -23,6 +23,7 @@ class MaximizeDistanceClosestPerson {
      * right = [0, 3, 2, 1, 0, 1, 0]
      * ans = Math.Math.min(left[i], right[i]));
      */
+    // Time: O(n^2), Space: O(1)
     public int maxDistToClosest(int[] seats) {
         int N = seats.length;
         int[] left = new int[N], right = new int[N];
@@ -47,7 +48,31 @@ class MaximizeDistanceClosestPerson {
 
         return res;
     }
-  
 
+    /**
+     * Two pointer 
+     * prev   0 0 0 4
+     * future 4 4 4 6
+     */
+    // Time: O(n), Space: O(1)
+    public int maxDistToClosest(int[] seats) {
+        int N = seats.length;
+        int prev = -1, future = 0;
+        int ans = 0;
 
+        for (int i = 0; i < N; ++i) {
+            if (seats[i] == 1) {
+                prev = i;
+            } else {
+                while (future < N && seats[future] == 0 || future < i)
+                    future++;
+
+                int left = prev == -1 ? N : i - prev;
+                int right = future == N ? N : future - i;
+                ans = Math.max(ans, Math.min(left, right));
+            }
+        }
+
+        return ans;
+    }
 }
