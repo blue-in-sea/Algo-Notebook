@@ -64,7 +64,7 @@ Welcome to Iris Algo Notebook
 > 挡板规则 [0, i): red, [i, j): white, [j, k]: unchecked element, [(k, len - 1]: blue
 * [Rainbow Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/RainbowSort.java) to sort 3 colors 
 * [Rainbow SortII](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/RainbowSortII.java) to sort 4 colors (divide-n-conquer) similar to mergeSort
-* [Rainbow SortIII](https://github.com/blue-in-sea/Algo-Notebook/tree/master/Sorting) to sort k colors (divide-n-conquer) similar to RainbowSortII
+* [Rainbow SortIII](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/RainbowSortIII.java) to sort k colors (divide-n-conquer) similar to RainbowSortII
   
 #### Others
 * [Wiggle Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/WiggleSort.java)
