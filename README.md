@@ -151,7 +151,7 @@ return 1. root or 2. non-null side
 3. [All Valid Combinations Of Parentheses](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllValidCombinationsOfParentheses.java)
   
 4. [All Permutations](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllPermutation.java)
-  * [All Permutations II (Dup)](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllPermutationsII.java)
+   * [All Permutations II (Dup)](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllPermutationsII.java)
 5. All Permutations of Subsets
 6. Factor Combinations
 
