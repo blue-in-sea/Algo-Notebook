@@ -169,8 +169,8 @@ return 1. root or 2. non-null side
 13. Split Array with Subset Sum
 
 #### 4) Boyer-Moore Majority Vote algorithm
-14. Majority Number I
-15. Majority Number II
+14. [Majority Number I](https://leetcode.com/problems/majority-element/)
+15. [Majority Number II](https://leetcode.com/problems/majority-element-ii/submissions/1324313084/)
 
 ### Graph
 #### 1) Eulerian Path (Directed Connected Graph)
