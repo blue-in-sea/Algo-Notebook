@@ -95,14 +95,14 @@ return Math.max(leftDepth, rightDepth) + 1
 
 3. Reconstruct Binary Tree
 
-[Reconstruct Binary Tree With Preorder And Inorder](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinaryTree/ReconstructBinaryTreeWithPreorderAndInorder.java)
-[Reconstruct Binary Tree With Inorder and Postorder](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinaryTree/ReconstructBinaryTreeWithPreorderAndInorder.java)
-Reconstruct Binary Tree from Preorder and Postorder ***
-[Reconstruct Binary Tree With LevelOrder]
+* [Reconstruct Binary Tree With Preorder And Inorder](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinaryTree/ReconstructBinaryTreeWithPreorderAndInorder.java)
+* [Reconstruct Binary Tree With Inorder and Postorder](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinaryTree/ReconstructBinaryTreeWithPreorderAndInorder.java)
+* Reconstruct Binary Tree from Preorder and Postorder
+* Reconstruct Binary Tree With LevelOrder
 
 
-Reconstruct Binary Search Tree with PostOrder
-Reconstruct Binary Search Tree with PreOrder
+* Reconstruct Binary Search Tree with PostOrder
+* Reconstruct Binary Search Tree with PreOrder
 
 
 5. Max Path Sum
