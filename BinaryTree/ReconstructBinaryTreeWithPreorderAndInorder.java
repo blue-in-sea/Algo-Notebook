@@ -1,17 +1,26 @@
 /**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     int val;
- *     TreeNode left;
- *     TreeNode right;
- *     TreeNode() {}
- *     TreeNode(int val) { this.val = val; }
- *     TreeNode(int val, TreeNode left, TreeNode right) {
- *         this.val = val;
- *         this.left = left;
- *         this.right = right;
- *     }
- * }
+ * 105. Construct Binary Tree from Preorder and Inorder Traversal
+ * Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder
+ * is the inorder traversal of the same tree, construct and return the binary tree.
+ *
+ *         3
+ *       /   \
+ *     9       20
+ *   /       /  \
+ * 1       15     7
+ *
+ * preorder: [3, 9, 1, 2, 15, 7]
+ * inorder: [1, 9, 3, 15, 20, 7]
+ *
+ * (Solution) DFS
+ *            R    L-tree   R-tree
+ * preorder: [3] [9, 1, 2] [15, 7]
+ * inorder: [1, 9, 2] [3] [15, 20, 7]
+ *            L-tree         R-tree
+ *               R
+ *  * preorder: [9] [1, 2]
+ *  * inorder: [1] [9] [2]
+ *              L       R
  */
 class ReconstructBinaryTreeWithPreorderAndInorder {
     // Method 1: Utilizing the inOrder sequence to determine the size of left/right subtree
@@ -62,3 +71,18 @@ class ReconstructBinaryTreeWithPreorderAndInorder {
         return map;
     }
 }
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
