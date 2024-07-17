@@ -9,18 +9,20 @@
  *   /       /  \
  * 1       15     7
  *
- * preorder: [3, 9, 1, 2, 15, 7]
- * inorder: [1, 9, 3, 15, 20, 7]
+ * preorder: [3, 9, 1, 20, 15, 7]
+ * inorder:  [1, 9, 3, 15, 20, 7]
  *
  * (Solution) DFS
- *            R    L-tree   R-tree
- * preorder: [3] [9, 1, 2] [15, 7]
- * inorder: [1, 9, 2] [3] [15, 20, 7]
- *            L-tree         R-tree
- *               R
- *  * preorder: [9] [1, 2]
- *  * inorder: [1] [9] [2]
- *              L       R
+ * Key: inorder sequence used to define left-subtree & right subtree
+ *            R    
+ * preorder: [3 |   9, 1, 20, 15, 7]
+ * inorder: [1, 9,  |3|   15, 20, 7]
+ *          L-tree         R-tree
+ 
+ *             R
+ *  preorder: [20 |  15, 7]
+ *  inorder:  [15  |20|  7]
+ *             L         R
  */
 class ReconstructBinaryTreeWithPreorderAndInorder {
     // Method 1: Utilizing the inOrder sequence to determine the size of left/right subtree
