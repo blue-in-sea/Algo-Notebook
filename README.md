@@ -94,21 +94,15 @@ return Math.max(leftDepth, rightDepth) + 1
 ```
 
 3. Reconstruct Binary Tree
-```
-preOrder: [root][left subtree][right subtree]
-inOrder:  [left subtree][root][right subtree]
 
-On left-substree:
-[inLeft ... inMid - 1]
-preRight - (preLeft - 1)  = (InMid - 1) - inLeft, and so
-preRight = preLeft + inMid - inLeft
+[Reconstruct Binary Tree With Preorder And Inorder](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinaryTree/ReconstructBinaryTreeWithPreorderAndInorder.java)
+[Reconstruct Binary Tree With Inorder and Postorder](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinaryTree/ReconstructBinaryTreeWithPreorderAndInorder.java)
+Reconstruct Binary Tree from Preorder and Postorder ***
+[Reconstruct Binary Tree With LevelOrder]
 
-On right-substree:
-[inMid + 1 ... inRight]
-preRight - preLeft = InRight - (inMid + 1), and so
-preLeft = preRight - InRight + inMid - 1  
-```
-[Reconstruct Binary Tree With Preorder And Inorder](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/editorial/)
+
+Reconstruct Binary Search Tree with PostOrder
+Reconstruct Binary Search Tree with PreOrder
 
 
 5. Max Path Sum
