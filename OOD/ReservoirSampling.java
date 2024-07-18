@@ -1,5 +1,12 @@
+/**
+ * 109. Reservoir Sampling
+ *  Consider an unlimited flow of data elements. How do you sample one element from this flow, such that at any point
+ *  during the processing of the flow, you can return a random element from the n elements read so far.
+ */
+
 // API: read() - read one number from the flow
 // API: sample() - return at any time the sample, if n values have been read
+
 public class ReservoirSampling {
   // how many number has been read so far 
   private int count;
@@ -12,7 +19,8 @@ public class ReservoirSampling {
     this.count = 0;
     this.sample = null;
   }
-  
+
+  // Amoritized O(n) time, O(1) space
   public void read(int value) {
     count++;
     // Random rand = new Random();
