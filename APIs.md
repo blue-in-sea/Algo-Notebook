@@ -331,6 +331,12 @@ public class Foo {
    }
 }
 ```
+To randomly generate a number from [0, n)
+```
+Random rand = new Random();
+int prob = rand.nextInt(n);    =>  int prob = (int) (Math.random() * n);
+```
+
 
 
 
