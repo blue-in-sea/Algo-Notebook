@@ -338,6 +338,13 @@ return 1. root or 2. non-null side
 ### LRU
 
 
+## Exceptions throw 
+```
+throw new IllegalArgumentException("invalid input") - RuntimeException
+public static void main(String args[]) throws IOException {}
+```
+
+
 
 
 
