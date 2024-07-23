@@ -338,5 +338,19 @@ int prob = rand.nextInt(n);    =>  int prob = (int) (Math.random() * n);
 ```
 
 
+### Exceptions throw 
+
+* throw new `IllegalArgumentException`("invalid input");
+* throw new `ArithmeticException`("illegal input");
+
+In the function handle 
+```
+public static void main(String args[]) throws `IOException` {
+
+}
+```
+
+
+
 
 
