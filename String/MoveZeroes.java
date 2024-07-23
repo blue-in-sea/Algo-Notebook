@@ -21,6 +21,7 @@
  * (if we use swap, we do not need post processing, since we do not kill the zeros)
  */
 public class MoveZeroes {
+    // 快慢同相双指针!! 推荐算法
     // Time: O(n), Space: O(1)
     public void moveZeroes(int[] nums) {
         // corner case
@@ -41,5 +42,38 @@ public class MoveZeroes {
         while (s < nums.length) {
             nums[s++] = 0;
         }
+    }
+
+
+    // **************************************************
+    // Version 2: similar to quickSort's partition 
+    
+    public int[] moveZero(int[] array) {
+        // assume array is not null
+        if (array.length <= 1) {
+            return array;
+        }
+        int left = 0;
+        int right = array.length - 1;
+        // [left, right] is the unexplory subarray
+        while (left <= right) {
+            if (array[left] != 0) {
+                left++;
+            } else if (array[right] == 0) {
+                right--;
+            } else {
+                swap(array, left++, right--);
+            }
+        }
+        return array;
+    }
+
+    // **************************************************
+    // Utils
+
+    private void swap(int[] array, int left, int right) {
+        int tmp = array[left];
+        array[left] = array[right];
+        array[right] = tmp;
     }
 }
