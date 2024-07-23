@@ -24,7 +24,6 @@ class MiddleOfLinkedList {
             slow = slow.next;      // slow 走一步
             fast = fast.next.next; // fast 走两步
         }
-
         return slow;   
     }
 }
