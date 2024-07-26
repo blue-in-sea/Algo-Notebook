@@ -37,13 +37,14 @@ class CoinChangeII {
     // dp[j] stores the number of combination of coins used to make amount j 
     // dp[0] = 1;
     // dp[j] = dp[j] + dp[j - coins[i]]
-    //                   用掉 coins[i] 的情况
+    //          不用         用掉 coins[i] 的情况
 
     // 滚动数组
     // for i from [0, n)
     //     for j from [0, amount]
     //         dp[j] += dp[j - coins[i]]
 
+    // Time: O(n), Space: O(1)
     public int change(int amount, int[] coins) {
         int n = coins.length;
         int[] dp = new int[amount + 1];
