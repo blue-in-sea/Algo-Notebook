@@ -14,7 +14,7 @@
 class LongestCommonPrefix {
     // Method 1: Horizontal scanning
     // Time: O(S) where S is the sum of all characters in all strings
-    // Space: O(1). We only used constant extra space
+    // Space: O(1) we only used constant extra space
     public String longestCommonPrefix(String[] strArr) {
         if (strArr.length == 0) return "";
 
