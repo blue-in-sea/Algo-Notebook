@@ -85,6 +85,67 @@ class LongestCommonPrefix {
         return true;
     }
 
+    // ================================================================================
+    // Method 4: Trie
+    // Time: O(s) where to build trie we need to process all char in the input str arr
+    // Time: O(s) for maintaining the trie
+    class TrieNode {
+        public boolean isEnd;
+        public Map<Character, TrieNode> children;
+        public TrieNode() {
+            this.children = new HashMap<>(); 
+        }
+    }
 
-    
+    class Trie {
+        private TrieNode root;
+
+        public Trie() {
+            root = new TrieNode();
+        }
+
+        public void insert(String word) {
+            if (word == null) return;
+
+            TrieNode curr = root;
+            for (int i = 0; i < word.length(); i++) {
+                char c = word.charAt(i);
+                // insert a new node
+                if (!curr.children.containsKey(c)) {
+                    curr.children.put(c, new TrieNode());
+                }
+                curr = curr.children.get(c);
+            }
+            curr.isEnd = true;
+        }
+
+        public String searchLongestPrefix(String word) {
+            TrieNode curr = root;
+            StringBuilder prefix = new StringBuilder();
+            for (int i = 0; i < word.length(); i++) {
+                char c = word.charAt(i);
+
+                if (curr.children.containsKey(c) && curr.children.size() == 1 && !curr.isEnd) {
+                    prefix.append(c);
+                    curr = curr.children.get(c);
+                } else {
+                    return prefix.toString();
+                }
+            }
+
+            return prefix.toString();
+        }
+    }
+
+    public String longestCommonPrefix(String[] strArr) {
+        if (strArr.length == 0) return "";
+        if (strArr.length == 1) return strArr[0];
+
+        Trie trie = new Trie();
+        for (String s : strArr) {
+            trie.insert(s);
+        }
+
+        return trie.searchLongestPrefix(strArr[0]);
+    } 
 }
