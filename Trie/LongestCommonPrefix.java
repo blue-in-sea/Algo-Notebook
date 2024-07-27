@@ -12,7 +12,7 @@
  * Explanation: There is no common prefix among the input strings.
  */
 class LongestCommonPrefix {
-    // Method 1: Horizontal scanning
+    // Method 1: Horizontal scanning (OK!)
     // Time: O(S) where S is the sum of all characters in all strings
     // Space: O(1) we only used constant extra space
     public String longestCommonPrefix(String[] strArr) {
@@ -30,7 +30,61 @@ class LongestCommonPrefix {
         return prefix; 
     }
 
-     // Method 2: Horizontal scanning
-    // Time: O(S) where S is the sum of all characters in all strings
-    // Space: O(1). We only used constant extra space
+    // Method 2: Vertical scanning
+    // Time: O(S) where S is the sum of all characters in all strings.
+    // In the worst case there will be n equal strings with length m and the algorithm performs S=m⋅n character
+    // Space: O(1) we only used constant extra space
+    public String longestCommonPrefix(String[] strArr) {
+        if (strArr.length == 0) return "";
+
+        String prefix = strArr[0];
+        for (int i = 0; i < prefix.length(); i++) {
+            char c = prefix.charAt(i);
+
+            for (int j = 1; j < strArr.length; j++) {
+                if (i == strArr[j].length() || strArr[j].charAt(i) != c) {
+                    return prefix.substring(0, i);
+                }
+            }
+        }
+        return prefix;
+    }
+
+    // Method 3: Binary search
+    // O(S⋅logm), where S is the sum of all characters in all strings
+    // The algorithm makes logm iterations, for each of them there are S=m⋅n comparisons
+    // Space: O(1) we only used constant extra space
+    public String longestCommonPrefix(String[] strArr) {
+        if (strArr.length == 0) return "";
+
+        int minLen = Integer.MAX_VALUE;
+        for (String s : strArr) {
+            minLen = Math.min(minLen, s.length());
+        }
+
+        int left = 0, right = minLen;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (isCommonPrefix(strArr, mid)) {
+                left = mid + 1;
+            } else {
+                right = mid - 1;
+            }
+        }
+
+        return strArr[0].substring(0, (left + right) / 2);
+    }
+
+    private boolean isCommonPrefix(String[] strArr, int len) {
+        String prefix = strArr[0].substring(0, len);
+        for (String s : strArr) {
+            if (!s.startsWith(prefix)) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+
+    
 }
