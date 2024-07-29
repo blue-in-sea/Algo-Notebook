@@ -31,9 +31,29 @@ public class CombinationsOfCoins {
 
     }
 
+    // ===============================================================================
+    // version 2
+    private void dfs(List<List<Integer>> res, int[] path, int[] coins, int index, int target) {
+        if (target == 0) {
+            res.add(arrayToList(path));
+            return;
+        }
+
+        for (int i = index; i < coins.length; i++) {
+            if (target - coins[i] >= 0) {
+                path[i]++;
+                dfs(res, path, coins, i, target - coins[i]);
+                path[i]--;
+            }
+        }
+    }
+
+    // ===============================================================================
+    // Utils
     private List<Integer> ToArrayList(int[] array) {
         List<Integer> list = new ArrayList<>();
         for (int ele : array) list.add(ele);
         return list;
     }
+    // Arrays.stream(ints).boxed().toList();
 }
