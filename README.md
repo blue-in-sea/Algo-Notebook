@@ -298,7 +298,10 @@ return 1. root or 2. non-null side
   4. [TopK Frquent Words](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/TopKFrequentWords.java) plus [tutorial](https://laioffer.com/zh/videos/2018-03-13-692-top-k-frequent-words/)
   5. [Kth Closest Point To Origin](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/KthClosestPointToOrigin.java)
   6. [Kth Largest Element In Array](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Heap/KthLargestElementInArray.java)
-  7. [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/description/)
+     * Sorting
+     * Heap
+     * Quick Select
+     * Counting Sort
 
 ### Comparator 
 * [Largest Number](https://leetcode.com/problems/largest-number/)
