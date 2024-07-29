@@ -25,8 +25,7 @@ class Combination {
         return result;
     }
 
-    private void dfs(List<List<Integer>> result, List<Integer> path, 
-                     int index, int n, int k) {
+    private void dfs(List<List<Integer>> result, List<Integer> path, int index, int n, int k) {
 
         if (path.size() == k) {
             result.add(new ArrayList<>(path));
@@ -38,5 +37,31 @@ class Combination {
             dfs(result, path, i + 1, n, k);
             path.remove(path.size() - 1);
         }
+    }
+
+    // ============================================================================
+    // Version 2
+    public List<List<Integer>> combine(int n, int k) {
+        List<List<Integer>> res = new ArrayList<>();
+        List<Integer> path = new ArrayList<>();
+        dfs(res, path, n, k, 0);
+        return res;
+    }
+    
+    private void dfs(List<List<Integer>> res, List<Integer> path, int n, int k, int index) {
+        if (index == n) {
+            if (path.size() == k) {
+                res.add(new ArrayList<>(path));
+            }
+            return;
+        }
+
+        // add
+        path.add(index + 1);
+        dfs(res, path, n, k, index + 1);
+        path.remove(path.size() - 1);
+
+        // not add
+        dfs(res, path, n, k, index + 1);
     }
 }
