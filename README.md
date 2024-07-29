@@ -143,18 +143,19 @@ return 1. root or 2. non-null side
 子集 Subsets: 2^N since each element could be select or unselect
 ```
 1. [Combinations](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/Combination.java)
+   * [Combinations of Coins](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/CombinationsOfCoins.java)
 
-2. [All Subsets](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllSubsets.java)
+3. [All Subsets](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllSubsets.java)
    * [All Subsets II (Dup)](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllSubsetsII.java)
    * [All Subset of Size K](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllSubsetsOfSizeK.java)
    * [Maximum Score Words Formed by Letters](https://leetcode.com/problems/maximum-score-words-formed-by-letters/description/)
 
-3. [All Valid Combinations Of Parentheses](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllValidCombinationsOfParentheses.java)
+4. [All Valid Combinations Of Parentheses](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllValidCombinationsOfParentheses.java)
   
-4. [All Permutations](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllPermutation.java)
+5. [All Permutations](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllPermutation.java)
    * [All Permutations II (Dup)](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Recursion/AllPermutationsII.java)
-5. All Permutations of Subsets
-6. Factor Combinations
+6. All Permutations of Subsets
+7. Factor Combinations
 
 #### 2) DSF Backtracking - [课件](https://docs.google.com/document/d/1wHGdet_cS2FO9AQXxd_1xid7u1AJ42mcq3vZvRn2ATw/edit#heading=h.t2lrjyikhz5t)
 7. Desirable Number
