@@ -56,7 +56,8 @@ Welcome to Iris Algo Notebook
 * [Selection Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/SelectionSort.java) Selects the min element from an unsorted list in each iteration; swap min to the beginning. 
 * [Merge Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/MergeSort.java) Divide & Conquer + Combine (Helper Arr 谁小移谁)
 * [Heap Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/HeapSort.java)
-* Quick Sort
+* [Quick Sort](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Sorting/QuickSort.java)
+  * [Quick Select](https://leetcode.com/problems/kth-largest-element-in-an-array/description/)
 * Counting Sort
 * Radix Sort
 
