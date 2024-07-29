@@ -217,6 +217,7 @@ return 1. root or 2. non-null side
 5) Best Time to Buy and Sell Stock
 * [Best Time to Buy and Sell Stock: For At Most 1 Trade](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/BestTimeBuyAndSellStock.java)
 * [Best Time to Buy and Sell Stock II: Hold at Most 1 Share At The Time](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/BestTimeBuyAndSellStockII.java)
+  * [Maximum Profit in Job Scheduling](https://leetcode.com/problems/maximum-profit-in-job-scheduling/description/)
 * [Best Time to Buy and Sell Stock III: Complete At Most 2 Transactions](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/BestTimeBuyAndSellStockIII.java)
 * [Best Time to Buy and Sell Stock IV: Complete At Most k Transactions](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/BestTimeBuyAndSellStockIV.java)
 
