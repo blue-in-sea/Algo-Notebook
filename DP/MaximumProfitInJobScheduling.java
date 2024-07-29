@@ -18,6 +18,9 @@
  * Profit obtained 150 = 20 + 70 + 60.
  */
 class MaximumProfitInJobScheduling {
+    // DP + TreeMap <Key: endTime, Value: maxProfit by this Time>
+    // Time: O(nlogn) 
+    // Space: O(n)
     public int jobScheduling(int[] startTime, int[] endTime, int[] profit) {
         // Get the number of jobs
         int n = profit.length;
