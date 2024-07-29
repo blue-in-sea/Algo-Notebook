@@ -1,3 +1,10 @@
+/**
+ * LaiCode 73. Combinations Of Coins
+ * Given a number of different denominations of coins (e.g., 1 cent, 5 cents, 10 cents, 25 cents), get all the
+ * possible ways to pay a target number of cents.
+ *
+ * coins = [25, 10, 5, 2, 1], target = 99
+ */
 public class CombinationsOfCoins {
     public List<List<Integer>> combinations(int target, int[] coins) {
         List<List<Integer>> res = new ArrayList<>();
