@@ -1,5 +1,5 @@
 public class AllSubsetsOfSizeK {
-    // Time: O(2^k * k)
+    // Time: O(2^k * k) 
     // Space: O(k) 
     public List<String> subSetsOfSizeK(String set, int k) {
         List<String> list = new ArrayList<>();
