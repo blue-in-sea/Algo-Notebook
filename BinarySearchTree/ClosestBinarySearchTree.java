@@ -45,8 +45,8 @@ class ClosestBinarySearchTree {
         dfs(root.right, inorder);
     }
 
-    // Method 2:  Iterative Inorder, O(k) time
-    // Time: O(k) in the average case and O(H + k) in the worst case, where k is an index of the closest element.
+    // Method 2: Iterative Traverse of BST (Optimal)
+    // Time: O(k) in the average case and O(H) in the worst case, where k is an index of the closest element.
     // Space: O(1)
     public int closestValue(TreeNode root, double target) {
         // Assume the binary tree is not null 
