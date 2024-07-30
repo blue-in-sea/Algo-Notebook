@@ -35,8 +35,8 @@ class MedianTracker {
     PriorityQueue<Integer> minHeap; // top of the heap be the min of all
 
     public MedianFinder() {
-        maxHeap = new PriorityQueue<>((x, y) -> y - x);
-        minHeap = new PriorityQueue<>((x, y) -> x - y);
+        maxHeap = new PriorityQueue<>((x, y) -> y - x);  
+        minHeap = new PriorityQueue<>((x, y) -> x - y); // minHeap.size() = maxHeap.size() - 1 for odd, minHeap.size() = maxHeap.size() for even
     }
     
     public void addNum(int num) {
