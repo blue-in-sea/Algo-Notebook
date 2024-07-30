@@ -30,7 +30,7 @@
  *      Finding the mean takes constant O(1) time since the tops of heaps are directly accessible.
  * Space: O(n) linear space to hold input in containers.
  */
-class MedianFinder {
+class MedianTracker {
     PriorityQueue<Integer> maxHeap; // top of the heap be the max of all
     PriorityQueue<Integer> minHeap; // top of the heap be the min of all
 
