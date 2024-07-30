@@ -33,4 +33,23 @@ class SubarraysOfSizeKandAverageGreaterthanOrEqualToThreshold {
         }
         return cnt;
     } 
+
+    // ======================================================
+    // Version 2
+    public int numOfSubarrays(int[] arr, int k, int threshold) {
+        int cnt = 0, sum = 0;
+        int l = 0;
+        for (int r = 0; r < arr.length; r++) {
+            sum += arr[r];
+
+            while (r - l + 1 == k) {
+                if ((sum / k) >= threshold) {
+                    cnt++;
+                }
+                sum -= arr[l];
+                l++;
+            }
+        }
+        return cnt;
+    } 
 }
