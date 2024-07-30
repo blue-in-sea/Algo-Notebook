@@ -20,11 +20,12 @@ class SubarraysOfSizeKandAverageGreaterthanOrEqualToThreshold {
         int l = 0;
         for (int r = 0; r < arr.length; r++) {
             // subarray(i, j) mush have size of k
+            // if not, shrink the window-l
             while (r - l + 1 > k) {
                 sum -= arr[l];
                 l++;
             }
-            // cnt number of valid res
+
             sum += arr[r];
             if (r - l + 1 == k && (sum / k) >= threshold) {
                 cnt++;
