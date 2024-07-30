@@ -259,13 +259,14 @@ return 1. root or 2. non-null side
 ### Sliding Window
 #### [同向双指针] Sliding window: left-right pointers  
  1. [Is Subsequence](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/IsSubsequence.java)
- 2. [Minimum Size Subarray Sum](https://github.com/blue-in-sea/Algo-Notebook/tree/master/SlidingWindow)
- 3. [Minimum Window Substring](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MinimumWindowSubstring.java)
- 4. [Longest Substring Without Repeating Character](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/LongestSubstringWithoutRepeating.java)
- 5. [Longest Subarray Contains Only 1s](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MaxConsecutiveOnes.java)
- 6. [Longest Subarray Contains Only 1s With At Most 1 Zero Flip](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MaxConsecutiveOnesWithOneZeroFlip.java)
- 7. [Longest Subarray Contains Only 1s With At Most K Zeros Flip](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MaxConsecutiveOnesWithKZeroFlip.java)
- 8. [Find All Anagrams in a String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/AllAnagrams.java)
+ 2. [Minimum Size Subarray Sum](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MinimumSizeSubarraySum.java)
+ 3. [Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/SubarraysOfSizeKandAverageGreaterthanOrEqualToThreshold.java)
+ 4. [Minimum Window Substring](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MinimumWindowSubstring.java)
+ 5. [Longest Substring Without Repeating Character](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/LongestSubstringWithoutRepeating.java)
+ 6. [Longest Subarray Contains Only 1s](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MaxConsecutiveOnes.java)
+ 7. [Longest Subarray Contains Only 1s With At Most 1 Zero Flip](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MaxConsecutiveOnesWithOneZeroFlip.java)
+ 8. [Longest Subarray Contains Only 1s With At Most K Zeros Flip](https://github.com/blue-in-sea/Algo-Notebook/blob/master/SlidingWindow/MaxConsecutiveOnesWithKZeroFlip.java)
+ 9. [Find All Anagrams in a String](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/AllAnagrams.java)
     * [Group Anagrams](https://github.com/blue-in-sea/Algo-Notebook/blob/master/String/GroupAnagrams.java)
 
 
