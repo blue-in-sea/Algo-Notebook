@@ -29,6 +29,9 @@
  * After performing 3 moves, the difference between the minimum and maximum is 7 - 7 = 0.
  */
 class MinimumDifferenceBetweenLargestAndSmallestValueInThreeMoves {
+    // Method: sorting + greedy
+    // Time: O(nlogn) for sorting
+    // Space: no extra space beside sorting
     public int minDifference(int[] nums) {
         int n = nums.length;
         if (n <= 4) return 0;
