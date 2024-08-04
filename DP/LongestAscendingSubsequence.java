@@ -14,9 +14,9 @@ package DP;
  * Input: nums = [7,7,7,7,7,7,7]
  * Output: 1     [7]                - The longest increasing subsequence
  */
-
 public class LongestAscendingSubsequence {
-  // Method 1: DP Linear Scan 回头看
+  // Method 1: DP Linear Scan 对于每一个ending，回头看
+  // dp[i] represent the longest increasing subsequence ending at arr[i]
   // Time: O(n^2) = 1 + 2 + 3 + 4 + ... + n(n+1)/2, Space: O(n)
   public int longest (int[] array) {
     // Assume array is not null
