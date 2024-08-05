@@ -7,9 +7,21 @@
  * {2, -1, 4, -2, 1}, the largest subarray sum is 2 + (-1) + 4 = 5
  * {-2, -1, -3},      the largest subarray sum is -1
  */
-public class MaximumSubarray {
+public class LargestSubArraySum {
+  // DP reduce the space consumption by ONLY store the latest largest sum
+   // Time: O(1) for linear scan, Space: O(1)
+  public int largestSum(int[] array) {  
+    int maxSum = array[0];
+    int lastSum = array[0]; 
+    
+    for (int i = 1; i < array.length; i++) {
+      lastSum = Math.max(lastSum + array[i], array[i]);
+      maxSum = Math.max(lastSum, maxSum);
+    }
+    return maxSum;
+  }
   
-  // M[i] means the largest sum of subarray ending at index i
+  // M[i] means the largest sum of subarray ending at index i ** 
   // M[i] = array[i]           if M[i-1] <= 0
   //      = M[i-1] + array[i]  if M[i-1] > 0
    
@@ -25,18 +37,5 @@ public class MaximumSubarray {
       res = Math.max(M[i], res);
     }
     return res;
-  }
-  
-   // DP reduce the space consumption by ONLY store the latest largest sum
-   // Time: O(1) for linear scan, Space: O(1)
-  public int largestSum(int[] array) {  
-    int maxSum = array[0];
-    int lastSum = array[0]; 
-    
-    for (int i = 1; i < array.length; i++) {
-      lastSum = Math.max(lastSum + array[i], array[i]);
-      maxSum = Math.max(lastSum, maxSum);
-    }
-    return maxSum;
   }
 }
