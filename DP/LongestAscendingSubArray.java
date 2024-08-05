@@ -13,11 +13,10 @@ public class LongestAscendingSubArray {
   /** 
    * Method 1: Dynamic Programming
    * 
-   * M[i] represents [within the range from the beginning index to i-th index]
-   * the max length of the ascending subarray. [must include the i-th element]
-   *
+   * M[i] represents the max length of the ascending subarray
    * M[i] = M[i - 1] + 1     a[i] > a[i - 1] 
    *      = 1                otherwise
+   * 
    * Time: O(n) for linear scan, Space: O(1)
    */
   public int longestDP(int[] array) {
