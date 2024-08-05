@@ -30,14 +30,15 @@ public class LargestSetOfPointsWithPositiveSlope {
         @Override
         public int compare(Point p1, Point p2) {
             return p1.x != p2.x ? p1.x - p2.x : p2.y - p1.y;
-            // x-value small goes front
-            // y-value small goes back
+            // sort by x-axis first
+            // if x equal, compare y-axis
         }
     }
     public int largest(Point[] points) {
         int n = points.length;
 
-        Arrays.sort(points, new MyComparator());
+        // Arrays.sort(points, new MyComparator());
+        Arrays.sort(points, (p1, p2) -> p1.x != p2.x ? p1.x - p2.x : p2.y - p1.y);
         int max = 0;
         int[] dp = new int[points.length];
         for (int i = 0; i < n; i++) {
