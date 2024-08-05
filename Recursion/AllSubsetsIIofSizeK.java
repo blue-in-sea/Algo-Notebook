@@ -14,7 +14,8 @@
  * Set = null, K = 0, all the subsets are [].
  */
 public class AllSubsetsIIofSizeK {
-    // Time: O(2^k * k), Space: O(k)
+    // Time: O(2^k * k) 
+    // Space: O(k) 
     public List<String> subSetsIIOfSizeK(String set, int k) {
         List<String> res = new ArrayList<>();
         if (set == null) {
