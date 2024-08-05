@@ -14,6 +14,7 @@
  * Set = null, K = 0, all the subsets are [].
  */
 public class AllSubsetsIIofSizeK {
+    // Time: O(2^k * k), Space: O(k)
     public List<String> subSetsIIOfSizeK(String set, int k) {
         List<String> res = new ArrayList<>();
         if (set == null) {
@@ -26,9 +27,34 @@ public class AllSubsetsIIofSizeK {
         return res;
     }
 
+    // version 1 
     private void dfs(List<String> res, StringBuilder sb, int index, int k, char[] array) {
-        // base case: we have picked k elements, we add the subset 
-        // to the result, and return 
+        // base case: we have picked k elements, we add the subset to the result, and return
+        if (sb.length() == k) {
+            res.add(sb.toString());
+            return;
+        }
+        // base case: reach the last index of the input array, we must return
+        if (index == array.length) {
+            return;
+        }
+
+        // 1. pick char
+        sb.append(array[index]);
+        dfs(res, sb, index + 1, k, array);
+        sb.deleteCharAt(sb.length() - 1);
+
+        // skip dups, input need to be sorted
+        while (index < array.length - 1 && array[index + 1] == array[index]) {
+            index++;
+        }
+
+        // 2. not pick
+        dfs(res, sb, index + 1, k, array);
+    }
+
+    // version 2
+    private void dfs(List<String> res, StringBuilder sb, int index, int k, char[] array) {
         if (sb.length() == k) {
             res.add(sb.toString());
             return;
