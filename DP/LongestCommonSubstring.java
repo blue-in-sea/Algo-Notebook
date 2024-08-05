@@ -12,8 +12,8 @@
 public class LongestCommonSubstring {
   // Version 1 : DP
   // dp[i][j] = lonest common substring between s and t
-  // base case: dp[i][0] = 0 and M[0][j] = 0 
-  // induction: dp[i][j] = 1 + M[i-1][j-1]   when s[i-1] == j[j-1]
+  // base case: dp[i][0] = 0 and dp[0][j] = 0 
+  // induction: dp[i][j] = 1 + dp[i-1][j-1]   when s[i-1] == t[j-1]
   //                     = 0                      otherwise -> reset the start
   public String longestCommon(String s, String t) {
     int[][] common = new int[s.length() + 1][t.length() + 1];
