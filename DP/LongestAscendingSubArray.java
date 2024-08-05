@@ -57,7 +57,8 @@ public class LongestAscendingSubArray {
     // corner cases
     
     int maxLen = 1;
-    for (int i = 0, left = 0; i < array.length; i++) {
+    int left = 0;
+    for (int i = 0; i < array.length; i++) {
       if (i == 0 || array[i] > array[i - 1]) {
         // Ascending part continue, for-loop drive window's right bound
         maxLen = Math.max(maxLen, i - left + 1);
