@@ -8,7 +8,7 @@
  * Input: nums = [0,1]
  * Output: [[0,1],[1,0]]
  */
-class AllValidCombinationsOfParentheses {
+class AllValidPermutationsOfParentheses {
     /**
      * Algo: DFS (same as AllSubsets)
      * 1. How many levels in the recursion tree? What does it store on each level?
