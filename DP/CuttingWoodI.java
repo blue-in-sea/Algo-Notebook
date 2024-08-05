@@ -8,6 +8,7 @@
  * L = 10, A = {2, 4, 7}, the minimum total cost is 10 + 4 + 6 = 20 (cut at 4 first then cut at 2 and cut at 7)
  */
 public class CuttingWoodI {
+    // DP
     // minCost[i][j] = min cost of cutting part[j, i]
     // base case: minCost[i][0] = 0
     //            minCost[j][i] = 0 if j + 1 = i
@@ -18,7 +19,7 @@ public class CuttingWoodI {
 
     // 每次记得加上左边的 cost (0, j)
 
-    // Time: O(n^3), Space: O(n^2)
+    // Time: O(n^3) where n is the len of cuts, Space: O(n^2)
     public int minCost(int[] cuts, int length) {
         // Assume cuts is not null, all cuts are valid
         // Assume length >= 0
