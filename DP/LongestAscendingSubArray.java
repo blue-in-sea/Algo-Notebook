@@ -54,9 +54,8 @@ public class LongestAscendingSubArray {
    * Time: O(n) for linear scan, Space: O(1)
    */ 
   public int longestSW(int[] array) {
-    // corner cases
-    
     int maxLen = 1;
+    
     int left = 0;
     for (int i = 0; i < array.length; i++) {
       if (i == 0 || array[i] > array[i - 1]) {
