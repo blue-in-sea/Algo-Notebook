@@ -43,7 +43,7 @@ class LongestCommonSubsequence {
 /**
  * dp[i][j] = the longest common subsequence at s.charAt(i) for j -> [1, tn)
  * base case dp[i][0] = 0, dp[0][j]  = 0
- * induction: dp[i][j] = dp[i - 1][j - 1] + 1                when s[i] == s[j]
+ * induction: dp[i][j] = dp[i - 1][j - 1] + 1                when s[i - 1] == s[j - 1]
  *            dp[i][j] = max( dp[i][j - 1], dp[i - 1][j] )   otherwise 
  *
  *         c  b  a  b  d  f  e
