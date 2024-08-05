@@ -19,19 +19,20 @@ class Point {
 
 public class LargestSetOfPointsWithPositiveSlope {
     // slope = (y2 - y1) / (x2 - x1) > 0
-    // when x2 > x1, we must have y2 > y1
+    // when x2 > x1, we must have y2 > y1 !!
 
-    // 1. Sort the input points according to their x-axis - Time O(nlogn)
+    // 1. Sort the points by x ascending and y descending 
     // A[N] = {<x0, y0>, <x1, y1>, <x2, y2> .. <xn-1, yn-1>}
 
-    // 2. Find the longest ascending subsequence based on their y-axis - Time O(n^2)
-    // Set = {y0, y1, y2 ... } 
+    // 2. Similar to longest ascending subsequence
+    /// For every ending points[i], (linear scan)
+    //    For every j -> [0, i)     (looking back)
+    //        points[j].y < points[i].y -> positive slope 
     static class MyComparator implements Comparator<Point> {
         @Override
         public int compare(Point p1, Point p2) {
             return p1.x != p2.x ? p1.x - p2.x : p2.y - p1.y;
-            // sort by x-axis first
-            // if x equal, compare y-axis
+            // sort by x ascending, then y descending 
         }
     }
     public int largest(Point[] points) {
