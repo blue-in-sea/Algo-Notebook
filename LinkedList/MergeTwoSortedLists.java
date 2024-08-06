@@ -17,7 +17,6 @@ class MergeTwoSortedLists {
     public ListNode mergeTwoLists(ListNode one, ListNode two) {
         ListNode dummy = new ListNode(0);
         ListNode cur = dummy;
-
         while (one != null && two != null) {
             if (one.val <= two.val) {
                 cur.next = one;
@@ -27,7 +26,6 @@ class MergeTwoSortedLists {
                 two = two.next;
             }
             cur = cur.next;
-
         }
         
         // post-processing
@@ -36,8 +34,25 @@ class MergeTwoSortedLists {
         } else {
             cur.next = two;
         }
-
         return dummy.next;
+    }
+
+    // ==============================================================
+    // Method 2: recursion
+    // Time: O(n + m) where n is the size of one, m is the size of two
+    // Space: O(n + m) stack calls 
+    public ListNode mergeTwoLists(ListNode one, ListNode two) {
+        if (one == null) {
+            return two;
+        } else if (two == null) {
+            return one;
+        } else if (one.val < two.val) {
+            one.next = mergeTwoLists(one.next, two);
+            return one;
+        } else {
+            two.next = mergeTwoLists(one, two.next);
+            return two;
+        }
     }
 }
 /**
