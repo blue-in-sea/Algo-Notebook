@@ -22,7 +22,8 @@
 class MinimumAbsoluteDifference {
     // Sort and find minDiff
     // Find the pairs with minDiff
-    // Time: O(nlogn), Space: O(1)
+    // Time: O(nlogn) for sorting
+    // Space: O(logn) or O(n) for sorting
     public List<List<Integer>> minimumAbsDifference(int[] arr) {
         List<List<Integer>> res = new ArrayList<>();
 
