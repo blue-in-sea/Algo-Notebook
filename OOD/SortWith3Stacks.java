@@ -9,8 +9,8 @@
 
 
 
-// Version 2: Selects the min each time from input 
-// Time: O(n^2), smiliar to selection sort 
+// Version 2: Selects the min each time from input (similar to selection sort)
+// Time: O(n^2)
 public class SortWith3Stacks {
   // declare min, cnt (if dup)
   //   1. supply input to buffer: find min in each iteration 
