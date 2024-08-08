@@ -13,6 +13,8 @@
  */
 public class MaximumValuesOfSizeKSlidingWindows {
   // Method 1: Maintain a monolithic Deque 
+  // Time: O(n) each element can only be in deque once
+  // Space: O(n) for deque
   public List<Integer> maxWindows(int[] array, int k) {
     List<Integer> res = new ArrayList<>();
     // corner case
@@ -20,7 +22,7 @@ public class MaximumValuesOfSizeKSlidingWindows {
       return res;
     }
     //维护一个单调非递减序列
-    Deque<Integer> dq = new ArrayDeque<>();
+    Deque<Integer> dq = new ArrayDeque<>(); // store the index 
     for (int i = 0; i < array.length; i++) {
       while (!dq.isEmpty() && array[i] >= array[dq.peekFirst()]) {
         dq.pollFirst();
