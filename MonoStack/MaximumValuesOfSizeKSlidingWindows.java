@@ -35,7 +35,8 @@ public class MaximumValuesOfSizeKSlidingWindows {
     }
     return res;
   }
-  
+
+  // ==================================================================
   // Method 2: Maintain a TreeSet 
   class Node {
     int pos;
