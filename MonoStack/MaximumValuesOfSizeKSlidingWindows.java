@@ -51,8 +51,10 @@ public class MaximumValuesOfSizeKSlidingWindows {
     Comparator<Node> comparator = new Comparator<Node>() {
       public int compare(Node left, Node right) {
         if (right.val == left.val) {
+          // 如果相等，位置不变
           return left.pos - right.pos;    
         }
+        // 如果不相等，max first (单调非递减序列)
         return right.val - left.val;
       }  
     };
