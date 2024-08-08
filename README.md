@@ -195,18 +195,19 @@ return 1. root or 2. non-null side
 * [Maximum Integer With At Most 1 Swap](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/MaximumSubarray.java)
   
 #### 2) 一维 DP
+* [Longest Ascending SubArray](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/LongestAscendingSubArray.java)
+* [Longest Ascending Subsequence](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/LongestAscendingSubsequence.java)
 * [Longest Palindromic Subsequence](https://laioffer.com/zh/videos/2018-03-14-516-longest-palindromic-subsequence/)
 * [Max Subarray Sum](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/MaximumSubarray.java)
+
+#### 3) 二维 DP
+* [Longest Common Substring](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/LongestCommonSubstring.java)
+* [Longest Common Subsequence](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/LongestCommonSubsequence.java)
 
 #### Prefix Sum 
 * [Subarray Sum Equals K](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/SubarraySumEqualsK.java)
   
-#### 3) 背包问题
-##### 0/1 背包
-* [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/description/)
-* [Minimum Partition](https://blog.csdn.net/weixin_43981315/article/details/105569525)
-  
-#### 3) 背包问题
+#### 4) 背包问题
 ##### 0/1 背包
 * [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/description/)
 * [Minimum Partition](https://blog.csdn.net/weixin_43981315/article/details/105569525)
