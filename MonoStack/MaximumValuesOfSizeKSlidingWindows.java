@@ -21,7 +21,7 @@ public class MaximumValuesOfSizeKSlidingWindows {
     if (array == null || array.length == 0) {
       return res;
     }
-    //维护一个单调非递减序列
+    //维护一个单调非递减序列, min -> max 
     Deque<Integer> dq = new ArrayDeque<>(); // store the index 
     for (int i = 0; i < array.length; i++) {
       while (!dq.isEmpty() && array[i] >= array[dq.peekFirst()]) {
@@ -56,7 +56,7 @@ public class MaximumValuesOfSizeKSlidingWindows {
           // 如果相等，位置不变
           return left.pos - right.pos;    
         }
-        // 如果不相等，max first (单调非递减序列)
+        // 如果不相等，maxHeap
         return right.val - left.val;
       }  
     };
