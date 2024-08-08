@@ -23,7 +23,7 @@ public class SortWith2Stacks {
   private void sort(LinkedList<Integer> s1, LinkedList<Integer> s2) {
     while (!s1.isEmpty()) {
       int cur = s1.pollFirst();
-      // 每次压当前 min 进入 s2
+      // 每次比栈顶小的元素进 s2
       while (!s2.isEmpty() && cur < s2.peekFirst()) {
         s1.offerFirst(s2.pollFirst());
       }
