@@ -214,7 +214,7 @@ return 1. root or 2. non-null side
 
 ##### 滚动数组
 * [Coin Change Fewest Coins](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/CoinChange.java)
-* [Coin Change II Number of Combinations]([https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/CoinChange.java](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/CoinChangeII.java))
+* [Coin Change II Number of Combinations](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/CoinChangeII.java)
 * Maximum Profit From Trading Stocks 
 
 5) Best Time to Buy and Sell Stock
