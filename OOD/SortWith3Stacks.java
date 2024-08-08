@@ -5,7 +5,6 @@
  * After sorting the original stack should contain the sorted integers and from top to bottom the integers are sorted
  * in ascending order.
  */
-
 // Version 1: Merge Sort
 // Time: O(n logn): divide/sorting take logn level; merge take logn level (with O(n) to copy the result)
 public class Solution {
