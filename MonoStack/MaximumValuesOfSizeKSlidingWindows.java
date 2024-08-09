@@ -61,7 +61,7 @@ public class MaximumValuesOfSizeKSlidingWindows {
       }  
     };
 
-    TreeSet<Node> set = new TreeSet<>(comparator);
+    TreeSet<Node> set = new TreeSet<>(comparator); // TreeSet<Node> set = new TreeSet<>((a, b) -> {return a.val == b.val ? a.index - b.index : b.val - a.val;});
     ArrayList<Integer> res = new ArrayList<>();
 
     for (int i = 0; i < array.length; i++) {
