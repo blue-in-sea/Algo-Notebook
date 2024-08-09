@@ -3,8 +3,8 @@ class WordSearch {
     private int rs;
     private int cs;
     private boolean[][] marked;
-   
-
+    private final int[][] DIRS = {{-1, 0}, {0, -1}, {1, 0}, {0, 1}};
+    
     public boolean exist(char[][] board, String word) {
         this.board = board;
         this.rs = board.length;
@@ -25,7 +25,32 @@ class WordSearch {
         return false;
     }
 
-    // version 2
+    // dfs version 1
+    private boolean dfs(int i, int j, String word, int index) {
+        if (index == word.length()) {
+            return true;
+        }
+        
+        if (i < 0 || i >= rs || j < 0 || j >= cs || marked[i][j] || board[i][j] != word.charAt(index)) {
+            return false;
+        }
+        
+        marked[i][j] = true;
+        
+        for (int[] dir : DIRS) {
+            int x = i + dir[0];
+            int y = j + dir[1];
+
+            if (dfs(x, y, word, index + 1)) {
+                return true;
+            }
+        }
+        
+        marked[i][j] = false;
+        return false;
+    }
+
+    // dfs version 2
     private boolean dfs(int i, int j, String word, int index) {
         if (index == word.length()) {
             return true;
