@@ -1,3 +1,11 @@
+
+/**
+ * Time: O(N⋅3^L) where N is the number of cells in the board and L is the length of the word to be matched.
+ *     For the backtracking function, initially we could have at most 4 directions to explore, but further the choices
+ *     are reduced into 3 (since we won't go back to where we come from)
+ *
+ * Space: O(L) for stack calls where L is the length of the word to be matched
+ */
 class WordSearchDFS {
     private char[][] board;
     private int rs;
