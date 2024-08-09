@@ -1,12 +1,28 @@
+/**
+ * Word Search I (exit?)
+ * 
+ * Given an m x n grid of characters board and a string word, return true if word exists in the grid.
+ * Given words = ["oath","pea","eat","rain"] and board =
+ *
+ * [
+ *   ['o','a','a','n'],
+ *   ['e','t','a','e'],
+ *   ['i','h','k','r'],
+ *   ['i','f','l','v']
+ * ]
+ * Return true for ["eat","oath"]
+ */
 
 /**
+ * DFS + backtracking
+ * 
  * Time: O(N⋅3^L) where N is the number of cells in the board and L is the length of the word to be matched.
  *     For the backtracking function, initially we could have at most 4 directions to explore, but further the choices
  *     are reduced into 3 (since we won't go back to where we come from)
  *
  * Space: O(L) for stack calls where L is the length of the word to be matched
  */
-class WordSearchDFS {
+class WordSearch {
     private char[][] board;
     private int rs;
     private int cs;
@@ -18,7 +34,6 @@ class WordSearchDFS {
         this.rs = board.length;
         this.cs = board[0].length;
         this.marked = new boolean[rs][cs];
-        
         
         for (int i = 0; i < rs; i++) {
             for (int j = 0; j < cs; j++) {
@@ -44,7 +59,6 @@ class WordSearchDFS {
         }
         
         marked[i][j] = true;
-        
         for (int[] dir : DIRS) {
             int x = i + dir[0];
             int y = j + dir[1];
@@ -53,8 +67,8 @@ class WordSearchDFS {
                 return true;
             }
         }
-        
         marked[i][j] = false;
+        
         return false;
     }
 
