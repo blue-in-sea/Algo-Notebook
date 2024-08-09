@@ -83,15 +83,14 @@ class WordSearch {
         }
         
         marked[i][j] = true;
-        
         if (dfs(i + 1, j, word, index + 1) || 
             dfs(i - 1, j, word, index + 1) || 
             dfs(i, j + 1, word, index + 1) || 
             dfs(i, j - 1, word, index + 1)) {
             return true;
         }
-        
         marked[i][j] = false;
+        
         return false;
     }
 }
