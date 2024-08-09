@@ -22,7 +22,7 @@
  *
  * Space: O(L) for stack calls where L is the length of the word to be matched
  */
-class WordSearch {
+class WordSearchDFS {
     private char[][] board;
     private int rs;
     private int cs;
