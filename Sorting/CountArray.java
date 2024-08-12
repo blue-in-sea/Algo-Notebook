@@ -97,3 +97,19 @@ class CountArray {
  *     Y's counter += 0
  *     j++
  */
+
+/**
+ * Index Array:  [1, 0, 2, 3]  位置
+ * Helper Array: [0, 1, 0, 0]  辅助   xxxx  yyyy (index)
+ * Count Array:  [1, 0, 0, 0]  计数
+ * =============
+ * Index Array:  [1, 0, 3, 2]
+ * Helper Array: [0, 1, 2, 3]
+ * Count Array:  [1, 0, 1, 0]
+ * =============
+ * Index Array:  [1, 3, 2, 0]
+ * Helper Array: [1, 0, 3, 2]
+ * Count Array:  [3, 0, 1, 0]
+ * =============
+ * Result: [3, 0, 1, 0]
+ */
