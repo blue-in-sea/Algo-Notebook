@@ -78,7 +78,7 @@ class Solution {
         sb.append(c);
         root = root.children.get(c);
 
-        if (root.isWord) {
+        if (root.isWord = true) {
             res.add(new String(sb));
         }
 
