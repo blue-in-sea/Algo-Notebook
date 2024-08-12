@@ -76,7 +76,7 @@ class CountArray {
  *           /   \   /   \
  *        4(0) 1(0) 3(0) 2(0)
  * conuter (semantic meaning) : in the process of merger, how many ele that is 
- * smaller than me have move from my right-side 右边 to my left-side 左边
+ * smaller than me have move from my right-side to my left-side
  * ===========================================================================
  *          \   /    \   /
  *        1(0) 4(1) 2(0) 3(1)
