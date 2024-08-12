@@ -29,10 +29,6 @@ public class CountArray {
   
   /**
    * 针对数组 array 指定的区间 [left, right] 进行归并排序，在排序的过程中完成统计任务
-   *
-   * @param array
-   * @param left
-   * @param right
    */
   private void mergeSort(int[] array, int left, int right) {
     if (left >= right) {
@@ -53,11 +49,6 @@ public class CountArray {
    * merge 谁小移动谁
    * [left, mid] 是排好序的
    * [mid + 1, right] 是排好序的
-   *
-   * @param array
-   * @param left
-   * @param mid
-   * @param right
    */  
   private void merge(int[] array, int left, int mid, int right) {
     for (int i = left; i <= right; i++) {
