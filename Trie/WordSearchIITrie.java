@@ -1,3 +1,20 @@
+/**
+ * Word Search II
+ * Given a 2D board and a list of words from the dictionary, find all words in the board.
+ *
+ * Each word must be constructed from letters of sequentially adjacent cell, where "adjacent" cells are those 
+ * horizontally or vertically neighboring. The same letter cell may not be used more than once in a word.
+ *
+ * Given words = ["oath","pea","eat","rain"] and board =
+ *
+ * [
+ *   ['o','a','a','n'],
+ *   ['e','t','a','e'],
+ *   ['i','h','k','r'],
+ *   ['i','f','l','v']
+ * ]
+ * Return ["eat","oath"].
+ */
 class TrieNode {
     boolean isWord;
     Map<Character, TrieNode> children;
@@ -8,37 +25,14 @@ class TrieNode {
     }
 }
 
-class Solution {
-    private TrieNode root;
-
-    public Solution() {
-        root = new TrieNode();
-    }
-
-    private void insert(String word) {
-        TrieNode curr = root;
-        for (int i = 0; i < word.length(); i++) {
-            char c = word.charAt(i);
-            if (!curr.children.containsKey(c)) {
-                curr.children.put(c, new TrieNode());
-            }
-            curr = curr.children.get(c);
-        }
-        curr.isWord = true;
-    }
-
-    private void buildDict(String[] words) {
-        for (String word : words) {
-            insert(word);
-        }
-    }
-
+class WordSearchIITrie {
     private char[][] board;
     private int rs;
     private int cs;
     private boolean[][] marked;
     private final int[][] DIRS = {{-1, 0}, {0, -1}, {1, 0}, {0, 1}};
 
+    private TrieNode root;
 
     public List<String> findWords(char[][] board, String[] words) {
         this.board = board;
@@ -51,6 +45,7 @@ class Solution {
             return new ArrayList<>();
         }
 
+        this.root = new TrieNode();
         buildDict(words);
 
         Set<String> res = new HashSet<>();
@@ -78,7 +73,7 @@ class Solution {
         sb.append(c);
         root = root.children.get(c);
 
-        if (root.isWord = true) {
+        if (root.isWord) {
             res.add(new String(sb));
         }
 
@@ -90,5 +85,23 @@ class Solution {
         }
         marked[i][j] = false;
         sb.deleteCharAt(sb.length() - 1);
+    }
+
+    private void buildDict(String[] words) {
+        for (String word : words) {
+            insert(word);
+        }
+    }
+
+    private void insert(String word) {
+        TrieNode curr = root;
+        for (int i = 0; i < word.length(); i++) {
+            char c = word.charAt(i);
+            if (!curr.children.containsKey(c)) {
+                curr.children.put(c, new TrieNode());
+            }
+            curr = curr.children.get(c);
+        }
+        curr.isWord = true;
     }
 }
