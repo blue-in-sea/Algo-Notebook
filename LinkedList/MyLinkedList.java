@@ -1,7 +1,35 @@
-class LinkedList {
+class Node {
+    int data;
+    Node next;
+
+    Node(int data) {
+        this.data = data;
+        this.next = null;
+    }
+}
+
+class MyLinkedList {
     Node head;
 
-    // Method to delete a specific node from the list
+    public MyLinkedList() {
+        head = null; 
+    }
+    
+    // Append a node to the end of the single linked list
+    public void add(int data) {
+        Node newNode = new Node(data);
+        if (head == null) {
+            head = newNode;
+        } else {
+            Node temp = head;
+            while (temp.next != null) {
+                temp = temp.next;
+            }
+            temp.next = newNode;
+        }
+    }
+
+    // Delete a node from the single linked list
     public void deleteNode(Node nodeToDelete) {
         Node current = head;
         Node previous = null;
@@ -24,21 +52,7 @@ class LinkedList {
         }
     }
 
-    // Method to add a new node at the end of the list
-    public void add(int data) {
-        Node newNode = new Node(data);
-        if (head == null) {
-            head = newNode;
-        } else {
-            Node temp = head;
-            while (temp.next != null) {
-                temp = temp.next;
-            }
-            temp.next = newNode;
-        }
-    }
-
-    // Method to display the list
+    // Print
     public void display() {
         Node temp = head;
         while (temp != null) {
@@ -69,15 +83,5 @@ class LinkedList {
         list.deleteNode(nodeToDelete);
         System.out.println("List after deleting the head node:");
         list.display();
-    }
-
-    class Node {
-        int data;
-        Node next;
-
-        Node(int data) {
-            this.data = data;
-            this.next = null;
-        }
     }
 }
