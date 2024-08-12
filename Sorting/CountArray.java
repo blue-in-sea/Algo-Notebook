@@ -7,60 +7,6 @@
  * A = { 4, 1, 3, 2 }, we should get B = { 3, 0, 1, 0 }.
  */
 class CountArray {
-    private char[][] board;
-    private int rs;
-    private int cs;
-    private boolean[][] marked;
-
-    private final int[][] DIRS = {{-1, 0}, {0, -1}, {1, 0}, {0, 1}};
-
-    public boolean exist(char[][] board, String word) {
-        this.board = board;
-        this.rs = board.length;
-        this.cs = board[0].length;
-        this.marked = new boolean[rs][cs];
-
-
-        for (int i = 0; i < rs; i++) {
-            for (int j = 0; j < cs; j++) {
-                if (dfs(i, j, word, 0)) {
-                    return true;
-                }
-            }
-        }
-
-        return false;
-    }
-
-    private boolean dfs(int i, int j, String word, int index) {
-        if (index >= word.length()) {
-            return true;
-        }
-
-        if (check(i, j) && word.charAt(index) == board[i][j] && marked[i][j]) {
-            return true;
-        }
-
-        marked[i][j] = true;
-
-        for (int[] dir : DIRS) {
-            int x = i + dir[0];
-            int y = i + dir[1];
-
-            if (dfs(x, y, word, index + 1)) {
-                return true;
-            }
-        }
-
-        marked[i][j] = false;
-        return false;
-    }
-
-    private boolean check(int x, int y) {
-        return x >= 0 && x < rs && y >= 0 && y < cs;
-    }
-}
-public class Solution {
     private int[] indexArray;
     private int[] countArray;  // the actual return array
     private int[] helper;      // helpe with merge sorting indices 
