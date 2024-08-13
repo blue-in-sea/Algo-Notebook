@@ -1,15 +1,23 @@
-public class AddTwoNumbers {
-
-    static class ListNode {
-        int val;
-        ListNode next;
-        public ListNode(int val) {
-            this.val = val;
-        }
-    }
-
-    public static ListNode addTwoNumbers(ListNode a, ListNode b) {
-        ListNode dummy = new ListNode(0); // Create a dummy head to construct the result list
+/**
+ * 2. Add Two Numbers
+ * You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse 
+ * order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.
+ *
+ * You may assume the two numbers do not contain any leading zero, except the number 0 itself.
+ *
+ * Input: l1 = [2,4,3], l2 = [5,6,4]
+ * Output: [7,0,8]
+ * Explanation: 342 + 465 = 807
+ *
+ * Input: l1 = [0], l2 = [0]
+ * Output: [0]
+ *
+ * Input: l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]
+ * Output: [8,9,9,9,0,0,0,1]
+ */
+class Solution {
+    public ListNode addTwoNumbers(ListNode a, ListNode b) {
+        ListNode dummy = new ListNode(0); 
         ListNode cur = dummy;
 
         int sum = 0;
@@ -35,23 +43,14 @@ public class AddTwoNumbers {
 
         return dummy.next;
     }
-
-    public static void main(String[] args) {
-        ListNode a = new ListNode(2);
-        a.next = new ListNode(4);
-        a.next.next = new ListNode(3);
-
-        ListNode b = new ListNode(5);
-        b.next = new ListNode(6);
-        b.next.next = new ListNode(4);
-
-        printLinkedList(addTwoNumbers(a, b));
-
-    }
-
-    private static void printLinkedList(ListNode head) {
-        for (ListNode cur = head; cur != null; cur = cur.next) {
-            System.out.println(cur.val);
-        }
-    }
 }
+/**
+ * Definition for singly-linked list.
+ * public class ListNode {
+ *     int val;
+ *     ListNode next;
+ *     ListNode() {}
+ *     ListNode(int val) { this.val = val; }
+ *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
+ * }
+ */
