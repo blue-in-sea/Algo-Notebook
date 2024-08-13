@@ -1,15 +1,19 @@
 /**
- * 86. Partition List
- * Given the head of a linked list and a value x, partition it such that all nodes less than x come before nodes 
- * greater than or equal to x. 
+ * 143. Reorder List
+ * You are given the head of a singly linked-list. The list can be represented as:
  *
- * You should preserve the original relative order of the nodes in each of the two partitions.
+ * L0 → L1 → … → Ln - 1 → Ln
+ * Reorder the list to be on the following form:
  *
- * Input: head = [1,4,3,2,5,2], x = 3
- * Output: [1,2,2,4,3,5]
+ * L0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → …
+ * You may not modify the values in the list's nodes. Only nodes themselves may be changed.
  *
- * Input: head = [2,1], x = 2
- * Output: [1,2]
+ * Input: head = [1,2,3,4]
+ * Output: [1,4,2,3]
+ *
+ *
+ * Input: head = [1,2,3,4,5]
+ * Output: [1,5,2,4,3]
  */
 class Solution {
     // Time: O(n) There are three steps here. Each takes O(n)
