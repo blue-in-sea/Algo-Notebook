@@ -9,18 +9,20 @@
  * }
  */
 class Solution {
+    // Time: O(n) There are three steps here. Each takes O(n)
+    // Space: O(1)
     public ListNode reorderList(ListNode head) {
         if (head == null || head.next == null) {
             return head;
         }
-        // 1. find the middle node
+        // 1. find the middle node - O(n)
         ListNode mid = findMiddle(head);
         ListNode one = head;
         ListNode two = mid.next;
         // de-link the second half from the list
         mid.next = null;
-        // 2. reverse the second half
-        // 3. merge the two havles
+        // 2. reverse the second half - O(n/2)
+        // 3. merge the two havles - O(n/2)
         return merge(one, reverse(two));
     }
 
