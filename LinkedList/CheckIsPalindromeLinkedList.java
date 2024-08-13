@@ -1,24 +1,17 @@
 /**
- * This soln would destroy the original structure of the linked list.
- * If you do not want to destroy the structure, you can reserve the second part back.
- */
-
-/**
- * Definition for ListNode
- * public class ListNode {
- *     int key;
- *     ListNode next;
- *     ListNode(int key) {
- *         this.key = key;
- *         next = null;
- *     }
- * }
+ * 234. Palindrome Linked List
+ * Given the head of a singly linked list, return true if it is a 
+ * palindrome or false otherwise.
+ *
+ * Input: head = [1,2,2,1]
+ * Output: true
+ *
+ *
+ * Input: head = [1,2]
+ * Output: false
  */
 public class CheckIsPalindromeLinkedList {
-  /**
-   * @param head a ListNode
-   * @return a boolean
-   */
+  // Time: O(n), Space: O(1)
   public boolean isPalindrome(ListNode head) {
     if (head == null || head.next == null) {
       return true;
@@ -56,3 +49,14 @@ public class CheckIsPalindromeLinkedList {
     return prev;                    // prev is the new head,  
   }                                 //(exit while)head is null
 }
+/**
+ * Definition for ListNode
+ * public class ListNode {
+ *     int key;
+ *     ListNode next;
+ *     ListNode(int key) {
+ *         this.key = key;
+ *         next = null;
+ *     }
+ * }
+ */
