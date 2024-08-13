@@ -12,7 +12,7 @@
  * Output: [1,2]
  */
 class Solution {
-    // 
+    // Time: O(n), Space: O(1)
     public ListNode partition(ListNode head, int x) {
         // corner case 
         if (head == null || head.next == null) {
