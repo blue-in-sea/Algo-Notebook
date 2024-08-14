@@ -11,6 +11,9 @@
  * Requirements: No additional memory, time complexity = O(n ^ 2).
  */
 public class SortWith2Stacks {
+  // Selection Sort
+  // * s2 -> buffer, select min each time from s1, add to s2
+  // * return to s1 
   // Time: O(n^2), No extra space created
   public void sort(LinkedList<Integer> s1) {
     if(s1 == null || s1.size() <= 1) {
