@@ -31,3 +31,11 @@ static class RandomGenerator {
 		return -1;
 	}
 }
+
+public static void main(String[] args) {
+	RandomGenerator rg = new RandomGenerator(3);
+	System.out.println(rg.generate()); 
+	System.out.println(rg.generate()); 
+	System.out.println(rg.generate()); 
+	System.out.println(rg.generate()); 
+}
