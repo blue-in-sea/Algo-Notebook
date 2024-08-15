@@ -9,6 +9,7 @@
  * top() - return the top element without remove it, if the stack is empty, return -1
  * min() - return the current min value in the stack.
  */
+// Time: O(1) for all APIs, O(n) for maintain additional minStack
 public class StackWithMin {
   private Deque<Integer> stack;
   private Deque<Integer> minStack;
@@ -54,3 +55,13 @@ public class StackWithMin {
     return stack.peekFirst();
   }
 }
+
+// push() 
+// s1 [4, 1, 2, 3]
+// if s1.peek < min.peek -> push to min
+// minS [1, 2, 3]
+
+// min() -> 1
+
+// pop() maintain both stacks in-sync
+// if s1.peek == min.peek -> pop both 
