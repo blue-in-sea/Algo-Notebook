@@ -21,28 +21,28 @@
  */
 class ConstructAWordUsingDice {
     public boolean combo(Character[][] dice, String word) {
-        List<Set<Character>> words = new ArrayList<>();
+        List<Set<Character>> dict = new ArrayList<>();
         for (Character[] d : dice) {
             Set<Character> curr = new HashSet<>(Arrays.asList(d));
-            words.add(curr);
+            dict.add(curr);
         }
 
         Set<Integer> visited = new HashSet<>();
         char[] letter = word.toCharArray();
-        return helper(0, visited, letter, words);
+        return helper(0, visited, letter, dict);
     }
 
-    private boolean helper(int i, Set<Integer> visited, char[] word, List<Set<Character>> words) {
+    private boolean helper(int i, Set<Integer> visited, char[] word, List<Set<Character>> dict) {
         if (visited.size() == word.length)
             return true;
 
-        for (int k = 0; k < words.size(); k++) {
-            Set<Character> curr = words.get(k);
+        for (int k = 0; k < dict.size(); k++) {
+            Set<Character> curr = dict.get(k);
             if (visited.contains(k)) continue;
 
             if (curr.contains(word[i])) {
                 visited.add(k);
-                if (helper(i + 1, visited, word, words)) return true;
+                if (helper(i + 1, visited, word, dict)) return true;
                 visited.remove(k);
             }
         }
