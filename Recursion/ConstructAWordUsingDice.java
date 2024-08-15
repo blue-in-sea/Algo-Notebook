@@ -32,7 +32,6 @@ class ConstructAWordUsingDice {
         return helper(0, visited, letter, words);
     }
 
-
     private boolean helper(int i, Set<Integer> visited, char[] word, List<Set<Character>> words) {
         if (visited.size() == word.length)
             return true;
