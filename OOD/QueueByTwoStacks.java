@@ -1,3 +1,5 @@
+// Stack LIFO(Last In First Out) 
+// Queue FIFO(First In Last Out)
 public class QueueByTwoStacks {
   private Deque<Integer> s1;  // in
   private Deque<Integer> s2;  // out
@@ -37,3 +39,12 @@ public class QueueByTwoStacks {
     }
   }
 }
+
+
+// push 1, 2, 3
+// s1 [3, 2, 1]
+// s2[]
+
+// peek -> 1
+// s1 []
+// s2 [1, 2, 3]
