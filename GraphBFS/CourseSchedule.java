@@ -80,6 +80,7 @@ public class CourseSchedule {
     return map;
   }
 
+  // ========================================================================
   // Approach 2: 裸拓扑排序
   public boolean canFinish(int numCourses, int[][] prerequisites) {
     List[] edges = new ArrayList[numCourses];
