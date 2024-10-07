@@ -56,13 +56,13 @@ class BinaryTreeMaximumPathSum {
     // ****************************************************************
 
     // Laicode version: 139. Maximum Path Sum Binary Tree II
-    
+    // Given a binary tree in which each node contains an integer number. 
+    // Find the maximum possible sum from any node to any node (the start node and the end node can be the same).
     public int maxPathSum(TreeNode root) {
         int[] max = new int[] { Integer.MIN_VALUE };
         dfs(root, max);
         return max[0];
     }
-
     // return 以 root 为顶点直上直下的 path 中最大的一条 path 的 path sum
     private int dfs(TreeNode root, int[] max) {
         if (root == null) {
