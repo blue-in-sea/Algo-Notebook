@@ -1,12 +1,6 @@
 /**
- * public class TreeNode {
- *   public int key;
- *   public TreeNode left;
- *   public TreeNode right;
- *   public TreeNode(int key) {
- *     this.key = key;
- *   }
- * }
+ * 54. Is Binary Search Tree Or Not
+ * Determine if a given binary tree is binary search tree.There should no be duplicate keys in binary search tree.
  */
 public class isBST {
   // Time: O(N)
@@ -25,3 +19,14 @@ public class isBST {
     return checkBST(root.left, min, root.key - 1) && checkBST(root.right, root.key + 1, max);
   }
 }
+
+/**
+ * public class TreeNode {
+ *   public int key;
+ *   public TreeNode left;
+ *   public TreeNode right;
+ *   public TreeNode(int key) {
+ *     this.key = key;
+ *   }
+ * }
+ */
