@@ -40,6 +40,9 @@
  * }
  */
 public class Solution {
+  // 1. check if the same tree, or 
+  // 2. check if identical tree
+  
   public boolean isTweakedIdentical(TreeNode one, TreeNode two) {
     if (one == null && two == null) {
       return true;
