@@ -1,5 +1,5 @@
 /**
- * 124. Binary Tree Maximum Path Sum
+ * 124. Binary Tree Maximum Path Sum (from any Node to any Node)
  * A path in a binary tree is a sequence of nodes where each pair of adjacent nodes in the sequence has an edge
  * connecting them. A node can only appear in the sequence at most once.
  *
@@ -49,5 +49,34 @@ class BinaryTreeMaximumPathSum {
 
         // return the max sum for a path starting at the root of subtree
         return Math.max(gainFromLeft + root.val, gainFromRight + root.val);
+    }
+
+
+
+    // ****************************************************************
+
+    // Laicode version: 139. Maximum Path Sum Binary Tree II
+    
+    public int maxPathSum(TreeNode root) {
+        int[] max = new int[] { Integer.MIN_VALUE };
+        dfs(root, max);
+        return max[0];
+    }
+
+    // return 以 root 为顶点直上直下的 path 中最大的一条 path 的 path sum
+    private int dfs(TreeNode root, int[] max) {
+        if (root == null) {
+            return 0;
+        }
+
+        int left = dfs(root.left, max);
+        int right = dfs(root.right, max);
+
+        left = left < 0 ? 0 : left;
+        right = right < 0 ? 0 : right;
+
+        int cur = root.key + left + right;
+        max[0] = Math.max(max[0], cur);
+        return root.key + Math.max(left, right);
     }
 }
