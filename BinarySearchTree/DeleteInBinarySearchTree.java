@@ -31,7 +31,7 @@
  *
  * 3. If key > root.val then 去右子树
  */
-class DeleteNodeInBinarySearchTree {
+public class DeleteInBinarySearchTree {
       // Time: O(logn) where search/delete/update in a balanced BST
       // Time: O(h) where search/delete/update in a skewed BST
       // Space: O(1)
