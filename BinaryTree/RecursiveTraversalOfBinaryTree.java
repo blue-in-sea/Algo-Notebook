@@ -11,7 +11,7 @@
  * In-order traversal is [1, 3, 4, 5, 8, 11]
  * Post-order traversal is [1, 4, 3, 11, 8, 5]
  */
-public class DFSBinaryTree {
+public class RecursiveTraversalOfBinaryTree {
     public List<Integer> preOrder(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         helper(root, res);
