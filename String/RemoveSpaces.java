@@ -1,3 +1,11 @@
+/**
+ * 281. Remove Spaces
+ * Given a string, remove all leading/trailing/duplicated empty spaces.
+ * The given string is not null.
+ *
+ * “  a” --> “a”
+ * “   I     love MTV ” --> “I love MTV”
+ */
 public class RemoveSpaces {
   public String removeSpaces(String input) {
     if (input.isEmpty()) {
