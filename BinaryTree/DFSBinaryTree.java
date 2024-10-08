@@ -1,19 +1,17 @@
 /**
- * 655. Pre-order Traversal Of Binary Tree (recursive)
- *
+ * 654. Pre-order, In-order, Post-order Traversal Of Binary Tree (recursive)
+ * Implement a recursive, in-order traversal of a given binary tree, return the list of keys of each node in the tree
  *         5
- *
  *       /    \
- *
  *     3        8
- *
  *   /   \        \
- *
  * 1      4        11
  *
  * Pre-order traversal is [5, 3, 1, 4, 8, 11]
+ * In-order traversal is [1, 3, 4, 5, 8, 11]
+ * Post-order traversal is [1, 4, 3, 11, 8, 5]
  */
-public class PreOrder {
+public class DFSBinaryTree {
     public List<Integer> preOrder(TreeNode root) {
         List<Integer> res = new ArrayList<>();
         helper(root, res);
@@ -23,9 +21,11 @@ public class PreOrder {
         if (root == null) {
             return;
         }
-        res.add(root.key);
+        res.add(root.key);         
         helper(root.left, res);
+        // In-order
         helper(root.right, res);
+        // Post-order
     }
 }
 /**
