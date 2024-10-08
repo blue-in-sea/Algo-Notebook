@@ -3,8 +3,6 @@
  * Get the list of keys in a given binary search tree in a given range[min, max] in ascending order, both min and max
  * are inclusive.
  *
- * Examples
- *
  *         5
  *       /    \
  *     3        8
@@ -16,9 +14,7 @@
  * Corner Cases
  * What if there are no keys in the given range? Return an empty list in this case.
  * How is the binary tree represented?
- *
  * We use the level order traversal sequence with a special symbol "#" denoting the null node.
- *
  * The sequence [1, 2, 3, #, #, 4] represents the following binary tree:
  *
  *     1
