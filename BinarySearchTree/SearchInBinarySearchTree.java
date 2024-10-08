@@ -5,8 +5,8 @@
  *
  * No duplicate keys in the binary search tree
  */
-
 public class SearchInBinarySearchTree {
+    // Time: O(logn), Space: O(1)
     public TreeNode search(TreeNode root, int key) {
         if (root == null) {
             return root;
