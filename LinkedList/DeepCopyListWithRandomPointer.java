@@ -1,8 +1,3 @@
-/**
- * Deep Copy Linked List With Random Pointer
- * Each of the nodes in the linked list has another pointer pointing to a random node in the list or null. 
- * Make a deep copy of the original list.
- */
 public class DeepCopyListWithRandomPointer {
     // HashMap: <K: node, V: node_copy> where the new linked list will be chained on node_copy
     // Time: O(n), Space: O(n)
@@ -40,7 +35,7 @@ public class DeepCopyListWithRandomPointer {
  *     int val;
  *     Node next;
  *     Node random;
- *
+ 
  *     public Node(int val) {
  *         this.val = val;
  *         // this.next = null;
