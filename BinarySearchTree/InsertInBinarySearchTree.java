@@ -6,7 +6,7 @@
  * 1) There are no duplicate keys in the binary search tree
  * 2) If the key is already existed in the binary search tree, you do not need to do anything
  */
-public class InsertBinarySearchTree {
+public class InsertInBinarySearchTree {
   // Time: O(logn) where search/delete/update in a balanced BST
   // Time: O(h) where search/delete/update in a skewed BST
 
