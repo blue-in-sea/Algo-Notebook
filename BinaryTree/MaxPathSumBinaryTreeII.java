@@ -21,7 +21,7 @@
  * Output: 42
  * Explanation: The optimal path is 15 -> 20 -> 7 with a path sum of 15 + 20 + 7 = 42.
  */
-class BinaryTreeMaximumPathSum {
+class MaxPathSumBinaryTreeII {
     private int maxSum;
     public int maxPathSum(TreeNode root) {
         maxSum = Integer.MIN_VALUE;
