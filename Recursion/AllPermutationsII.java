@@ -1,5 +1,5 @@
 /**
- * 47. Permutations II
+ * 47. Permutations II (Dups)
  * Given a collection of numbers that might contain duplicates, return all possible unique permutations in any order.
  *
  * Input: nums = [1,1,2]
