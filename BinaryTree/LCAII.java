@@ -1,5 +1,5 @@
 /**
- * 127. Lowest Common Ancestor II
+ * LaiCode 127. Lowest Common Ancestor II
  * Given two nodes in a binary tree (with parent pointer available), find their lowest common ancestor.
  * There is parent pointer for the nodes in the binary tree
  *
