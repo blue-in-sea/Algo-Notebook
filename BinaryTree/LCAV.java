@@ -16,16 +16,6 @@
  * The lowest common ancestor of 2 and 14 is 5.
  * The lowest common ancestor of 2 and 9 is 9.
  */
-/**
- * public class KnaryTreeNode {
- *     int key;
- *     List<KnaryTreeNode> children;
- *     public KnaryTreeNode(int key) {
- *         this.key = key;
- *         this.children = new ArrayList<>();
- *     }
- * }
- */
 public class LCAV {
     public KnaryTreeNode lowestCommonAncestor(KnaryTreeNode root, KnaryTreeNode a, KnaryTreeNode b) {
         // assume root is not null, and two nodes are guaranteed to be in tree
@@ -52,3 +42,14 @@ public class LCAV {
 // case 1: if all of them are null, return null
 // case 2: if only one of them is not null, return non-null
 // case 3: if more than one of them are not null, return root
+
+/**
+ * public class KnaryTreeNode {
+ *     int key;
+ *     List<KnaryTreeNode> children;
+ *     public KnaryTreeNode(int key) {
+ *         this.key = key;
+ *         this.children = new ArrayList<>();
+ *     }
+ * }
+ */
