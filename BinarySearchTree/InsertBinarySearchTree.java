@@ -20,17 +20,18 @@ public class InsertBinarySearchTree {
     } else if (key > root.key) {
       root.right = insert(root.right, key);
     }
+    
     return root;
   }
   
   // Method 2: Iterative
   public TreeNode insert(TreeNode root, int key) {
-    // corner case: empty tree
     if (root == null) {
       return new TreeNode(key);
     }
+    
     TreeNode cur = root;
-    while (key != cur.key) { // If the key is already existed
+    while (key != cur.key) {
       if (key < cur.key) {
         if (cur.left == null) {
           cur.left = new TreeNode(key);
@@ -43,6 +44,7 @@ public class InsertBinarySearchTree {
         cur = cur.right;
       }
     }
+    
     return root;
   }
 }
