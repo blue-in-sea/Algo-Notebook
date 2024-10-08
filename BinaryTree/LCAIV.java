@@ -23,11 +23,10 @@
  */
 public class LCAIV {
     public TreeNode lowestCommonAncestor(TreeNode root, List<TreeNode> nodes) {
-        // Assumption: K >=2, No parent pointers given, and K nodes are 
-        //             guaranteed to be in the binary tree
         Set<TreeNode> set = new HashSet<>(nodes);
         return LCA(root, set);
     }
+    
     private TreeNode LCA(TreeNode root, Set<TreeNode> set) {
         // 1. What should you do on current layer?
         // base case: if root is null (or) root is one of the nodes in set 
