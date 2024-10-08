@@ -17,7 +17,7 @@
  *
  * The maximum path sum is 11 + 14 = 25
  */
-public class MaximumPathSumBinaryTreeIII {
+public class MaxPathSumBinaryTreeIII {
     // Mathod 1: recursive
     // Time: O(H) where O(log N) for average case, O(N) worst case
     // Space: O(H) 
