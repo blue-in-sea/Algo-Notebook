@@ -6,25 +6,11 @@
  * 1) There are no duplicate keys in the binary search tree
  * 2) If the key is already existed in the binary search tree, you do not need to do anything
  */
-
-/**
- * Definition of TreeNode:
- * public class TreeNode {
- *     public int key;
- *     public TreeNode left, right;
- *     public TreeNode(int key) {
- *         this.key = key;
- *         this.left = this.right = null;
- *     }
- * }
- */
-
+// Time: O(H) where O(log N) for average case BBST, O(N) worst case
+// Space: O(H) for recursion stack calls
 public class InsertBinarySearchTree {
-  /* *
-   * Mathod 1: Recurison
-   * Time: O(H) where O(log N) for average case, O(N) worst case
-   * Space: O(H) for recursion stack calls
-   */
+
+  // Method 1: Recurison
   public TreeNode insert(TreeNode root, int key) {
     if (root == null) {
       return new TreeNode(key);
@@ -37,11 +23,7 @@ public class InsertBinarySearchTree {
     return root;
   }
   
-  /**
-   * Mathod 2: Iterative 
-   * Time: O(H) where O(log N) for average case, O(N) worst case
-   * Space: O(1) since it's a constant space solution
-   */
+  // Method 2: Iterative
   public TreeNode insert(TreeNode root, int key) {
     // corner case: empty tree
     if (root == null) {
@@ -64,3 +46,14 @@ public class InsertBinarySearchTree {
     return root;
   }
 }
+/**
+ * Definition of TreeNode:
+ * public class TreeNode {
+ *     public int key;
+ *     public TreeNode left, right;
+ *     public TreeNode(int key) {
+ *         this.key = key;
+ *         this.left = this.right = null;
+ *     }
+ * }
+ */
