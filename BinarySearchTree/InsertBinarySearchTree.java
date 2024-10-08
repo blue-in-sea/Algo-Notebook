@@ -6,9 +6,9 @@
  * 1) There are no duplicate keys in the binary search tree
  * 2) If the key is already existed in the binary search tree, you do not need to do anything
  */
-// Time: O(H) where O(log N) for average case BBST, O(N) worst case
-// Space: O(H) for recursion stack calls
 public class InsertBinarySearchTree {
+  // Time: O(logn) where search/delete/update in a balanced BST
+  // Time: O(h) where search/delete/update in a skewed BST
 
   // Method 1: Recurison
   public TreeNode insert(TreeNode root, int key) {
