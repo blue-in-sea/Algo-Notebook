@@ -12,37 +12,37 @@
  */
 
 public class BinaryTreeLevelOrderTraversal {
-    /**
-     * @param root: A Tree
-     * @return: Level order a list of lists of integer
-     */
+    // Time: O(n)
+    // Space: O(n) for size of queue/res list 
     public List<List<Integer>> levelOrder(TreeNode root) {
         List<List<Integer>> res = new ArrayList<>();
         
-        if (root == null) {
-            return res;
-        }
-        
-        Queue<TreeNode> queue = new LinkedList<>();
+        if (root == null) return res;
+
+        Queue<TreeNode> queue = new ArrayDeque<>();
         queue.offer(root);
-        
+
         while (!queue.isEmpty()) {
             List<Integer> level = new ArrayList<>();
+
             int size = queue.size();
             for (int i = 0; i < size; i++) {
-                TreeNode cur = queue.poll();
-                level.add(cur.val);
-                
-                if (cur.left != null) {
-                    queue.offer(cur.left);
+                TreeNode curr = queue.poll();
+
+                level.add(curr.val);
+
+                if (curr.left != null) {
+                    queue.offer(curr.left);
                 }
-                if (cur.right != null) {
-                    queue.offer(cur.right);
+
+                if (curr.right != null) {
+                    queue.offer(curr.right);
                 }
             }
+
             res.add(level);
         }
-        
+
         return res;
     }
 }
