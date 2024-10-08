@@ -14,7 +14,6 @@
  * firstNonRepeating()
  * a   a   a   b   b   b   null
  */
-
 public class FirstNonRepeatingCharacterInStream {
   // each node is a double linked list node
   // and it contains one dinstict character
