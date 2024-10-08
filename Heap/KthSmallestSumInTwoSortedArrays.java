@@ -1,51 +1,49 @@
 /**
- * Data Str. min heap
- * 1.0 K Smallest In Unsorted Array 
- * 1.1 Kth Smallest Number In Sorted Matrix
- * 1.2 Kth Smallest Sum In Two Sorted Arrays
+ * 202. Kth Smallest In Two Sorted Arrays (Hard)
+ * Given two sorted arrays of integers, find the Kth smallest number.
+ *
+ * The two given arrays are not null and at least one of them is not empty
+ * K >= 1, K <= total lengths of the two sorted arrays
+ *
+ * A = {1, 4, 6}, B = {2, 3}, the 3rd smallest number is 3.
+ * A = {1, 2, 3, 4}, B = {}, the 2nd smallest number is 2.
  */
 public class KthSmallestSumInTwoSortedArrays {
-    class Cell {
-    public int x, y, sum;
-    public Cell(int x, int y, int sum) {
-      this.x = x;
-      this.y = y;
-      this.sum = sum;
-    }
-  }
-  
-  class CellComparator implements Comparator<Cell> {
-    @Override 
-    public int compare(Cell c1, Cell c2) {
-      return c1.sum - c2.sum;  // mim heap
-    }
-  }
-  public int kthSum(int[] A, int[] B, int k) {
-    // assume The two given arrays are not null 
-    // and at least one of them is not empty
-    // 1 <= K <= total lengths of the two sorted arrays
-    PriorityQueue<Cell> minHeap = new PriorityQueue<Cell>(k, new CellComparator());
-    boolean[][] visited = new boolean[A.length][B.length];  
-    // if don't use vistied, when meet the 6th-cell, the 5th-cell is doubtly generated into heap, pattern repeats, see note
-
-    minHeap.offer(new Cell(0, 0, A[0] + B[0]));
-    visited[0][0] = true;  
-
-    for (int i = 0; i < k - 1; i++) {
-      Cell c = minHeap.poll();
-      // the next cell will be insert back to minHeap only if
-      // 1. it is still in the boundary
-      // 2. it has never been generated before, since no cell allows to be generated twice
-      if (c.x + 1 < A.length && !visited[c.x + 1][c.y]) {
-        minHeap.offer(new Cell(c.x + 1, c.y, A[c.x + 1] + B[c.y]));
-        visited[c.x + 1][c.y] = true;
-      }
-      if (c.y + 1 < B.length && !visited[c.x][c.y + 1]) {
-        minHeap.offer(new Cell(c.x, c.y + 1, A[c.x] + B[c.y + 1]));
-        visited[c.x][c.y + 1] = true;
-      } 
+    public int kth(int[] a, int[] b, int k) {
+        // Assume a, b is not null, and at leaste one of them
+        // is not empty, k <= a.len + b.len, k >= 1
+        return kth(a, 0, b, 0, k);
     }
 
-    return minHeap.peek().sum;
-  }
+    // search the subarray of a starting from index aLeft, 
+    // and the subarray of b starting from index aRight
+    private int kth(int[] a, int aleft, int[] b, int bleft, int k) {
+        // there base cases:
+        // 1. we already eliminate all the ele in a
+        // 2. we already eliminate all the ele in b
+        // 3. when k is reduced to 1, don't miss this base case
+        // (k >= 2) for binary search to be worked 
+        if (aleft >= a.length) {
+            return b[bleft + k - 1];
+        }
+        if (bleft >= b.length) {
+            return a[aleft + k - 1];
+        }
+        if (k == 1) {
+            return Math.min(a[aleft], b[bleft]);
+        }
+        // we compare the k/2-th element in a's subarray
+        // and the k/2-th element in b's subarray
+        // to determine which k/2 partition can be surely included
+        // in the smallest k elements
+        int amid = aleft + k/2 - 1;  // array index from 0
+        int bmid = bleft + k/2 - 1;  // array index from 0 
+        int aval = amid >= a.length ? Integer.MAX_VALUE : a[amid];
+        int bval = bmid >= b.length ? Integer.MAX_VALUE : b[bmid];
+        if (aval <= bval) {
+            return kth(a, amid + 1, b, bleft, k - k / 2);
+        } else {
+            return kth(a, aleft, b, bmid + 1, k - k / 2);
+        }
+    }
 }
