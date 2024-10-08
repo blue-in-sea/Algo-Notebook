@@ -21,9 +21,13 @@ public class 2Sum {
         int l = 0, r = array.length - 1;
         while (l < r) {
             int sum = array[l] + array[r];
-            if (sum == target) return true;
-            else if (sum < target) l++;
-            else r--;
+            if (sum == target) {
+                return true;
+            } else if (sum < target) {
+                l++;
+            } else {
+                r--;
+            }
         }
         return false;
     }
