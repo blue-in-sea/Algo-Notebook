@@ -49,7 +49,6 @@ public class InsertInBinarySearchTree {
   }
 }
 /**
- * Definition of TreeNode:
  * public class TreeNode {
  *     public int key;
  *     public TreeNode left, right;
