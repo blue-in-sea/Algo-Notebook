@@ -20,7 +20,6 @@
  *
  * note: duplicate combination is not allowed.
  */
-
 public class FactorCombinations {
     public List<List<Integer>> combinations(int target) {
         if (target == 1) return new ArrayList<>();
