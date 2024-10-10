@@ -1,6 +1,7 @@
 public class EditDistance {
     /**
-     * Given two strings of alphanumeric characters, determine the minimum number of Replace, Delete, and Insert operations needed to transform one string into the other.
+     * Given two strings of alphanumeric characters, determine the minimum number of Replace, Delete, and Insert 
+     * operations needed to transform one string into the other.
      *
      * Assumptions: Both strings are not null
      * Examples: string one: “sigh”, string two : “asith”.
