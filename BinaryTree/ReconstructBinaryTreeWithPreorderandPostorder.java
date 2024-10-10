@@ -1,18 +1,36 @@
-
-
+/**
+ * 889. Construct Binary Tree from Preorder and Postorder Traversal
+ * Given two integer arrays, preorder and postorder where preorder is the preorder traversal of a binary tree of
+ * distinct values and postorder is the postorder traversal of the same tree, reconstruct and return the binary tree.
+ *
+ *         1
+ *       /   \
+ *     2       3
+ *   /  \     /  \
+ *  4    5   6    7
+ *
+ * Input: preorder = [1,2,4,5,3,6,7], postorder = [4,5,2,6,7,3,1]
+ * Output: [1,2,3,4,5,6,7]
+ *
+ * Input: preorder = [1], postorder = [1]
+ * Output: [1]
+ */
+/**
+ * Algo
+ *     1. the root is the 1st ele in preorder
+ *     2. find the next element from preorder, then its index from postorder map.
+ *     3. For left tree , elements will be from start up to the index of next element from postorder array
+ *     4. For right tree, elements will be from next index of the above element found up to end-1,
+ *        because we already added root element into the tree, which is last in postorder array.
+ *
+ *                        x
+ *     preorder =  [1,   [2,]   4,5,3,6,7]
+ *     postorder = [4,5, [2,]     6,7,3,   1]
+ *
+ *     Note: in preOrder, root always be the first ele
+ *           in postOrder, root always be the last ele
+ */
 class ReconstructBinaryTreeWithPreorderandPostorder {
-    // 1. the root is the 1st ele in preorder
-    // 2. find the next element from preorder, then its index from postorder map.
-    // 3. For left tree , elements will be from start up to the index of next element from postorder array
-    // 4. For right tree, elements will be from next index of the above element found up to end-1, 
-    //    because we already added root element into the tree, which is last in postorder array.
-  
-    //                    x
-    // preorder =  [1,   [2,]   4,5,3,6,7]
-    // postorder = [4,5, [2,]     6,7,3,1]
-
-    // Note: in preOrder, root always be the first ele
-    //       in postOrder, root always be the last ele
 
     int preIndex = 0;
 
