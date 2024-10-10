@@ -1,5 +1,3 @@
-package DP;
-
 /**
  * 62. Unique Paths
  * There is a robot on an m x n grid. The robot is initially located at the top-left corner (i.e., grid[0][0]). The
@@ -27,11 +25,9 @@ package DP;
  * 2. Down -> Down -> Right
  * 3. Down -> Right -> Down
  */
-
 class UniquePaths {
     // Time: O(NM)
     // Space: O(NM)
-
     public int uniquePaths(int m, int n) {
         int[][] d = new int[m][n];
 
@@ -45,6 +41,4 @@ class UniquePaths {
         }
         return d[m - 1][n - 1];
     }
-
-    
 }
