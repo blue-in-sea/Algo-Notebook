@@ -1,5 +1,4 @@
 /**
- * Definition for a binary tree node.
  * public class TreeNode {
  *     TreeNode left;
  *     TreeNode right;  
@@ -13,7 +12,6 @@
  * }
  * https://leetcode.com/problems/find-leaves-of-binary-tree
  */
-
 class FindLeavesOfBinaryTree {
     // Time: O(N) we traverse the entire input tree once
     // Space: O(N) number of recursive call is bounded by the height of the tree.
@@ -30,7 +28,6 @@ class FindLeavesOfBinaryTree {
         }
 
         int level = Math.max(dfs(root.left, res), dfs(root.right, res)) + 1;
-
         if (res.size() == level) {
             // go to the next level
             res.add(new ArrayList<>());
