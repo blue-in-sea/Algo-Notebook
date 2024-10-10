@@ -1,12 +1,20 @@
 /**
- * public class TreeNode {
- *   public int key;
- *   public TreeNode left;
- *   public TreeNode right;
- *   public TreeNode(int key) {
- *     this.key = key;
- *   }
- * }
+ * 675. Maximum Binary Tree
+ * Given an integer array, build a binary tree following the rules below:
+ *
+ * 1. The root node is the maximum value in the array.
+ * 2. The left sub-tree contains all values on the left of the root value in the given array.
+ * 3. The right sub-tree contains all values on the right of the root value in the given array.
+ * 4. All tree nodes follow the rules above.
+ *
+ * Input: [2,1,6,3]
+ * Output: 
+ *
+ *           6
+ *        /     \
+ *      2        3
+ *       \
+ *        1
  */
 public class MaxTree {
   public TreeNode constructMaximumBinaryTree(int[] A) {
@@ -36,3 +44,13 @@ public class MaxTree {
     return stack.peek().left;
   }
 }
+/**
+ * public class TreeNode {
+ *   public int key;
+ *   public TreeNode left;
+ *   public TreeNode right;
+ *   public TreeNode(int key) {
+ *     this.key = key;
+ *   }
+ * }
+ */
