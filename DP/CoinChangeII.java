@@ -45,6 +45,42 @@ class CoinChangeII {
     //         dp[j] += dp[j - coins[i]]
 
     // Time: O(n), Space: O(1)
+    class Solution {
+    // Method 1: BottomUp DP (Interview!!)
+    // dp[i][j] stores the number of combination of coins used to make amount j from conins[i...n-1]
+
+    // Induction Rule
+    // dp[i][j] = dp[i + 1][j] + dp[i][j - coins[i]]
+    // Base Case
+    // dp[n][0] = 1 since we can always make up the amount 0 by not selecting any coins. 
+
+    // 总数背包
+    // dp[j] stores the number of combination of coins used to make amount j 
+    // dp[0] = 1;
+    // dp[j] = dp[j] + dp[j - coins[i]]
+    //                   用掉 coins[i] 的情况
+
+    // 滚动数组
+    // for i from [0, n)
+    //     for j from [0, amount]
+    //         dp[j] += dp[j - coins[i]]
+    public int change(int amount, int[] coins) {
+        int n = coins.length;
+        int[] dp = new int[amount + 1];
+        
+        dp[0] = 1;
+        for (int i = 0; i < coins.length; i++) {
+            for (int j = 0; j <= amount; j++) {
+                if (j - coins[i] >= 0) {
+                    dp[j] += dp[j - coins[i]];
+                }
+            }
+        }
+
+        return dp[amount];
+    }
+
+    // version 2
     public int change(int amount, int[] coins) {
         int n = coins.length;
         int[] dp = new int[amount + 1];
