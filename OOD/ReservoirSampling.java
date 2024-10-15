@@ -34,6 +34,7 @@ public class ReservoirSampling {
     }
   }
   
+  // O(1) 
   public Integer sample() {
     return sample;
   }
