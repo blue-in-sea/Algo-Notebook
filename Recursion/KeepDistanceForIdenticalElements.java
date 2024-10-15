@@ -37,10 +37,6 @@ public class KeepDistanceForIdenticalElements {
 
         return false;
     }
-
-    // ===========================================
-    // Method 2: used another way to generate all permutations
-
     
     // ===========================================
     // Method 1: used swap swap to generate all permutations
@@ -81,5 +77,30 @@ public class KeepDistanceForIdenticalElements {
         int tmp = arr[a];
         arr[a] = arr[b];
         arr[b] = tmp;
+    }
+    
+    // ===========================================
+    // Method 2: used another way to generate all permutations
+    public int[] keepDistance(int k) {
+        int[] array = new int[2 * k];
+        int[] used = new int[k + 1];
+        return helper2(array, 0, used) ? array : null;
+    }
+
+    private boolean helper2(int[] array, int index, int[] used) {
+        if (index == array.length) {
+            return true;
+        }
+        for (int i = 1; i < used.length; i++) {
+            if (used[i] == 0 || (used[i] == 1 && index > i && array[index - i - 1] == i)) {
+                array[index] = i;
+                used[i]++;
+                if (helper2(array, index + 1, used)) {
+                    return true;
+                }
+                used[i]--;
+            }
+        }
+        return false;
     }
 }
