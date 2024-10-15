@@ -5,7 +5,8 @@
  */
 
 // API: read() - read one number from the flow
-// API: sample() - return at any time the sample, if n values have been read
+// API: sample() - return at any time the sample, if n values have been read, the probability of returning any one of the n values is 1/n, 
+//                 return null(Java) if there is no value read so far
 
 public class ReservoirSampling {
   // how many number has been read so far 
