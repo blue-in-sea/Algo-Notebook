@@ -1,5 +1,12 @@
 
 
+/**
+ * Time: O(M×N) where M is the number of rows and
+ * N is the number of columns.
+ *
+ * Space: worst case O(M×N) in case that the grid map
+ * is filled with lands where DFS goes by M×N deep.
+ */
 class NumberOfIslandsDFS {
     private static final int[][] DIRS = {{-1, 0}, {0, -1}, {1, 0}, {0, 1}};
 
