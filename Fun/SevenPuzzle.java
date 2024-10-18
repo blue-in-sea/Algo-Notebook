@@ -32,6 +32,8 @@
  * 4 5 6 7
  */
 public class SevenPuzzle {
+    // BFS: level order
+    // Find the shortest distance in an unweight graph 
     static class Board {
         public final static int R = 2;
         public final static int C = 4;
