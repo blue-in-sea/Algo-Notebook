@@ -1,4 +1,4 @@
-package DP;/* The knows API is defined in the parent class Relation.
+/* The knows API is defined in the parent class Relation.
       boolean knows(int a, int b); */
 // https://leetcode.com/problems/find-the-celebrity
 
