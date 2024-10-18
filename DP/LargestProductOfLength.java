@@ -11,6 +11,8 @@
  * dictionary = [“abcde”, “abcd”, “ade”, “xy”], the largest product is 5 * 2 = 10 (by choosing “abcde” and “xy”)
  */
 public class LargestProductOfLength {
+    // DP + Bit Mask
+    // Linear Scan 回头看
     public int largestProduct(String[] dict) {
         // Assume the dict is not null and has length >= 2
         // there is no null String in the dict.
