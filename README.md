@@ -166,9 +166,9 @@ return 1. root or 2. non-null side
 
 #### 3) DFS Partition 
 10. [Minimum Partition](https://blog.csdn.net/weixin_43981315/article/details/105569525) - DP [01背包]
-11. [Partition with Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/description/) - DP [01背包]
-12. [Partition with Equal Subset Sum to K](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/)
-13. Split Array with Subset Sum
+11. [Can Partition with Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/description/) - DP [01背包] 
+12. [Can Partition with Equal Subset Sum to K](https://leetcode.com/problems/partition-to-k-equal-sum-subsets/) - DFS [Combination] & Memo
+13. [Split Array with Subset Sum](https://github.com/blue-in-sea/Algo-Notebook/blob/master/DP/SplitArrayWithSubsetSum.java) - HalfSum
 
 #### 4) Boyer-Moore Majority Vote algorithm
 14. [Majority Number I](https://leetcode.com/problems/majority-element/)
