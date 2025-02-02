@@ -16,7 +16,7 @@
  * Note that combinations are unordered, i.e., [1,2] and [2,1] are considered to be the same combination.
  */
 class Combination {
-    // Time: C(N, K) = N! / (N−k)!k!
+    // Time: O(C(N, K) * k) where C(N, K) = N! / (N−k)!k!
     // Space: O(k)
     public List<List<Integer>> combine(int n, int k) {
         List<List<Integer>> result = new ArrayList<>();
