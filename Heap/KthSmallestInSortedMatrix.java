@@ -7,7 +7,7 @@ int[][] matrix = {
 int k = 8; output expect the 8th smallest element is 13.
 */
 
-//         Heap                Binary Search
+//         minHeap             Binary Search
 // T       O((n+k)logn)        O(nlog(max-min))
 // S       O(n)                O(1)
 
