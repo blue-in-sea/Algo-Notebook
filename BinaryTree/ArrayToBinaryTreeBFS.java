@@ -8,8 +8,8 @@ class TreeNode {
 
     TreeNode(int val) {
         this.val = val;
-        this.left = null;
-        this.right = null;
+        // this.left = null;
+        // this.right = null;
     }
 }
 public class ArrayToBinaryTreeBFS {
@@ -46,6 +46,7 @@ public class ArrayToBinaryTreeBFS {
 
         return root;
     }
+    
     // -------------------------------------------------------
     // Helper function to print the tree (in-order traversal)
     public static void inOrderTraversal(TreeNode root) {
