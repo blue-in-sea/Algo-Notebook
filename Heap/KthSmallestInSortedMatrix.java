@@ -8,16 +8,16 @@ int k = 8; output expect the 8th smallest element is 13.
 */
 
 //         minHeap             Binary Search
-// T       O((n+k)logn)        O(nlog(max-min))
-// S       O(n)                O(1)
+// T       O(klogk)            O(nlog(max-min))
+// S       O(n^2 + k)          O(1)
 
 // when K << n^2 -> Heap 
 // when K ~ n^2  -> Binary Search since the complexity does not depends on K
 
 /*
 Method 1: Priority Queue (minHeap)
-Time: O((n+k)logn)
-Space: O(n) 
+Time: O(klogk)
+Space: O(n^2 + k) due to visited + heap size 
 */
 public class KthSmallestInSortedMatrix {
   class Cell {
