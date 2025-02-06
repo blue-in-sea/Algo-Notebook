@@ -1,9 +1,25 @@
+/*
+int[][] matrix = {
+    {1, 5, 9},
+    {10, 11, 13},
+    {12, 13, 15}
+};
+int k = 8; output expect the 8th smallest element is 13.
+*/
+
+//         Heap                Binary Search
+// T       O((n+k)logn)        O(nlog(max-min))
+// S       O(n)                O(1)
+
+// when K << n^2 -> Heap 
+// when K ~ n^2  -> Binary Search since the complexity does not depends on K
+
+/*
+Method 1: Priority Queue (minHeap)
+Time: O((n+k)logn)
+Space: O(n) 
+*/
 public class KthSmallestInSortedMatrix {
-  /**
-   * @param matrix: a matrix of integers
-   * @param k: An integer
-   * @return: the kth smallest number in the matrix
-   */
   class Cell {
     public int x, y, val;
     public Cell(int x, int y, int val) {
@@ -51,5 +67,49 @@ public class KthSmallestInSortedMatrix {
   }
 }
 
-// PriorityQueue<Cell> minHeap = new PriorityQueue<>((x, y) -> x.value - y.value);  // x 小排前面
-// PriorityQueue<Cell> maxHeap = new PriorityQueue<>((x, y) -> y.value - x.value); 
+/*
+Method 2: Binary Search + Cnt Smalle or Equal
+Time: O(nlog(max - min)) or O(nlog(range)) 
+    1. binary search takes log(max - min), where max is the largest ele & min is the smallest ele from the matrix
+    2. cnt element takes O(n)
+Space: O(1) constant time
+*/
+class KthSmallestInSortedMatrixBinarySearch {
+    public int kthSmallest(int[][] matrix, int k) {
+        int n = matrix.length;
+        int l = matrix[0][0];
+        int r = matrix[n - 1][n - 1];
+
+        while (l < r) {
+            int m = l + (r - l) / 2;
+            int cnt = cntLessOrEqual(matrix, m);
+
+            if (cnt < k) {
+                l = m + 1;
+            } else {
+                r = m;
+            }
+        }
+
+        return l;
+    }
+
+    private int cntLessOrEqual(int[][] matrix, int target) {
+        int n = matrix.length;
+        int cnt = 0;
+        int row = 0; 
+        int col = n - 1;
+
+        while (row < n && col >= 0) {
+            if (matrix[row][col] <= target) {
+                cnt += col + 1;
+                row++;
+            } else {
+                col--;
+            }
+        }
+
+        return cnt;
+    }
+}
+
