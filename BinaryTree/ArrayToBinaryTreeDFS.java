@@ -1,12 +1,11 @@
 /**
- * Binary Tree
- *         3
- *       /   \
- *     9       20
- *           /  \
- *         15     7
- *
- * preorder: [3, 9, 20, null, null, 15, 7]
+        1
+       / \
+      2   3
+     / \ / \
+    4  5 6  7
+
+    in-order traversal: 4 2 5 1 6 3 7
  */
 class TreeNode {
     int val;
