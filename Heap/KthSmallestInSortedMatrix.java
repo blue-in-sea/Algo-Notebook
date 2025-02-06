@@ -15,7 +15,7 @@ int k = 8; output expect the 8th smallest element is 13.
 // when K ~ n^2  -> Binary Search since the complexity does not depends on K
 
 /*
-Method 1: Priority Queue (minHeap)
+Method 1: Priority Queue (minHeap) to poll (k-1)th times, where the peak of heap will be kth smallest 
 Time: O(klogk)
 Space: O(n^2 + k) due to visited + heap size 
 */
