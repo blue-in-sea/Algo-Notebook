@@ -36,7 +36,7 @@ Welcome to Iris Algo Notebook
 ### Recursion
 
 
-### [Sorting](https://leetcode.com/problems/sort-an-array/editorial)
+### [Sorting](https://www.programiz.com/dsa/sorting-algorithm)
 
 ```
     Sorting                        Best Case                         Ave Case                            Worset Case - Big O       
