@@ -98,9 +98,11 @@ return Math.max(leftDepth, rightDepth) + 1
 
 * [Reconstruct Binary Tree With Preorder And Inorder](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinaryTree/ReconstructBinaryTreeWithPreorderAndInorder.java)
 * [Reconstruct Binary Tree With Inorder and Postorder](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinaryTree/ReconstructBinaryTreeWithPreorderAndInorder.java)
-* Reconstruct Binary Tree from Preorder and Postorder
-* Reconstruct Binary Tree With LevelOrder
+* [Reconstruct Binary Tree from Preorder and Postorder](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinaryTree/ReconstructBinaryTreeWithPreorderandPostorder.java)
+* [Reconstruct Binary Tree With LevelOrder and Inorder](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinaryTree/ReconstructBinaryTreeWithLevelorderAndInorder.java)
 
+* [Array to Binary Tree DFS](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinaryTree/ArrayToBinaryTreeDFS.java)
+* [Array to Binary Tree BFS](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinaryTree/ArrayToBinaryTreeBFS.java)
 
 * Reconstruct Binary Search Tree with PostOrder
 * Reconstruct Binary Search Tree with PreOrder
