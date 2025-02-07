@@ -25,7 +25,7 @@ class ReconstructItinerary {
      *
      * Find an Eulerian Path is a list of all edges in a graph in a sequence such that
      * you can go from point A to all other nodes in the graph multiple times,
-     * as long as an edge is not visited.
+     * as long as an edge is not visited. 
      */
     
     // Time: O(E * log(E/V)) where V vertex, E edges
