@@ -104,7 +104,7 @@ return Math.max(leftDepth, rightDepth) + 1
 * [Array to Binary Tree DFS](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinaryTree/ArrayToBinaryTreeDFS.java)
 * [Array to Binary Tree BFS](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinaryTree/ArrayToBinaryTreeBFS.java)
 
-* Reconstruct Binary Search Tree with PostOrder
+* [Reconstruct Binary Search Tree with PostOrder](https://github.com/blue-in-sea/Algo-Notebook/blob/master/BinarySearchTree/ReconstructBinarySearchTreeWithPostorderTraversal.java)
 * Reconstruct Binary Search Tree with PreOrder
 
 
@@ -178,7 +178,7 @@ return 1. root or 2. non-null side
 
 ### Graph
 #### 1) Eulerian Path (Directed Connected Graph)
-* [Reconstruct Itinerary](https://github.com/blue-in-sea/Algo-Notebook/edit/master/Graph/ReconstructItinerary.java)
+* [Reconstruct Itinerary](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Graph/ReconstructItinerary.java)
 #### 2) Topological Sort (BFS + IndegreeMap)
 * [Course Schedule I (can take all course?)](https://github.com/blue-in-sea/Algo-Notebook/blob/master/GraphBFS/CourseSchedule.java)
 * [Course Schedule II (course list)](https://github.com/blue-in-sea/Algo-Notebook/blob/master/GraphBFS/CourseSchedule.java)
