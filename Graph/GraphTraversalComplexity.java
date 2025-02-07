@@ -20,11 +20,11 @@ class GraphNode {
 
 public class GraphTraversalComplexity {
   /**
-   * DFS Traversal: Complexity Analysis 
-   * Time: O(V * (1 + E/V)) = O(V + E)
+   * Graph Traversal: Complexity Analysis 
+   * Time: O(V + E)
    * Spcae: O(V) 
    */
-  public void traverse(Graph<ListNode> graph) {
+  public void traverse(List<GraphNode> graph) {
     for (GraphNode n : graph) {
       if (!n.visited) {
         dfs(n);
@@ -33,16 +33,36 @@ public class GraphTraversalComplexity {
   }
   
   /**
-   * V := Number of Nodes 
-   * E := Number of Edges 
+   * DFS
    */
-  priavte dfs(GraphNode node) { // O(V)
+  priavte void dfs(GraphNode node) { 
     node.visited = true; // O(1)
-    for (GraphNode n : node.nei) { // O(E/V)
+    
+    for (GraphNode n : node.nei) { 
       if (!n.visited) {
         dfs(n);
       }
     }
+  }
+
+  /**
+   * BFS
+   */
+  private void bfs(GraphNode start) {
+    Queue<GraphNode> queue = new ArrayDeque<>();
+    queue.offer(start);
+
+    start.visited = true;
+
+    while (!queue.isEmpty()) {
+      GraphNode cur = queue.poll();
+
+      for (GraphNode n : cur.nei) {
+        if (!n.visited) {
+          queue.offer(n);
+          n.visited = true;
+        }
+      }
   }
 }
 /**
