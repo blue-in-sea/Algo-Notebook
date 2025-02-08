@@ -12,11 +12,9 @@
  * Example
  * Input: n = 3, connections = [[1,2,5],[1,3,6],[2,3,1]] 
  * Output: 6
- * Explanation: Choosing any 2 edges will connect all cities so we choose the minimum 2.
  *
  * Input: n = 4, connections = [[1,2,3],[3,4,4]]
  * Output: -1
- * Explanation: There is no way to connect all cities even if all edges are used.
  */
 class ConnectingCitiesWithMinimumCost {
    /**
