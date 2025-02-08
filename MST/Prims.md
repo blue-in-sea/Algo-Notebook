@@ -84,6 +84,14 @@ B-C: 2
 B-D: 5
 C-D: 6
 ```
+Graph:
+```
+A --1---- B
+| \     / |
+4  3   2  5
+|   \ /   |
+C --6-----D
+```
 
 
 ### Lazy Prim's Execution:
