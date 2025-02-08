@@ -19,7 +19,7 @@
  * Explanation: There is no way to connect all cities even if all edges are used.
  */
 class ConnectingCitiesWithMinimumCost {
-    // Prim's algorithm to find the MST ()
+    // Prim's algorithm to find the minimum spanning tree
     // Time: O((V+E) logV)
     // Space: O(V+E)
     public int minimumCost(int n, int[][] connections) {
