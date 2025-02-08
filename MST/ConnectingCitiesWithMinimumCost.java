@@ -6,23 +6,37 @@
  * = [xi, yi, costi] indicates that the cost of connecting city xi and city yi (bidirectional connection) is costi.
  *
  * Return the minimum cost to connect all the n cities such that there is at least one path between each pair of
- * cities. If it is impossible to connect all the n cities, return -1,
- *
- * The cost is the sum of the connections' costs used.
- *
- * Input: n = 3, connections = [[1,2,5],[1,3,6],[2,3,1]]
+ * cities. The cost is the sum of the connections' costs used.
+ * If it is impossible to connect all the n cities, return -1. 
+ * 
+ * Example
+ * Input: n = 3, connections = [[1,2,5],[1,3,6],[2,3,1]] 
  * Output: 6
- * Explanation: Choosing any 2 edges will connect all cities, so we choose the minimum 2.
+ * Explanation: Choosing any 2 edges will connect all cities so we choose the minimum 2.
  *
  * Input: n = 4, connections = [[1,2,3],[3,4,4]]
  * Output: -1
  * Explanation: There is no way to connect all cities even if all edges are used.
  */
 class ConnectingCitiesWithMinimumCost {
-    // Prim's algorithm to find the minimum spanning tree
-    // Time: O((V+E) logV)
-    // Space: O(V+E)
+   /**
+     * Prim's algorithm to find the minimum spanning tree
+     * 
+     * 1. Build Graph: O(V+E)
+     * Constructs an adjacency list representation of the graph.
+     * Each node stores a list of its neighbors along with the edge weights.
+     *
+     * 2. Prim's Algorithm: O(ElogE)  
+     * Uses a Priority Queue (Min-Heap) to always select the smallest edge 
+     * connecting a vertex in the MST to a vertex outside the MST.
+     *
+     * Keeps track of visited vertices to avoid cycles.
+     */
+    
+    // Time: O(V+ElogE) 
+    // Space: O(V+E) 
     public int minimumCost(int n, int[][] connections) {
+        
         Map<Integer, List<int[]>> graph = buildGraph(n, connections);
 
         // Prim's algorithm using a Priority Queue
