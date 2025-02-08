@@ -87,18 +87,22 @@ C-D: 6
 
 
 ### Lazy Prim's Execution:
+```
 1. Start with A. Add edges (A-B:1), (A-C:4), (A-D:3) to the heap.
 2. Extract A-B (1). Add B to MST. Add edges (B-C:2), (B-D:5) to the heap.
 3. Extract B-C (2). Add C to MST. Add edge (C-D:6) to the heap.
 4. Extract A-D (3). Add D to MST.
 5. Discard stale edges (A-C:4, B-D:5, C-D:6).
+```
 
 ### Eager Prim's Execution:
+```
 1. Start with A (key=0). Initialize B, C, D with keys=∞.
 2. Extract A. Update keys of B (1), C (4), D (3).
 3. Extract B (key=1). Update key of C (2).
 4. Extract C (key=2). Update key of D (6).
 5. Extract D (key=3).
+```
 
 ---
 
