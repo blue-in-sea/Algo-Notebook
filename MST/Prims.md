@@ -1,3 +1,45 @@
+# Minimum Spanning Tree (MST)
+
+Given a connected, edge-weighted and undirected graph, **Minimum Spanning Tree (MST)** is a subset of edges that connect all vertices while the total weights of these edges are minimum among all possible subsets.
+
+---
+
+## Key Properties of MST
+
+1. **Connects all vertices**: The MST spans all the vertices in the graph.
+2. **No cycles**: It is a tree, so it contains no cycles.
+3. **Minimum total weight**: The sum of the edge weights is the smallest possible among all spanning trees.
+
+---
+
+## Algorithms to Find MST
+
+Two of the most common algorithms for finding an MST are:
+
+### 1. Kruskal's Algorithm
+
+- **Approach**:
+  - Sort all the edges in the graph in non-decreasing order of their weight.
+  - Add the smallest edge to the MST, ensuring it doesn’t form a cycle.
+  - Repeat until all vertices are connected.
+- **Data Structures**:
+  - Uses a **Union-Find (Disjoint Set Union)** data structure to detect cycles efficiently.
+- **Time Complexity**: `O(E log E)` or `O(E log V)`, where `E` is the number of edges and `V` is the number of vertices.
+
+### 2. Prim's Algorithm
+
+- **Approach**:
+  - Start with an arbitrary vertex.
+  - At each step, add the smallest edge that connects a vertex in the MST to a vertex outside the MST.
+  - Repeat until all vertices are included.
+- **Data Structures**:
+  - Uses a **Priority Queue (Min-Heap)** to efficiently select the next edge.
+- **Time Complexity**:
+- `O(E log V)` Eager Prim's
+- `O(E log E)`Lazy Prim's     
+
+---
+
 # Comparison: Lazy Prim's vs Eager Prim's Algorithm
 
 **Prim's Algorithm** for finding the **Minimum Spanning Tree (MST)** can be implemented in two main ways: **Lazy Prim's** and **Eager Prim's**. Both approaches use a priority queue (min-heap) to select edges, but they differ in how they manage the heap and handle edge updates.
