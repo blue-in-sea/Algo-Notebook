@@ -32,7 +32,7 @@ class ConnectingCitiesWithMinimumCost {
      */
     
     // Time: O(V+ElogE) 
-    // Space: O(V+E) 
+    // Space: O(V+E) size of graph
     public int minimumCost(int n, int[][] connections) {
         
         Map<Integer, List<int[]>> graph = buildGraph(n, connections);
