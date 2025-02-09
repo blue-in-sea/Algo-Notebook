@@ -35,8 +35,8 @@ Two of the most common algorithms for finding an MST are:
 - **Data Structures**:
   - Uses a **Priority Queue (Min-Heap)** to efficiently select the next edge.
 - **Time Complexity**:
-- `O(E log V)` Eager Prim's
-- `O(E log E)`Lazy Prim's     
+  - `O(E log V)` Eager Prim's
+  - `O(E log E)`Lazy Prim's     
 
 ---
 
