@@ -23,7 +23,7 @@
  */
 import java.util.*;
 
-public class LazyPrimsAdjacencyList {
+public class AdjacencyListLazyPrims {
 
     static class Edge implements Comparable<Edge> {
         int from, to, cost;
