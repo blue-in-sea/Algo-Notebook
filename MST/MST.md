@@ -2,6 +2,8 @@
 
 Given a connected, edge-weighted and undirected graph, **Minimum Spanning Tree (MST)** is a subset of edges that connect all vertices while the total weights of these edges are minimum among all possible subsets.
 
+LC: https://leetcode.com/problem-list/minimum-spanning-tree/
+
 ---
 
 ## Key Properties of MST
