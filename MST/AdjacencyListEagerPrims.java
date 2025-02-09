@@ -56,7 +56,7 @@ import java.util.*;
  *                ipq.decreaseKey(destNodeIndex, edge)
  */
 
-public class EagerPrimsAdjacencyList {
+public class AdjacencyListEagerPrims {
 
     static class Edge implements Comparable<Edge> {
         int from, to, cost;
