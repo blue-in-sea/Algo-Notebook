@@ -121,6 +121,8 @@ return 1. root or 2. non-null side
 6. Weighted Binary Tree
 * Minimum Edge Weight Equilibrium Queries in a Tree
 
+
+
 ### DFS
 #### DSF based upon Recursive Thinking (Base Case + Sub-Problems)  
 > 1. How many levels in the recursion tree? What does it store on each level?
@@ -186,7 +188,9 @@ return 1. root or 2. non-null side
 * [Key And Rooms](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Graph/KeysAndRooms.java)
 * [Number of Connected Components in an Undirected Graph](https://github.com/blue-in-sea/Algo-Notebook/blob/master/Graph/NumberOfConnectedComponentsUndirectedGraph.java)
 * [Number of Islands](https://github.com/blue-in-sea/Algo-Notebook/blob/master/GraphBFS/NumberOfIslandsBFS.java)
+* [Shortest Bridge](https://github.com/blue-in-sea/Algo-Notebook/blob/master/GraphBFS/ShortestBridge.java)
 * [The Maze](https://leetcode.com/problems/the-maze/description/)
+  
 
 
 
