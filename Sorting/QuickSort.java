@@ -1,11 +1,24 @@
 /**
- * The time complexity of the Quick Sort algorithm is O(n*log(n)) on average and in the best case, 
- * but O(n^2) in the worst case. 
+ * Quick Sort Algorithm:
+ * 1. Choose a Pivot:
+ * Select an element from the array as the pivot (e.g., the first element, last element, or a random element).
  *
- * The worst-case time complexity occurs when the pivot choice consistently results in unbalanced partitions. This is
- * rare and usually happens if the array is already sorted or close to being sorted
+ * 2. Partition the Array:
+ * Rearrange the array so that all elements less than the pivot are on its left, and all elements greater than the
+ * pivot are on its right. The pivot is now in its correct sorted position.
+ *
+ * 3. Recursively Sort Sub-arrays
+ * Recursively apply the above steps to the left and right subarrays.
  */
 class QuickSort {
+    /**
+     * Time: O(n*log(n)) - average or best case, O(n^2) in the worst case.
+     * Space: O(log n) due to the recursion stack.
+     *
+     * Worst-case time complexity occurs: when the pivot choice consistently results in unbalanced partitions.
+     * This is and usually happens if the array is already sorted or close to being sorted.
+     * (Randomized pivot selection to avoid worst-case behavior)
+     */
     public int[] sortArray(int[] array) {
         if (array == null || array.length <= 1) {
             return array;
@@ -26,8 +39,10 @@ class QuickSort {
     private int partition(int[] array, int left, int right) {
         int pivotIndex = findPivotIndex(left, right);
         int pivot = array[pivotIndex];
-        swap(array, pivotIndex, right);
-
+        
+        // Move pivot to the last position
+        swap(array, pivotIndex, right); 
+        
         int i = left;
         int j = right - 1;
         while (i <= j) {
@@ -41,7 +56,9 @@ class QuickSort {
                 j--;
             }
         }
+        // Move pivot back to the correct place 
         swap(array, i, right);
+        
         return i;
     }
 
