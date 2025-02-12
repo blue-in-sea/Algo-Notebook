@@ -1,5 +1,3 @@
-package GraphBFS;
-
 /**
  * BFS Time Complexity
  * Time: O(M * N) where M is # of rows and N is # of cols
