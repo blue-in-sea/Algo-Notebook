@@ -1,14 +1,16 @@
 /**
  * Quick Sort Algorithm:
  * 1. Choose a Pivot:
- * Select an element from the array as the pivot (e.g., the first element, last element, or a random element).
+ * Select an element from the array as the pivot (e.g., 
+ * the first element, last element, or a random element).
  *
  * 2. Partition the Array:
- * Rearrange the array so that all elements less than the pivot are on its left, and all elements greater than the
- * pivot are on its right. The pivot is now in its correct sorted position.
+ * Rearrange the array so that all elements less than the pivot are on its left,
+ * and all elements greater than the pivot are on its right. 
+ * The pivot is now in its correct sorted position.
  *
  * 3. Recursively Sort Sub-arrays
- * Recursively apply the above steps to the left and right subarrays.
+ * Recursively apply the above steps to the left and right sub-arrays.
  */
 class QuickSort {
     /**
