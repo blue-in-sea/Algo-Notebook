@@ -3,10 +3,9 @@ package GraphBFS;
 /**
  * BFS Time Complexity
  * Time: O(M * N) where M is # of rows and N is # of cols
- * Space: O( min(M * N) ) where in the worst case all elements in grid are lands, 
- *        and the size of queue could reach its maximum of min(M * N).
+ * Space: O( min(M * N) ) depends on the size of the queue used in BFS. In the worst case (e.g., when the entire grid 
+ *      is one large island), the queue can grow to the size of the smaller dimension of the grid.
  */
-
 public class NumberOfIslandsBFS {
   /* * * * * * * * * * * * version 1 * * * * * * * * * * * * */
   private class Pair {
@@ -124,3 +123,37 @@ public class NumberOfIslandsBFS {
     return (x >= 0 && x < rows && y >= 0 && y < cols);
   }
 }
+
+/**
+ * Time Complexity
+ * BFS and DFS: Both algorithms have the same time complexity:
+ * 
+ * O(M × N), where:
+ * M = number of rows in the grid.
+ * N = number of columns in the grid.
+ *
+ * This is because, in the worst case, both algorithms visit every cell in the grid once.
+ *
+ * Space Complexity
+ * BFS:
+ * The space complexity depends on the size of the queue used in BFS. In the worst case (e.g., when the entire grid 
+ * is one large island), the queue can grow to the size of the smaller dimension of the grid.
+ * Space Complexity: O(min(M, N))
+ *
+ * DFS:
+ * The space complexity depends on the recursion stack. In the worst case (e.g., when the grid is one large island 
+ * with a spiral shape), the recursion stack can grow to the size of the entire grid.
+ * Space Complexity: O(M × N)
+ *
+ * Summary
+ * Algorithm	Time Complexity	Space Complexity
+ * BFS	O(M × N)	O(min(M, N))
+ * DFS	O(M × N)	O(M × N)
+ * 
+ * Key Takeaways
+ * BFS is generally more space-efficient than DFS for this problem, especially in cases where the grid is large but 
+ * the islands are small or sparse.
+ *
+ * DFS can use more space due to its recursive nature, but it is often easier to implement.
+ * Both algorithms are equally efficient in terms of time complexity.
+ */
