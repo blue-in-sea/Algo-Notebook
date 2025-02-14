@@ -19,6 +19,23 @@
  * Output: 0  no such common subsequence
  */
 class LongestCommonSubsequence {
+    /**
+     * dp[i][j] = the longest common subsequence at s.charAt(i) for j -> [1, tn)
+     * base case dp[i][0] = 0, dp[0][j]  = 0
+     * induction: dp[i][j] = dp[i - 1][j - 1] + 1                when s[i - 1] == s[j - 1]
+     *            dp[i][j] = max( dp[i][j - 1], dp[i - 1][j] )   otherwise 
+     *
+     *         c  b  a  b  d  f  e            T = “cbabdfe”
+     *    [[0, 0, 0, 0, 0, 0, 0, 0],
+     * a   [0, 0, 0, 1, 1, 1, 1, 1],
+     * b   [0, 0, 1, 1, 2, 2, 2, 2],
+     * c   [0, 1, 1, 1, 2, 2, 2, 2],
+     * d   [0, 1, 1, 1, 2, 3, 3, 3],
+     * e   [0, 1, 1, 1, 2, 3, 3, 4]]
+     *
+     * S = “abcde”, T = “cbabdfe”, the longest common subsequence "abde"
+     */
+    
     // Time: O(sn * tn) 
     // Space: O(sn * tn)
     public int longestCommonSubsequence(String s, String t) {
@@ -40,19 +57,4 @@ class LongestCommonSubsequence {
         return dp[sn][tn];
     }
 }
-/**
- * dp[i][j] = the longest common subsequence at s.charAt(i) for j -> [1, tn)
- * base case dp[i][0] = 0, dp[0][j]  = 0
- * induction: dp[i][j] = dp[i - 1][j - 1] + 1                when s[i - 1] == s[j - 1]
- *            dp[i][j] = max( dp[i][j - 1], dp[i - 1][j] )   otherwise 
- *
- *         c  b  a  b  d  f  e
- *    [[0, 0, 0, 0, 0, 0, 0, 0],
- * a   [0, 0, 0, 1, 1, 1, 1, 1],
- * b   [0, 0, 1, 1, 2, 2, 2, 2],
- * c   [0, 1, 1, 1, 2, 2, 2, 2],
- * d   [0, 1, 1, 1, 2, 3, 3, 3],
- * e   [0, 1, 1, 1, 2, 3, 3, 4]]
- *
- * S = “abcde”, T = “cbabdfe”, the longest common subsequence "abde"
- */
+
