@@ -16,7 +16,12 @@ package DP;
  */
 public class LongestAscendingSubsequence {
   // Method 1: DP Linear Scan 对于每一个ending，回头看
+  
   // dp[i] represent the longest increasing subsequence ending at arr[i]
+  // base case: dp[i] = 1
+  // inductive rule: when arr[j] < arr[i] where j < i
+  //           dp[i] = Math.max(dp[j] + 1, dp[i])        
+  
   // Time: O(n^2) = 1 + 2 + 3 + 4 + ... + n(n+1)/2, Space: O(n)
   public int longest (int[] array) {
     // Assume array is not null
