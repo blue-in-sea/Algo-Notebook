@@ -23,7 +23,15 @@ class LongestCommonSubsequence {
      * dp[i][j] = the longest common subsequence at s.charAt(i) for j -> [1, tn)
      * base case dp[i][0] = 0, dp[0][j]  = 0
      * induction: dp[i][j] = dp[i - 1][j - 1] + 1                when s[i - 1] == s[j - 1]
-     *            dp[i][j] = max( dp[i][j - 1], dp[i - 1][j] )   otherwise 
+     *            dp[i][j] = max( dp[i][j - 1], dp[i - 1][j] )   otherwise   
+     *
+     * Proof 
+     * If the characters match where s[i - 1] == s[j - 1], 
+     *     the len of LCS increase by 1
+     * If the characters do not match, 
+     *     the len of LCS is the maximum of the two possible cases
+     *          1) Exclude the current character of s and consider the LCS of s[0..i-1] and t[0..j]
+     *          2) Exclude the current character of t and consider the LCS of s[0..i] and t[0..j-1]
      *
      *         c  b  a  b  d  f  e            T = “cbabdfe”
      *    [[0, 0, 0, 0, 0, 0, 0, 0],
@@ -36,8 +44,8 @@ class LongestCommonSubsequence {
      * S = “abcde”, T = “cbabdfe”, the longest common subsequence "abde"
      */
     
-    // Time: O(sn * tn) 
-    // Space: O(sn * tn)
+    // Time: O(sn * tn) for filling the DP table
+    // Space: O(sn * tn) for the size of DP table
     public int longestCommonSubsequence(String s, String t) {
         int sn = s.length();
         int tn = t.length();
