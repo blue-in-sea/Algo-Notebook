@@ -16,6 +16,18 @@
  * Explanation: Buy on day 2 (price = 2) and sell on day 3 (price = 6), profit = 6-2 = 4. Then buy on day 5 (price = 0) and sell on day 6 (price = 3), profit = 3-0 = 3.
  */
 public class BestTimeBuyAndSellStockIV {
+    // You can complete at most k transactions.
+    // You cannot hold more than one share at a time.
+    // You must sell the stock before buying again.
+    // The goal is to maximize the total profit.
+
+    // Edge Cases:
+    // If k is 0 or the prices array is empty, the maximum profit is 0.
+    // If k is large enough (e.g., k >= n/2, where n is the number of days), the problem reduces to the "Best Time to Buy and Sell Stock II" problem, where you can make as many transactions as you want.
+
+    // DP: 
+    // buy[j]: Represents the minimum cost to buy the stock for the j-th transaction.
+    // sell[j]: Represents the maximum profit from the j-th transaction.
 
     // Time: O(n * k)
     // Space: O(k) better than 2nd approach 
@@ -23,7 +35,7 @@ public class BestTimeBuyAndSellStockIV {
         int n = prices.length;
         if (k == 0 || n == 0) return 0;
 
-        // If k is large enough, the problem reduces to the "Best Time to Buy and Sell Stock II" problem.
+        // If k is large enough, the problem reduces to the "Best Time to Buy and Sell Stock II" problem: tracking slopes
         if (k >= n / 2) {
             int maxProfit = 0;
             for (int i = 1; i < n; i++) {
