@@ -23,6 +23,11 @@
  * Explanation: There is no way to make a positive profit, so we never buy the stock to achieve the maximum profit of 0.
  */
 public class BestTimeBuyAndSellStockII {
+    // You can buy and sell multiple times.
+    // You can only hold one share at a time.
+    // You can buy and sell on the same day.
+    // The goal is to maximize the total profit.
+    
     /**
      * DP: Greedy in Simple One Pass - Track slope: Total Profit = ∑i (height(peak_i)) − height(valley_i))
      *
