@@ -80,8 +80,11 @@ public class LongestAscendingSubsequence {
       // subsequence with len = index + 1 (the ending value is smaller or 
       // equal than)
       if (index == res) {
-        tbl[++res] = array[i];
+        // 延长了，更新终点
+        res++;
+        tbl[res] = array[i];
       } else {
+        // 原长度内，找到一个更小的终点
         tbl[index + 1] = array[i];
       }
     }
