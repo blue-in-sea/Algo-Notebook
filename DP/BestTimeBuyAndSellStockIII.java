@@ -21,8 +21,14 @@
  * Explanation: In this case, no transaction is done, i.e. max profit = 0.
  */
 public class BestTimeBuyAndSellStockIII {
+    //You can complete at most two transactions.
+    // You cannot hold more than one share at a time.
+    // You must sell the stock before buying again.
+    // The goal is to maximize the total profit.
+    
     /**
-     * Algorithm
+     * The problem can be solved using a dynamic programming approach. The idea is to track the costs and profits for two transactions separately.
+     * Algorithm: Dynamic Programming
      *
      * t1_cost: the minimal cost of buying the stock in transaction #1.
      *          The minimal cost to acquire a stock would be the minimal price value that we have seen so far at each step.
@@ -42,9 +48,11 @@ public class BestTimeBuyAndSellStockIII {
         int t1Profit = 0, t2Profit = 0;
 
         for (int price : prices) {
+            
             // the maximum profit if only one transaction is allowed
             t1Cost = Math.min(t1Cost, price);
             t1Profit = Math.max(t1Profit, price - t1Cost);
+            
             // reinvest the gained profit in the second transaction
             t2Cost = Math.min(t2Cost, price - t1Profit);
             t2Profit = Math.max(t2Profit, price - t2Cost);
