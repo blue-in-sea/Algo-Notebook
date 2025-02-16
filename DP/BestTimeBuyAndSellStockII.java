@@ -29,9 +29,10 @@ public class BestTimeBuyAndSellStockII {
      * Instead of looking for every peak following a valley, we can simply go on crawling over the slope
      * and keep on adding the profit obtained from every consecutive transaction.
      *
-     * We need not track the costs corresponding to the peaks and valleys along with the maximum profit,
-     * but we can directly keep on adding the difference between the consecutive numbers of the array
-     * if the second number is larger than the first one, and at the total sum we obtain will be the current maximum profit.
+     * The greedy approach works because we are capturing all the local profitable transactions. 
+     * Whenever the price increases from one day to the next, we take the profit and add it to the total. 
+     * This ensures that we are not missing any opportunity to make a profit, 
+     * and the sum of all these small profits will give us the maximum total profit.
      */
 
     // Time: O(n) one pass 
