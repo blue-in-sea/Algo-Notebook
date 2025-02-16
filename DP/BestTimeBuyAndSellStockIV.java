@@ -25,7 +25,7 @@ public class BestTimeBuyAndSellStockIV {
     // If k is 0 or the prices array is empty, the maximum profit is 0.
     // If k is large enough (e.g., k >= n/2, where n is the number of days), the problem reduces to the "Best Time to Buy and Sell Stock II" problem, where you can make as many transactions as you want.
 
-    // DP: 
+    // DP: track of the costs and profits for up to k transactions.
     // buy[j]: Represents the minimum cost to buy the stock for the j-th transaction.
     // sell[j]: Represents the maximum profit from the j-th transaction.
 
