@@ -18,14 +18,7 @@
  * Explanation: In this case, no transactions are done and the max profit = 0.
  */
 public class BestTimeBuyAndSellStock {
-    /**
-     * We need to find the largest price (peak) following each min price (valley), which difference could be the max profit
-     *
-     * > min-price: lowest valley
-     * > max-profit: maximum profit = max diff (selling price - min-price)
-     *
-     * where we have the current selling price move with i
-     */
+    // We need to find the max price (peak) following each min price (valley) which leads to the max profit
     
     // Time: O(n) one pass 
     // Space: O(1)
