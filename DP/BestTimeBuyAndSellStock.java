@@ -18,7 +18,12 @@
  * Explanation: In this case, no transactions are done and the max profit = 0.
  */
 public class BestTimeBuyAndSellStock {
-    // We need to find the max price (peak) following each min price (valley) which leads to the max profit
+    
+    // You can only buy once and sell once.
+    // You must buy before you sell.
+    // If no profit can be made, return 0.
+
+    // Key Points -> find the max price (peak) following each min price (valley) which leads to the max profit
     
     // Time: O(n) one pass 
     // Space: O(1)
