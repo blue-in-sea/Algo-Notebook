@@ -89,7 +89,7 @@ public class LongestAscendingSubsequence {
     return res;
   }
 
-  // Binary search to find the largest index j such that tbl[j] < target
+  // Binary search to find the largest index j such that tbl[j] < target(array[i])
   // (Equivalent to find the largest smaller ele than target)
   private int find(int[] tbl, int left, int right, int target) {
     while (left + 1 < right) {
