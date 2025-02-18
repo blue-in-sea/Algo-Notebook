@@ -11,9 +11,7 @@
  *         this.val = val;
  *     }
  * }
- * https://leetcode.com/problems/symmetric-tree
  */
-
 class Solution {
     // Time: O(N) we traverse the entire input tree once
     // Space: O(N) number of recursive call is bounded by the height of the tree.
