@@ -10,6 +10,9 @@
  * }
  */
 public class CheckIfBinaryTreeIsBalanced {
+  // Key: 
+  // A balanced binary tree is defined as a binary tree in which the height of the left and right subtree of any node differ by not more than 1.
+  
   // Method 1: 优化 use only depth() to indicate
   // Time: O(N)
   // Spce: O(H)
