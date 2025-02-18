@@ -1,18 +1,15 @@
 /**
- * Definition for a binary tree node.
- * public class TreeNode {
- *     TreeNode left;
- *     TreeNode right;  
- *     int val;
- *     
- *     TreeNode(TreeNode left, TreeNode right, int val) {
- *         this.left = left;
- *         this.right = right;
- *         this.val = val;
- *     }
- * }
+ *         1
+ *        / \
+ *       2   2
+ *      / \ / \
+ *     3  4 4  3
+ *
+ * root = [1,2,2,3,4,4,3]
+ * true (is a symmetric tree)
  */
 class Solution {
+    
     // Time: O(N) we traverse the entire input tree once
     // Space: O(N) number of recursive call is bounded by the height of the tree.
     //        In the worest case, the tree is linear & height is N 
@@ -40,3 +37,18 @@ class Solution {
         return isSymmetric(one.left, two.right) && isSymmetric(one.right, two.left);
     }
 }
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     TreeNode left;
+ *     TreeNode right;  
+ *     int val;
+ *     
+ *     TreeNode(TreeNode left, TreeNode right, int val) {
+ *         this.left = left;
+ *         this.right = right;
+ *         this.val = val;
+ *     }
+ * }
+ */
