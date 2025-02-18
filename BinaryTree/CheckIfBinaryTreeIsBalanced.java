@@ -10,7 +10,7 @@
  * }
  */
 public class CheckIfBinaryTreeIsBalanced {
-  // Method 1: use depth() only to indicate
+  // Method 1: 优化 use only depth() to indicate
   // Time: O(N)
   // Spce: O(H)
   public boolean isBalanced(TreeNode root) {
@@ -29,7 +29,7 @@ public class CheckIfBinaryTreeIsBalanced {
 
   // =========================================================
   
-  // Method 2: 从顶至底DFS，以每个节点为根节点，递归判断是否是平衡二叉树
+  // Method 2: two recursive func
   // Time: O(NlogN) Not Recommended
   // Spce: O(H)
   public boolean isBalanced(TreeNode root) {
