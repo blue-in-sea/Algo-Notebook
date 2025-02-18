@@ -26,6 +26,8 @@ public class CheckIfBinaryTreeIsBalanced {
     if (left == -1 || right == -1 || Math.abs(left - right) > 1)  return -1;
     return Math.max(left, right) + 1;
   }
+
+  // =========================================================
   
   // Method 2: 从顶至底DFS，以每个节点为根节点，递归判断是否是平衡二叉树
   // Time: O(NlogN) Not Recommended
