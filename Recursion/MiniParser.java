@@ -32,7 +32,8 @@ public class NestedInteger {
      * The problem can be approached using recursive parsing. When encountering a list (represented by [ and ]), the 
      * idea is to recursively process its elements. When encountering an integer, it can be directly processed. 
      * Recursion naturally helps with handling nested structures of arbitrary depth.
-     *
+     * 
+     * Approach
      * 1. Use a recursive function parse to handle both lists and integers.
      * 2. If a list is detected (starting with [), create a new NestedInteger object and 
      *    recursively add elements to it until the closing ] is found.
