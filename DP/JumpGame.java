@@ -15,19 +15,47 @@
 
 class JumpGame {
     // boolean dp[i] represents can jump from i-th element to the target
-    // base case:
-    //     dp[4] = true since a[4] is target itself
-    // induction rule:
-    //     dp[i] = true if (there exists one) j such that dp[j] == true
-    //                     where i <= j <= i + a[i]
-    //           = false otherwise
 
     // index  0  1  2  3  4
     // Arr  [ 2, 3, 1, 1, 4 ]
     //        <-
     // dp   [ T, T, T, T, T ]
-    
-    // Method1: from end to start scan (回头看) 如上图 
+
+    // ========================================================================
+    // Method1: 从起始点 dp 到终点 (linear scan 回头看）
+    // base case: 
+    //      dp[0] = true
+    // induction rule: 
+    //     dp[i] = true if (there exists one) j such that dp[j] == true && dp[j] + j >= i for j => [0, i)
+    //          = false, otherwise 
+    // return dp[n - 1]
+    // Time: O(n^2), Space: O(n)
+    public boolean canJump(int[] array) {
+        // Assume array is not null and not empty 
+        boolean[] dp = new boolean[array.length];
+
+        dp[0] = true;
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < i; j++) {
+                if (dp[j] && array[j] + j >= i) {
+                    dp[i] = true;
+                    break;
+                }
+            }
+        }
+
+        return dp[array.length - 1];
+    }
+
+    // ========================================================================
+    // Method2: 从终点 dp 到起始点 (linear scan 回头看）
+    // base case: 
+    //      dp[n - 1] = true
+    // induction rule: 
+    //     dp[i] = true if (there exists one) k such that dp[k] == true where k => [i, i + a[i]]
+    //             let k = (j + i) such that dp[j + i] == true where j => [1, a[i]]
+    //          = false, otherwise 
+    // return dp[0]
     // Time: O(n^2), Space: O(n)
     public boolean canJump(int[] array) {
         // Assume the input is not null and input has length at leaste 1
