@@ -29,9 +29,17 @@
 public class NestedInteger {
 
     // Time: O(n) where n is the length of the input string. Each character in the string is processed once.
+    //    1. parse()
+    //    * each char is process only once O(n)
+    //    * In the worst case, the input string is fully nested (e.g., [[[[...]]]]), and the recursion depth is proportional to the length of the string
+    //    2. dfs()
+    //    * recursive call stack O(n)
     // Space: O(n) 
+    //    1. parse()
     //    * recursive call stack O(n) 
-    //    * space needed to store the parsed NestedInteger structure.
+    //    * space needed to store the parsed NestedInteger structure O(n) 
+    //    2. dfs()
+    //    * recursive call stack O(n)  
     public NestedInteger deserialize(String s) {
         Object parsed = parse(s);
         return dfs(parsed);
