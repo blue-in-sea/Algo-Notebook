@@ -16,7 +16,7 @@ public class isBST {
     if (root.key < min || root.key > max) {
       return false;
     }
-    return checkBST(root.left, min, root.key - 1) && checkBST(root.right, root.key + 1, max);
+    return checkBST(root.left, min, root.key - 1L) && checkBST(root.right, root.key + 1L, max);
   }
 }
 
