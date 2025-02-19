@@ -71,35 +71,34 @@ class StrToInt {
     public int myAtoi(String s) {
         int index = 0;
         int sign = 1;
-        int res = 0;
+        int result = 0;
         int n = s.length();
-
+        
         // Step 1: Ignore leading whitespace
         while (index < n && s.charAt(index) == ' ') {
             index++;
         }
-
+        
         // Step 2: Determine the sign
         if (index < n && (s.charAt(index) == '+' || s.charAt(index) == '-')) {
             sign = (s.charAt(index) == '-') ? -1 : 1;
             index++;
         }
-
+        
         // Step 3: Convert the number and handle overflow
         while (index < n && Character.isDigit(s.charAt(index))) {
             int digit = s.charAt(index) - '0';
-
-            // check overflow 
-            if (res > Integer.MAX_VALUE / 10 && 
-                (res == Integer.MAX_VALUE / 10 && digit > Integer.MAX_VALUE % 10)) {
-                
+            
+            // Check for overflow
+            if (result > Integer.MAX_VALUE / 10 || 
+                (result == Integer.MAX_VALUE / 10 && digit > Integer.MAX_VALUE % 10)) {
                 return (sign == 1) ? Integer.MAX_VALUE : Integer.MIN_VALUE;
             }
-
-            res = res * 10 + digit;
+            
+            result = result * 10 + digit;
             index++;
         }
-
-        return res * sign; 
+        
+        return result * sign;
     }
 }
