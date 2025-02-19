@@ -40,8 +40,8 @@
  * }
  */
 public class Solution {
-  // 1. check if the same tree, or 
-  // 2. check if the symmetric tree
+  // 1. check if the same tree,               if no swap or even swaps
+  // 2. check if the symmetric tree           if odd swaps
   
   public boolean isTweakedIdentical(TreeNode one, TreeNode two) {
     if (one == null && two == null) {
