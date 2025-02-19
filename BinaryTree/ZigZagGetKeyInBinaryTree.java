@@ -102,7 +102,7 @@ public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
       if (cur.right != null)  queue.offer(cur.right);
     } 
     
-    if (layer == 0) Collections.reverse(list); // O(n) cost 
+    if (layer == 0) Collections.reverse(list); // O(n) additional cost 
     result.add(list);
     layer = 1 - layer;
   }
