@@ -27,6 +27,19 @@
 
 // Algo Explain: https://authorslog.com/@dare2solve/385-mini-parser-aw46KFc7BX
 public class NestedInteger {
+    /**
+     * Intuition
+     * The problem can be approached using recursive parsing. When encountering a list (represented by [ and ]), the 
+     * idea is to recursively process its elements. When encountering an integer, it can be directly processed. 
+     * Recursion naturally helps with handling nested structures of arbitrary depth.
+     *
+     * 1. Use a recursive function parse to handle both lists and integers.
+     * 2. If a list is detected (starting with [), create a new NestedInteger object and 
+     *    recursively add elements to it until the closing ] is found.
+     * 3. If a number is detected, directly return a NestedInteger object holding the number.
+     * 4. The main deserialize function initializes the parsing by checking the input string 
+     *    and then recursively processes it using the parse function.
+     */
 
     // Time: O(n) where n is the length of the input string. Each character in the string is processed once.
     //    1. parse()
@@ -45,6 +58,7 @@ public class NestedInteger {
         return dfs(parsed);
     }
 
+    // Parse() recursively parse the string into a structured format (either a list or an integer).
     private Object parse(String s) {
         if (s.charAt(0) == '[') {
             List<Object> list = new ArrayList<>();
@@ -64,6 +78,7 @@ public class NestedInteger {
         }
     }
 
+    // dfs() convert ParsedStructure into a NestedInteger object.
     private NestedInteger dfs(Object input) {
         if (input instanceof Integer) {
             return new NestedInteger((int) input);
