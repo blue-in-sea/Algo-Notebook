@@ -21,14 +21,16 @@ class ReverseInteger {
      * 1. Handle Negative Numbers: if input x is negative => this will not affect the res
      * 2. Reverse the Digits
      *    We repeatedly extract the last digit of x
+     *
      *    // pop operation:
-     *    pop = x % 10;
+     *    digit = x % 10;
      *    x /= 10;
      *
      *    and append it to the result.
      *    // push operation:
-     *    temp = rev * 10 + pop;
+     *    temp = rev * 10 + digit;
      *    rev = temp;
+     *
      * 3. Check for Overflow: INT_MAX 2147483647 > x > -2147483648 INT_MIN
      * 4. Return the reversed result 
      */
