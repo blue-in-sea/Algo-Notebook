@@ -37,6 +37,9 @@ class JumpGame {
         dp[0] = true;
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < i; j++) {
+                
+                // if index j is reachable, && from index j if it is reachable to index i
+                
                 if (dp[j] && array[j] + j >= i) {
                     dp[i] = true;
                     break;
@@ -66,7 +69,7 @@ class JumpGame {
         dp[n - 1] = true;
         for (int i = n - 1; i >= 0; i--) {
             if (array[i] + i >= n) {
-                // check the endpoint if directly reachable at index i
+                // if from index i, it is reachable to the end of the array 
                 dp[i] = true;
             } else {
                 // for any of the reachable index from i
