@@ -78,7 +78,6 @@ class JumpGame {
                     }
                 }
             }
-
         }
 
         return dp[0];
