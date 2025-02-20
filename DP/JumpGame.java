@@ -58,16 +58,15 @@ class JumpGame {
     // return dp[0]
     // Time: O(n^2), Space: O(n)
     public boolean canJump(int[] array) {
-        // Assume the input is not null and input has length at leaste 1
-        int len = array.length;
-        if (len == 1) return true;
+        // Assume array is not null and not empty 
+        int n = array.length;
+        if (n == 0) return true;
 
-        boolean[] dp = new boolean[len];
-        // dp[len - 1] = true;  // base can skip, since default is true
-        for (int i = len - 2; i >= 0; i--) {
-            // from index i, it is already possible to jump to
-            // the end of array
-            if (i + array[i] >= len - 1) {
+        boolean[] dp = new boolean[n];
+        dp[n - 1] = true;
+        for (int i = n - 1; i >= 0; i--) {
+            if (array[i] + i >= n) {
+                // check the endpoint if directly reachable at index i
                 dp[i] = true;
             } else {
                 // for any of the reachable index from i
@@ -79,6 +78,7 @@ class JumpGame {
                     }
                 }
             }
+
         }
 
         return dp[0];
