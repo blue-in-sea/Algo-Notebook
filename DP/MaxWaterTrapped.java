@@ -8,6 +8,9 @@
  */
 public class MaxWaterTrapped {
   // Optimization on Space: Two Pointers (leftMax + rightMax) + waterSum
+  // Key: Bucket Principle
+  //      The water trapped between the bars is determined by the shorter of the two bars on either side (l and r) of a given position
+  
   // Time: O(N)
   // Space: O(1) Only constant space for l, r, lmax, rmax
   public int maxTrapped(int[] array) {
