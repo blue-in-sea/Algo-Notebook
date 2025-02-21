@@ -1,3 +1,54 @@
+/**
+ * 200. Number of Islands (Union Find)
+ * Given an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), return the number of
+ * islands.
+ *
+ * An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may
+ * assume all four edges of the grid are all surrounded by water.
+ *
+ * Input: grid = [
+ *   ["1","1","1","1","0"],
+ *   ["1","1","0","1","0"],
+ *   ["1","1","0","0","0"],
+ *   ["0","0","0","0","0"]
+ * ]
+ * Output: 1
+ *
+ * Input: grid = [
+ *   ["1","1","0","0","0"],
+ *   ["1","1","0","0","0"],
+ *   ["0","0","1","0","0"],
+ *   ["0","0","0","1","1"]
+ * ]
+ * Output: 3
+ *
+ *
+ * Constraints:
+ * m == grid.length
+ * n == grid[i].length
+ * 1 <= m, n <= 300
+ * grid[i][j] is '0' or '1'.
+ */
+/**
+ * Implementation Details
+ * Data Structures:
+ * parent[]: An array where parent[i] stores the root of the set containing cell i.
+ * rank[]: An array where rank[i] stores the depth of the tree rooted at cell i.
+ * count: A variable to track the number of islands.
+ *
+ * Find Operation:
+ * Recursively find the root of a cell while applying path compression to flatten the tree.
+ *
+ * Union Operation:
+ * Find the roots of the two cells
+ * If the roots are different, merge the sets using union by rank:
+ * Attach the smaller tree to the root of the larger tree.
+ * Update the rank of the new root if necessary.
+ * Decrement the island count.
+ *
+ * Grid Indexing: Use a unique identifier for each cell
+ * i * cols + j, where i is the row index and j is the column index.
+ */
 class Solution {
     // Time: O(M × N × α(M × N)) for visiting all cells with each union/find operations  
     // Space: O(M × N) for the parent and rank arrays
