@@ -1,5 +1,8 @@
 # Topological Sort
 
+Question Pattern: When we are scheduling jobs or tasks, they may have dependencies. For example, before we finish task a, we have to finish b first. In this case, given a set of tasks and their dependencies, how shall we arrange our schedules? 
+
+
 Topological sort is an algorithm used in graph theory to linearly order the vertices of a directed acyclic graph (DAG) such that for every directed edge \( (u, v) \), vertex \( u \) comes before vertex \( v \) in the ordering. This ordering is useful in scenarios where tasks or events have dependencies, such as scheduling, build systems, or course prerequisites.
 
 ---
