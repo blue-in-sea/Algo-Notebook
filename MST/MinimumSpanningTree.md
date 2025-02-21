@@ -1,8 +1,8 @@
 # Minimum Spanning Tree (MST)
 
-Given a connected, edge-weighted and undirected graph, **Minimum Spanning Tree (MST)** is a subset of edges that connect all vertices while the total weights of these edges are minimum among all possible subsets.
-
-LC: https://leetcode.com/problem-list/minimum-spanning-tree/
+* Given a graph G = (V, E) we want to find a Minimum Spanning Tree in the graph (it may not be unique).
+* A **minimum spanning tree** is a subset of the edges which connect all vertices in the graph with the minimal total edge cost.
+* LC: https://leetcode.com/problem-list/minimum-spanning-tree/
 
 ---
 
@@ -42,7 +42,21 @@ Two of the most common algorithms for finding an MST are:
 
 ---
 
+## **Kruskal's Algorithm**
+
+### Key Idea:
+- Tutorial: [Union Find Kruskal's Algorithm](https://www.youtube.com/watch?v=JZBQLXgSGfs)
+
+### Steps:
+1. Sort edges by ascending edge weight.
+2. Walk through the sorted edges and look at the two nodes the edge belongs to. If the nodes are already unified we don't include this edge (which it may create the cycle), otherwise we include it and unify the nodes.
+3. The algorithm terminates when every edge has been processed or all the vertices have been unified.
+
+---
+
 # Comparison: Lazy Prim's vs Eager Prim's Algorithm
+
+---
 
 **Prim's Algorithm** for finding the **Minimum Spanning Tree (MST)** can be implemented in two main ways: **Lazy Prim's** and **Eager Prim's**. Both approaches use a priority queue (min-heap) to select edges, but they differ in how they manage the heap and handle edge updates.
 
