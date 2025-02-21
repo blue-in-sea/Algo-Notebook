@@ -1,3 +1,4 @@
+// SC: https://github.com/williamfiset/Algorithms/blob/master/src/main/java/com/williamfiset/algorithms/graphtheory/EagerPrimsAdjacencyList.java
 /**
  * Eager Prim'S
  * A natural question to ask at this point is how are we going to efficiently update and
