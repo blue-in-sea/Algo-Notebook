@@ -1,3 +1,4 @@
+// SC: https://github.com/williamfiset/Algorithms/blob/master/src/main/java/com/williamfiset/algorithms/graphtheory/LazyPrimsAdjacencyList.java
 /**
  * Lazy Prim's MST Overview
  * Maintain a min Priority Queue (PQ) that sorts edges based on min edge cost.
