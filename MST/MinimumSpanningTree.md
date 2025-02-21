@@ -59,13 +59,13 @@ Two of the most common algorithms for finding an MST are:
 
 ### **Kruskal's Algorithm**
 - **Best for Sparse Graphs**:
-  - When the graph has fewer edges (\(E \approx V\)), Kruskal's algorithm is more efficient due to its \(O(E \log E)\) complexity.
+  - When the graph has fewer edges E ~= V, Kruskal's algorithm is more efficient due to its \(O(E \log E)\) complexity.
 - **Edge-Based**:
   - Works well when edges are already sorted or when edge weights are dynamic.
 
 ### **Prim's Algorithm**
 - **Best for Dense Graphs**:
-  - When the graph has many edges (\(E \approx V^2\)), Prim's algorithm with an adjacency matrix is more efficient (\(O(V^2)\)).
+  - When the graph has many edges E ~= V^2, Prim's algorithm with an adjacency matrix is more efficient `O(E log V)`.
 - **Vertex-Based**:
   - Works well when the graph is represented as an adjacency list and a priority queue is used.
 
