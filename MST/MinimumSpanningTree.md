@@ -38,7 +38,52 @@ Two of the most common algorithms for finding an MST are:
   - Uses a **Priority Queue (Min-Heap)** to efficiently select the next edge.
 - **Time Complexity**:
   - `O(E log V)` Eager Prim's
-  - `O(E log E)`Lazy Prim's     
+  - `O(E log E)`Lazy Prim's
+ 
+---
+
+# Comparison: Kruskal's vs Prim's Algorithm
+---
+## **Time Complexity**
+
+### **Kruskal's Algorithm**
+- **Sorting Edges**: \(O(E \log E)\), where \(E\) is the number of edges.
+- **Union-Find Operations**: \(O(E \cdot \alpha(V))\), where \(\alpha(V)\) is the inverse Ackermann function (nearly constant).
+- **Total Time Complexity**: \(O(E \log E)\).
+
+### **Prim's Algorithm**
+- **With Adjacency List and Min-Heap**:
+  - Each edge is processed once, and each heap operation takes \(O(\log V)\).
+  - Total Time Complexity: \(O(E \log V)\).
+- **With Adjacency Matrix**:
+  - Time Complexity: \(O(V^2)\).
+
+## **Space Complexity**
+
+### **Kruskal's Algorithm**
+- **Space**: \(O(E + V)\).
+  - \(O(E)\) for storing edges.
+  - \(O(V)\) for the Union-Find data structure.
+
+### **Prim's Algorithm**
+- **Space**: \(O(V + E)\).
+  - \(O(V)\) for the priority queue and visited array.
+  - \(O(E)\) for storing the graph (adjacency list).
+
+
+## **Suitability**
+
+### **Kruskal's Algorithm**
+- **Best for Sparse Graphs**:
+  - When the graph has fewer edges (\(E \approx V\)), Kruskal's algorithm is more efficient due to its \(O(E \log E)\) complexity.
+- **Edge-Based**:
+  - Works well when edges are already sorted or when edge weights are dynamic.
+
+### **Prim's Algorithm**
+- **Best for Dense Graphs**:
+  - When the graph has many edges (\(E \approx V^2\)), Prim's algorithm with an adjacency matrix is more efficient (\(O(V^2)\)).
+- **Vertex-Based**:
+  - Works well when the graph is represented as an adjacency list and a priority queue is used.
 
 ---
 
