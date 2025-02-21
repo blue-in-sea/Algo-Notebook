@@ -4,6 +4,12 @@
 * A **minimum spanning tree** is a subset of the edges which connect all vertices in the graph with the minimal total edge cost.
 * LC: https://leetcode.com/problem-list/minimum-spanning-tree/
 
+
+### Tutorial
+- [Prim's Minimum Spanning Tree Algorithm](https://www.youtube.com/watch?v=jsmMtJpPnhU&t=3s)
+- [Eager Prim's Minimum Spanning Tree Algorithm](https://www.youtube.com/watch?v=xq3ABa-px_g)
+- [Union Find Kruskal's Algorithm](https://www.youtube.com/watch?v=JZBQLXgSGfs)
+
 ---
 
 ## Key Properties of MST
@@ -72,9 +78,6 @@ Two of the most common algorithms for finding an MST are:
 ---
 
 ## **Kruskal's Algorithm**
-
-### Key Idea:
-- Tutorial: [Union Find Kruskal's Algorithm](https://www.youtube.com/watch?v=JZBQLXgSGfs)
 
 ### Steps:
 1. Sort edges by ascending edge weight.
