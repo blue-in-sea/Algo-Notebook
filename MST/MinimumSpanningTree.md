@@ -44,34 +44,18 @@ Two of the most common algorithms for finding an MST are:
 
 # Comparison: Kruskal's vs Prim's Algorithm
 ---
-## **Time Complexity**
-
-### **Kruskal's Algorithm**
-- **Sorting Edges**: \(O(E \log E)\), where \(E\) is the number of edges.
-- **Union-Find Operations**: \(O(E \cdot \alpha(V))\), where \(\alpha(V)\) is the inverse Ackermann function (nearly constant).
-- **Total Time Complexity**: \(O(E \log E)\).
-
-### **Prim's Algorithm**
-- **With Adjacency List and Min-Heap**:
-  - Each edge is processed once, and each heap operation takes \(O(\log V)\).
-  - Total Time Complexity: \(O(E \log V)\).
-- **With Adjacency Matrix**:
-  - Time Complexity: \(O(V^2)\).
-
-## **Space Complexity**
-
-### **Kruskal's Algorithm**
-- **Space**: \(O(E + V)\).
-  - \(O(E)\) for storing edges.
-  - \(O(V)\) for the Union-Find data structure.
-
-### **Prim's Algorithm**
-- **Space**: \(O(V + E)\).
-  - \(O(V)\) for the priority queue and visited array.
-  - \(O(E)\) for storing the graph (adjacency list).
+| Feature                | Kruskal's Algorithm               | Prim's Algorithm                 |
+|------------------------|-----------------------------------|----------------------------------|
+| **Approach**           | Edge-based                       | Vertex-based                     |
+| **Data Structures**    | Union-Find, Edge List            | Priority Queue, Visited Array    |
+| **Time Complexity**    | \(O(E log E)\)                   | \(O(E log V)\) or \(O(V^2)\)     |
+| **Space Complexity**   | \(O(V + E)\)                     | \(O(V + E)\)                     |
+| **Best For**           | Sparse Graphs (\(E \approx V\))  | Dense Graphs (\(E \approx V^2\)) |
+| **Cycle Detection**    | Union-Find                       | Implicit (no cycles by design)   |
 
 
-## **Suitability**
+
+### **Suitability**
 
 ### **Kruskal's Algorithm**
 - **Best for Sparse Graphs**:
