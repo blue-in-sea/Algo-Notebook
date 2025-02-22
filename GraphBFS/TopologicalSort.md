@@ -42,3 +42,16 @@ while !queue.empty():
 ```
 
 #### DFS
+```
+def topological_sort():
+    for each node:
+        if visited[node] is False:
+            dfs(node)
+
+def dfs(node):
+    visited[node] = True
+    for nei in neighbours[node]:
+		if visited(node) = false:
+			dfs(node)
+	ret.insert_at_the _front(node)
+```
