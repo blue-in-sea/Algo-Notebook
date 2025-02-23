@@ -10,7 +10,7 @@ class AlienDictionary {
         }
         
         Map<Character, Set<Character>> graph = new HashMap<>();
-                for (int i = 0; i < words.length; i++) {
+        for (int i = 0; i < words.length; i++) {
             for (int j = 0; j < words[i].length(); j++) {
                 char c = words[i].charAt(j);
                 if (!graph.containsKey(c)) {
