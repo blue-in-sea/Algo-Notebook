@@ -31,7 +31,7 @@ class Solution {
     int row;
     int col;
 
-    // Algo: Topological Sorting with BFS
+    // Algo: Topological Sorting with BFS (but recommend DFS approach)
     // BFS computes the layer which is the len of the path starting from a given cell (x, y).
     // Out-degree of a given cell (x, y) is the number of nei smaller than it
     // Key: search the larger adjacent nodes first (greedy)
@@ -117,3 +117,4 @@ class Solution {
         }
     }
 }
+// https://leetcode.com/problems/longest-increasing-path-in-a-matrix/solutions/2052444/4-approaches-bfs-memorization-dfs-dp-topo-sorting/?envType=problem-list-v2&envId=topological-sort
