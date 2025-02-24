@@ -20,6 +20,8 @@
  * Output: false
  */
 class ConstructAWordUsingDice {
+    // Time: O(n!) all permutation
+    // Space: O(n) for visited sets 
     public boolean combo(Character[][] dice, String word) {
         List<Set<Character>> dict = new ArrayList<>();
         for (Character[] d : dice) {
