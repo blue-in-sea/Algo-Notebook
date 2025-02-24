@@ -1,8 +1,43 @@
+/**
+ * 329. Longest Increasing Path in a Matrix
+ * Given an m x n integers matrix, return the length of the longest increasing path in matrix.
+ *
+ * From each cell, you can either move in four directions: left, right, up, or down. You may not move diagonally or
+ * move outside the boundary (i.e., wrap-around is not allowed).
+ *
+ * Input: matrix = [
+ *   [9, 9, 4],
+ *   [6, 6, 8],
+ *   [2, 1, 1]
+ * ]
+ * Output: 4
+ * Explanation: The longest increasing path is [1, 2, 6, 9].
+ *
+ * Input: matrix = [
+ *    [3, 4, 5],
+ *    [3, 2, 6],
+ *    [2, 2, 1]]
+ * Output: 4
+ * Explanation: The longest increasing path is [3, 4, 5, 6]. Moving diagonally is not allowed.
+ *
+ * Input: matrix = [[1]]
+ * Output: 1
+ * 
+ * Constraints: m == matrix.length; n == matrix[i].length
+ * 1 <= m, n <= 200; 0 <= matrix[i][j] <= 231 - 1
+ */
 class Solution {
     private static final int[][] DIRS = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
     int row;
     int col;
-    
+
+    // Algo: Topological Sorting with BFS
+    // BFS computes the layer which is the len of the path starting from a given cell (x, y).
+    // Out-degree of a given cell (x, y) is the number of nei smaller than it
+    // Key: search the larger adjacent nodes first (greedy)
+
+    // Time: O(mn) given the (m x n) matrix 
+    // Space: O(mn) 
     public int longestIncreasingPath(int[][] matrix) {
         row = matrix.length;
         col = matrix[0].length;
