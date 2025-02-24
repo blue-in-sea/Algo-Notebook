@@ -86,3 +86,53 @@ class LongestIncreasingPathInAMatrix {
         return x >= 0 && x < row && y >= 0 && y < col;
     }
 }
+
+/**
+ * matrix = [
+ *   [9, 9, 4],
+ *   [6, 6, 8],
+ *   [2, 1, 1]
+ * ]
+ * 
+ * 1. Initialization:
+ * row = 3, col = 3 (matrix dimensions).
+ * memo is initialized as a 3x3 array filled with zeros.
+ *
+ * 2. Iterate Over Cells:
+ * The algorithm iterates over each cell in the matrix and calls dfs if memo[i][j] == 0.
+ *
+ * 3. DFS Calls:
+ * Let's focus on the cell (2, 1) (value = 1), which is part of the longest path [1, 2, 6, 9].
+ *
+ * DFS for (2, 1):
+ * * Current value = 1.
+ * * Explore neighbors:
+ * * * (1, 1) (value = 6): Valid (6 > 1). Recursively call dfs on (1, 1).
+ * * * (2, 0) (value = 2): Valid (2 > 1). Recursively call dfs on (2, 0).
+ * * Other neighbors are either out of bounds or have values ≤ 1.
+ *
+ * DFS for (1, 1):
+ * * Current value = 6.
+ * * Explore neighbors:
+ * * * (0, 1) (value = 9): Valid (9 > 6). Recursively call dfs on (0, 1).
+ * * * Other neighbors are either out of bounds or have values ≤ 6.
+ *
+ * DFS for (0, 1):
+ * * Current value = 9.
+ * * No valid neighbors (all neighbors have values ≤ 9).
+ * * Return 1 (path length = 1).
+ * Back to (1, 1):
+ * * The result from (0, 1) is 1.
+ * * The longest path from (1, 1) is 1 + 1 = 2.
+ *
+ * Back to (2, 1):
+ * * The result from (1, 1) is 2.
+ * 
+ * The result from (2, 0) is computed similarly and also contributes to the path length.
+ * The longest path from (2, 1) is max(2, ...) + 1 = 3.
+ *
+ * 4. Final Result:
+ * The maximum path length found across all cells is 4 (from the path [1, 2, 6, 9]).
+ */
+// soln: https://leetcode.com/problems/longest-increasing-path-in-a-matrix/solutions/2052444/4-approaches-bfs-memorization-dfs-dp-topo-sorting/?envType=problem-list-v2&envId=topological-sort
+
