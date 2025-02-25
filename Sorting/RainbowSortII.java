@@ -14,15 +14,23 @@ public class RainbowSortII {
      * Rainbow Sort:
      * Dutch National Flag Problem
      *
+     * 1. Partitioning:
      * For the left range
      * [0, l): red
      * [l, m): green
      * [m, r]: unchecked element
      * [r, len - 1]: (blue+black)
      *
+     * 2. Divide-n-Conquer 
      * recursively sort left (red, green, (blue&black))
      * recursively sort right ((red+green), blue, black)
      */
+
+    // Time: O(n⋅log2​(4)) = O(2n) = O(n)
+    //       Partitioning: O(n) for iterate through the array 
+    //       Recursion call: log2(4) = O(1) for sorting 4 colors 
+    
+    // Space: O(1) for recursion stack calls 
     public int[] rainbowSortII(int[] array) {
         if (array == null || array.length <= 1) {
             return array;
