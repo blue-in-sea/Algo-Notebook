@@ -21,9 +21,16 @@
  * (so) any connected graph without simple cycles is a tree! => checkCycle()
  */
 class GraphValidTree {
+    /**
+     * Key: Tree - A connected acyclic undirected graph
+     * In graph theory, a tree is an undirected graph in which any two vertices are connected by exactly one path
+     */
+    
+     // 1. 只在neighbor没有被遍历过时才放入queue中, 这样的话, 在遍历出队列时，如果遇到元素被二次访问就说明有cycle,
+     // 2. 最后遍历visited，确认每一个元素都被遍历到，才是valid tree（没有落单的节点）
+    
     // BFS
-    // Time: O(V + E)
-    // Space: O(V)
+    // Time: O(V + E), Space: O(V)
     public boolean validTree(int n, int[][] edges) {
         Map<Integer, List<Integer>> graph = buildGraph(n, edges);
 
@@ -31,9 +38,7 @@ class GraphValidTree {
 
         Queue<Integer> queue = new ArrayDeque<>();
         queue.offer(0);
-        // 只在neighbor没有被遍历过时才放入queue中, 这样的话,
-        // 在遍历出队列时，如果遇到元素被二次访问就说明有cycle,
-        // 最后遍历visited，确认每一个元素都被遍历到，才是valid tree（没有落单的节点）
+
         while (!queue.isEmpty()) {
             // expand and add to set
             Integer curr = queue.poll();
@@ -57,6 +62,8 @@ class GraphValidTree {
         return true;
     }
 
+    // ==========================================================================
+    // Helper
     private Map<Integer, List<Integer>> buildGraph(int n, int[][] edges) {
         Map<Integer, List<Integer>> graph = new HashMap<>();
         // initialize the graph nodes
@@ -118,22 +125,5 @@ class GraphValidTree {
         }
 
         return true;
-    }
-
-    private Map<Integer, List<Integer>> buildGraph(int n, int[][] edges) {
-        Map<Integer, List<Integer>> graph = new HashMap<>();
-        // intialize vertices
-        for (int i = 0; i < n; i++) {
-            graph.put(i, new ArrayList<>());
-        }
-
-        // build edges 
-        for (int[] edge : edges) {
-            // for undirected graph, each edge is a pair of nodes
-            graph.get(edge[0]).add(edge[1]);
-            graph.get(edge[1]).add(edge[0]);
-        }
-
-        return graph;
     }
 }
