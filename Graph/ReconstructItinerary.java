@@ -22,14 +22,16 @@ class ReconstructItinerary {
      * The problem can be modelled as a directed graph:
      * Vertex -> airport
      * Edge   -> ticket[start, end] with direction
-     *
-     * Find an Eulerian Path is a list of all edges in a graph in a sequence such that
-     * you can go from point A to all other nodes in the graph multiple times,
-     * as long as an edge is not visited. 
      */
-    
+
+    // Euler Path: a path in a graph that visits every edge exactly once.
+
+    // You may assume all tickets form at least one valid itinerary. 
+    // You must use all the tickets once and only once.
+
+    // General Graph Complexity 
     // Time: O(E * log(E/V)) where V vertex, E edges
-    // Space: O(V + E)
+    // Space: O(V + E) 
     public List<String> findItinerary(List<List<String>> tickets) {
         // corner case
         if (tickets == null || tickets.size() == 0) {
