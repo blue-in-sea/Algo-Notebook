@@ -25,6 +25,9 @@ public class RainbowSortIII {
      * recursively sort left (0, 1, (2...k))
      * recursively sort right ((0...k-2), k-1, k)
      */
+
+    // Time: O(n log k),
+    // Space: O(log k) (due to recursion stack).
     public int[] rainbowSortIII(int[] array, int k) {
         if (array == null || array.length <= 1) {
             return array;
