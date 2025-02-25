@@ -9,6 +9,10 @@
 public class AllPermutationsofSubsets {
     public List<String> allPermutationsOfSubsets(String set) {
         // Return all permutations of the string and all its subsets
+
+        // Complexity: https://chat.deepseek.com/a/chat/s/cecb11c4-7b80-4fbe-8f79-2356769405cc
+        // Time: O(n! * n)
+        // Space: O(n! * n)
         List<String> list = new ArrayList<>();
         if (set == null) {
             return list;
