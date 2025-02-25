@@ -5,6 +5,8 @@ public class MergeKSortedArrays {
     // assume arrayOfArrays is not null, and none of the array is null
     
     PriorityQueue<Entry> minHeap = new PriorityQueue<Entry>(11, new MyComparator());
+    // PriorityQueue<Entry> minHeap = new PriorityQueue<>((e1, e2) -> Integer.compare(e1.value, e2.value));
+    
     int len = 0;
     int k = arrayOfArrays.length;
     
