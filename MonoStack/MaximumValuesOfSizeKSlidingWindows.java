@@ -36,6 +36,8 @@ public class MaximumValuesOfSizeKSlidingWindows {
       }
     }
     return res;
+
+    // res.stream().mapToInt(i -> i).toArray();  
   }
 
   // ==================================================================
