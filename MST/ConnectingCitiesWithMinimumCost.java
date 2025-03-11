@@ -62,9 +62,7 @@ class ConnectingCitiesWithMinimumCost {
             // Add all edges from the current city to the queue
             for (int[] neighbor : graph.get(city)) {
                 if (!visited[neighbor[0]]) {
-                    if (!visited[neighbor[0]]) {
-                        pq.offer(new int[]{neighbor[0], neighbor[1]});
-                    }
+                    pq.offer(new int[]{neighbor[0], neighbor[1]});
                 }
             }
         }
