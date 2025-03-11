@@ -12,9 +12,11 @@
  * and the maximum values of each K-sized sliding window are [3, 3, 4, 4, 4]
  */
 public class MaximumValuesOfSizeKSlidingWindows {
-  // Method 1: Maintain a monolithic Deque 
+  // Method 1: Deque 
+  
   // Time: O(n) each element can only be in deque once
-  // Space: O(n) for deque
+  // Space: O(K) for deque
+  
   public List<Integer> maxWindows(int[] array, int k) {
     List<Integer> res = new ArrayList<>();
     // corner case
