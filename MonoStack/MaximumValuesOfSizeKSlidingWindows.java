@@ -12,33 +12,40 @@
  * and the maximum values of each K-sized sliding window are [3, 3, 4, 4, 4]
  */
 public class MaximumValuesOfSizeKSlidingWindows {
-  // Method 1: Deque 
+  // Method 1: Deque   ( monotonically decreasing order )
+  //     peekLast [max        ->            min] peekFirst
+
+  // Deque stores idx 
+  // 1. 每次把最小的从前面移除，while  array[i] >= min
+  // 2. 把 i 从前面塞进去
+  // 3. 如果窗口 == k, 记录 res 最大值
+  // 4. Remove indices from the back of the deque if they are outside the current window (dq.peekLast() <= i - k + 1).
   
   // Time: O(n) each element can only be in deque once
   // Space: O(K) for deque
-  
   public List<Integer> maxWindows(int[] array, int k) {
     List<Integer> res = new ArrayList<>();
     // corner case
     if (array == null || array.length == 0) {
       return res;
     }
-    //维护一个单调非递减序列, min -> max 
+
     Deque<Integer> dq = new ArrayDeque<>(); // store the index 
     for (int i = 0; i < array.length; i++) {
       while (!dq.isEmpty() && array[i] >= array[dq.peekFirst()]) {
         dq.pollFirst();
       }
       dq.offerFirst(i);
+      
       if (i >= k - 1) {
         res.add(array[dq.peekLast()]);
       }
+      
       while(!dq.isEmpty() && dq.peekLast() <= i - k + 1){
         dq.pollLast();
       }
     }
     return res;
-
     // res.stream().mapToInt(i -> i).toArray();  
   }
 
