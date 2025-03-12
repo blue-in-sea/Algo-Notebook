@@ -12,84 +12,84 @@
  * and the maximum values of each K-sized sliding window are [3, 3, 4, 4, 4]
  */
 public class MaximumValuesOfSizeKSlidingWindows {
-  // Method 1: Deque   ( monotonically decreasing order )
-  //     peekLast [max        ->            min] peekFirst
+    // Method 1: Deque   ( monotonically decreasing order )
+    //     peekLast [max        ->            min] peekFirst
 
-  // Deque stores idx 
-  // 1. 每次把最小的从前面移除，while  array[i] >= min
-  // 2. 把 i 从前面塞进去
-  // 3. 如果窗口 == k, 记录 res 最大值
-  // 4. Remove indices from the back of the deque if they are outside the current window (dq.peekLast() <= i - k + 1).
-  
-  // Time: O(n) each element can only be in deque once
-  // Space: O(K) for deque
-  public List<Integer> maxWindows(int[] array, int k) {
-    List<Integer> res = new ArrayList<>();
-    // corner case
-    if (array == null || array.length == 0) {
-      return res;
-    }
+    // Deque stores idx 
+    // 1. 每次把最小的从前面移除，while  array[i] >= min
+    // 2. 把 i 从前面塞进去
+    // 3. 如果窗口 == k, 记录 res 最大值
+    // 4. Remove indices from the back of the deque if they are outside the current window (dq.peekLast() <= i - k + 1).
 
-    Deque<Integer> dq = new ArrayDeque<>(); // store the index 
-    for (int i = 0; i < array.length; i++) {
-      while (!dq.isEmpty() && array[i] >= array[dq.peekFirst()]) {
-        dq.pollFirst();
-      }
-      dq.offerFirst(i);
-      
-      if (i >= k - 1) {
-        res.add(array[dq.peekLast()]);
-      }
-      
-      while(!dq.isEmpty() && dq.peekLast() <= i - k + 1){
-        dq.pollLast();
-      }
-    }
-    return res;
-    // res.stream().mapToInt(i -> i).toArray();  
-  }
-
-  // ==================================================================
-  // Method 2: Maintain a TreeSet 
-  class Node {
-    int pos;
-    int val;
-    public Node (int pos, int val) {
-      this.pos = pos;
-      this.val = val;
-    }
-  }
-
-  public List<Integer> maxWindows(int[] array, int k) {
-    Comparator<Node> comparator = new Comparator<Node>() {
-      public int compare(Node left, Node right) {
-        if (right.val == left.val) {
-          // 如果相等，老的元素在前面
-          return left.pos - right.pos;    
+    // Time: O(n) each element can only be in deque once
+    // Space: O(K) for deque
+    public List<Integer> maxWindows(int[] array, int k) {
+        List<Integer> res = new ArrayList<>();
+        // corner case
+        if (array == null || array.length == 0) {
+            return res;
         }
-        // 如果不相等，maxHeap，大的元素在前面
-        return right.val - left.val;
-      }  
-    };
 
-    TreeSet<Node> set = new TreeSet<>(comparator); // TreeSet<Node> set = new TreeSet<>((a, b) -> {return a.val == b.val ? a.index - b.index : b.val - a.val;});
-    ArrayList<Integer> res = new ArrayList<>();
+        Deque<Integer> dq = new ArrayDeque<>(); // store the index 
+        for (int i = 0; i < array.length; i++) {
+            while (!dq.isEmpty() && array[i] >= array[dq.peekFirst()]) {
+                dq.pollFirst();
+            }
+            dq.offerFirst(i);
 
-    for (int i = 0; i < array.length; i++) {
-      Node node = new Node(i, array[i]);
-      set.add(node);
+            if (i >= k - 1) {
+                res.add(array[dq.peekLast()]);
+            }
 
-      if (set.size() > k) {
-        Node last = new Node(i - k, array[i - k]);
-        set.remove(last);
-      }
-
-      if (set.size() == k) {
-        res.add(set.first().val);
-      }
+            while(!dq.isEmpty() && dq.peekLast() <= i - k + 1){
+                dq.pollLast();
+            }
+        }
+        return res;
+        // res.stream().mapToInt(i -> i).toArray();  
     }
-    return res;
-  }
+
+    // ==================================================================
+    // Method 2: Maintain a TreeSet 
+    class Node {
+        int pos;
+        int val;
+        public Node (int pos, int val) {
+            this.pos = pos;
+            this.val = val;
+        }
+    }
+
+    public List<Integer> maxWindows(int[] array, int k) {
+        Comparator<Node> comparator = new Comparator<Node>() {
+            public int compare(Node left, Node right) {
+                if (right.val == left.val) {
+                    // 如果相等，老的元素在前面
+                    return left.pos - right.pos;
+                }
+                // 如果不相等，maxHeap，大的元素在前面
+                return right.val - left.val;
+            }
+        };
+
+        TreeSet<Node> set = new TreeSet<>(comparator); // TreeSet<Node> set = new TreeSet<>((a, b) -> {return a.val == b.val ? a.index - b.index : b.val - a.val;});
+        ArrayList<Integer> res = new ArrayList<>();
+
+        for (int i = 0; i < array.length; i++) {
+            Node node = new Node(i, array[i]);
+            set.add(node);
+
+            if (set.size() > k) {
+                Node last = new Node(i - k, array[i - k]);
+                set.remove(last);
+            }
+
+            if (set.size() == k) {
+                res.add(set.first().val);
+            }
+        }
+        return res;
+    }
 }
 /**
  * Other examples
