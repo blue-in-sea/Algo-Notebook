@@ -45,15 +45,16 @@ public class EvaluatePostfix {
     }
 }
 
-/*
-Postfix Expression: 1 7 2 * -
+/**
+ * Postfix Expression: 1 7 2 * -
+ *
+ * Token	Action	                                   Stack After Step
+ * 1	    Push        	                           [1]
+ * 7	    Push                                       [1, 7]
+ * 2	    Push        	                           [1, 7, 2]
+ * *	    Pop 2 and 7 → 7 * 2 = 14 → Push result	   [1, 14]
+ * -	    Pop 14 and 1 → 1 - 14 = -13 → Push result  [-13]
+ *
+ * Final Stack: [-13]
+ */
 
-Token	Action	                                   Stack After Step
-1	    Push        	                           [1]
-7	    Push                                       [1, 7]
-2	    Push        	                           [1, 7, 2]
-*	    Pop 2 and 7 → 7 * 2 = 14 → Push result	   [1, 14]
--	    Pop 14 and 1 → 1 - 14 = -13 → Push result  [-13]
-
-Final Stack: [-13]
-*/
